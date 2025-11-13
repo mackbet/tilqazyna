@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kumisBottleWithoutLid_0: 3010004013801002122
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
