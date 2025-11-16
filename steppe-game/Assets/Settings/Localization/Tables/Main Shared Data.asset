@@ -408,7 +408,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2850459398144
-    m_Key: back
+    m_Key: Back
     m_Metadata:
       m_Items: []
   - m_Id: 2519514920955904
@@ -3113,6 +3113,22 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 124828672729436160
     m_Key: turkistan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125420660419207168
+    m_Key: Saryarka
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125421053131890688
+    m_Key: Altai
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125421401816965120
+    m_Key: Mangystau
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125421660790071296
+    m_Key: North
     m_Metadata:
       m_Items: []
   m_Metadata:

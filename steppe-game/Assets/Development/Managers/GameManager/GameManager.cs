@@ -1,6 +1,5 @@
 using System;
 using System.Threading.Tasks;
-using Development.Managers;
 using Development.Managers.Bozok;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,8 +12,13 @@ public class GameManager : MonoBehaviour
     [Header("Managers")][SerializeField] private TutorialManager _tutorialManager;
     [SerializeField] private StateManager _stateManager;
     [SerializeField] private HUDManager _hudManager;
-    [SerializeField] private MapManager _mapManager;
+    [SerializeField] private MapManager _astanaMapManager;
     [SerializeField] private AlmatyMapManager _almatyMapManager;
+    [SerializeField] private GameObject _turkistanMapManager;
+    [SerializeField] private GameObject _saryarkaMapManager;
+    [SerializeField] private GameObject _altaiMapManager;
+    [SerializeField] private GameObject _mangystauMapManager;
+    [SerializeField] private GameObject _northMapManager;
     [SerializeField] private LevelManager _levelManager;
     [SerializeField] private QuizController _quizController;
     [SerializeField] private FiveWeaponPointAndClickManager _fiveWeaponPointAndClickManager;
@@ -192,6 +196,7 @@ public class GameManager : MonoBehaviour
         }
 
         SceneManager.sceneLoaded += OnSceneLoaded;
+
     }
 
     private void OnDestroy()
@@ -245,10 +250,10 @@ public class GameManager : MonoBehaviour
 
         _leaderboardManager.Initialize(realtimeManager: _realtimeManager, stateManager: _stateManager);
 
-        _mapManager.Initialize(_stateManager);
-        _mapManager.OnClickCookingButtonAction += () => OpenNewScene(GameScene.Cooking);
-        _mapManager.OnClickQuizButtonAction += () => OpenNewScene(GameScene.Quiz);
-        _mapManager.OnClickMuseumButtonAction += () => OpenNewScene(GameScene.Museum);
+        _astanaMapManager.Initialize(_stateManager);
+        _astanaMapManager.OnClickCookingButtonAction += () => OpenNewScene(GameScene.Cooking);
+        _astanaMapManager.OnClickQuizButtonAction += () => OpenNewScene(GameScene.Quiz);
+        _astanaMapManager.OnClickMuseumButtonAction += () => OpenNewScene(GameScene.Museum);
         MapManager.OnClickMuseumFiveWeaponsButtonAction += () => OpenNewScene(GameScene.MuseumFiveWeapons);
         MapManager.OnClickMuseumSevenTreasuresButtonAction += () => OpenNewScene(GameScene.MuseumSevenTreasures);
         MapManager.OnBozokButtonAction += () => OpenNewScene(GameScene.Bozok);
@@ -272,14 +277,6 @@ public class GameManager : MonoBehaviour
             OpenNewScene(GameScene.ChooseCity);
         };
 
-        _chooseCityManager.CitySelected += scene =>
-        {
-            _stateManager.City = scene;
-            OpenNewScene(scene);
-        };
-
-        _chooseCityManager.BackButtonClicked += () => OpenNewScene(GameScene.ChooseCharacter);
-
         //_levelManager.Initialize(_stateManager);
         LevelManager.OnBackClick += () => OpenNewScene(_stateManager.City);
 
@@ -298,8 +295,6 @@ public class GameManager : MonoBehaviour
         _hudManager.Initialize(_stateManager, _leaderboardManager, _soundManager);
         HUDManager.OnBackClickAction += ProcessBackClick;
 
-        _chooseCityManager.Initialize(_soundManager);
-
         _tutorialManager.OnTutorialStarted += _soundManager.OnTutorialSound;
 
         //_bozokIntro.Initialize(_stateManager);
@@ -317,7 +312,7 @@ public class GameManager : MonoBehaviour
         //_boneQuizManager.Initialize(_stateManager, _soundManager);
     }
 
-    private async void OpenNewScene(GameScene scene)
+    public async void OpenNewScene(GameScene scene)
     {
         _soundManager.PlayButtonSound();
         CloseAllScenes();
@@ -516,7 +511,7 @@ public class GameManager : MonoBehaviour
         _cookingCanvas.gameObject.SetActive(false);
         _quizCanvas.enabled = false;
         _quizCanvas.gameObject.SetActive(false);
-        _mapManager.gameObject.SetActive(false);
+        _astanaMapManager.gameObject.SetActive(false);
         _almatyMapManager.gameObject.SetActive(false);
         _hudManager.gameObject.SetActive(false);
         _chooseCharacterManager.gameObject.SetActive(false);
@@ -548,22 +543,25 @@ public class GameManager : MonoBehaviour
                 _quizCanvas.enabled = true;
                 break;
             case GameScene.Astana:
-                _hudManager.gameObject.SetActive(true);
-                _mapManager.gameObject.SetActive(true);
-                if (PreviousGameScene == GameScene.Quiz)
-                {
-                    _soundManager.PlayEnterCitySound();
-                }
-
+                OpenCity(_astanaMapManager.gameObject);
                 break;
             case GameScene.Almaty:
-                _hudManager.gameObject.SetActive(true);
-                _almatyMapManager.gameObject.SetActive(true);
-                if (PreviousGameScene == GameScene.Quiz)
-                {
-                    _soundManager.PlayEnterCitySound();
-                }
-
+                OpenCity(_almatyMapManager.gameObject);
+                break;
+            case GameScene.Turkistan:
+                OpenCity(_turkistanMapManager);
+                break;
+            case GameScene.Saryarka:
+                OpenCity(_saryarkaMapManager);
+                break;
+            case GameScene.Altai:
+                OpenCity(_altaiMapManager);
+                break;
+            case GameScene.Mangystau:
+                OpenCity(_mangystauMapManager);
+                break;
+            case GameScene.North:
+                OpenCity(_northMapManager);
                 break;
             case GameScene.ChooseCharacter:
                 _chooseCharacterManager.gameObject.SetActive(true);
@@ -571,7 +569,6 @@ public class GameManager : MonoBehaviour
                 break;
             case GameScene.ChooseCity:
                 _chooseCityManager.gameObject.SetActive(true);
-                _chooseCityManager.StartOver();
                 break;
             case GameScene.Museum:
                 _hudManager.gameObject.SetActive(true);
@@ -616,6 +613,16 @@ public class GameManager : MonoBehaviour
                 _hudManager.gameObject.SetActive(true);
                 _traditionalLifeCanvas.gameObject.SetActive(true);
                 break;
+        }
+    }
+
+    private void OpenCity(GameObject city)
+    {
+        _hudManager.gameObject.SetActive(true);
+        city.gameObject.SetActive(true);
+        if (PreviousGameScene == GameScene.Quiz)
+        {
+            _soundManager.PlayEnterCitySound();
         }
     }
 }

@@ -212,7 +212,6 @@ public class HUDManager : MonoBehaviour
     public void CookingMode(bool isActive)
     {
         _settingsButton.SetActive(!isActive);
-        _backBottomButton.SetActive(!isActive);
         _backTopButton.SetActive(isActive);
     }
 

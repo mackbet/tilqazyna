@@ -15,6 +15,25 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 92bc637b8a39f1ec3800f3ecba815b59
   m_SerializeEntries:
+  - m_GUID: 1363c255b76044b0884b6cd942155da2
+    m_Address: ChooseCityDialogue1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a7727b179ae54249b20264c0ebd5bde
+    m_Address: Tazy_3_ChooseCity
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5b340f3ed11184147b2effa5c79d2393
+    m_Address: Assets/Development/Audio Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: aa0c96a897bb2520f8d789afe9cb43d5
     m_Address: Assets/Settings/Localization/Tables/Main Shared Data.asset
     m_ReadOnly: 1

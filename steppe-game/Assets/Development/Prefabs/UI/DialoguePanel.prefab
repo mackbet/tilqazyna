@@ -224,6 +224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8188853911568069845}
+  - component: {fileID: 932588743354132972}
   m_Layer: 5
   m_Name: DialoguePanel
   m_TagString: Untagged
@@ -254,6 +255,24 @@ RectTransform:
   m_AnchoredPosition: {x: -30, y: -90}
   m_SizeDelta: {x: 730, y: 180}
   m_Pivot: {x: 1, y: 1}
+--- !u!114 &932588743354132972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2564758120843214489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c321d93dd3d784ca8948382e401a89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Dialogue
+  display: {fileID: 4420244195531666729}
+  dialoguePhrases: []
+  delayBetweenPhrases: 0.3
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &3355090584815500635
 GameObject:
   m_ObjectHideFlags: 0

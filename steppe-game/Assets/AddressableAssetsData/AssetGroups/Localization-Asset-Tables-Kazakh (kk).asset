@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Asset-Tables-Kazakh (kk)
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Localization-Asset-Tables-Kazakh (kk)
+  m_GUID: 2289f0291b4684a4db4f1d3a5b77c101
+  m_SerializeEntries:
+  - m_GUID: 27b0ef03214d23043972d222e1e9e8c5
+    m_Address: Audio_kk
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: b2812d830086c3c3e9abb97cbd5be879, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 74354d8e0462319419c542d7dcf7d25f, type: 2}
+    - {fileID: 11400000, guid: 1590596e6f5195f4ea44166497ace002, type: 2}

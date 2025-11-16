@@ -59,9 +59,6 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     private AudioClip _playerCreation;
 
-    [Space, SerializeField] private AudioClip _cityChoose_1;
-    [SerializeField] private AudioClip _cityChoose_2;
-
     [Space, SerializeField] private AudioClip _tip_1;
     [SerializeField] private AudioClip _tip_2;
     [SerializeField] private AudioClip _tip_3;
@@ -288,7 +285,7 @@ public class SoundManager : MonoBehaviour
         }
         else if (scene == GameScene.ChooseCity)
         {
-            PlayVoice(_cityChoose_1);
+            //PlayVoice(_cityChoose_1);
             PlayMusic(_musicIntro);
 
             // if (_cityChoose_1 != null)
@@ -640,15 +637,15 @@ public class SoundManager : MonoBehaviour
         PlaySound(_expGainSound);
     }
 
-    public float GetCityChooseOneSoundLength()
-    {
-        return _cityChoose_1.length;
-    }
+    // public float GetCityChooseOneSoundLength()
+    // {
+    //     return _cityChoose_1.length;
+    // }
 
-    public void PlayChooseCitySecondPartSound()
-    {
-        PlayVoice(_cityChoose_2);
-    }
+    // public void PlayChooseCitySecondPartSound()
+    // {
+    //     PlayVoice(_cityChoose_2);
+    // }
 
     public void PlayRevealSound()
     {

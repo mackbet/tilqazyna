@@ -7,8 +7,8 @@ namespace Development.Managers
     {
         private Button _globalBackButton;
 
-        private void Awake() =>
-            _globalBackButton = GameObject.FindWithTag("GlobalBackButton").GetComponent<Button>();
+        // private void Awake() =>
+        //     _globalBackButton = GameObject.FindWithTag("GlobalBackButton").GetComponent<Button>();
 
         public void SetButtonActiveOn() => _globalBackButton.gameObject.SetActive(true);
         public void SetButtonActiveOff() => _globalBackButton.gameObject.SetActive(false);

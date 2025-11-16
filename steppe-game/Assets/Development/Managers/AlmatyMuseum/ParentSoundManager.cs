@@ -9,11 +9,11 @@ namespace Development.Managers.AlmatyMuseum
         private StateManager _stateManager;
         private SoundManager _soundManager;
         
-        private Button _backButton;
+        //private Button _backButton;
         
         private void Awake()
         {
-            _backButton = GameObject.FindWithTag("GlobalBackButton").GetComponent<Button>();
+            //_backButton = GameObject.FindWithTag("GlobalBackButton").GetComponent<Button>();
             _audioSource = gameObject.AddComponent<AudioSource>();
             _stateManager = FindAnyObjectByType<StateManager>();
             _soundManager = FindAnyObjectByType<SoundManager>();
@@ -50,15 +50,15 @@ namespace Development.Managers.AlmatyMuseum
 
         protected virtual void OnEnable()
         {
-            _backButton.onClick.AddListener(StopVoice);
-            _backButton.onClick.AddListener(ResumePlayingMainMusic);
+            // _backButton.onClick.AddListener(StopVoice);
+            // _backButton.onClick.AddListener(ResumePlayingMainMusic);
         }
 
         protected virtual void OnDisable()
         {
             StopVoice();
-            _backButton.onClick.RemoveListener(StopVoice);
-            _backButton.onClick.RemoveListener(ResumePlayingMainMusic);
+            // _backButton.onClick.RemoveListener(StopVoice);
+            // _backButton.onClick.RemoveListener(ResumePlayingMainMusic);
         }
     }
 }
