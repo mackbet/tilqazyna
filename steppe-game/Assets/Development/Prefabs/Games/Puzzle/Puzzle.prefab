@@ -1407,7 +1407,7 @@ PrefabInstance:
     - {fileID: 7482301280389333648, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 7148639537272080791, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
-      insertIndex: 2
+      insertIndex: 1
       addedObject: {fileID: 3320192798533283132}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 849376715505048235, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
@@ -1431,6 +1431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c56019228b1dd904db83da118f513e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Puzzle
+  startDelay: 1
+  finishDelay: 1
   puzzleSets:
   - name: pic1
     pieceSprites:

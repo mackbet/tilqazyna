@@ -1,9 +1,15 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 using DG.Tweening;
 
 public class HitSpawner : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private Button targetButton;
+    [SerializeField] private RectTransform targetTransform; // Target (Image)
+    [SerializeField] private Image targetImage;
+
     [Header("Animation Settings")]
     [SerializeField] private float spawnDuration = 0.3f;
     [SerializeField] private float despawnDuration = 0.3f;
@@ -13,9 +19,6 @@ public class HitSpawner : MonoBehaviour
     [Header("Collision Settings")]
     [SerializeField] private float collisionDelay = 0.2f;
 
-    [Header("Visual Settings")]
-    [SerializeField] private Transform visualTransform; // Визуальная часть цели
-
     public event Action OnTargetHit;
 
     private Vector3 originalScale;
@@ -23,22 +26,62 @@ public class HitSpawner : MonoBehaviour
     private Tween despawnTween;
     private bool isTargetActive = false;
     private bool canBeHit = false;
-    private Collider2D targetCollider;
+
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        if (!targetButton)
+            targetButton = GetComponent<Button>();
+
+        if (!targetTransform && transform.childCount > 0)
+        {
+            // Ищем дочерний объект с именем Target
+            foreach (Transform child in transform)
+            {
+                if (child.name.Contains("Target"))
+                {
+                    targetTransform = child.GetComponent<RectTransform>();
+                    break;
+                }
+            }
+        }
+
+        if (targetTransform && !targetImage)
+            targetImage = targetTransform.GetComponent<Image>();
+    }
+#endif
 
     private void Awake()
     {
-        if (visualTransform == null)
-            visualTransform = transform;
+        if (targetButton == null)
+            targetButton = GetComponent<Button>();
 
-        originalScale = visualTransform.localScale;
-        targetCollider = GetComponent<Collider2D>();
-        
-        // Скрываем цель изначально
-        visualTransform.localScale = Vector3.zero;
-        
-        if (targetCollider != null)
+        if (targetTransform == null && transform.childCount > 0)
         {
-            targetCollider.enabled = false;
+            targetTransform = transform.GetChild(0).GetComponent<RectTransform>();
+        }
+
+        if (targetImage == null && targetTransform != null)
+            targetImage = targetTransform.GetComponent<Image>();
+
+        if (targetTransform != null)
+            originalScale = targetTransform.localScale;
+
+        // Подписываемся на событие нажатия кнопки
+        if (targetButton != null)
+        {
+            targetButton.onClick.AddListener(OnButtonClicked);
+        }
+
+        // Скрываем цель изначально
+        Deactivate();
+    }
+
+    private void OnDestroy()
+    {
+        if (targetButton != null)
+        {
+            targetButton.onClick.RemoveListener(OnButtonClicked);
         }
     }
 
@@ -57,8 +100,20 @@ public class HitSpawner : MonoBehaviour
         currentTween?.Kill();
         despawnTween?.Kill();
 
+        // Поднимаем Target из родителя
+        if (targetTransform != null)
+        {
+            targetTransform.SetAsLastSibling();
+        }
+
+        // Делаем Image видимым но пока не кликабельным
+        if (targetImage != null)
+        {
+            targetImage.raycastTarget = false;
+        }
+
         // Анимация появления
-        currentTween = visualTransform.DOScale(originalScale, spawnDuration)
+        currentTween = targetTransform.DOScale(originalScale, spawnDuration)
             .SetEase(spawnEase)
             .OnComplete(() =>
             {
@@ -68,9 +123,9 @@ public class HitSpawner : MonoBehaviour
                     if (isTargetActive)
                     {
                         canBeHit = true;
-                        if (targetCollider != null)
+                        if (targetImage != null)
                         {
-                            targetCollider.enabled = true;
+                            targetImage.raycastTarget = true;
                         }
                     }
                 });
@@ -86,16 +141,7 @@ public class HitSpawner : MonoBehaviour
             });
     }
 
-    private void OnMouseDown()
-    {
-        if (canBeHit && isTargetActive)
-        {
-            Hit();
-        }
-    }
-
-    // Для мобильных устройств
-    private void OnTouchDown()
+    private void OnButtonClicked()
     {
         if (canBeHit && isTargetActive)
         {
@@ -116,16 +162,16 @@ public class HitSpawner : MonoBehaviour
         isTargetActive = false;
         canBeHit = false;
 
-        if (targetCollider != null)
+        if (targetImage != null)
         {
-            targetCollider.enabled = false;
+            targetImage.raycastTarget = false;
         }
 
         // Останавливаем текущую анимацию
         currentTween?.Kill();
 
         // Анимация исчезновения
-        despawnTween = visualTransform.DOScale(Vector3.zero, despawnDuration)
+        despawnTween = targetTransform.DOScale(Vector3.zero, despawnDuration)
             .SetEase(despawnEase);
     }
 
@@ -133,20 +179,26 @@ public class HitSpawner : MonoBehaviour
     {
         isTargetActive = false;
         canBeHit = false;
-        
-        if (targetCollider != null)
+
+        if (targetImage != null)
         {
-            targetCollider.enabled = false;
+            targetImage.raycastTarget = false;
         }
 
         currentTween?.Kill();
         despawnTween?.Kill();
-        
-        visualTransform.localScale = Vector3.zero;
+
+        if (targetTransform != null)
+        {
+            targetTransform.localScale = Vector3.zero;
+        }
     }
 
     private void OnDisable()
     {
         Deactivate();
     }
+
+    public bool IsActive() => isTargetActive;
+    public bool CanBeHit() => canBeHit;
 }
