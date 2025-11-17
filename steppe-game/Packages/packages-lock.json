@@ -9,6 +9,16 @@
       },
       "hash": "a0a11814cb0d106431396f5482fb7ba530906635"
     },
+    "com.coffee.ui-particle": {
+      "version": "https://github.com/mob-sakai/ParticleEffectForUGUI.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0",
+        "com.unity.modules.particlesystem": "1.0.0"
+      },
+      "hash": "c54f63cb18a22382215b142b63e232f0f86fff58"
+    },
     "com.gilzoide.lottie-player": {
       "version": "https://github.com/gilzoide/unity-lottie-player.git#1.0.2",
       "depth": 0,

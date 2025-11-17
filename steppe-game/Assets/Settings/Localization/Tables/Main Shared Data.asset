@@ -3131,6 +3131,30 @@ MonoBehaviour:
     m_Key: North
     m_Metadata:
       m_Items: []
+  - m_Id: 125783960651452416
+    m_Key: Location
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125799450887213056
+    m_Key: Mausoleum of Khoja Ahmed Yasawi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125800882239590400
+    m_Key: Puzzle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125893249919504384
+    m_Key: Rocket launch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125898501410410496
+    m_Key: Baikonur Cosmodrome
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125971578571870208
+    m_Key: Hit the targets
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

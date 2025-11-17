@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.ammariqais.skiaforunity": "https://github.com/ammariqais/SkiaForUnity.git?path=SkiaUnity/Assets/SkiaSharp",
+    "com.coffee.ui-particle": "https://github.com/mob-sakai/ParticleEffectForUGUI.git",
     "com.gilzoide.lottie-player": "https://github.com/gilzoide/unity-lottie-player.git#1.0.2",
     "com.gindemit.rlottie": "https://github.com/gindemit/unity-rlottie.git?path=/unity/RLottieUnity/Assets/LottiePlugin/#0.2.2",
     "com.unity.adaptiveperformance.google.android": "5.1.6",
