@@ -76,7 +76,7 @@ public class HitTargets : GameController
         HitSpawner selectedSpawner = GetRandomSpawner();
         
         // Спавним цель на оставшееся время до следующего спавна
-        float targetDuration = spawnInterval * 1.5f;
+        float targetDuration = spawnInterval;
         selectedSpawner.SpawnTargetFor(targetDuration);
         
         lastSpawner = selectedSpawner;
