@@ -3,6 +3,16 @@ using UnityEngine;
 
 public class StateManager : MonoBehaviour
 {
+    private static StateManager instance;
+    public static StateManager Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindFirstObjectByType<StateManager>();
+            return instance;
+        }
+    }
     #region Constants
 
     private const string IsSwordBoughtKey = "IsSwordBought";

@@ -14,7 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Localization-Assets-Russian (ru)
   m_GUID: 3eff7847c9c71ed47992f8927a3ba691
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 51b1373bef8ce864283be282c3f40998
+    m_Address: rocketlaunch3_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 603085811ec204f44a43fa0fc4398067
+    m_Address: rocketlaunch1_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b80af3fbd20434b42b495ef2302b5a43
+    m_Address: rocketlaunch4_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8c80bc6d6428a547be00922520ca639
+    m_Address: rocketlaunch2_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef39ee9002779fb46babdbc495f793dd
+    m_Address: rocketlaunch5_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f14403ae2d416104eb28010749d60dd4
+    m_Address: rocketlaunch5_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: b2812d830086c3c3e9abb97cbd5be879, type: 2}
   m_SchemaSet:

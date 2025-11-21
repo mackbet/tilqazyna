@@ -1,8 +1,19 @@
 ﻿using System.Collections;
+using UnityEditor.Build.Pipeline;
 using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
+    private static SoundManager instance;
+    public static SoundManager Instance
+    {
+        get
+        {
+            if (instance == null)
+                instance = FindFirstObjectByType<SoundManager>();
+            return instance;
+        }
+    }
     [SerializeField] private AudioSource _musicAudioSource;
     [SerializeField] private AudioSource _effectsAudioSource;
     [SerializeField] private AudioSource _voiceAudioSource;
@@ -120,6 +131,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private AudioClip _musicSword;
     [SerializeField] private AudioClip _musicMaze;
 
+    private float musicMultiplier = 1;
+
     private StateManager _stateManager;
     public float VolumeVoicesSounds { get; set; } = 1;
 
@@ -211,19 +224,23 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlayMusic(AudioClip musicClip)
+    public AudioSource PlayMusic(AudioClip musicClip, float volume = 1)
     {
         if (_musicAudioSource.isPlaying && musicClip != null && musicClip != _musicAudioSource.clip)
         {
             _musicAudioSource.Stop();
         }
-
+        musicMultiplier = volume;
         _musicAudioSource.clip = musicClip;
         _musicAudioSource.loop = true;
         _musicAudioSource.Play();
+
+        return _musicAudioSource;
     }
 
     public void StopMusic() => _musicAudioSource.Stop();
+
+    public AudioSource GetMusicAudioSource() { return _musicAudioSource; }
 
     private void PlayIngredientSound(IngredientType ingredient)
     {
@@ -246,7 +263,7 @@ public class SoundManager : MonoBehaviour
 
     private void UpdateVolume()
     {
-        _musicAudioSource.volume = Mathf.Clamp(_stateManager.MusicVolume / 10f, 0f, 1f);
+        _musicAudioSource.volume = Mathf.Clamp(_stateManager.MusicVolume / 10f * musicMultiplier, 0f, 1f);
         _effectsAudioSource.volume = Mathf.Clamp(_stateManager.SoundVolume / 10f, 0f, 1f);
         //_voiceAudioSource.volume = _effectsAudioSource.volume;
 

@@ -2,49 +2,64 @@ using UnityEngine;
 
 public class HitTargets : GameController
 {
-    [SerializeField] private HitSpawner[] spawners;
-    [SerializeField] private float targetCount = 15;
-    [SerializeField] private float gameDuration = 15;
+    [Header("UI")]
+    [SerializeField] private Stopwatch stopwatch;
     
+    [Header("Spawners")]
+    [SerializeField] private HitSpawner[] spawners;
+    
+    [Header("Game Settings")]
+    [SerializeField] private float spawnInterval = 1f;
+    [SerializeField] private float spawnDuration = 2f;
+    [SerializeField] private float gameDuration = 15f;
+    
+    [Header("Hit Effect")]
+    [SerializeField] private GameObject hitEffectPrefab;
+    [SerializeField] private Transform effectParent;
+    [SerializeField] private float effectLifetime = 1f;
+
     private HitSpawner lastSpawner = null;
-    private float spawnInterval;
     private float currentTime = 0f;
     private float nextSpawnTime = 0f;
-    private int spawnedCount = 0;
-    private int hitCount = 0;
     private bool isGameActive = false;
+    private int score = 0;
+    private int maxScore = 0;
+
+    private void Start()
+    {
+        stopwatch.SetTime(gameDuration);
+        stopwatch.StopStopwatch();
+    }
 
     protected override void InitializeGame()
     {
         base.InitializeGame();
-        
-        spawnInterval = gameDuration / targetCount;
+
         currentTime = 0f;
-        nextSpawnTime = 0f;
-        spawnedCount = 0;
-        hitCount = 0;
+        score = 0;
+        maxScore = 0;
         isGameActive = true;
-        
-        // Подписываемся на события попадания
+
         foreach (var spawner in spawners)
         {
-            spawner.OnTargetHit += HandleTargetHit;
+            spawner.OnTargetHit += OnTargetHit;
         }
-        
-        // Спавним первую цель сразу
+
         SpawnNextTarget();
+        nextSpawnTime = spawnInterval;
+        stopwatch.StartStopwatch();
     }
 
     protected override void OnDisable()
     {
         base.OnDisable();
-        
-        // Отписываемся от событий
+
         if (spawners != null)
         {
             foreach (var spawner in spawners)
             {
-                spawner.OnTargetHit -= HandleTargetHit;
+                spawner.OnTargetHit -= OnTargetHit;
+                spawner.Deactivate();
             }
         }
     }
@@ -55,13 +70,12 @@ public class HitTargets : GameController
 
         currentTime += Time.deltaTime;
 
-        // Проверяем, пора ли спавнить следующую цель
-        if (currentTime >= nextSpawnTime && spawnedCount < targetCount)
+        if (currentTime >= nextSpawnTime && currentTime < gameDuration - 2f)
         {
             SpawnNextTarget();
+            nextSpawnTime = currentTime + spawnInterval;
         }
 
-        // Проверяем, закончилось ли время игры
         if (currentTime >= gameDuration)
         {
             EndGame();
@@ -70,59 +84,104 @@ public class HitTargets : GameController
 
     private void SpawnNextTarget()
     {
-        if (spawners == null || spawners.Length == 0) return;
+        if (!isGameActive || spawners == null || spawners.Length == 0) return;
 
-        // Выбираем случайный спавнер, отличный от предыдущего
         HitSpawner selectedSpawner = GetRandomSpawner();
         
-        // Спавним цель на оставшееся время до следующего спавна
-        float targetDuration = spawnInterval;
-        selectedSpawner.SpawnTargetFor(targetDuration);
-        
-        lastSpawner = selectedSpawner;
-        spawnedCount++;
-        nextSpawnTime = currentTime + spawnInterval;
+        if (selectedSpawner != null)
+        {
+            selectedSpawner.SpawnTargetFor(spawnDuration);
+            maxScore++;
+            lastSpawner = selectedSpawner;
+        }
     }
 
     private HitSpawner GetRandomSpawner()
     {
-        if (spawners.Length == 1) return spawners[0];
-
-        HitSpawner selectedSpawner;
-        do
+        if (spawners.Length == 1)
         {
-            selectedSpawner = spawners[Random.Range(0, spawners.Length)];
+            return spawners[0].IsActive() ? null : spawners[0];
         }
-        while (selectedSpawner == lastSpawner && spawners.Length > 1);
 
-        return selectedSpawner;
+        // Собираем список доступных спавнеров (неактивных)
+        var availableSpawners = new System.Collections.Generic.List<HitSpawner>();
+        
+        foreach (var spawner in spawners)
+        {
+            if (!spawner.IsActive() && spawner != lastSpawner)
+            {
+                availableSpawners.Add(spawner);
+            }
+        }
+
+        // Если нет доступных без учета lastSpawner, берем любой неактивный
+        if (availableSpawners.Count == 0)
+        {
+            foreach (var spawner in spawners)
+            {
+                if (!spawner.IsActive())
+                {
+                    availableSpawners.Add(spawner);
+                }
+            }
+        }
+
+        // Если все спавнеры заняты, возвращаем null
+        if (availableSpawners.Count == 0)
+        {
+            Debug.LogWarning("Все спавнеры заняты! Увеличьте spawnInterval или уменьшите spawnDuration.");
+            return null;
+        }
+
+        return availableSpawners[Random.Range(0, availableSpawners.Count)];
     }
 
-    private void HandleTargetHit()
+    private void OnTargetHit(Vector2 screenPosition)
     {
-        hitCount++;
-        Debug.Log($"Попадание! Счёт: {hitCount}/{spawnedCount}");
+        score++;
+        Debug.Log($"Попадание! Счет: {score}/{maxScore}");
+        
+        SpawnHitEffect(screenPosition);
+    }
+
+    private void SpawnHitEffect(Vector2 screenPosition)
+    {
+        if (hitEffectPrefab == null || effectParent == null) return;
+
+        GameObject effect = Instantiate(hitEffectPrefab, effectParent);
+        RectTransform effectRect = effect.GetComponent<RectTransform>();
+        
+        if (effectRect != null)
+        {
+            RectTransform canvasRect = effectParent.GetComponent<RectTransform>();
+            Vector2 localPoint;
+            
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                canvasRect,
+                screenPosition,
+                null,
+                out localPoint
+            );
+            
+            effectRect.localPosition = localPoint;
+        }
+        
+        Destroy(effect, effectLifetime);
     }
 
     private void EndGame()
     {
         isGameActive = false;
-        
-        // Деактивируем все спавнеры
+
         foreach (var spawner in spawners)
         {
             spawner.Deactivate();
         }
-        
+
+        Debug.Log($"Игра окончена! Финальный счет: {score}/{maxScore}");
         FinishGame();
     }
 
-    public float GetProgress()
-    {
-        return gameDuration > 0 ? currentTime / gameDuration : 0f;
-    }
-
-    public int GetSpawnedCount() => spawnedCount;
-    public int GetHitCount() => hitCount;
-    public int GetTotalTargets() => (int)targetCount;
+    public float GetProgress() => gameDuration > 0 ? currentTime / gameDuration : 0f;
+    public int GetScore() => score;
 }

@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private HUDManager _hudManager;
     [SerializeField] private MapManager _astanaMapManager;
     [SerializeField] private AlmatyMapManager _almatyMapManager;
-    [SerializeField] private GameObject _turkistanMapManager;
-    [SerializeField] private GameObject _saryarkaMapManager;
+    [SerializeField] private GameObject _southKazakhstan;
+    [SerializeField] private GameObject _eastKazakhstan;
     [SerializeField] private GameObject _altaiMapManager;
     [SerializeField] private GameObject _mangystauMapManager;
     [SerializeField] private GameObject _northMapManager;
@@ -503,6 +503,9 @@ public class GameManager : MonoBehaviour
 
     private void CloseAllScenes()
     {
+        if (lastCity)
+            lastCity.SetActive(false);
+            
         if (CurrentGameScene == GameScene.Bozok)
         {
             return;
@@ -548,11 +551,11 @@ public class GameManager : MonoBehaviour
             case GameScene.Almaty:
                 OpenCity(_almatyMapManager.gameObject);
                 break;
-            case GameScene.Turkistan:
-                OpenCity(_turkistanMapManager);
+            case GameScene.SouthKazakhstan:
+                OpenCity(_southKazakhstan);
                 break;
-            case GameScene.Saryarka:
-                OpenCity(_saryarkaMapManager);
+            case GameScene.EastKazakhstan:
+                OpenCity(_eastKazakhstan);
                 break;
             case GameScene.Altai:
                 OpenCity(_altaiMapManager);
@@ -616,10 +619,15 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+    private GameObject lastCity = null;
+
     private void OpenCity(GameObject city)
     {
         _hudManager.gameObject.SetActive(true);
         city.gameObject.SetActive(true);
+        lastCity = city;
+
         if (PreviousGameScene == GameScene.Quiz)
         {
             _soundManager.PlayEnterCitySound();

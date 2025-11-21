@@ -1,8 +1,7 @@
-using BigDreamLab.LocalizationSystem;
 using UnityEngine;
 using UnityEngine.Localization;
 
-public class GameButton : CustomButton
+public class GameButton : CustomImageButton
 {
     [SerializeField] private GameView gameView;
     [SerializeField] private LocalizedString gameTitle;

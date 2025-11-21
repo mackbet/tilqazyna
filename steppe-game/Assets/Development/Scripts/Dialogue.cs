@@ -3,14 +3,14 @@ using System.Threading;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Dialogue : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI display;
     [SerializeField] private DialoguePhrase[] dialoguePhrases;
-    [SerializeField] private float delayBetweenPhrases = 0.5f;
     [SerializeField] private bool playEveryTime = false;
-    
+
     private bool isPlayed = false;
     private CancellationTokenSource cancellationTokenSource;
     private DialoguePhrase currentPhrase;
@@ -18,7 +18,7 @@ public class Dialogue : MonoBehaviour
     private void OnEnable()
     {
         if (isPlayed && !playEveryTime) return;
-        
+
         cancellationTokenSource = new CancellationTokenSource();
         _ = PlayDialogueAsync(cancellationTokenSource.Token);
         isPlayed = true;
@@ -34,22 +34,15 @@ public class Dialogue : MonoBehaviour
 
     private async Task PlayDialogueAsync(CancellationToken token)
     {
-        try
+        foreach (var phrase in dialoguePhrases)
         {
-            foreach (var phrase in dialoguePhrases)
-            {
-                currentPhrase = phrase;
-                display.text = phrase.Phrase.LocalizedString.GetLocalizedString();
-                
-                await phrase.Play(token);
-                
-                if (delayBetweenPhrases > 0)
-                    await Task.Delay(TimeSpan.FromSeconds(delayBetweenPhrases), token);
-                
-                currentPhrase = null;
-            }
+            currentPhrase = phrase;
+            display.text = phrase.Phrase.LocalizedString.GetLocalizedString();
+
+            await phrase.Play(token);
+
+            currentPhrase = null;
         }
-        catch (OperationCanceledException) { }
     }
 
     [Serializable]
@@ -57,29 +50,47 @@ public class Dialogue : MonoBehaviour
     {
         public Phrase Phrase => phrase;
         [SerializeField] private Phrase phrase;
+        [SerializeField] private float delayAfterPhrase = 0.5f;
         [SerializeField] private ActivateableObject[] onStartedActivateables;
         [SerializeField] private ActivateableObject[] onFinishedActivateables;
+        public UnityEvent OnStartedEvent;
+        public UnityEvent OnEndedEvent;
 
         private AudioSource audioSource;
 
         public async Task Play(CancellationToken token)
         {
             ActivateObjects(onStartedActivateables);
+            OnStartedEvent?.Invoke();
+
+            // Проверяем LocalizedAudio
+            if (phrase.LocalizedAudio == null || phrase.LocalizedAudio.IsEmpty)
+            {
+                Debug.LogWarning($"LocalizedAudio не настроен для фразы. Пропускаем воспроизведение.");
+                await Task.Delay(TimeSpan.FromSeconds(delayAfterPhrase), token);
+                ActivateObjects(onFinishedActivateables);
+                return;
+            }
 
             var loadOp = phrase.LocalizedAudio.LoadAssetAsync();
+
             while (!loadOp.IsDone)
             {
                 await Task.Yield();
                 token.ThrowIfCancellationRequested();
             }
 
-            if (loadOp.Result == null) return;
+            float audioLength = 0;
 
-            audioSource = AudioManager.Instance.PlaySound(loadOp.Result, 1f);
+            if (loadOp.Result != null)
+            {
+                audioSource = AudioManager.Instance.PlaySound(loadOp.Result, 1f);
+                audioLength = loadOp.Result.length;
+            }
 
             try
             {
-                await Task.Delay(TimeSpan.FromSeconds(loadOp.Result.length), token);
+                await Task.Delay(TimeSpan.FromSeconds(audioLength + delayAfterPhrase), token);
             }
             catch (OperationCanceledException)
             {
@@ -88,6 +99,7 @@ public class Dialogue : MonoBehaviour
             }
 
             ActivateObjects(onFinishedActivateables);
+            OnEndedEvent?.Invoke();
             audioSource = null;
         }
 

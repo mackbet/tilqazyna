@@ -1,13 +1,13 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using DG.Tweening;
 
-public class HitSpawner : MonoBehaviour
+public class HitSpawner : MonoBehaviour, IPointerDownHandler
 {
-    [Header("References")]
     [SerializeField] private Button targetButton;
-    [SerializeField] private RectTransform targetTransform; // Target (Image)
+    [SerializeField] private RectTransform targetTransform;
     [SerializeField] private Image targetImage;
 
     [Header("Animation Settings")]
@@ -16,143 +16,55 @@ public class HitSpawner : MonoBehaviour
     [SerializeField] private Ease spawnEase = Ease.OutBack;
     [SerializeField] private Ease despawnEase = Ease.InBack;
 
-    [Header("Collision Settings")]
-    [SerializeField] private float collisionDelay = 0.2f;
-
-    public event Action OnTargetHit;
+    public event Action<Vector2> OnTargetHit; // Теперь передаем позицию клика
 
     private Vector3 originalScale;
-    private Tween currentTween;
-    private Tween despawnTween;
+    private Vector2 hiddenPosition;
+    private Sequence currentSequence;
     private bool isTargetActive = false;
-    private bool canBeHit = false;
-
-#if UNITY_EDITOR
-    private void OnValidate()
-    {
-        if (!targetButton)
-            targetButton = GetComponent<Button>();
-
-        if (!targetTransform && transform.childCount > 0)
-        {
-            // Ищем дочерний объект с именем Target
-            foreach (Transform child in transform)
-            {
-                if (child.name.Contains("Target"))
-                {
-                    targetTransform = child.GetComponent<RectTransform>();
-                    break;
-                }
-            }
-        }
-
-        if (targetTransform && !targetImage)
-            targetImage = targetTransform.GetComponent<Image>();
-    }
-#endif
 
     private void Awake()
     {
-        if (targetButton == null)
-            targetButton = GetComponent<Button>();
-
-        if (targetTransform == null && transform.childCount > 0)
-        {
-            targetTransform = transform.GetChild(0).GetComponent<RectTransform>();
-        }
-
-        if (targetImage == null && targetTransform != null)
-            targetImage = targetTransform.GetComponent<Image>();
-
         if (targetTransform != null)
+        {
             originalScale = targetTransform.localScale;
-
-        // Подписываемся на событие нажатия кнопки
-        if (targetButton != null)
-        {
-            targetButton.onClick.AddListener(OnButtonClicked);
+            hiddenPosition = targetTransform.anchoredPosition;
         }
 
-        // Скрываем цель изначально
         Deactivate();
-    }
-
-    private void OnDestroy()
-    {
-        if (targetButton != null)
-        {
-            targetButton.onClick.RemoveListener(OnButtonClicked);
-        }
     }
 
     public void SpawnTargetFor(float duration)
     {
-        // Если уже есть активная цель, удаляем её
         if (isTargetActive)
-        {
             DespawnTarget();
-        }
 
         isTargetActive = true;
-        canBeHit = false;
+        currentSequence?.Kill();
 
-        // Останавливаем предыдущие анимации
-        currentTween?.Kill();
-        despawnTween?.Kill();
-
-        // Поднимаем Target из родителя
-        if (targetTransform != null)
-        {
-            targetTransform.SetAsLastSibling();
-        }
-
-        // Делаем Image видимым но пока не кликабельным
         if (targetImage != null)
-        {
-            targetImage.raycastTarget = false;
-        }
+            targetImage.raycastTarget = true;
 
-        // Анимация появления
-        currentTween = targetTransform.DOScale(originalScale, spawnDuration)
-            .SetEase(spawnEase)
+        currentSequence = DOTween.Sequence()
+            .Append(targetTransform.DOScale(originalScale, spawnDuration).SetEase(spawnEase))
+            .Join(targetTransform.DOAnchorPosY(0, spawnDuration).SetEase(spawnEase))
             .OnComplete(() =>
             {
-                // Включаем возможность попадания после задержки
-                DOVirtual.DelayedCall(collisionDelay, () =>
-                {
-                    if (isTargetActive)
-                    {
-                        canBeHit = true;
-                        if (targetImage != null)
-                        {
-                            targetImage.raycastTarget = true;
-                        }
-                    }
-                });
-
-                // Автоматически удаляем цель через заданное время
                 DOVirtual.DelayedCall(duration, () =>
                 {
                     if (isTargetActive)
-                    {
                         DespawnTarget();
-                    }
                 });
             });
     }
 
-    private void OnButtonClicked()
+    public void OnPointerDown(PointerEventData eventData)
     {
-        if (canBeHit && isTargetActive)
+        if (isTargetActive)
         {
-            Hit();
+            OnTargetHit?.Invoke(eventData.position);
+            DespawnTarget();
         }
-    }
-
-    private void Hit()
-    {
-        OnTargetHit?.Invoke();
-        DespawnTarget();
     }
 
     private void DespawnTarget()
@@ -160,37 +72,30 @@ public class HitSpawner : MonoBehaviour
         if (!isTargetActive) return;
 
         isTargetActive = false;
-        canBeHit = false;
 
         if (targetImage != null)
-        {
             targetImage.raycastTarget = false;
-        }
 
-        // Останавливаем текущую анимацию
-        currentTween?.Kill();
+        currentSequence?.Kill();
 
-        // Анимация исчезновения
-        despawnTween = targetTransform.DOScale(Vector3.zero, despawnDuration)
-            .SetEase(despawnEase);
+        currentSequence = DOTween.Sequence()
+            .Append(targetTransform.DOScale(Vector3.zero, despawnDuration).SetEase(despawnEase))
+            .Join(targetTransform.DOAnchorPosY(hiddenPosition.y, despawnDuration).SetEase(despawnEase));
     }
 
     public void Deactivate()
     {
         isTargetActive = false;
-        canBeHit = false;
 
         if (targetImage != null)
-        {
             targetImage.raycastTarget = false;
-        }
 
-        currentTween?.Kill();
-        despawnTween?.Kill();
+        currentSequence?.Kill();
 
         if (targetTransform != null)
         {
             targetTransform.localScale = Vector3.zero;
+            targetTransform.anchoredPosition = hiddenPosition;
         }
     }
 
@@ -198,7 +103,6 @@ public class HitSpawner : MonoBehaviour
     {
         Deactivate();
     }
-
+    
     public bool IsActive() => isTargetActive;
-    public bool CanBeHit() => canBeHit;
 }

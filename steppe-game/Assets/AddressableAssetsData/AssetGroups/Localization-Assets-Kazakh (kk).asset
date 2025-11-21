@@ -14,7 +14,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Localization-Assets-Kazakh (kk)
   m_GUID: 723cd68c2376e9542842a38f1d59a842
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 00c1b3e29da64684ebb28ad6ccf37051
+    m_Address: rocketlaunch4_KZ
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ed91d766d5c93a499291b60060398bf
+    m_Address: rocketlaunch2_KZ
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6cade2e0edf85a64c87b9fd9801f1d8b
+    m_Address: rocketlaunch5_KZ
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 75be040150aa45b4e8baf52f8fc6ac93
+    m_Address: rocketlaunch5_KZ
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a57212e1861753540905538e1ea0cf07
+    m_Address: rocketlaunch1_KZ
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4d429a36b7bc424fad39315deea3340
+    m_Address: rocketlaunch3_KZ
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: b2812d830086c3c3e9abb97cbd5be879, type: 2}
   m_SchemaSet:

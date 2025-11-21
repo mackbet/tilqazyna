@@ -8,7 +8,7 @@ public class GameView : CanvasView
     [SerializeField] private UIPanelRestart restartPanel;
     [SerializeField] private GameController gameController;
 
-    private void OnEnable()
+    protected virtual void OnEnable()
     {
         gameController.OnGameFinished += Finish;
         gameController.OnGameFailed += Restart;

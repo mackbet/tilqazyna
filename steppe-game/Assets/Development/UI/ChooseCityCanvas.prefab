@@ -2168,7 +2168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2260944670070582812, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
       propertyPath: <LocalizedString>k__BackingField.m_TableEntryReference.m_KeyId
-      value: 124828672729436160
+      value: 126290901366624256
       objectReference: {fileID: 0}
     - target: {fileID: 2260944670070582812, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
       propertyPath: <LocalizedString>k__BackingField.m_TableReference.m_TableCollectionName
@@ -2180,11 +2180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6381734291704246071, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
       propertyPath: m_text
-      value: "\u0422\u04AF\u0440\u043A\u0456\u0441\u0442\u0430\u043D"
+      value: "\u041E\u04A3\u0442\u04AF\u0441\u0442\u0456\u043A \u049A\u0430\u0437\u0430\u049B\u0441\u0442\u0430\u043D"
       objectReference: {fileID: 0}
     - target: {fileID: 6381734291704246071, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
       propertyPath: m_fontSize
-      value: 41.65
+      value: 23.85
       objectReference: {fileID: 0}
     - target: {fileID: 6745713244770177282, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
       propertyPath: m_Sprite
@@ -2200,7 +2200,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8453812093074301969, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
       propertyPath: m_Name
-      value: Turkistan
+      value: South Kazakhstan
       objectReference: {fileID: 0}
     - target: {fileID: 8916456307418688455, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2688,21 +2688,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1546545935380158338, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1546545935380158338, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1546545935380158338, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2260944670070582812, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
       propertyPath: <LocalizedString>k__BackingField.m_TableEntryReference.m_KeyId
-      value: 125420660419207168
+      value: 126278647380332544
       objectReference: {fileID: 0}
     - target: {fileID: 3351899954255818334, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
       propertyPath: city
@@ -2710,11 +2698,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6381734291704246071, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
       propertyPath: m_text
-      value: "\u0421\u0430\u0440\u044B\u0430\u0440\u049B\u0430"
+      value: "\u0428\u044B\u0493\u044B\u0441 \u049A\u0430\u0437\u0430\u049B\u0441\u0442\u0430\u043D"
       objectReference: {fileID: 0}
     - target: {fileID: 6381734291704246071, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
       propertyPath: m_fontSize
-      value: 41.65
+      value: 26.15
       objectReference: {fileID: 0}
     - target: {fileID: 6745713244770177282, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
       propertyPath: m_Sprite
@@ -2742,7 +2730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8453812093074301969, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
       propertyPath: m_Name
-      value: Saryarka
+      value: East Kazakhstan
       objectReference: {fileID: 0}
     - target: {fileID: 8916456307418688455, guid: 08e1f6ee713b36342adf5c8c2a0be241, type: 3}
       propertyPath: m_AnchorMax.x

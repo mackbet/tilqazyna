@@ -39,7 +39,6 @@ public class AudioManager : MonoBehaviour
     /// <returns>GameObject с AudioSource компонентом</returns>
     public AudioSource PlaySound(AudioClip clip, float volume = 1f, bool loop = false)
     {
-        Debug.Log("PlaySound");
         if (clip == null)
         {
             Debug.LogWarning("AudioManager: Попытка воспроизвести null AudioClip!");

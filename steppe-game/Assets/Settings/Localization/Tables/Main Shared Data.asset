@@ -3155,6 +3155,54 @@ MonoBehaviour:
     m_Key: Hit the targets
     m_Metadata:
       m_Items: []
+  - m_Id: 126257041631236096
+    m_Key: Historical and Cultural Ethnographic Center
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126278647380332544
+    m_Key: East Kazakhstan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126284134779867136
+    m_Key: Alakol
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126289640542064640
+    m_Key: Katon Karagay
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126290901366624256
+    m_Key: South Kazakhstan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126293154626424832
+    m_Key: Zhidebai Borili
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126913930555707392
+    m_Key: rocketlaunch1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126914268713078784
+    m_Key: rocketlaunch2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126934532263923712
+    m_Key: rocketlaunch3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126937459384799232
+    m_Key: rocketlaunch4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126980388493086720
+    m_Key: rocketlaunchFinish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126993675788111872
+    m_Key: rocketlaunch5
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

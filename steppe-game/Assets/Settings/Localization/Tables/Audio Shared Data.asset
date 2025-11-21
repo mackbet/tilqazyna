@@ -23,6 +23,30 @@ MonoBehaviour:
     m_Key: dialog_choose_city_2
     m_Metadata:
       m_Items: []
+  - m_Id: 1531361006604288
+    m_Key: rocketlaunch1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1531456250859520
+    m_Key: rocketlaunch2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1541154039549952
+    m_Key: rocketlaunch3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1542814832939008
+    m_Key: rocketlaunch4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1546838974025728
+    m_Key: rocketlaunchFinish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1560292191522816
+    m_Key: rocketlaunch5
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 4486272774368133209
@@ -47,5 +71,29 @@ MonoBehaviour:
           m_TableCodes:
           - ru
           - kk
+        - m_KeyId: 1531361006604288
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 1531456250859520
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 1541154039549952
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 1542814832939008
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 1546838974025728
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 1560292191522816
+          m_TableCodes:
+          - kk
+          - ru
         m_TypeString: UnityEngine.AudioClip, UnityEngine.AudioModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
