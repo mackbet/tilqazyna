@@ -3203,6 +3203,22 @@ MonoBehaviour:
     m_Key: rocketlaunch5
     m_Metadata:
       m_Items: []
+  - m_Id: 127976065385779200
+    m_Key: Taykazan
+    m_Metadata:
+      m_Items: []
+  - m_Id: 127976876958437376
+    m_Key: Door
+    m_Metadata:
+      m_Items: []
+  - m_Id: 127977062174707712
+    m_Key: Lamp
+    m_Metadata:
+      m_Items: []
+  - m_Id: 127977172770115584
+    m_Key: Pattern
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
