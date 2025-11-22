@@ -173,6 +173,8 @@ GameObject:
   - component: {fileID: 313511803914551716}
   - component: {fileID: 850614724937219451}
   - component: {fileID: 2500006567788536184}
+  - component: {fileID: 8388128850514189012}
+  - component: {fileID: 8843493673277489375}
   m_Layer: 5
   m_Name: Word
   m_TagString: Untagged
@@ -198,7 +200,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 0}
+  m_SizeDelta: {x: 250, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &850614724937219451
 CanvasRenderer:
@@ -238,3 +240,31 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 6
+--- !u!225 &8388128850514189012
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8537845517784411077}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &8843493673277489375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8537845517784411077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be4a6c5e2d0ae6a46ad9e26a19a145bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ArrangeNamesPlug
+  rectTransform: {fileID: 313511803914551716}
+  image: {fileID: 2500006567788536184}
+  canvas: {fileID: 0}
+  canvasGroup: {fileID: 8388128850514189012}

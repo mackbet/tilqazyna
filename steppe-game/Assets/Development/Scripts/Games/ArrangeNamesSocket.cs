@@ -1,7 +1,65 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ArrangeNamesSocket : MonoBehaviour
 {
+    [SerializeField] private Image image;
+    [SerializeField] private List<ArrangeNamesPlug> validPlugs = new List<ArrangeNamesPlug>();
+
+    private bool isOccupied = false;
+    private ArrangeNamesPlug attachedPlug = null;
+
     public event Action<ArrangeNamesSocket> OnSocketEntered;
+
+#if UNITY_EDITOR
+    private void OnValidate()
+    {
+        if (!image)
+            image = GetComponent<Image>();
+    }
+#endif
+
+    private void Start()
+    {
+        if (image != null)
+        {
+            image.alphaHitTestMinimumThreshold = 0.1f;
+        }
+    }
+
+    public bool CanAcceptPlug(ArrangeNamesPlug plug)
+    {
+        if (isOccupied)
+            return false;
+
+        return validPlugs.Contains(plug);
+    }
+
+    public void AttachPlug(ArrangeNamesPlug plug)
+    {
+        if (!CanAcceptPlug(plug))
+            return;
+
+        isOccupied = true;
+        attachedPlug = plug;
+
+        OnSocketEntered?.Invoke(this);
+    }
+
+    public void DetachPlug()
+    {
+        isOccupied = false;
+        if (attachedPlug != null)
+        {
+            attachedPlug.Reset();
+            attachedPlug = null;
+        }
+    }
+
+    public void Reset()
+    {
+        DetachPlug();
+    }
 }

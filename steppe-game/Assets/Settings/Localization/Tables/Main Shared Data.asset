@@ -3219,6 +3219,26 @@ MonoBehaviour:
     m_Key: Pattern
     m_Metadata:
       m_Items: []
+  - m_Id: 128012861389819904
+    m_Key: Carpet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128013063844679680
+    m_Key: Vessel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128013182186967040
+    m_Key: Chest
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128013300629917696
+    m_Key: Book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128013628825817088
+    m_Key: ArrangeNames
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
