@@ -3267,6 +3267,10 @@ MonoBehaviour:
     m_Key: arrangeNames6
     m_Metadata:
       m_Items: []
+  - m_Id: 128094228207259648
+    m_Key: Craft tools
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
