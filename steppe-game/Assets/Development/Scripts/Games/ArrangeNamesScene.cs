@@ -1,12 +1,12 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ArrangeNamesScene : MonoBehaviour
 {
     [SerializeField] private ArrangeNamesSocket[] sockets;
     private int count = 0;
-
-    public event Action OnSceneCompleted;
+    public UnityEvent OnSceneCompleted;
 
     private void OnEnable()
     {

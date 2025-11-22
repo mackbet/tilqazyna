@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class ArrangeNamesSocket : MonoBehaviour
 {
     [SerializeField] private Image image;
+    [SerializeField] private RectTransform attachPoint;
     [SerializeField] private List<ArrangeNamesPlug> validPlugs = new List<ArrangeNamesPlug>();
 
     private bool isOccupied = false;
@@ -13,11 +14,16 @@ public class ArrangeNamesSocket : MonoBehaviour
 
     public event Action<ArrangeNamesSocket> OnSocketEntered;
 
+    public RectTransform AttachPoint => attachPoint != null ? attachPoint : GetComponent<RectTransform>();
+
 #if UNITY_EDITOR
     private void OnValidate()
     {
         if (!image)
             image = GetComponent<Image>();
+            
+        if (!attachPoint)
+            attachPoint = GetComponent<RectTransform>();
     }
 #endif
 

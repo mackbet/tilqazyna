@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
@@ -6,8 +7,12 @@ public class CustomImageButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
 {
     [SerializeField] private Image image;
 
+    public event Action OnButtonPressed;
+    public event Action OnButtonReleased;
+    public event Action OnButtonClicked;
+
 #if UNITY_EDITOR
-    private void OnValidate()
+    protected virtual void OnValidate()
     {
         if (!image)
             image = GetComponent<Image>();
@@ -39,16 +44,16 @@ public class CustomImageButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
     protected virtual void OnPressed()
     {
-        // Вызывается при нажатии
+        OnButtonPressed?.Invoke();
     }
 
     protected virtual void OnReleased()
     {
-        // Вызывается при отпускании
+        OnButtonReleased?.Invoke();
     }
 
     protected virtual void Clicked()
     {
-        // Вызывается при клике (после release)
+        OnButtonClicked?.Invoke();
     }
 }

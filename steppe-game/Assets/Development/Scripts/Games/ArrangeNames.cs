@@ -11,33 +11,19 @@ public class ArrangeNames : GameController
     protected override void InitializeGame()
     {
         base.InitializeGame();
-
-        NextScene();
     }
 
     public void NextScene()
     {
-        if (currentScene)
-        {
-            if (currentSceneController != null)
-            {
-                currentSceneController.OnSceneCompleted -= OnSceneCompleted;
-            }
-
-            currentScene.SetActive(false);
-        }
-
         index++;
 
         if (index < scenes.Length)
         {
+            if (currentScene)
+                currentScene.SetActive(false);
+                
             currentScene = scenes[index];
             currentSceneController = currentScene.GetComponent<ArrangeNamesScene>();
-
-            if (currentSceneController != null)
-            {
-                currentSceneController.OnSceneCompleted += OnSceneCompleted;
-            }
 
             currentScene.SetActive(true);
         }
@@ -47,18 +33,8 @@ public class ArrangeNames : GameController
         }
     }
 
-    private void OnSceneCompleted()
-    {
-        NextScene();
-    }
-
     protected override void OnDisable()
     {
         base.OnDisable();
-
-        if (currentSceneController != null)
-        {
-            currentSceneController.OnSceneCompleted -= OnSceneCompleted;
-        }
     }
 }
