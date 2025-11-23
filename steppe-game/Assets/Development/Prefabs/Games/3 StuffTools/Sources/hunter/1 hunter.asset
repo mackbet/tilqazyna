@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fae24f1bd4847045adfcffc9695e982, type: 3}
+  m_Name: 1 hunter
+  m_EditorClassIdentifier: Assembly-CSharp::CraftToolsProfession
+  <Name>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:aa0c96a897bb2520f8d789afe9cb43d5
+    m_TableEntryReference:
+      m_KeyId: 128326105224597504
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  <WaitingSprite>k__BackingField: {fileID: 21300000, guid: bb6a678c3f170644eac77e6db0fa04ad, type: 3}
+  <FunSprite>k__BackingField: {fileID: 21300000, guid: 58b2900629079424bba83bbdb6a99feb, type: 3}
+  <SadSprite>k__BackingField: {fileID: 21300000, guid: 643d059ba63758840967c8b12d0bc98d, type: 3}
+  <FinalSprite>k__BackingField: {fileID: 21300000, guid: 99173ad59ced3294d95ea3b4d9cc7e68, type: 3}
+  <Stuff>k__BackingField:
+  - {fileID: 11400000, guid: 3982834a9408c66499cdfc96984bfc99, type: 2}
+  - {fileID: 11400000, guid: d8f1bd8a76b5938468bba4dfcec4e7bc, type: 2}
+  - {fileID: 11400000, guid: 764874f421178d24db11bf23395bca6d, type: 2}
+  - {fileID: 11400000, guid: 3a8d813f312c4e246b77441710748c74, type: 2}
+  references:
+    version: 2
+    RefIds: []

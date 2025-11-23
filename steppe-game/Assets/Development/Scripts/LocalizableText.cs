@@ -3,47 +3,44 @@ using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 
-namespace BigDreamLab.LocalizationSystem
+public class LocalizableText : MonoBehaviour
 {
-    public class LocalizableText : MonoBehaviour
+    [SerializeField] private TextMeshProUGUI display;
+    [field: SerializeField] public LocalizedString LocalizedString { get; private set; }
+
+    public void SetString(LocalizedString localization)
     {
-        [SerializeField] private TextMeshProUGUI display;
-        [field: SerializeField] public LocalizedString LocalizedString { get; private set; }
+        LocalizedString = localization;
+        Localize();
+    }
 
-        public void SetString(LocalizedString localization)
-        {
-            LocalizedString = localization;
+    private void OnEnable()
+    {
+        if (LocalizedString != null)
             Localize();
-        }
 
-        private void OnEnable()
-        {
-            if (LocalizedString != null)
-                Localize();
+        LocalizationSettings.SelectedLocaleChanged += OnSelectedLocaleChanged;
+    }
 
-            LocalizationSettings.SelectedLocaleChanged += OnSelectedLocaleChanged;
-        }
+    private void OnDisable()
+    {
+        LocalizationSettings.SelectedLocaleChanged -= OnSelectedLocaleChanged;
+    }
 
-        private void OnDisable()
-        {
-            LocalizationSettings.SelectedLocaleChanged -= OnSelectedLocaleChanged;
-        }
-
-        private void OnSelectedLocaleChanged(Locale obj) => Localize();
+    private void OnSelectedLocaleChanged(Locale obj) => Localize();
 
 
-        private void Localize()
-        {
-            if (LocalizedString.TableEntryReference.KeyId != 0)
-                display.text = LocalizedString.GetLocalizedString();
-        }
+    private void Localize()
+    {
+        if (LocalizedString.TableEntryReference.KeyId != 0)
+            display.text = LocalizedString.GetLocalizedString();
+    }
 
-        private void OnValidate()
-        {
-            if (!display) display = GetComponent<TextMeshProUGUI>();
+    private void OnValidate()
+    {
+        if (!display) display = GetComponent<TextMeshProUGUI>();
 
-            if (display.text == "")
-                Localize();
-        }
+        if (display.text == "")
+            Localize();
     }
 }

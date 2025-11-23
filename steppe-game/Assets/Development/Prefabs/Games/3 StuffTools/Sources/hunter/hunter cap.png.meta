@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7721186f8d797a44bbecefaefb976f74
+guid: 137e8d3968f67f04ba1391341189eb6f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6526394482378017634
-    second: BackButtonBackground_0
+      213: 3944007334588457206
+    second: hunter golden eagle (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -122,30 +122,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BackButtonBackground_0
+      name: hunter golden eagle (1)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 304
-        height: 86
+        x: 468
+        y: 388
+        width: 565
+        height: 676
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e94f9cdebc69d65a0800000000000000
-      internalID: -6526394482378017634
+      spriteID: 6f02ea946cdebb630800000000000000
+      internalID: 3944007334588457206
       vertices: []
       indices: 
       edges: []
@@ -164,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BackButtonBackground_0: -6526394482378017634
+      hunter golden eagle (1)_0: 3944007334588457206
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b55afa2cbae4de488c090b62e97482e, type: 3}
+  m_Name: saber
+  m_EditorClassIdentifier: Assembly-CSharp::CraftToolsStuff
+  <Phrase>k__BackingField:
+    localizedString:
+      m_TableReference:
+        m_TableCollectionName: GUID:aa0c96a897bb2520f8d789afe9cb43d5
+      m_TableEntryReference:
+        m_KeyId: 128329227388997632
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
+    localizedAudio:
+      m_TableReference:
+        m_TableCollectionName: GUID:5b340f3ed11184147b2effa5c79d2393
+      m_TableEntryReference:
+        m_KeyId: 1546838974025728
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+  <Sprite>k__BackingField: {fileID: 21300000, guid: ee00494127426614597916d24a338211, type: 3}
+  references:
+    version: 2
+    RefIds: []

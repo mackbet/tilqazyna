@@ -3271,6 +3271,86 @@ MonoBehaviour:
     m_Key: Craft tools
     m_Metadata:
       m_Items: []
+  - m_Id: 128325903084310528
+    m_Key: warrior
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128326105224597504
+    m_Key: hunter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128326390936391680
+    m_Key: jeweler
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128326621820243968
+    m_Key: bellows
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128326816700190720
+    m_Key: bracelet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128327007155146752
+    m_Key: earrings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128327173413163008
+    m_Key: ingot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128328048466612224
+    m_Key: bow arrows
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128328218788909056
+    m_Key: cap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128328377400709120
+    m_Key: gloves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128329088205213696
+    m_Key: golden eagle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128329202730684416
+    m_Key: chain mail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128329227388997632
+    m_Key: saber
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128329262449184768
+    m_Key: saddle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128329288961380352
+    m_Key: shield
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128368123866927104
+    m_Key: stuffTools1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128368334110609408
+    m_Key: stuffTools2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128368581608099840
+    m_Key: stuffTools3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128368980389941248
+    m_Key: stuffTools4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 128369575607816192
+    m_Key: stuffTools5
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

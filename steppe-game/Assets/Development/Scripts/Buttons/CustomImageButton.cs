@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class CustomImageButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler
 {
-    [SerializeField] private Image image;
+    [SerializeField] protected Image image;
 
     public event Action OnButtonPressed;
     public event Action OnButtonReleased;
