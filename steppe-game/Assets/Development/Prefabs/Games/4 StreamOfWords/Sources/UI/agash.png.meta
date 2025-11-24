@@ -1,0 +1,871 @@
+fileFormatVersion: 2
+guid: a439b6885b13eae4b9a4a0696a5d8800
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2274308761740691283
+    second: agash_0
+  - first:
+      213: 8254348583886731011
+    second: agash_1
+  - first:
+      213: 6121752964594921663
+    second: agash_2
+  - first:
+      213: 8050682621364160260
+    second: agash_3
+  - first:
+      213: 8621947499570338999
+    second: agash_4
+  - first:
+      213: -6335378803722481998
+    second: agash_5
+  - first:
+      213: -2046335358157446905
+    second: agash_6
+  - first:
+      213: 1706632048500733666
+    second: agash_7
+  - first:
+      213: -6254283862574926803
+    second: agash_8
+  - first:
+      213: 7561170140701791554
+    second: agash_9
+  - first:
+      213: 1346644405052842533
+    second: agash_10
+  - first:
+      213: 6025284752326719005
+    second: agash_11
+  - first:
+      213: -5701351141361036283
+    second: agash_12
+  - first:
+      213: -5947812559253934537
+    second: agash_13
+  - first:
+      213: 7511632188889960332
+    second: agash_14
+  - first:
+      213: -5551245863743336490
+    second: agash_15
+  - first:
+      213: 4394456549713828395
+    second: agash_16
+  - first:
+      213: -4918024173072855024
+    second: agash_17
+  - first:
+      213: 3629587716907549382
+    second: agash_18
+  - first:
+      213: -2644914476279526451
+    second: agash_19
+  - first:
+      213: -3161238247742797990
+    second: agash_20
+  - first:
+      213: 4887928904382242474
+    second: agash_21
+  - first:
+      213: 6805216892866279741
+    second: agash_22
+  - first:
+      213: 4671851971203839684
+    second: agash_23
+  - first:
+      213: -6233010472411164937
+    second: agash_24
+  - first:
+      213: -2673505166483116801
+    second: agash_25
+  - first:
+      213: -104181469402768014
+    second: agash_26
+  - first:
+      213: 7493804701974987806
+    second: agash_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: agash_0
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 568
+        width: 98
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da833e22b380070e0800000000000000
+      internalID: -2274308761740691283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_1
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 642
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30731dabd465d8270800000000000000
+      internalID: 8254348583886731011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_2
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 447
+        width: 805
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb0ff5903e5d4f450800000000000000
+      internalID: 6121752964594921663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_3
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 853
+        width: 30
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40742d59035c9bf60800000000000000
+      internalID: 8050682621364160260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_4
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 823
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bc15ffd19f47a770800000000000000
+      internalID: 8621947499570338999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_5
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 682
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2be05965b863418a0800000000000000
+      internalID: -6335378803722481998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_6
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 756
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70124bd65d4f993e0800000000000000
+      internalID: -2046335358157446905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_7
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 777
+        width: 35
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e6fe255ecc2fa710800000000000000
+      internalID: 1706632048500733666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_8
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 848
+        width: 48
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2473cea6f15439a0800000000000000
+      internalID: -6254283862574926803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_9
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 582
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24512d2ae2caee860800000000000000
+      internalID: 7561170140701791554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_10
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 578
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52221f993fd30b210800000000000000
+      internalID: 1346644405052842533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_11
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 685
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16f2051f8c1e9350800000000000000
+      internalID: 6025284752326719005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_12
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 722
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 504586f085bb0e0b0800000000000000
+      internalID: -5701351141361036283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_13
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 691
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73eef0f7dff157da0800000000000000
+      internalID: -5947812559253934537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_14
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 614
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8f0d2e6dadae3860800000000000000
+      internalID: 7511632188889960332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_15
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 582
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dfc8b67c4306f2b0800000000000000
+      internalID: -5551245863743336490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_16
+      rect:
+        serializedVersion: 2
+        x: 1139
+        y: 642
+        width: 38
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ad49af2fe3cfc30800000000000000
+      internalID: 4394456549713828395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_17
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 816
+        width: 48
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0105537421bafbbb0800000000000000
+      internalID: -4918024173072855024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_18
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 775
+        width: 34
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c245635cc2ee5230800000000000000
+      internalID: 3629587716907549382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_19
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 545
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb02141c406b4bd0800000000000000
+      internalID: -2644914476279526451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_20
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 545
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5789e800960124d0800000000000000
+      internalID: -3161238247742797990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_21
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 547
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae5111f07965d340800000000000000
+      internalID: 4887928904382242474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_22
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 538
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3938ce55bcf07e50800000000000000
+      internalID: 6805216892866279741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_23
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 510
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c630d28d90c5d040800000000000000
+      internalID: 4671851971203839684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_24
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 513
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe84aecff5ef79a0800000000000000
+      internalID: -6233010472411164937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_25
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 514
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffc2a96473dc5ead0800000000000000
+      internalID: -2673505166483116801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_26
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 447
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27dd11c618fdd8ef0800000000000000
+      internalID: -104181469402768014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: agash_27
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 447
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e140f5d2ca75ff760800000000000000
+      internalID: 7493804701974987806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      agash_0: -2274308761740691283
+      agash_1: 8254348583886731011
+      agash_10: 1346644405052842533
+      agash_11: 6025284752326719005
+      agash_12: -5701351141361036283
+      agash_13: -5947812559253934537
+      agash_14: 7511632188889960332
+      agash_15: -5551245863743336490
+      agash_16: 4394456549713828395
+      agash_17: -4918024173072855024
+      agash_18: 3629587716907549382
+      agash_19: -2644914476279526451
+      agash_2: 6121752964594921663
+      agash_20: -3161238247742797990
+      agash_21: 4887928904382242474
+      agash_22: 6805216892866279741
+      agash_23: 4671851971203839684
+      agash_24: -6233010472411164937
+      agash_25: -2673505166483116801
+      agash_26: -104181469402768014
+      agash_27: 7493804701974987806
+      agash_3: 8050682621364160260
+      agash_4: 8621947499570338999
+      agash_5: -6335378803722481998
+      agash_6: -2046335358157446905
+      agash_7: 1706632048500733666
+      agash_8: -6254283862574926803
+      agash_9: 7561170140701791554
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
