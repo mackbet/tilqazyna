@@ -15,8 +15,36 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 92bc637b8a39f1ec3800f3ecba815b59
   m_SerializeEntries:
+  - m_GUID: 0203bddc44ea2fa4eba5f3a9d5dda57d
+    m_Address: "\u0421\u044B\u0440\u0493\u0430"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c618de5881506444a7d088ba2e2e5af
+    m_Address: "\u0421\u0430\u0434\u0430\u049B \u043F\u0435\u043D \u0436\u0435\u0431\u0435"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0dc4ddd898482b041bed3283ae8e37be
+    m_Address: "\u041A\u04E9\u0440\u0456\u043A"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1363c255b76044b0884b6cd942155da2
     m_Address: ChooseCityDialogue1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 140b8dde190fb5c429d9ef92c652bed6
+    m_Address: "\u0421\u0430\u0443\u044B\u0442"
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
@@ -29,15 +57,71 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d780fcd39167a44da0e04c6ff13c35f
+    m_Address: "\u0411\u04B1\u043B\u0493\u0430\u0440\u044B \u0431\u0456\u043B\u0435\u043A\u0448\u0435"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5b340f3ed11184147b2effa5c79d2393
     m_Address: Assets/Development/Audio Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62b696210eb5aa94590ad95c376c290d
+    m_Address: "\u041A\u04AF\u043C\u0456\u0441 \u043A\u0435\u0441\u0435\u0433\u0456"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b548c6a429332248aa1aeeff669c9da
+    m_Address: "\u0411\u04AF\u0440\u043A\u0456\u0442"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6e63fea3879025040afefd5c74fcc2e8
+    m_Address: "\u049A\u044B\u043B\u044B\u0448"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d16abfeb07707d4f9111f999d09df7a
+    m_Address: "\u049A\u0430\u043B\u049B\u0430\u043D"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e42cbe65857d8c4dbc503b8220d2899
+    m_Address: "\u0411\u04E9\u0440i\u043A"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8fc090436e5bd4449b187a725cbc6cd0
+    m_Address: "\u0415\u0440-\u0442\u04B1\u0440\u043C\u0430\u043D"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: aa0c96a897bb2520f8d789afe9cb43d5
     m_Address: Assets/Settings/Localization/Tables/Main Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f2853a4e075d98641ab374b0747a4366
+    m_Address: "\u0411\u0456\u043B\u0435\u0437\u0456\u043A"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: b2812d830086c3c3e9abb97cbd5be879, type: 2}

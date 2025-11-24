@@ -69,5 +69,11 @@ public class CraftStuffButton : CustomImageButton
     public void Hide()
     {
         gameObject.SetActive(false);
+        soundButton.gameObject.SetActive(false);
+    }
+
+    public void HideSoundButton()
+    {
+        soundButton.gameObject.SetActive(false);
     }
 }

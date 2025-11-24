@@ -47,6 +47,98 @@ MonoBehaviour:
     m_Key: rocketlaunch5
     m_Metadata:
       m_Items: []
+  - m_Id: 3126729087537152
+    m_Key: arrangeNames1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3126793231028224
+    m_Key: arrangeNames2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3126872687923200
+    m_Key: arrangeNames3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3126948017623040
+    m_Key: arrangeNames4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3127045895901184
+    m_Key: arrangeNames6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3127171045543936
+    m_Key: arrangeNames5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3131962471632896
+    m_Key: stuffTools1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3132026887753728
+    m_Key: stuffTools2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3132071112495104
+    m_Key: stuffTools3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3132153350213632
+    m_Key: stuffTools4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3132257033408512
+    m_Key: stuffTools5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3134574348619776
+    m_Key: bow arrows
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3134647988015104
+    m_Key: cap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3134713557569536
+    m_Key: gloves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3134764996513792
+    m_Key: golden eagle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3134848882593792
+    m_Key: bellows
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3134868339970048
+    m_Key: bracelet
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3134882772570112
+    m_Key: earrings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3134897767206912
+    m_Key: ingot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3135045972938752
+    m_Key: chain mail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3135069163245568
+    m_Key: saber
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3135084363403264
+    m_Key: saddle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3135099995574272
+    m_Key: shield
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 4486272774368133209
@@ -92,6 +184,98 @@ MonoBehaviour:
           - kk
           - ru
         - m_KeyId: 1560292191522816
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3126729087537152
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3126793231028224
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3126872687923200
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3126948017623040
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3127045895901184
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3127171045543936
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3131962471632896
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3132026887753728
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3132071112495104
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3132153350213632
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3132257033408512
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3134574348619776
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3134647988015104
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3134713557569536
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3134764996513792
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3134897767206912
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3134882772570112
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3134868339970048
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3134848882593792
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3135099995574272
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3135084363403264
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3135069163245568
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 3135045972938752
           m_TableCodes:
           - kk
           - ru

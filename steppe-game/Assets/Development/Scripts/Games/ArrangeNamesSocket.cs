@@ -8,7 +8,8 @@ public class ArrangeNamesSocket : MonoBehaviour
     [SerializeField] private Image image;
     [SerializeField] private RectTransform attachPoint;
     [SerializeField] private List<ArrangeNamesPlug> validPlugs = new List<ArrangeNamesPlug>();
-
+    [SerializeField] private Material acceptedColor;
+    private Material material;
     private bool isOccupied = false;
     private ArrangeNamesPlug attachedPlug = null;
 
@@ -21,7 +22,7 @@ public class ArrangeNamesSocket : MonoBehaviour
     {
         if (!image)
             image = GetComponent<Image>();
-            
+
         if (!attachPoint)
             attachPoint = GetComponent<RectTransform>();
     }
@@ -48,6 +49,7 @@ public class ArrangeNamesSocket : MonoBehaviour
         if (!CanAcceptPlug(plug))
             return;
 
+        image.material = acceptedColor;
         isOccupied = true;
         attachedPlug = plug;
 
@@ -68,4 +70,5 @@ public class ArrangeNamesSocket : MonoBehaviour
     {
         DetachPlug();
     }
+
 }

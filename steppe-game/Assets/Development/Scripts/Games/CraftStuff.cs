@@ -123,7 +123,7 @@ public class CraftStuff : GameController
         {
             button.transform.DOScale(0f, shrinkDuration)
                 .SetEase(Ease.InBack)
-                .OnComplete(() => button.gameObject.SetActive(false));
+                .OnComplete(() => button.Hide());
         }
 
         float delay = wrongButtons.Count > 0 ? shrinkDuration : 0f;
@@ -135,6 +135,7 @@ public class CraftStuff : GameController
 
             foreach (var button in correctButtons)
             {
+                button.HideSoundButton();
                 sequence.Join(button.transform.DOMove(targetPos, flyDuration).SetEase(Ease.InBack));
                 sequence.Join(button.transform.DOScale(0f, flyDuration).SetEase(Ease.InBack));
             }

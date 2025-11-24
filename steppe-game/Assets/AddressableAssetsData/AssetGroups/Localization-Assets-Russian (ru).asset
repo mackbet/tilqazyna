@@ -15,6 +15,42 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Russian (ru)
   m_GUID: 3eff7847c9c71ed47992f8927a3ba691
   m_SerializeEntries:
+  - m_GUID: 03560192cc28dfd4094d52d0e49541a3
+    m_Address: arrangeNames6_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 23d8bd75d5596be4392a26443725dff5
+    m_Address: arrangeNames4_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2472055d4886fd943ac57fce71fe7ed1
+    m_Address: stuffTools4_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f3144ad20f0d7b44bf6f538ff94f864
+    m_Address: arrangeNames2_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3dce85950a9cd8c4cb8f0b02ea4b366c
+    m_Address: arrangeNames5_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 450a91e63e25d724aaafe794d2a73a13
+    m_Address: stuffTools3_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 51b1373bef8ce864283be282c3f40998
     m_Address: rocketlaunch3_RU
     m_ReadOnly: 1
@@ -27,8 +63,32 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c80ffb1196232f48a8cd008575969ba
+    m_Address: arrangeNames3_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab5b79ad694a7b146b3c211b29ebf6c3
+    m_Address: stuffTools2_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b80af3fbd20434b42b495ef2302b5a43
     m_Address: rocketlaunch4_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: be5b79e8fd0e714429442b59fa667b93
+    m_Address: arrangeNames1_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3a9267e263d2b54b808cd1c106e3337
+    m_Address: stuffTools5_RU
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru
@@ -41,6 +101,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ef39ee9002779fb46babdbc495f793dd
     m_Address: rocketlaunch5_RU
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eff5b95e2c2e84240a4d83aed504d28a
+    m_Address: stuffTools1_RU
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru
