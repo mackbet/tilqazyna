@@ -6,7 +6,7 @@ public class CustomButton : MonoBehaviour
     [SerializeField] private Button button;
 
 #if UNITY_EDITOR
-    private void OnValidate()
+    protected virtual void OnValidate()
     {
         if (!button)
             button = GetComponent<Button>();
@@ -25,6 +25,6 @@ public class CustomButton : MonoBehaviour
 
     protected virtual void Clicked()
     {
-        
+
     }
 }

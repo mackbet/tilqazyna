@@ -3419,6 +3419,34 @@ MonoBehaviour:
     m_Key: Horse
     m_Metadata:
       m_Items: []
+  - m_Id: 129845274399100928
+    m_Key: Quiz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129877487199080448
+    m_Key: Question 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129877625745330176
+    m_Key: Answer 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129877702140383232
+    m_Key: Answer 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129877745626927104
+    m_Key: Answer 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129877869979652096
+    m_Key: Answer 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129877992218447872
+    m_Key: Question 2
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

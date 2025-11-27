@@ -3677,6 +3677,34 @@ MonoBehaviour:
     m_Localized: "\u0416\u044B\u043B\u049B\u044B"
     m_Metadata:
       m_Items: []
+  - m_Id: 129845274399100928
+    m_Localized: "\u0412\u0438\u043A\u0442\u043E\u0440\u0438\u043D\u0430"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129877487199080448
+    m_Localized: Question 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129877745626927104
+    m_Localized: Answer 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129877702140383232
+    m_Localized: Answer 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129877625745330176
+    m_Localized: Answer 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129877869979652096
+    m_Localized: Answer 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 129877992218447872
+    m_Localized: Question 2
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

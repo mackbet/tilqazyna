@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 5994fd7bac9876a4cbe5a1719def2ad0
+guid: 4e79d5a42e3e096419f2e911dd177b85
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8377895971564688389
-    second: ayu_0
-  - first:
-      213: -1412408334865954624
-    second: ayu_1
-  - first:
-      213: -4248464704982539409
-    second: ayu_2
+      213: -2700381060529858895
+    second: ayu 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -30,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -132,57 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ayu_0
+      name: ayu 1_0
       rect:
         serializedVersion: 2
-        x: 1242
-        y: 639
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5041a468ff3444470800000000000000
-      internalID: 8377895971564688389
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ayu_1
-      rect:
-        serializedVersion: 2
-        x: 1369
-        y: 394
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0c8838a4a1e166ce0800000000000000
-      internalID: -1412408334865954624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ayu_2
-      rect:
-        serializedVersion: 2
-        x: 1420
+        x: 1426
         y: 308
-        width: 442
-        height: 315
+        width: 432
+        height: 314
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f632bb23cdb6a05c0800000000000000
-      internalID: -4248464704982539409
+      spriteID: 1b6dce09bb1568ad0800000000000000
+      internalID: -2700381060529858895
       vertices: []
       indices: 
       edges: []
@@ -211,9 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ayu_0: 8377895971564688389
-      ayu_1: -1412408334865954624
-      ayu_2: -4248464704982539409
+      ayu 1_0: -2700381060529858895
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

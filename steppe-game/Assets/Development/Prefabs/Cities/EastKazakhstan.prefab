@@ -1177,7 +1177,7 @@ PrefabInstance:
     - target: {fileID: 7094043963711371333, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: gameView
       value: 
-      objectReference: {fileID: 2313823898805712846, guid: da64ebc45e1f6194e8bd45ee9371bb06, type: 3}
+      objectReference: {fileID: 7300590894235645829, guid: 7db9632f5b272a84f81341e22c56cfa5, type: 3}
     - target: {fileID: 7094043963711371333, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: gameTitle.m_TableEntryReference.m_KeyId
       value: 126293154626424832
