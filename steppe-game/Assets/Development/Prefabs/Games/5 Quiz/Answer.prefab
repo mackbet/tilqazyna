@@ -224,7 +224,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 5635755762637176840}
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -241,6 +241,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuizButton
   button: {fileID: 8051508248233130685}
+  answerText: {fileID: 2874929460708570403}
+  background: {fileID: 5635755762637176840}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  correctColor: {r: 0, g: 1, b: 0, a: 1}
+  wrongColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1976510094094869125
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,14 +304,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6526394482378017634, guid: 7721186f8d797a44bbecefaefb976f74, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9a51d323d336645469a077e8e6baacb7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

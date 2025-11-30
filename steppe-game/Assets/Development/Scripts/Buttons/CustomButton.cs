@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CustomButton : MonoBehaviour
 {
     [SerializeField] private Button button;
+    public event Action OnButtonClicked;
 
 #if UNITY_EDITOR
     protected virtual void OnValidate()

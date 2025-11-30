@@ -50,8 +50,29 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19bc3f780a4806145afac28b6e3276b3
+    m_Address: Question 8
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2a7727b179ae54249b20264c0ebd5bde
     m_Address: Tazy_3_ChooseCity
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d42e6b74da01ac4bb34207b973fee6e
+    m_Address: Question 7
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42907889feca0c94faff1895e359a7a4
+    m_Address: Question 5
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
@@ -90,6 +111,13 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 779e765e8ef712946913a6b5b071c54d
+    m_Address: arrangeNames8_KK
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7d16abfeb07707d4f9111f999d09df7a
     m_Address: "\u049A\u0430\u043B\u049B\u0430\u043D"
     m_ReadOnly: 1
@@ -97,8 +125,36 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 81f1fc6d95910d04d9310f3987dedfc1
+    m_Address: Question 4
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8386fd4871955934993ff87e7a0967f7
+    m_Address: Question 2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8e42cbe65857d8c4dbc503b8220d2899
     m_Address: "\u0411\u04E9\u0440i\u043A"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ef9ca4d5b483c847a2292c7a435c90e
+    m_Address: Question 10
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f6d183a5e32f224b925048847f689cf
+    m_Address: Question 9
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
@@ -116,8 +172,36 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2ad75cacd19b4840a84b74db8f62eba
+    m_Address: Question 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7b2e7585620dd044be3c682c1e78f3d
+    m_Address: stuffToolsFinish_KK
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec08c1ad26399284d8397732b5933c05
+    m_Address: Question 6
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f2853a4e075d98641ab374b0747a4366
     m_Address: "\u0411\u0456\u043B\u0435\u0437\u0456\u043A"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f49452951be5df343965bd90f861a8af
+    m_Address: arrangeNames7_KK
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk

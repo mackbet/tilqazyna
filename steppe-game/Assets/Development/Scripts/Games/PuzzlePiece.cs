@@ -145,8 +145,10 @@ public class PuzzlePiece : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             rectTransform.anchoredPosition = initialPosition;
             isLocked = true;
             canvasGroup.blocksRaycasts = false;
+            transform.SetAsFirstSibling();
 
             OnPieceLocked?.Invoke(this);
+
         }
     }
 

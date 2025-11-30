@@ -222,12 +222,6 @@ public class Quiz : GameController
     {
         Debug.Log($"Викторина завершена! Правильных ответов: {correctAnswersCount}/{selectedQuestions.Count}");
 
-        // Очищаем текстовое поле
-        if (questionField != null)
-        {
-            questionField.text = $"Результат: {correctAnswersCount}/{selectedQuestions.Count}";
-        }
-
         // Завершаем игру
         FinishGame();
     }
