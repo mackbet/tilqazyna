@@ -34,7 +34,6 @@ public class StreamOfWords : GameController
 
         // Показываем первое слово
         currentWordIndex = 0;
-        ShowCurrentWord();
     }
 
     protected override void OnDisable()
@@ -68,7 +67,7 @@ public class StreamOfWords : GameController
         }
     }
 
-    private void ShowCurrentWord()
+    public void ShowCurrentWord()
     {
         if (currentWordIndex >= selectedTargets.Count)
         {
@@ -84,6 +83,7 @@ public class StreamOfWords : GameController
         {
             textField.text = currentCorrectTarget.Word;
             soundButton.SetAudio(currentCorrectTarget.Phrase.LocalizedAudio);
+            soundButton.PlayAudio();
         }
     }
 

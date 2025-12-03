@@ -352,8 +352,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5504925560885248
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128830170840846336
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -473,8 +481,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5505274392760320
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128830666905374720
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -606,8 +622,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5505095883182080
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128830605500764160
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -727,8 +751,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5505285868376064
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128830822761517056
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -989,7 +1021,7 @@ PrefabInstance:
       objectReference: {fileID: 661622492904393361}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[0].phrase.localizedAudio.m_TableEntryReference.m_KeyId
-      value: 0
+      value: 5504239985119232
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[1].OnStartedEvent.m_PersistentCalls.m_Calls.Array.size
@@ -997,7 +1029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[1].phrase.localizedAudio.m_TableEntryReference.m_KeyId
-      value: 0
+      value: 5504567354740736
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[2].phrase.localizedAudio.m_TableEntryReference.m_KeyId
@@ -1033,11 +1065,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[0].phrase.localizedAudio.m_TableReference.m_TableCollectionName
-      value: 
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[1].phrase.localizedAudio.m_TableReference.m_TableCollectionName
-      value: 
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[2].phrase.localizedAudio.m_TableReference.m_TableCollectionName
@@ -1227,8 +1259,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5505033744568320
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128829450196504576
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -1348,8 +1388,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5505079475064832
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128829847640363008
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -1716,8 +1764,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5505301064339456
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128830872187195392
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -1837,8 +1893,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5505010659119104
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128829084029571072
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -1970,8 +2034,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5505142892941312
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128830114632978432
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -2091,8 +2163,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5505051624886272
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128829260622352384
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -2212,8 +2292,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5505208391192576
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128830307138949120
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -2333,8 +2421,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5505261344280576
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128830535573327872
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -2454,8 +2550,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5505225705279488
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128830432531861504
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -2575,8 +2679,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5505112257744896
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128829976023814144
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -2696,8 +2808,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5505242952257536
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128830488324493312
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x
@@ -2834,7 +2954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[3].delayAfterPhrase
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[4].delayAfterPhrase
@@ -2917,6 +3037,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
+      propertyPath: dialoguePhrases.Array.data[3].onFinishedActivateables.Array.data[1].state
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[4].onFinishedActivateables.Array.data[0].state
       value: 2
       objectReference: {fileID: 0}
@@ -2937,12 +3061,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5252601318657801131}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
+      propertyPath: dialoguePhrases.Array.data[3].onFinishedActivateables.Array.data[1].gameObject
+      value: 
+      objectReference: {fileID: 5252601318657801131}
+    - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[4].onFinishedActivateables.Array.data[0].gameObject
       value: 
       objectReference: {fileID: 5252601318657801131}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
+      propertyPath: dialoguePhrases.Array.data[3].OnEndedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[0].phrase.localizedAudio.m_TableEntryReference.m_KeyId
-      value: 0
+      value: 5498178238566400
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[1].OnStartedEvent.m_PersistentCalls.m_Calls.Array.size
@@ -2950,15 +3082,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[1].phrase.localizedAudio.m_TableEntryReference.m_KeyId
-      value: 0
+      value: 5498723066073088
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[2].phrase.localizedAudio.m_TableEntryReference.m_KeyId
-      value: 0
+      value: 5501716998017024
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[3].phrase.localizedAudio.m_TableEntryReference.m_KeyId
-      value: 0
+      value: 5503839789797376
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[4].phrase.localizedAudio.m_TableEntryReference.m_KeyId
@@ -2985,20 +3117,24 @@ PrefabInstance:
       value: 130595603243749376
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
+      propertyPath: dialoguePhrases.Array.data[3].OnEndedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[0].phrase.localizedAudio.m_TableReference.m_TableCollectionName
-      value: 
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[1].phrase.localizedAudio.m_TableReference.m_TableCollectionName
-      value: 
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[2].phrase.localizedAudio.m_TableReference.m_TableCollectionName
-      value: 
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[3].phrase.localizedAudio.m_TableReference.m_TableCollectionName
-      value: 
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[4].phrase.localizedAudio.m_TableReference.m_TableCollectionName
@@ -3021,12 +3157,24 @@ PrefabInstance:
       value: GUID:aa0c96a897bb2520f8d789afe9cb43d5
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
+      propertyPath: dialoguePhrases.Array.data[3].OnEndedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 842203341720328022}
+    - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[3].phrase.localizedString.m_TableReference.m_TableCollectionName
       value: GUID:aa0c96a897bb2520f8d789afe9cb43d5
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[4].phrase.localizedString.m_TableReference.m_TableCollectionName
       value: GUID:aa0c96a897bb2520f8d789afe9cb43d5
+      objectReference: {fileID: 0}
+    - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
+      propertyPath: dialoguePhrases.Array.data[3].OnEndedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
+      propertyPath: dialoguePhrases.Array.data[3].OnEndedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowCurrentWord
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[1].OnStartedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -3037,8 +3185,16 @@ PrefabInstance:
       value: Animate
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
+      propertyPath: dialoguePhrases.Array.data[3].OnEndedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: StreamOfWords, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[1].OnStartedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: MovementAnimator, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
+      propertyPath: dialoguePhrases.Array.data[3].OnEndedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[1].OnStartedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -3180,8 +3336,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 7275557217220660424}
     m_Modifications:
     - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableEntryReference.m_KeyId
+      value: 5505127596314624
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: phrase.localizedString.m_TableEntryReference.m_KeyId
       value: 128830020533768192
+      objectReference: {fileID: 0}
+    - target: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
+      propertyPath: phrase.localizedAudio.m_TableReference.m_TableCollectionName
+      value: GUID:5b340f3ed11184147b2effa5c79d2393
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_Pivot.x

@@ -2,17 +2,15 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class NumberOfTargets : GameController
 {
     [Header("UI")]
-    [SerializeField] private Image groupIconImage;
     [SerializeField] private TextMeshProUGUI questionText;
     [SerializeField] private TextMeshProUGUI numberDisplayText;
+    [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private CustomButton increaseButton;
     [SerializeField] private CustomButton decreaseButton;
-    [SerializeField] private CustomButton submitButton;
 
     [Header("Groups")]
     [SerializeField] private TargetGroup[] groups;
@@ -22,21 +20,27 @@ public class NumberOfTargets : GameController
     [SerializeField] private int maxHiddenPerGroup = 3;
     [SerializeField] private int minNumber = 0;
     [SerializeField] private int maxNumber = 10;
+    [SerializeField] private float timeToAnswer = 10f;
+    [SerializeField] private bool allowManualSubmit = false;
 
     [Header("Sounds")]
     [SerializeField] private AudioClip correctSound;
     [SerializeField] private AudioClip wrongSound;
     [SerializeField] private AudioClip buttonClickSound;
+    [SerializeField] private AudioClip tickSound;
 
     private TargetGroup selectedGroup;
     private int correctAnswer;
     private int currentNumber;
     private bool isAnswering = false;
+    private float currentTime;
+    private bool isTimerRunning = false;
 
     [Serializable]
     private class TargetGroup
     {
         [field: SerializeField] public string Name { get; private set; }
+        [field: SerializeField] public AudioClip Audio { get; private set; }
         [field: SerializeField] public Sprite Sprite { get; private set; }
         [field: SerializeField] public GameObject[] Objects { get; private set; }
 
@@ -60,8 +64,73 @@ public class NumberOfTargets : GameController
         currentNumber = minNumber;
         UpdateNumberDisplay();
 
-        // Показываем вопрос
+        // Показываем вопрос и запускаем таймер
         ShowQuestion();
+    }
+
+    private void Update()
+    {
+        if (!isTimerRunning || isAnswering) return;
+
+        currentTime -= Time.deltaTime;
+
+        // Обновляем отображение таймера
+        UpdateTimerDisplay();
+
+        // Проверяем звук тика (последние 3 секунды)
+        if (currentTime <= 3f && currentTime > 2.9f && tickSound != null)
+        {
+            AudioManager.Instance.PlaySound(tickSound);
+        }
+
+        // Время вышло - автоматически проверяем ответ
+        if (currentTime <= 0f)
+        {
+            StopTimer();
+            AutoSubmit();
+        }
+    }
+
+    public void StartTimer()
+    {
+        AudioManager.Instance.PlaySound(selectedGroup.Audio);
+        currentTime = timeToAnswer;
+        isTimerRunning = true;
+        UpdateTimerDisplay();
+    }
+
+    private void StopTimer()
+    {
+        isTimerRunning = false;
+    }
+
+    private void UpdateTimerDisplay()
+    {
+        if (timerText != null)
+        {
+            int seconds = Mathf.CeilToInt(currentTime);
+            timerText.text = seconds.ToString();
+
+            // Можно изменить цвет при малом времени
+            if (currentTime <= 3f)
+            {
+                timerText.color = Color.red;
+            }
+            else if (currentTime <= 5f)
+            {
+                timerText.color = Color.yellow;
+            }
+            else
+            {
+                timerText.color = Color.white;
+            }
+        }
+    }
+
+    private void AutoSubmit()
+    {
+        Debug.Log("Время вышло! Автоматическая проверка ответа.");
+        OnSubmitClicked();
     }
 
     private void HideRandomObjects()
@@ -118,21 +187,8 @@ public class NumberOfTargets : GameController
 
     private void SetupButtons()
     {
-        // Подписываемся на кнопки
-        if (increaseButton != null)
-        {
-            increaseButton.OnButtonClicked += OnIncreaseClicked;
-        }
-
-        if (decreaseButton != null)
-        {
-            decreaseButton.OnButtonClicked += OnDecreaseClicked;
-        }
-
-        if (submitButton != null)
-        {
-            submitButton.OnButtonClicked += OnSubmitClicked;
-        }
+        increaseButton.OnButtonClicked += OnIncreaseClicked;
+        decreaseButton.OnButtonClicked += OnDecreaseClicked;
     }
 
     private void OnIncreaseClicked()
@@ -183,16 +239,10 @@ public class NumberOfTargets : GameController
 
     private void ShowQuestion()
     {
-        // Показываем иконку группы
-        if (groupIconImage != null && selectedGroup.Sprite != null)
-        {
-            groupIconImage.sprite = selectedGroup.Sprite;
-        }
-
         // Показываем текст вопроса
         if (questionText != null)
         {
-            questionText.text = $"Сколько {selectedGroup.Name}?";
+            questionText.text = $"{selectedGroup.Name}";
         }
 
         isAnswering = false;
@@ -203,6 +253,7 @@ public class NumberOfTargets : GameController
         if (isAnswering) return;
 
         isAnswering = true;
+        StopTimer();
 
         Debug.Log($"Игрок ответил: {currentNumber}, правильный ответ: {correctAnswer}");
 
@@ -226,12 +277,6 @@ public class NumberOfTargets : GameController
             AudioManager.Instance.PlaySound(correctSound);
         }
 
-        // Обновляем текст вопроса
-        if (questionText != null)
-        {
-            questionText.text = $"Правильно! {answer} {selectedGroup.Name}";
-        }
-
         // Завершаем игру
         Invoke(nameof(FinishGame), 1f);
     }
@@ -246,14 +291,8 @@ public class NumberOfTargets : GameController
             AudioManager.Instance.PlaySound(wrongSound);
         }
 
-        // Показываем правильный ответ
-        if (questionText != null)
-        {
-            questionText.text = $"Неправильно! Правильный ответ: {correctAnswer}";
-        }
-
         // Завершаем игру
-        Invoke(nameof(FailGame), 1f);
+        Invoke(nameof(FinishGame), 1f);
     }
 
     protected override void OnDisable()
@@ -270,12 +309,6 @@ public class NumberOfTargets : GameController
         {
             decreaseButton.OnButtonClicked -= OnDecreaseClicked;
         }
-
-        if (submitButton != null)
-        {
-            submitButton.OnButtonClicked -= OnSubmitClicked;
-        }
-
         // Показываем все объекты обратно
         ShowAllObjects();
     }
@@ -297,6 +330,7 @@ public class NumberOfTargets : GameController
     public void ResetGame()
     {
         isAnswering = false;
+        isTimerRunning = false;
         ShowAllObjects();
         InitializeGame();
     }

@@ -43,7 +43,6 @@ public class Quiz : GameController
         // Показываем первый вопрос
         currentQuestionIndex = 0;
         correctAnswersCount = 0;
-        ShowCurrentQuestion();
     }
 
     protected override void OnDisable()
@@ -79,7 +78,7 @@ public class Quiz : GameController
         Debug.Log($"Выбрано {selectedQuestions.Count} вопросов для викторины");
     }
 
-    private void ShowCurrentQuestion()
+    public void ShowCurrentQuestion()
     {
         if (currentQuestionIndex >= selectedQuestions.Count)
         {
@@ -101,6 +100,7 @@ public class Quiz : GameController
         if (soundButton != null && currentQuestion.Question.LocalizedAudio != null)
         {
             soundButton.SetAudio(currentQuestion.Question.LocalizedAudio);
+            soundButton.PlayAudio();
         }
 
         // Заполняем кнопки ответами

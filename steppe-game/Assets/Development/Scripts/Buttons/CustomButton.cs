@@ -27,6 +27,6 @@ public class CustomButton : MonoBehaviour
 
     protected virtual void Clicked()
     {
-
+        OnButtonClicked?.Invoke();
     }
 }
