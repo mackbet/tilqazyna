@@ -16,7 +16,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AlmatyMapManager _almatyMapManager;
     [SerializeField] private GameObject _southKazakhstan;
     [SerializeField] private GameObject _eastKazakhstan;
-    [SerializeField] private GameObject _altaiMapManager;
+    [SerializeField] private GameObject _centralKazakhstan;
+    [SerializeField] private GameObject _westernKazakhstan;
     [SerializeField] private GameObject _mangystauMapManager;
     [SerializeField] private GameObject _northMapManager;
     [SerializeField] private LevelManager _levelManager;
@@ -505,7 +506,7 @@ public class GameManager : MonoBehaviour
     {
         if (lastCity)
             lastCity.SetActive(false);
-            
+
         if (CurrentGameScene == GameScene.Bozok)
         {
             return;
@@ -557,11 +558,11 @@ public class GameManager : MonoBehaviour
             case GameScene.EastKazakhstan:
                 OpenCity(_eastKazakhstan);
                 break;
-            case GameScene.Altai:
-                OpenCity(_altaiMapManager);
+            case GameScene.CentralKazakhstan:
+                OpenCity(_centralKazakhstan);
                 break;
-            case GameScene.Mangystau:
-                OpenCity(_mangystauMapManager);
+            case GameScene.WesternKazakhstan:
+                OpenCity(_westernKazakhstan);
                 break;
             case GameScene.North:
                 OpenCity(_northMapManager);

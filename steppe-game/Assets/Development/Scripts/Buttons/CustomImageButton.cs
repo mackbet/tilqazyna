@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class CustomImageButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerClickHandler
 {
     [SerializeField] protected Image image;
+    [SerializeField] private float alphaHitTestMinimumThreshold = 0.1f;
 
     public event Action OnButtonPressed;
     public event Action OnButtonReleased;
@@ -23,7 +24,7 @@ public class CustomImageButton : MonoBehaviour, IPointerDownHandler, IPointerUpH
     {
         if (image != null)
         {
-            image.alphaHitTestMinimumThreshold = 0.1f;
+            image.alphaHitTestMinimumThreshold = alphaHitTestMinimumThreshold;
         }
     }
 

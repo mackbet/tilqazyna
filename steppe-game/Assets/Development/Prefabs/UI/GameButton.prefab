@@ -174,7 +174,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 15
+  m_fontSizeMin: 10
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -480,6 +480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameButton
   image: {fileID: 3009551252449398793}
+  alphaHitTestMinimumThreshold: 0.1
   gameView: {fileID: 0}
   gameTitle:
     m_TableReference:

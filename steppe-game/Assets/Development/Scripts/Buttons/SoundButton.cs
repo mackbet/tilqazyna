@@ -10,6 +10,7 @@ public class SoundButton : CustomImageButton
 
     private AudioSource currentAudioSource;
     private CancellationTokenSource cancellationTokenSource;
+    private AudioClip directAudioClip; // Для прямого AudioClip без локализации
 
     private void OnDisable()
     {
@@ -30,6 +31,12 @@ public class SoundButton : CustomImageButton
         localizedAudio = audio;
     }
 
+    public void SetAudio(AudioClip audio)
+    {
+        directAudioClip = audio;
+        localizedAudio = null;
+    }
+
     public void SetVolume(float newVolume)
     {
         volume = Mathf.Clamp01(newVolume);
@@ -37,13 +44,21 @@ public class SoundButton : CustomImageButton
 
     public async void PlayAudio()
     {
-        if (localizedAudio == null || localizedAudio.IsEmpty)
+        StopCurrentAudio();
+
+        // Если есть прямой AudioClip, используем его
+        if (directAudioClip != null)
         {
-            Debug.LogWarning("SoundButton: LocalizedAudioClip не установлен!");
+            currentAudioSource = AudioManager.Instance.PlaySound(directAudioClip, volume);
             return;
         }
 
-        StopCurrentAudio();
+        // Иначе используем локализованный аудио
+        if (localizedAudio == null || localizedAudio.IsEmpty)
+        {
+            Debug.LogWarning("SoundButton: Аудио не установлено!");
+            return;
+        }
 
         cancellationTokenSource?.Cancel();
         cancellationTokenSource?.Dispose();

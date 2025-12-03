@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a952284fb0e6b6144908038086cd026f, type: 3}
+  m_Name: wheel
+  m_EditorClassIdentifier: Assembly-CSharp::FindTheItemVariant
+  sprite: {fileID: 21300000, guid: b6a521163cd88bb449db432bdac73207, type: 3}
+  audioClip: {fileID: 8300000, guid: 7954e6103151fbb4aaba8e0f5d6ca7df, type: 3}
+  itemName: "\u0414\u04E9\u04A3\u0433\u0435\u043B\u0435\u043A"

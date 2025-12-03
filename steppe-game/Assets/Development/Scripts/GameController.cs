@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
 {
     [SerializeField] private float startDelay = 1f;
     [SerializeField] private float finishDelay = 1f;
+    [SerializeField] private bool startWithDelay = true;
 
     public event Action OnGameStarted;
     public event Action OnGameFinished;
@@ -17,7 +18,8 @@ public class GameController : MonoBehaviour
     protected virtual void OnEnable()
     {
         cancellationTokenSource = new CancellationTokenSource();
-        StartGameWithDelay();
+        if (startWithDelay)
+            StartGameWithDelay();
     }
 
     protected virtual void OnDisable()
@@ -26,6 +28,11 @@ public class GameController : MonoBehaviour
         cancellationTokenSource?.Dispose();
     }
 
+    public void InitializeGameManualy()
+    {
+        InitializeGame();
+    }
+    
     private async void StartGameWithDelay()
     {
         try
