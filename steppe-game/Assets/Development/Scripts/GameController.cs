@@ -12,6 +12,10 @@ public class GameController : MonoBehaviour
     public event Action OnGameStarted;
     public event Action OnGameFinished;
     public event Action OnGameFailed;
+    public event Action<int> OnLivesChanged;
+
+    protected int lives = 0;
+    public int Lives => lives;
 
     private CancellationTokenSource cancellationTokenSource;
 
@@ -50,6 +54,12 @@ public class GameController : MonoBehaviour
     protected virtual void InitializeGame()
     {
 
+    }
+
+    protected void SetLives(int value)
+    {
+        lives = value;
+        OnLivesChanged?.Invoke(lives);
     }
 
     protected async void FinishGame()

@@ -37,7 +37,7 @@ public class AudioManager : MonoBehaviour
     /// <param name="volume">Громкость (0-1)</param>
     /// <param name="loop">Зациклить звук?</param>
     /// <returns>GameObject с AudioSource компонентом</returns>
-    public AudioSource PlaySound(AudioClip clip, float volume = 1f, bool loop = false)
+    public AudioSource PlaySound(AudioClip clip, float volume = 1f, bool loop = false, float pitch = 1f)
     {
         if (clip == null)
         {
@@ -52,6 +52,7 @@ public class AudioManager : MonoBehaviour
         audioSource.clip = clip;
         audioSource.volume = Mathf.Clamp01(volume);
         audioSource.loop = loop;
+        audioSource.pitch = pitch;
         audioSource.Play();
 
         // Если звук не зациклен, удаляем объект после завершения

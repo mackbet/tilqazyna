@@ -1,15 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Random = UnityEngine.Random;
 
-public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
+public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler, IPointerMoveHandler
 {
     [Header("Game Objects")]
     [SerializeField] private RectTransform wordContainer; // Контейнер для слов
     [SerializeField] private RectTransform gameArea; // Игровая область
     [SerializeField] private GameObject wordPrefab; // Префаб WordObject
+    [SerializeField] private GameObject trailObject; // Объект следа за касанием
 
     [Header("Word Data")]
     [SerializeField] private WordData[] allWords; // Все доступные слова
@@ -19,6 +22,9 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
     [SerializeField] private int wordsToSlice = 10; // Сколько нужно разрезать правильных слов
     [SerializeField] private float spawnInterval = 1.5f; // Интервал спавна слов
     [SerializeField] private int maxWordsOnScreen = 5; // Максимум слов на экране
+    [SerializeField] [Range(0f, 1f)] private float correctWordsProbability = 0.4f; // Вероятность спавна правильного слова (0-1)
+    [SerializeField] [Range(0f, 1f)] private float spawnXMin = 0.1f; // Минимальная позиция спавна по X (0 = левый край, 1 = правый край)
+    [SerializeField] [Range(0f, 1f)] private float spawnXMax = 0.9f; // Максимальная позиция спавна по X
     [SerializeField] private float launchForceMin = 800f; // Минимальная сила запуска
     [SerializeField] private float launchForceMax = 1200f; // Максимальная сила запуска
     [SerializeField] private float launchAngleMin = 60f; // Минимальный угол запуска
@@ -27,7 +33,6 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI progressText; // "Разрезано: 5/10"
     [SerializeField] private TextMeshProUGUI categoryText; // "Категория: Животные"
-    [SerializeField] private TextMeshProUGUI livesText; // "Жизни: 3"
 
     [Header("Sounds")]
     [SerializeField] private AudioClip correctSliceSound;
@@ -35,17 +40,19 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
     [SerializeField] private AudioClip missSound;
 
     private WordCategory targetCategory; // Целевая категория
+    private List<WordData> targetCategoryWords = new List<WordData>(); // Слова целевой категории
     private int slicedCount = 0; // Количество разрезанных правильных слов
-    private int lives = 3; // Количество жизней
     private List<WordObject> activeWords = new List<WordObject>();
     private Coroutine spawnCoroutine;
     private bool isGameActive = false;
 
     // Свайп
     private Vector2 swipeStart;
+    private Vector2 lastSwipePosition;
     private bool isSwiping = false;
     private Camera mainCamera;
     private Canvas canvas;
+    private GameObject activeTrailObject;
 
     protected override void InitializeGame()
     {
@@ -54,7 +61,7 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
         mainCamera = Camera.main;
         canvas = GetComponentInParent<Canvas>();
         slicedCount = 0;
-        lives = 3;
+        SetLives(3);
         activeWords.Clear();
         isGameActive = true;
 
@@ -72,16 +79,78 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
         if (!isGameActive) return;
 
         swipeStart = eventData.position;
+        lastSwipePosition = eventData.position;
         isSwiping = true;
+
+        // Создаем объект следа
+        if (trailObject != null)
+        {
+            activeTrailObject = Instantiate(trailObject, transform);
+            UpdateTrailPosition(eventData.position);
+        }
+    }
+
+    public void OnPointerMove(PointerEventData eventData)
+    {
+        if (!isGameActive || !isSwiping) return;
+
+        // Проверяем пересечение с словами от предыдущей позиции до текущей
+        CheckSwipe(lastSwipePosition, eventData.position);
+        lastSwipePosition = eventData.position;
+
+        // Обновляем позицию объекта следа
+        if (activeTrailObject != null)
+        {
+            UpdateTrailPosition(eventData.position);
+        }
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         if (!isGameActive || !isSwiping) return;
 
-        Vector2 swipeEnd = eventData.position;
-        CheckSwipe(swipeStart, swipeEnd);
+        // Проверяем последний сегмент (от последней позиции до конца)
+        CheckSwipe(lastSwipePosition, eventData.position);
         isSwiping = false;
+
+        // Удаляем след через 1 секунду (чтобы отработал Color over Lifetime)
+        if (activeTrailObject != null)
+        {
+            StartCoroutine(DestroyTrailAfterDelay(activeTrailObject, 1f));
+            activeTrailObject = null;
+        }
+    }
+
+    private void UpdateTrailPosition(Vector2 screenPosition)
+    {
+        if (activeTrailObject == null) return;
+
+        // Конвертируем экранные координаты в локальные координаты канваса
+        RectTransform canvasRect = canvas.GetComponent<RectTransform>();
+        Vector2 localPoint;
+
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            canvasRect,
+            screenPosition,
+            canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : mainCamera,
+            out localPoint
+        );
+
+        // Устанавливаем позицию объекта следа
+        RectTransform trailRect = activeTrailObject.GetComponent<RectTransform>();
+        if (trailRect != null)
+        {
+            trailRect.anchoredPosition = localPoint;
+        }
+    }
+
+    private IEnumerator DestroyTrailAfterDelay(GameObject trail, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (trail != null)
+        {
+            Destroy(trail);
+        }
     }
 
     private void SelectRandomCategory()
@@ -90,6 +159,19 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
 
         // Выбираем случайную категорию
         targetCategory = availableCategories[Random.Range(0, availableCategories.Length)];
+
+        // Выписываем все слова этой категории (только одиночные слова, без пробелов)
+        targetCategoryWords.Clear();
+        if (allWords != null && targetCategory != null)
+        {
+            foreach (WordData word in allWords)
+            {
+                if (word.HasCategory(targetCategory) && !word.Word.Contains(" "))
+                {
+                    targetCategoryWords.Add(word);
+                }
+            }
+        }
 
         if (categoryText != null && targetCategory != null)
         {
@@ -100,30 +182,34 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
     private void CheckSwipe(Vector2 start, Vector2 end)
     {
         // Проверяем все активные слова на пересечение с линией свайпа
-        List<WordObject> wordsToSlice = new List<WordObject>();
+        List<(WordObject word, Vector2 slicePoint)> wordsToSlice = new List<(WordObject, Vector2)>();
 
         foreach (var word in activeWords)
         {
             if (!word.IsAlive) continue;
 
             // Проверяем пересечение линии с объектом
-            if (IsSwipeIntersectingWord(start, end, word))
+            Vector2? intersectionPoint = IsSwipeIntersectingWord(start, end, word);
+            if (intersectionPoint.HasValue)
             {
-                wordsToSlice.Add(word);
+                wordsToSlice.Add((word, intersectionPoint.Value));
             }
         }
 
         // Разрезаем все найденные слова
-        foreach (var word in wordsToSlice)
+        foreach (var (word, slicePoint) in wordsToSlice)
         {
-            SliceWord(word);
+            SliceWord(word, slicePoint);
         }
     }
 
-    private bool IsSwipeIntersectingWord(Vector2 start, Vector2 end, WordObject word)
+    private Vector2? IsSwipeIntersectingWord(Vector2 start, Vector2 end, WordObject word)
     {
-        // Проверяем несколько точек вдоль линии свайпа
-        int steps = 10;
+        // Вычисляем количество шагов в зависимости от длины свайпа
+        // Чем длиннее свайп, тем больше точек проверяем
+        float distance = Vector2.Distance(start, end);
+        int steps = Mathf.Max(5, Mathf.CeilToInt(distance / 5f)); // Минимум 5 шагов, по 1 шагу на каждые 5 пикселей
+
         for (int i = 0; i <= steps; i++)
         {
             float t = i / (float)steps;
@@ -131,14 +217,14 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
 
             if (word.IsPointInside(point))
             {
-                return true;
+                return point; // Возвращаем точку пересечения
             }
         }
 
-        return false;
+        return null; // Пересечения нет
     }
 
-    private void SliceWord(WordObject word)
+    private void SliceWord(WordObject word, Vector2 slicePoint)
     {
         if (!word.IsAlive) return;
 
@@ -165,12 +251,15 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
         else
         {
             // Неправильное слово - теряем жизнь
-            lives--;
+            SetLives(lives - 1);
 
             if (wrongSliceSound != null)
             {
                 AudioManager.Instance.PlaySound(wrongSliceSound);
             }
+
+            // Тряска экрана при ошибке
+            CameraShake.Instance.Shake(gameArea, 80f, 0.3f, 1.05f);
 
             UpdateUI();
 
@@ -181,7 +270,7 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
             }
         }
 
-        word.Slice(isCorrect);
+        word.Slice(isCorrect, slicePoint);
         activeWords.Remove(word);
     }
 
@@ -203,15 +292,55 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
         if (allWords == null || allWords.Length == 0 || wordPrefab == null)
             return;
 
-        // Выбираем случайное слово
-        WordData wordData = allWords[Random.Range(0, allWords.Length)];
+        // Выбираем слово по процентному соотношению
+        WordData wordData = null;
+        float randomValue = Random.value; // 0.0 - 1.0
+
+        if (randomValue < correctWordsProbability && targetCategoryWords.Count > 0)
+        {
+            // Спавним правильное слово из списка целевой категории
+            wordData = targetCategoryWords[Random.Range(0, targetCategoryWords.Count)];
+        }
+        else
+        {
+            // Спавним случайное слово из общего списка (без пробелов)
+            int attempts = 0;
+            while (wordData == null && attempts < 50)
+            {
+                WordData candidate = allWords[Random.Range(0, allWords.Length)];
+                if (!candidate.Word.Contains(" "))
+                {
+                    wordData = candidate;
+                }
+                attempts++;
+            }
+
+            // Если не нашли подходящее слово, берем первое без пробела
+            if (wordData == null)
+            {
+                foreach (WordData w in allWords)
+                {
+                    if (!w.Word.Contains(" "))
+                    {
+                        wordData = w;
+                        break;
+                    }
+                }
+            }
+        }
+
+        // Если так и не нашли подходящее слово, выходим
+        if (wordData == null)
+            return;
 
         // Получаем размеры канваса
         RectTransform canvasRect = canvas.GetComponent<RectTransform>();
         Vector2 canvasSize = canvasRect.sizeDelta;
 
-        // Случайная X позиция внизу экрана
-        float randomX = Random.Range(-canvasSize.x / 2f + 100f, canvasSize.x / 2f - 100f);
+        // Случайная X позиция (от 0 до 1, где 0 = левый край, 1 = правый край)
+        float normalizedX = Random.Range(spawnXMin, spawnXMax);
+        // Конвертируем в координаты канваса (-width/2 до +width/2)
+        float randomX = Mathf.Lerp(-canvasSize.x / 2f, canvasSize.x / 2f, normalizedX);
         Vector2 spawnPosition = new Vector2(randomX, -canvasSize.y / 2f - 100f);
 
         // Случайный угол и сила запуска
@@ -237,23 +366,11 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
 
     private void OnWordMissed(WordObject word)
     {
-        // Если пропустили слово правильной категории - теряем жизнь
-        if (word.Data.HasCategory(targetCategory))
+        // Слово улетело за пределы экрана
+        // Можно воспроизвести звук если нужно
+        if (word.Data.HasCategory(targetCategory) && missSound != null)
         {
-            lives--;
-
-            if (missSound != null)
-            {
-                AudioManager.Instance.PlaySound(missSound);
-            }
-
-            UpdateUI();
-
-            // Проверяем проигрыш
-            if (lives <= 0)
-            {
-                StartCoroutine(LoseGame());
-            }
+            AudioManager.Instance.PlaySound(missSound);
         }
 
         activeWords.Remove(word);
@@ -293,11 +410,6 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
         if (progressText != null)
         {
             progressText.text = $"{slicedCount}/{wordsToSlice}";
-        }
-
-        if (livesText != null)
-        {
-            livesText.text = $"Жизни: {lives}";
         }
     }
 
