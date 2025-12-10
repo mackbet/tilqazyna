@@ -107,14 +107,16 @@ public class WordDataGenerator : EditorWindow
         Dictionary<string, WordCategory> categories = CreateCategories(categoryWordsMap.Keys.ToList());
 
         // Создаем слова
-        int wordsCreated = CreateWords(categoryWordsMap, categories);
+        var (wordsCreated, wordsUpdated) = CreateWords(categoryWordsMap, categories);
 
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
 
-        EditorUtility.DisplayDialog("Success",
-            $"Generated {categories.Count} categories and {wordsCreated} words!",
-            "OK");
+        string message = $"Generated {categories.Count} categories\n" +
+                        $"Created {wordsCreated} new words\n" +
+                        $"Updated {wordsUpdated} existing words";
+
+        EditorUtility.DisplayDialog("Success", message, "OK");
     }
 
     private Dictionary<string, List<string>> ParseCategoryBlocks(string text)
@@ -226,7 +228,7 @@ public class WordDataGenerator : EditorWindow
         return categories;
     }
 
-    private int CreateWords(Dictionary<string, List<string>> categoryWordsMap, Dictionary<string, WordCategory> categories)
+    private (int created, int updated) CreateWords(Dictionary<string, List<string>> categoryWordsMap, Dictionary<string, WordCategory> categories)
     {
         // Собираем все уникальные слова с их категориями
         var wordCategoriesMap = new Dictionary<string, List<WordCategory>>();
@@ -252,11 +254,12 @@ public class WordDataGenerator : EditorWindow
 
         // Создаем WordData для каждого уникального слова
         int wordsCreated = 0;
+        int wordsUpdated = 0;
 
         foreach (var kvp in wordCategoriesMap)
         {
             string word = kvp.Key;
-            List<WordCategory> wordCategories = kvp.Value;
+            List<WordCategory> newCategories = kvp.Value;
 
             // Безопасное имя файла
             string safeFileName = word.Replace(" ", "_").Replace("/", "_").Replace("\\", "_");
@@ -266,6 +269,7 @@ public class WordDataGenerator : EditorWindow
 
             if (wordData == null)
             {
+                // Создаем новое слово
                 wordData = ScriptableObject.CreateInstance<WordData>();
 
                 // Используем рефлексию для установки полей
@@ -278,15 +282,49 @@ public class WordDataGenerator : EditorWindow
                     wordField.SetValue(wordData, word);
 
                 if (categoriesField != null)
-                    categoriesField.SetValue(wordData, wordCategories.ToArray());
+                    categoriesField.SetValue(wordData, newCategories.ToArray());
 
                 AssetDatabase.CreateAsset(wordData, assetPath);
                 wordsCreated++;
-                Debug.Log($"Created word: {word} with {wordCategories.Count} categories");
+                Debug.Log($"Created word: {word} with {newCategories.Count} categories");
+            }
+            else
+            {
+                // Слово уже существует - дополняем категории
+                var categoriesField = typeof(WordData).GetField("categories",
+                    System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+
+                if (categoriesField != null)
+                {
+                    // Получаем текущие категории
+                    WordCategory[] existingCategories = (WordCategory[])categoriesField.GetValue(wordData);
+                    List<WordCategory> allCategories = new List<WordCategory>(existingCategories ?? new WordCategory[0]);
+
+                    // Добавляем только новые категории
+                    int addedCount = 0;
+                    foreach (var newCategory in newCategories)
+                    {
+                        if (!allCategories.Contains(newCategory))
+                        {
+                            allCategories.Add(newCategory);
+                            addedCount++;
+                        }
+                    }
+
+                    // Обновляем категории только если были добавлены новые
+                    if (addedCount > 0)
+                    {
+                        categoriesField.SetValue(wordData, allCategories.ToArray());
+                        EditorUtility.SetDirty(wordData);
+                        wordsUpdated++;
+                        Debug.Log($"Updated word: {word} - added {addedCount} new categories (total: {allCategories.Count})");
+                    }
+                }
             }
         }
 
-        return wordsCreated;
+        Debug.Log($"Words created: {wordsCreated}, Words updated: {wordsUpdated}");
+        return (wordsCreated, wordsUpdated);
     }
 
     private void CreateDirectoryIfNotExists(string path)

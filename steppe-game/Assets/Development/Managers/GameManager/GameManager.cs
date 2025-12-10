@@ -18,8 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject _eastKazakhstan;
     [SerializeField] private GameObject _centralKazakhstan;
     [SerializeField] private GameObject _westernKazakhstan;
-    [SerializeField] private GameObject _mangystauMapManager;
-    [SerializeField] private GameObject _northMapManager;
+    [SerializeField] private GameObject _northernKazakhstan;
     [SerializeField] private LevelManager _levelManager;
     [SerializeField] private QuizController _quizController;
     [SerializeField] private FiveWeaponPointAndClickManager _fiveWeaponPointAndClickManager;
@@ -564,8 +563,8 @@ public class GameManager : MonoBehaviour
             case GameScene.WesternKazakhstan:
                 OpenCity(_westernKazakhstan);
                 break;
-            case GameScene.North:
-                OpenCity(_northMapManager);
+            case GameScene.NorthernKazakhstan:
+                OpenCity(_northernKazakhstan);
                 break;
             case GameScene.ChooseCharacter:
                 _chooseCharacterManager.gameObject.SetActive(true);

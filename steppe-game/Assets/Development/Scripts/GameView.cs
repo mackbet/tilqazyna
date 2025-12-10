@@ -33,7 +33,7 @@ public class GameView : CanvasView
 
     private void Restart()
     {
-        restartPanel.Show();
+        finishPanel.Show();
     }
 
     private void Finish()
