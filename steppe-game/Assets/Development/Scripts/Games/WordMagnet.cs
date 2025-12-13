@@ -13,6 +13,7 @@ public class WordMagnet : GameController
     [SerializeField] private WordMagnetBox correctWordBoxPrefab; // Префаб для правильных слов
     [SerializeField] private WordMagnetBox wrongWordBoxPrefab; // Префаб для неправильных слов
     [SerializeField] private FloatingJoystick joystick;
+    [SerializeField] private ParallaxController parallaxController;
 
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI categoryText; // Текст категории на магните
@@ -65,6 +66,13 @@ public class WordMagnet : GameController
         UpdateCategoryUI();
         UpdateScoreUI();
 
+        // Инициализируем параллакс
+        if (parallaxController != null)
+        {
+            parallaxController.InitializeLayers();
+            parallaxController.ResumeParallax();
+        }
+
         // Очищаем активные коробки
         ClearBoxes();
 
@@ -80,6 +88,12 @@ public class WordMagnet : GameController
         if (spawnCoroutine != null)
         {
             StopCoroutine(spawnCoroutine);
+        }
+
+        // Останавливаем параллакс
+        if (parallaxController != null)
+        {
+            parallaxController.StopParallax();
         }
 
         ClearBoxes();

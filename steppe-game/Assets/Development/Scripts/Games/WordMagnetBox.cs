@@ -7,11 +7,13 @@ public class WordMagnetBox : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI wordText;
     [SerializeField] private RectTransform rectTransform;
+    [SerializeField] private RectTransform model;
 
     private WordData wordData;
     private float speed;
     private bool isCaptured = false;
     private WordMagnet wordMagnet;
+    private Sequence scaleSequence;
 
     public WordData WordData => wordData;
     public bool IsCaptured => isCaptured;
@@ -33,6 +35,23 @@ public class WordMagnetBox : MonoBehaviour
         {
             wordText.text = wordData.Word;
         }
+
+        // Запускаем постоянную анимацию увеличения-уменьшения
+        StartBreathingAnimation();
+    }
+
+    private void StartBreathingAnimation()
+    {
+        if (model == null) return;
+
+        // Убиваем предыдущую анимацию если она есть
+        scaleSequence?.Kill();
+
+        // Создаем зацикленную последовательность
+        scaleSequence = DOTween.Sequence();
+        scaleSequence.Append(model.DOScale(1.1f, 0.5f).SetEase(Ease.InOutSine));
+        scaleSequence.Append(model.DOScale(1.0f, 0.5f).SetEase(Ease.InOutSine));
+        scaleSequence.SetLoops(-1); // Бесконечный цикл
     }
 
     private void Update()
@@ -52,6 +71,9 @@ public class WordMagnetBox : MonoBehaviour
 
         isCaptured = true;
 
+        // Останавливаем анимацию дыхания
+        scaleSequence?.Kill();
+
         // Анимация притяжения к магниту
         rectTransform.DOAnchorPos(magnetTransform.anchoredPosition, 0.3f)
             .SetEase(Ease.InQuad)
@@ -64,7 +86,7 @@ public class WordMagnetBox : MonoBehaviour
                 }
             });
 
-        // Уменьшение размера при захвате
+        // Уменьшение размера всего объекта при захвате
         rectTransform.DOScale(0f, 0.3f).SetEase(Ease.InQuad);
     }
 
@@ -77,5 +99,11 @@ public class WordMagnetBox : MonoBehaviour
                pos.x > screenWidth / 2f + margin ||
                pos.y < -screenHeight / 2f - margin ||
                pos.y > screenHeight / 2f + margin;
+    }
+
+    private void OnDestroy()
+    {
+        // Очищаем анимацию при уничтожении объекта
+        scaleSequence?.Kill();
     }
 }

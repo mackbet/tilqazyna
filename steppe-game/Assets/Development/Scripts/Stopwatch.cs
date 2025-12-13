@@ -1,9 +1,11 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
 
 public class Stopwatch : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI textField;
+    [SerializeField] private LocalizedString localizedString;
     [SerializeField] private float time;
     [SerializeField] private bool countDown = false;
 
@@ -65,7 +67,7 @@ public class Stopwatch : MonoBehaviour
     {
         if (textField == null) return;
 
-        textField.text = Mathf.RoundToInt(time).ToString();
+        textField.text = localizedString.GetLocalizedString() + Mathf.RoundToInt(time).ToString();
     }
 
     public float GetTime() => time;

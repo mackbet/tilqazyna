@@ -1,29 +1,49 @@
 using UnityEngine;
+using TMPro;
+using System.Collections.Generic;
+using UnityEngine.Localization;
 
 public class HitTargets : GameController
 {
     [Header("UI")]
     [SerializeField] private Stopwatch stopwatch;
-    
+    [SerializeField] private TextMeshProUGUI categoryText;
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private LocalizedString localizedScore;
+
     [Header("Spawners")]
     [SerializeField] private HitSpawner[] spawners;
-    
+
+    [Header("Word Data")]
+    [SerializeField] private WordData[] allWords;
+    [SerializeField] private WordCategory[] availableCategories;
+
     [Header("Game Settings")]
     [SerializeField] private float spawnInterval = 1f;
     [SerializeField] private float spawnDuration = 2f;
-    [SerializeField] private float gameDuration = 15f;
-    
+    [SerializeField] private float gameDuration = 60f;
+    [SerializeField] private int startLives = 3;
+    [SerializeField][Range(0f, 1f)] private float correctWordProbability = 0.5f;
+
     [Header("Hit Effect")]
     [SerializeField] private GameObject hitEffectPrefab;
     [SerializeField] private Transform effectParent;
     [SerializeField] private float effectLifetime = 1f;
 
+    [Header("Sounds")]
+    [SerializeField] private AudioClip correctHitSound;
+    [SerializeField] private AudioClip wrongHitSound;
+    [SerializeField] private AudioClip winSound;
+    [SerializeField] private AudioClip loseSound;
+
+    private WordCategory targetCategory;
+    private List<WordData> targetCategoryWords = new List<WordData>();
+    private List<WordData> otherCategoryWords = new List<WordData>();
     private HitSpawner lastSpawner = null;
     private float currentTime = 0f;
     private float nextSpawnTime = 0f;
     private bool isGameActive = false;
     private int score = 0;
-    private int maxScore = 0;
 
     private void Start()
     {
@@ -35,10 +55,17 @@ public class HitTargets : GameController
     {
         base.InitializeGame();
 
+        SetLives(startLives);
         currentTime = 0f;
         score = 0;
-        maxScore = 0;
         isGameActive = true;
+
+        // Выбираем случайную категорию
+        SelectRandomCategory();
+
+        // Инициализируем UI
+        UpdateCategoryUI();
+        UpdateScoreUI();
 
         foreach (var spawner in spawners)
         {
@@ -48,6 +75,48 @@ public class HitTargets : GameController
         SpawnNextTarget();
         nextSpawnTime = spawnInterval;
         stopwatch.StartStopwatch();
+    }
+
+    private void SelectRandomCategory()
+    {
+        if (availableCategories == null || availableCategories.Length == 0)
+        {
+            Debug.LogError("No available categories!");
+            return;
+        }
+
+        targetCategory = availableCategories[Random.Range(0, availableCategories.Length)];
+
+        targetCategoryWords.Clear();
+        otherCategoryWords.Clear();
+
+        foreach (var word in allWords)
+        {
+            if (word.HasCategory(targetCategory))
+            {
+                targetCategoryWords.Add(word);
+            }
+            else
+            {
+                otherCategoryWords.Add(word);
+            }
+        }
+    }
+
+    private void UpdateCategoryUI()
+    {
+        if (categoryText != null && targetCategory != null)
+        {
+            categoryText.text = targetCategory.CategoryName;
+        }
+    }
+
+    private void UpdateScoreUI()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = localizedScore.GetLocalizedString() + score.ToString();
+        }
     }
 
     protected override void OnDisable()
@@ -87,12 +156,27 @@ public class HitTargets : GameController
         if (!isGameActive || spawners == null || spawners.Length == 0) return;
 
         HitSpawner selectedSpawner = GetRandomSpawner();
-        
+
         if (selectedSpawner != null)
         {
-            selectedSpawner.SpawnTargetFor(spawnDuration);
-            maxScore++;
-            lastSpawner = selectedSpawner;
+            // Выбираем слово (правильное или неправильное)
+            bool isCorrectWord = Random.value < correctWordProbability;
+            WordData selectedWord = null;
+
+            if (isCorrectWord && targetCategoryWords.Count > 0)
+            {
+                selectedWord = targetCategoryWords[Random.Range(0, targetCategoryWords.Count)];
+            }
+            else if (otherCategoryWords.Count > 0)
+            {
+                selectedWord = otherCategoryWords[Random.Range(0, otherCategoryWords.Count)];
+            }
+
+            if (selectedWord != null)
+            {
+                selectedSpawner.SpawnTargetFor(spawnDuration, selectedWord);
+                lastSpawner = selectedSpawner;
+            }
         }
     }
 
@@ -105,7 +189,7 @@ public class HitTargets : GameController
 
         // Собираем список доступных спавнеров (неактивных)
         var availableSpawners = new System.Collections.Generic.List<HitSpawner>();
-        
+
         foreach (var spawner in spawners)
         {
             if (!spawner.IsActive() && spawner != lastSpawner)
@@ -136,12 +220,43 @@ public class HitTargets : GameController
         return availableSpawners[Random.Range(0, availableSpawners.Count)];
     }
 
-    private void OnTargetHit(Vector2 screenPosition)
+    private void OnTargetHit(HitSpawner spawner, Vector2 screenPosition)
     {
-        score++;
-        Debug.Log($"Попадание! Счет: {score}/{maxScore}");
-        
-        SpawnHitEffect(screenPosition);
+        if (spawner == null) return;
+
+        WordData word = spawner.GetCurrentWord();
+        if (word == null) return;
+
+        bool isCorrect = word.HasCategory(targetCategory);
+
+        if (isCorrect)
+        {
+            // Правильное слово - добавляем очки
+            score++;
+            UpdateScoreUI();
+
+            if (word.AudioClip)
+                AudioManager.Instance.PlaySound(word.AudioClip);
+            else if (correctHitSound != null)
+                AudioManager.Instance.PlaySound(correctHitSound);
+
+            SpawnHitEffect(screenPosition);
+        }
+        else
+        {
+            // Неправильное слово - отнимаем жизнь
+            SetLives(Lives - 1);
+
+            if (wrongHitSound != null)
+            {
+                AudioManager.Instance.PlaySound(wrongHitSound);
+            }
+
+            if (Lives <= 0)
+            {
+                LoseGame();
+            }
+        }
     }
 
     private void SpawnHitEffect(Vector2 screenPosition)
@@ -150,22 +265,22 @@ public class HitTargets : GameController
 
         GameObject effect = Instantiate(hitEffectPrefab, effectParent);
         RectTransform effectRect = effect.GetComponent<RectTransform>();
-        
+
         if (effectRect != null)
         {
             RectTransform canvasRect = effectParent.GetComponent<RectTransform>();
             Vector2 localPoint;
-            
+
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 canvasRect,
                 screenPosition,
                 null,
                 out localPoint
             );
-            
+
             effectRect.localPosition = localPoint;
         }
-        
+
         Destroy(effect, effectLifetime);
     }
 
@@ -178,8 +293,34 @@ public class HitTargets : GameController
             spawner.Deactivate();
         }
 
-        Debug.Log($"Игра окончена! Финальный счет: {score}/{maxScore}");
+        if (winSound != null)
+        {
+            AudioManager.Instance.PlaySound(winSound);
+        }
+
         FinishGame();
+    }
+
+    private void LoseGame()
+    {
+        isGameActive = false;
+
+        if (stopwatch != null)
+        {
+            stopwatch.StopStopwatch();
+        }
+
+        foreach (var spawner in spawners)
+        {
+            spawner.Deactivate();
+        }
+
+        if (loseSound != null)
+        {
+            AudioManager.Instance.PlaySound(loseSound);
+        }
+
+        FailGame();
     }
 
     public float GetProgress() => gameDuration > 0 ? currentTime / gameDuration : 0f;

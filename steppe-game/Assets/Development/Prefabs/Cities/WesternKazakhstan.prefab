@@ -706,7 +706,7 @@ PrefabInstance:
     - target: {fileID: 7094043963711371333, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: gameView
       value: 
-      objectReference: {fileID: 3757822391873779700, guid: 9b01669365ba3714cb01d765ca3be1e6, type: 3}
+      objectReference: {fileID: 5081850633016735024, guid: b426978c321869e4dbd182ea7bfc0ac0, type: 3}
     - target: {fileID: 7094043963711371333, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: gameTitle.m_TableEntryReference.m_KeyId
       value: 131689128530169856
@@ -970,7 +970,7 @@ PrefabInstance:
     - target: {fileID: 7094043963711371333, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: gameView
       value: 
-      objectReference: {fileID: 2313823898805712846, guid: da64ebc45e1f6194e8bd45ee9371bb06, type: 3}
+      objectReference: {fileID: 5081850633016735024, guid: b426978c321869e4dbd182ea7bfc0ac0, type: 3}
     - target: {fileID: 7094043963711371333, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: gameTitle.m_TableEntryReference.m_KeyId
       value: 131687485768093696

@@ -16,4 +16,5 @@ MonoBehaviour:
   categories:
   - {fileID: 11400000, guid: 14d11cd655707d24dbf2a02beefb581b, type: 2}
   - {fileID: 11400000, guid: 5cf4efb8bcc2eac46a653e6b86bb7fd4, type: 2}
+  - {fileID: 11400000, guid: 6ef2146c7cef3fe4085cabd3e94819a3, type: 2}
   audioClip: {fileID: 0}

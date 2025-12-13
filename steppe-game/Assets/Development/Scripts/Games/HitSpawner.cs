@@ -3,12 +3,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using DG.Tweening;
+using TMPro;
 
 public class HitSpawner : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] private Button targetButton;
     [SerializeField] private RectTransform targetTransform;
     [SerializeField] private Image targetImage;
+    [SerializeField] private TextMeshProUGUI wordText;
 
     [Header("Animation Settings")]
     [SerializeField] private float spawnDuration = 0.3f;
@@ -16,12 +18,13 @@ public class HitSpawner : MonoBehaviour, IPointerDownHandler
     [SerializeField] private Ease spawnEase = Ease.OutBack;
     [SerializeField] private Ease despawnEase = Ease.InBack;
 
-    public event Action<Vector2> OnTargetHit; // Теперь передаем позицию клика
+    public event Action<HitSpawner, Vector2> OnTargetHit; // Передаем спавнер и позицию клика
 
     private Vector3 originalScale;
     private Vector2 hiddenPosition;
     private Sequence currentSequence;
     private bool isTargetActive = false;
+    private WordData currentWord;
 
     private void Awake()
     {
@@ -34,13 +37,20 @@ public class HitSpawner : MonoBehaviour, IPointerDownHandler
         Deactivate();
     }
 
-    public void SpawnTargetFor(float duration)
+    public void SpawnTargetFor(float duration, WordData word)
     {
         if (isTargetActive)
             DespawnTarget();
 
+        currentWord = word;
         isTargetActive = true;
         currentSequence?.Kill();
+
+        // Устанавливаем текст слова
+        if (wordText != null && word != null)
+        {
+            wordText.text = word.Word;
+        }
 
         if (targetImage != null)
             targetImage.raycastTarget = true;
@@ -58,11 +68,13 @@ public class HitSpawner : MonoBehaviour, IPointerDownHandler
             });
     }
 
+    public WordData GetCurrentWord() => currentWord;
+
     public void OnPointerDown(PointerEventData eventData)
     {
         if (isTargetActive)
         {
-            OnTargetHit?.Invoke(eventData.position);
+            OnTargetHit?.Invoke(this, eventData.position);
             DespawnTarget();
         }
     }

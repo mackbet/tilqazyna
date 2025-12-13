@@ -15,4 +15,5 @@ MonoBehaviour:
   word: "\u0442\u043E\u0441\u0430\u043F"
   categories:
   - {fileID: 11400000, guid: 7a3057bffffc11b4f82fc094a8ee05ab, type: 2}
+  - {fileID: 11400000, guid: 6ef2146c7cef3fe4085cabd3e94819a3, type: 2}
   audioClip: {fileID: 0}
