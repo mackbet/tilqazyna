@@ -1875,13 +1875,13 @@ RectTransform:
   - {fileID: 4441305989961051855}
   - {fileID: 3584760610486666784}
   - {fileID: 7555741799238904050}
-  m_Father: {fileID: 6242322995396613232}
+  m_Father: {fileID: 7723454421789965021}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -499.5, y: -38.46631}
+  m_AnchoredPosition: {x: 50, y: 0}
   m_SizeDelta: {x: 149, y: 260}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &577185200808250602
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3511,12 +3511,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1083503835207522394}
+  - {fileID: 5664490453527536463}
   m_Father: {fileID: 6242322995396613232}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.31822917, y: 0.08359259}
-  m_AnchorMax: {x: 0.6826459, y: 0.7327037}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -100}
+  m_SizeDelta: {x: 700, y: 700}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5031717780667488555
 CanvasRenderer:
@@ -3736,7 +3737,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5664490453527536463}
   - {fileID: 7723454421789965021}
   m_Father: {fileID: 3353015040541341618}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4081,7 +4081,7 @@ MonoBehaviour:
   movesLimit: 7
   scoreGoal: 250
   matchSound: {fileID: 8300000, guid: 7c91c2876bd4c7e4ba7ad4a7cc67fdfe, type: 3}
-  swapSound: {fileID: 0}
+  swapSound: {fileID: 8300000, guid: 505fcb448a0082e408f841d98344095a, type: 3}
   invalidSound: {fileID: 8300000, guid: 893f48ecb04dd3e4db7da1449028a354, type: 3}
 --- !u!224 &3353015040541341618 stripped
 RectTransform:

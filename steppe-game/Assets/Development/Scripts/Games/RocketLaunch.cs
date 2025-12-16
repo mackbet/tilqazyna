@@ -109,11 +109,11 @@ public class RocketLaunch : GameController
         OnAngleDifferenceChanged?.Invoke(Mathf.Abs(angleDifference) / maxRotationDifference);
 
         // Проверяем отклонение
-        if (Mathf.Abs(angleDifference) > maxRotationDifference)
-        {
-            FailFlight();
-            return;
-        }
+        // if (Mathf.Abs(angleDifference) > maxRotationDifference)
+        // {
+        //     FailFlight();
+        //     return;
+        // }
 
         // Угол правильный - продолжаем полет
         CurrentFlightTime += Time.deltaTime;

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +11,9 @@ public class ImageAnimator : MonoBehaviour
     [SerializeField] private float frameDuration = 0.07f;
     [SerializeField] private bool playOnEnable = true;
     [SerializeField] private bool pingPong = false; // Анимация вперед-назад
+    [SerializeField] private bool loop = true; // Зацикливать анимацию
+
+    public event Action OnAnimationComplete; // Событие завершения анимации
 
     private Coroutine _animationCoroutine;
     private WaitForSeconds _waitForSeconds; // Кэшируем для избежания GC аллокаций
@@ -67,6 +71,7 @@ public class ImageAnimator : MonoBehaviour
         int index = 0;
         int direction = 1; // 1 = вперед, -1 = назад
         int spritesLength = sprites.Length; // Кэшируем длину
+        int frameCount = 0; // Счетчик кадров для не зацикленной анимации
 
         while (true)
         {
@@ -96,6 +101,16 @@ public class ImageAnimator : MonoBehaviour
             {
                 // Обычный режим: по кругу
                 index = (index + 1) % spritesLength;
+            }
+
+            frameCount++;
+
+            // Если не зацикливаем и прошли все спрайты один раз
+            if (!loop && frameCount >= spritesLength)
+            {
+                yield return _waitForSeconds;
+                OnAnimationComplete?.Invoke();
+                yield break;
             }
 
             yield return _waitForSeconds; // Используем кэшированный WaitForSeconds
@@ -129,7 +144,7 @@ public class ImageAnimator : MonoBehaviour
         }
 
         // Загружаем все спрайты из текстуры
-        Object[] assets = UnityEditor.AssetDatabase.LoadAllAssetsAtPath(assetPath);
+        UnityEngine.Object[] assets = UnityEditor.AssetDatabase.LoadAllAssetsAtPath(assetPath);
 
         System.Collections.Generic.List<Sprite> loadedSprites = new System.Collections.Generic.List<Sprite>();
 

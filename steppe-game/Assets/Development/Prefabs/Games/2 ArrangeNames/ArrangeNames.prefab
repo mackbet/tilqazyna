@@ -95,7 +95,6 @@ MonoBehaviour:
   sockets:
   - {fileID: 7364671676912093807}
   - {fileID: 1208864912400314043}
-  - {fileID: 4630189792876547904}
   - {fileID: 1732167289163374347}
   OnSceneCompleted:
     m_PersistentCalls:
@@ -1013,7 +1012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[0].onStartedActivateables.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[1].onStartedActivateables.Array.size
@@ -1026,6 +1025,10 @@ PrefabInstance:
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[1].onFinishedActivateables.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
+      propertyPath: dialoguePhrases.Array.data[0].onStartedActivateables.Array.data[0].state
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[1].onStartedActivateables.Array.data[0].state
@@ -1051,6 +1054,10 @@ PrefabInstance:
       propertyPath: dialoguePhrases.Array.data[1].onFinishedActivateables.Array.data[1].state
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
+      propertyPath: dialoguePhrases.Array.data[0].onStartedActivateables.Array.data[0].gameObject
+      value: 
+      objectReference: {fileID: 4528023238979956101}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[1].onFinishedActivateables.Array.data[0].gameObject
       value: 
@@ -2044,6 +2051,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp
       objectReference: {fileID: 0}
+    - target: {fileID: 8537845517784411077, guid: fa1b3c5dd0866774f86e3b05777d1e33, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8843493673277489375, guid: fa1b3c5dd0866774f86e3b05777d1e33, type: 3}
       propertyPath: canvas
       value: 
@@ -3005,17 +3016,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8147960c2410ef3459f75ef1d9045fbe, type: 3}
---- !u!114 &4630189792876547904 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1642533807886826776, guid: 8147960c2410ef3459f75ef1d9045fbe, type: 3}
-  m_PrefabInstance: {fileID: 6236024086953341528}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30b234277d21967439060afefe91eefb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ArrangeNamesSocket
 --- !u!224 &6835079785328822039 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 599499952612734287, guid: 8147960c2410ef3459f75ef1d9045fbe, type: 3}
@@ -3415,6 +3415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ArrangeNames
   startDelay: 5
   finishDelay: 1
+  startWithDelay: 1
   scenes:
   - {fileID: 650014622040928873}
   - {fileID: 5568790630825626226}

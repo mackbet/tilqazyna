@@ -650,7 +650,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2488284045119347068, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_text
-      value: "\u0417\u0430\u0442\u0442\u044B \u0442\u0430\u0431\u044B\u04A3\u044B"
+      value: "\u0417\u0430\u0442\u0442\u044B \u0442\u0430\u043F"
       objectReference: {fileID: 0}
     - target: {fileID: 3075755175789649611, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_AnchorMax.y
