@@ -56,6 +56,12 @@ public class RocketLaunch : GameController
         base.OnDisable();
         leftEngineButton.OnStateChanged -= LeftEngine;
         rightEngineButton.OnStateChanged -= RightEngine;
+
+        // Останавливаем частицы взрыва при выходе из игры
+        if (explosionParticles != null)
+        {
+            explosionParticles.Stop();
+        }
     }
 
     private void FixedUpdate()
