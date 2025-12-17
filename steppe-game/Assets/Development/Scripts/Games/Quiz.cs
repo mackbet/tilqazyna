@@ -223,6 +223,8 @@ public class Quiz : GameController
         Debug.Log($"Викторина завершена! Правильных ответов: {correctAnswersCount}/{selectedQuestions.Count}");
 
         // Завершаем игру
+        float value = correctAnswersCount / (float)selectedQuestions.Count;
+        finishPanel.SetReward(Mathf.RoundToInt(20 * value), Mathf.RoundToInt(100 * value), Mathf.RoundToInt(150 * value));
         FinishGame();
     }
 

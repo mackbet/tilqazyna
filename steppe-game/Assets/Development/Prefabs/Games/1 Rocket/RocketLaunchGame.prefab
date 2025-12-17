@@ -37961,6 +37961,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+--- !u!114 &1233721345333871050 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7198366607822241818, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+  m_PrefabInstance: {fileID: 8285131605148041680}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1c3677a016ac41adc9e7a35dad5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinishPanel
 --- !u!224 &1283423110206081095 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7148639537272080791, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
@@ -37983,8 +37994,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5dd507b063704e4bb9346c7979d5510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RocketLaunch
+  finishPanel: {fileID: 1233721345333871050}
   startDelay: 5
   finishDelay: 2
+  startWithDelay: 1
   rocketRigidbody: {fileID: 4842068626815804953}
   targetRocket: {fileID: 1163300756925444223}
   leftEngineButton: {fileID: 6795870929687168021}

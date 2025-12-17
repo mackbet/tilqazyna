@@ -4031,6 +4031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 139a591251e23954b87e4b07c99609ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThreeInRow
+  finishPanel: {fileID: 5550166390472538725}
   startDelay: 1
   finishDelay: 1
   startWithDelay: 0
@@ -4093,6 +4094,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2149072980642890070, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
   m_PrefabInstance: {fileID: 3378714190094678655}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5550166390472538725 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7198366607822241818, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+  m_PrefabInstance: {fileID: 3378714190094678655}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1c3677a016ac41adc9e7a35dad5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinishPanel
 --- !u!224 &5608823695536583656 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7148639537272080791, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}

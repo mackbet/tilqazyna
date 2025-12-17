@@ -86,6 +86,8 @@ public class CatchAHorse : GameController
         if (currentSession >= totalSessions)
         {
             // Все сессии пройдены - победа
+
+            finishPanel.SetReward(15, 80, 100);
             FinishGame();
             return;
         }
@@ -352,7 +354,8 @@ public class CatchAHorse : GameController
         if (lives <= 0)
         {
             isSliderMoving = false;
-            FailGame();
+            finishPanel.SetReward(3, 20, 15);
+            FinishGame();
             return;
         }
 

@@ -3386,6 +3386,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 2996199540740494532}
   m_SourcePrefab: {fileID: 100100000, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+--- !u!114 &370740045730791920 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7198366607822241818, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+  m_PrefabInstance: {fileID: 7404091862279815658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1c3677a016ac41adc9e7a35dad5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinishPanel
 --- !u!223 &1664321936393500434 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 8203383318861018872, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
@@ -3413,6 +3424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c97546e99754148938a223356e80f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrangeNames
+  finishPanel: {fileID: 370740045730791920}
   startDelay: 5
   finishDelay: 1
   startWithDelay: 1

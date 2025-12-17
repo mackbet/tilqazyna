@@ -179,6 +179,7 @@ public class Fishing : GameController
 
         yield return new WaitForSeconds(1f);
 
+        finishPanel.SetReward(15, 30, 200);
         FinishGame();
     }
 

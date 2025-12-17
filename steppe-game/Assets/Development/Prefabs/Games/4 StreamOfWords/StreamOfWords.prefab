@@ -334,6 +334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundButton
   image: {fileID: 2013955060926872869}
+  alphaHitTestMinimumThreshold: 0.1
   localizedAudio:
     m_TableReference:
       m_TableCollectionName: 
@@ -1715,8 +1716,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62cc3666a030c0c45bf92f526609eacd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StreamOfWords
+  finishPanel: {fileID: 6076408309000372609}
   startDelay: 1
   finishDelay: 1
+  startWithDelay: 1
   textField: {fileID: 2780995782093421887}
   soundButton: {fileID: 3397380692913938075}
   targets:
@@ -1739,6 +1742,17 @@ MonoBehaviour:
   wordsToSelect: 10
   correctSound: {fileID: 8300000, guid: a952bc3dc0b2b5f45bf35fcaa2f3c5af, type: 3}
   wrongSound: {fileID: 0}
+--- !u!114 &6076408309000372609 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7198366607822241818, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+  m_PrefabInstance: {fileID: 4014397643608572315}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1c3677a016ac41adc9e7a35dad5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinishPanel
 --- !u!224 &6089729450044164108 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7148639537272080791, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
@@ -2494,11 +2508,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -344
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -126
       objectReference: {fileID: 0}
     - target: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

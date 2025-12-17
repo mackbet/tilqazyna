@@ -1,9 +1,9 @@
 {
   "dependencies": {
-    "com.ammariqais.skiaforunity": "https://github.com/ammariqais/SkiaForUnity.git?path=SkiaUnity/Assets/SkiaSharp",
+    "com.ammariqais.skiaforunity": "https://github.com/ammariqais/SkiaForUnity.git?path=SkiaUnity/Assets/SkiaSharp#3.2.3",
     "com.coffee.ui-particle": "https://github.com/mob-sakai/ParticleEffectForUGUI.git",
     "com.gilzoide.lottie-player": "https://github.com/gilzoide/unity-lottie-player.git#1.0.2",
-    "com.gindemit.rlottie": "https://github.com/gindemit/unity-rlottie.git?path=/unity/RLottieUnity/Assets/LottiePlugin/#0.2.2",
+    "com.gindemit.rlottie": "https://github.com/gindemit/unity-rlottie.git?path=/unity/RLottieUnity/Assets/LottiePlugin/#0.4.5",
     "com.unity.adaptiveperformance.google.android": "5.1.6",
     "com.unity.collab-proxy": "2.9.3",
     "com.unity.device-simulator.devices": "1.0.0",
@@ -12,7 +12,7 @@
     "com.unity.ide.rider": "3.0.38",
     "com.unity.ide.visualstudio": "2.0.23",
     "com.unity.inputsystem": "1.14.2",
-    "com.unity.localization": "1.5.8",
+    "com.unity.localization": "1.5.9",
     "com.unity.multiplayer.center": "1.0.0",
     "com.unity.postprocessing": "3.5.0",
     "com.unity.render-pipelines.universal": "17.2.0",

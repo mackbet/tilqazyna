@@ -63,6 +63,7 @@ public class Puzzle : GameController
 
         if (lockedCount >= pieces.Length)
         {
+            finishPanel.SetReward(8, 70, 100);
             FinishGame();
         }
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 public class GameView : CanvasView
 {
     [SerializeField] private TextMeshProUGUI title;
+    [SerializeField] private TextMeshProUGUI finishTitle;
     [SerializeField] private UIPanelFinish finishPanel;
     [SerializeField] private UIPanelRestart restartPanel;
     [SerializeField] private GameController gameController;
@@ -24,6 +25,7 @@ public class GameView : CanvasView
     public void SetTitle(string text)
     {
         title.text = text;
+        finishPanel.SetTitle(text);
     }
 
     public void Close()

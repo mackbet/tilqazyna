@@ -499,6 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameView
   title: {fileID: 3215562817317932678}
+  finishTitle: {fileID: 8255466567671250423}
   finishPanel: {fileID: 7198366607822241818}
   restartPanel: {fileID: 0}
   gameController: {fileID: 0}
@@ -4385,6 +4386,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f1c3677a016ac41adc9e7a35dad5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FinishPanel
+  titleField: {fileID: 8255466567671250423}
+  coinField: {fileID: 3857027271526464528}
+  pointField: {fileID: 7243634181166995809}
+  expField: {fileID: 680207323392451987}
 --- !u!1 &9027299388517465089
 GameObject:
   m_ObjectHideFlags: 0

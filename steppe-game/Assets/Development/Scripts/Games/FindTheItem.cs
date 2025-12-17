@@ -31,6 +31,7 @@ public class FindTheItem : GameController
     [SerializeField] private AudioClip shuffleSound;
 
     private int currentRound = 0;
+    private int worRounds = 0;
     private FindTheItemVariant targetItem;
     private FindTheItemWagon correctWagon;
     private bool isProcessing = false;
@@ -62,6 +63,8 @@ public class FindTheItem : GameController
     {
         if (currentRound >= roundsCount)
         {
+            float value = (float)worRounds / roundsCount;
+            finishPanel.SetReward(Mathf.RoundToInt(20 * value), Mathf.RoundToInt(100 * value), Mathf.RoundToInt(100));
             FinishGame();
             yield break;
         }
@@ -262,7 +265,7 @@ public class FindTheItem : GameController
         {
             questionPanel.SetActive(true);
         }
-        
+
         if (questionItemImage != null && targetItem != null)
         {
             questionItemImage.sprite = targetItem.Sprite;
@@ -305,6 +308,7 @@ public class FindTheItem : GameController
         {
             if (correctSound != null)
             {
+                worRounds++;
                 AudioManager.Instance.PlaySound(correctSound);
             }
             Debug.Log("Правильно!");

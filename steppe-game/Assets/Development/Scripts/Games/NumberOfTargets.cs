@@ -277,6 +277,7 @@ public class NumberOfTargets : GameController
             AudioManager.Instance.PlaySound(correctSound);
         }
 
+        finishPanel.SetReward(10, 85, 100);
         // Завершаем игру
         Invoke(nameof(FinishGame), 1f);
     }
@@ -291,6 +292,7 @@ public class NumberOfTargets : GameController
             AudioManager.Instance.PlaySound(wrongSound);
         }
 
+        finishPanel.SetReward(2, 20, 50);
         // Завершаем игру
         Invoke(nameof(FinishGame), 1f);
     }

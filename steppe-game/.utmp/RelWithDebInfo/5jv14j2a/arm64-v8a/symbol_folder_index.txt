@@ -1,0 +1,1 @@
+C:\Work\Aruzhan\tilqazyna\steppe-game\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\5jv14j2a\obj\arm64-v8a

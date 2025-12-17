@@ -155,6 +155,7 @@ public class RocketLaunch : GameController
 
         Debug.Log($"Полет успешно завершен! Время: {CurrentFlightTime:F2}с");
         targetRocket.gameObject.SetActive(false);
+        finishPanel.SetReward(10, 80, 100);
         FinishGame();
     }
 

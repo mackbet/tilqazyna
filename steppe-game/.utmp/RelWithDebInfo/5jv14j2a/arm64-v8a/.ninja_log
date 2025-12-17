@@ -1,0 +1,12 @@
+# ninja log v5
+256	556	7876131941109200	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	d4d877307a6a2a8
+558	1260	7876131947989576	C:/Work/Aruzhan/tilqazyna/steppe-game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5jv14j2a/obj/arm64-v8a/libswappywrapper.so	4d63fe16527541b6
+212	2197	7876131957479906	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	395064e53b9998a4
+222	2244	7876131957956070	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	e3f5cda0c66945e5
+232	2257	7876131958001179	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	7fbd5c327393b803
+185	2260	7876131958046304	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	ab80cefbc7f06525
+0	2364	7876131959281228	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	92a846b99264c0ec
+245	2484	7876131960500717	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	b42c26f1475db3e
+203	2560	7876131961243191	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	6dae70889997d8f2
+195	2678	7876131962414480	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	3e7c0ee086aedbb6
+2678	3058	7876131966257436	C:/Work/Aruzhan/tilqazyna/steppe-game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5jv14j2a/obj/arm64-v8a/libgame.so	b40d28eed49e014b
