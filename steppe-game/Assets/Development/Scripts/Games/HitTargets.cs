@@ -298,7 +298,7 @@ public class HitTargets : GameController
             AudioManager.Instance.PlaySound(winSound);
         }
 
-        finishPanel.SetReward(7 + lives * 5, 80, 80);
+        finishPanel.SetReward(7 + lives * 5, score, 80);
         FinishGame();
     }
 
@@ -321,7 +321,7 @@ public class HitTargets : GameController
             AudioManager.Instance.PlaySound(loseSound);
         }
 
-        finishPanel.SetReward(2, 20, 30);
+        finishPanel.SetReward(2, score, 30);
         FinishGame();
     }
 
