@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    [SerializeField] protected UIPanelFinish finishPanel;
     [SerializeField] private float startDelay = 1f;
     [SerializeField] private float finishDelay = 1f;
     [SerializeField] private bool startWithDelay = true;
@@ -36,7 +37,7 @@ public class GameController : MonoBehaviour
     {
         InitializeGame();
     }
-    
+
     private async void StartGameWithDelay()
     {
         try

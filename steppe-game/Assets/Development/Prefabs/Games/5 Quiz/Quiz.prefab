@@ -382,6 +382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundButton
   image: {fileID: 6905248902162467851}
+  alphaHitTestMinimumThreshold: 0.1
   localizedAudio:
     m_TableReference:
       m_TableCollectionName: 
@@ -1801,6 +1802,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 5497075232152995219}
   m_SourcePrefab: {fileID: 100100000, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+--- !u!114 &3473017255720982474 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7198366607822241818, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+  m_PrefabInstance: {fileID: 6041330967162542032}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1c3677a016ac41adc9e7a35dad5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinishPanel
 --- !u!224 &5621641310849357446 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2149072980642890070, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
@@ -1828,8 +1840,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52982dc8f664fdc44b0af546d3327963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Quiz
+  finishPanel: {fileID: 3473017255720982474}
   startDelay: 1
   finishDelay: 1
+  startWithDelay: 1
   questionField: {fileID: 1033741221098775482}
   soundButton: {fileID: 4659965732116181648}
   buttons:

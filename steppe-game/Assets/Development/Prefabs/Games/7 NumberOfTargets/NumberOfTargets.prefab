@@ -4565,8 +4565,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d215a706057a0b049ab17f947aca4242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NumberOfTargets
+  finishPanel: {fileID: 9012442184043666954}
   startDelay: 1
   finishDelay: 1
+  startWithDelay: 1
   questionText: {fileID: 2563129816681157454}
   numberDisplayText: {fileID: 4655011382714891487}
   timerText: {fileID: 3968993494972172165}
@@ -4725,6 +4727,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9012442184043666954 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7198366607822241818, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+  m_PrefabInstance: {fileID: 2231283064500936208}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1c3677a016ac41adc9e7a35dad5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinishPanel
 --- !u!224 &9061820693033129863 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7148639537272080791, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}

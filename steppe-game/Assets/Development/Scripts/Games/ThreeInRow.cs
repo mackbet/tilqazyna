@@ -107,7 +107,7 @@ public class ThreeInRow : GameController
     {
         if (movesLeft <= 0)
             return;
-            
+
         if (isProcessing) return;
 
         if (selectedItem == null)
@@ -413,6 +413,7 @@ public class ThreeInRow : GameController
         if (currentScore >= scoreGoal)
         {
             isEnded = true;
+            finishPanel.SetReward(10, 60, currentScore);
             FinishGame();
         }
         else if (movesLeft <= 0)

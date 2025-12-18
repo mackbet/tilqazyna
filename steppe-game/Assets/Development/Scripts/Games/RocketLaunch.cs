@@ -11,6 +11,7 @@ public class RocketLaunch : GameController
     [SerializeField] private RocketButton leftEngineButton;
     [SerializeField] private RocketButton rightEngineButton;
     [SerializeField] private RocketInstability instability;
+    [SerializeField] private ParticleSystem explosionParticles; // Система частиц взрыва при превышении допустимого угла
 
     [Header("Rotation Settings")]
     [SerializeField] private float rotationTorque = 10f;
@@ -36,6 +37,7 @@ public class RocketLaunch : GameController
     }
     private float currentFlightTime;
     private bool isFlightActive = false;
+    private bool explosionTriggered = false; // Флаг для отслеживания взрыва
 
     public event Action<float> OnAngleDifferenceChanged;
     public event Action<float> OnTimeCoefChanged;
@@ -54,6 +56,12 @@ public class RocketLaunch : GameController
         base.OnDisable();
         leftEngineButton.OnStateChanged -= LeftEngine;
         rightEngineButton.OnStateChanged -= RightEngine;
+
+        // Останавливаем частицы взрыва при выходе из игры
+        if (explosionParticles != null)
+        {
+            explosionParticles.Stop();
+        }
     }
 
     private void FixedUpdate()
@@ -108,6 +116,13 @@ public class RocketLaunch : GameController
 
         OnAngleDifferenceChanged?.Invoke(Mathf.Abs(angleDifference) / maxRotationDifference);
 
+        // Проверяем превышение допустимого угла и запускаем взрыв
+        if (!explosionTriggered && Mathf.Abs(angleDifference) > maxRotationDifference)
+        {
+            FailFlight();
+            TriggerExplosion();
+        }
+
         // Проверяем отклонение
         // if (Mathf.Abs(angleDifference) > maxRotationDifference)
         // {
@@ -155,6 +170,7 @@ public class RocketLaunch : GameController
 
         Debug.Log($"Полет успешно завершен! Время: {CurrentFlightTime:F2}с");
         targetRocket.gameObject.SetActive(false);
+        finishPanel.SetReward(10, 80, 100);
         FinishGame();
     }
 
@@ -173,16 +189,30 @@ public class RocketLaunch : GameController
         {
             rocketRigidbody.angularVelocity = 0;
             float angleInRadians = rocketRigidbody.rotation * Mathf.Deg2Rad;
-            Vector2 direction = rocketRigidbody.transform.up;
+            Vector2 direction = Vector2.down;
             DOTween.To(() => 0f, x =>
             {
                 // Каждый кадр двигаем ракету вперед
                 rocketRigidbody.MovePosition(rocketRigidbody.position + direction * finalFlightSpeed * Time.deltaTime);
             }, 1f, finalFlightTime)
             .SetEase(Ease.Linear);
-            targetRocket.gameObject.SetActive(false);
+            finishPanel.SetReward(2, 25, 10);
             FinishGame();
         }
+    }
+
+    private void TriggerExplosion()
+    {
+        explosionTriggered = true;
+
+        if (explosionParticles != null)
+        {
+            // Позиционируем частицы в месте ракеты
+            explosionParticles.transform.position = rocketRigidbody.transform.position;
+            explosionParticles.Play();
+        }
+
+        Debug.Log("Взрыв! Ракета превысила допустимый угол отклонения!");
     }
 
     private void LeftEngine(bool state)
@@ -201,6 +231,7 @@ public class RocketLaunch : GameController
         isRightEngineActive = false;
         CurrentFlightTime = 0f;
         isFlightActive = false;
+        explosionTriggered = false;
 
         if (instability != null)
         {

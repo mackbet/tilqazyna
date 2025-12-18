@@ -38,6 +38,8 @@ public class WordMagnet : GameController
     [Header("Sounds")]
     [SerializeField] private AudioClip correctCaptureSound;
     [SerializeField] private AudioClip wrongCaptureSound;
+    [SerializeField] private AudioClip[] correctLines;
+    [SerializeField] private AudioClip[] wrongLines;
     [SerializeField] private AudioClip winSound;
     [SerializeField] private AudioClip loseSound;
 
@@ -355,6 +357,8 @@ public class WordMagnet : GameController
             {
                 if (correctCaptureSound != null)
                     AudioManager.Instance.PlaySound(correctCaptureSound);
+                if (Random.Range(0f, 1f) > 0.5f)
+                    AudioManager.Instance.PlaySound(correctLines[Random.Range(0, correctLines.Length)]);
             }
         }
         else
@@ -365,6 +369,8 @@ public class WordMagnet : GameController
             if (wrongCaptureSound != null)
             {
                 AudioManager.Instance.PlaySound(wrongCaptureSound);
+                if (Random.Range(0f, 1f) > 0.5f)
+                    AudioManager.Instance.PlaySound(wrongLines[Random.Range(0, wrongLines.Length)]);
             }
 
             if (Lives <= 0)
@@ -402,6 +408,7 @@ public class WordMagnet : GameController
             AudioManager.Instance.PlaySound(winSound);
         }
 
+        finishPanel.SetReward(7 + lives * 5, 80, 80);
         FinishGame();
     }
 
@@ -414,6 +421,7 @@ public class WordMagnet : GameController
             AudioManager.Instance.PlaySound(loseSound);
         }
 
-        FailGame();
+        finishPanel.SetReward(2, 20, 30);
+        FinishGame();
     }
 }

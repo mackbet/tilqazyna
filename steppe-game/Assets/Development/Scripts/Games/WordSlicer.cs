@@ -550,6 +550,7 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
 
         yield return new WaitForSeconds(1f);
 
+        finishPanel.SetReward(7 + lives * 5, 80, 80);
         FinishGame();
     }
 
@@ -565,6 +566,7 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
         yield return new WaitForSeconds(1f);
 
         // Можно вызвать метод проигрыша или перезапуска
+        finishPanel.SetReward(2, 20, 30);
         FinishGame();
     }
 

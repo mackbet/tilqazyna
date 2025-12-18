@@ -1164,6 +1164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4520f7a20acfe8a4b817165f129dcbd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fishing
+  finishPanel: {fileID: 7924428428073733912}
   startDelay: 1
   finishDelay: 1
   startWithDelay: 0
@@ -1231,6 +1232,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7148639537272080791, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
   m_PrefabInstance: {fileID: 1016834821337435906}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7924428428073733912 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7198366607822241818, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+  m_PrefabInstance: {fileID: 1016834821337435906}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1c3677a016ac41adc9e7a35dad5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinishPanel
 --- !u!1001 &3398757875731775235
 PrefabInstance:
   m_ObjectHideFlags: 0

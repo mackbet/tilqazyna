@@ -133,6 +133,8 @@ public class StreamOfWords : GameController
     {
         currentCorrectTarget = null;
         // Завершаем игру
+
+        finishPanel.SetReward(10, 85, 100);
         FinishGame();
     }
 

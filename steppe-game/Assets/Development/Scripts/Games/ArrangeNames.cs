@@ -21,7 +21,7 @@ public class ArrangeNames : GameController
         {
             if (currentScene)
                 currentScene.SetActive(false);
-                
+
             currentScene = scenes[index];
             currentSceneController = currentScene.GetComponent<ArrangeNamesScene>();
 
@@ -29,6 +29,7 @@ public class ArrangeNames : GameController
         }
         else
         {
+            finishPanel.SetReward(8, 70, 90);
             FinishGame();
         }
     }
