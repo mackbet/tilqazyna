@@ -57,13 +57,6 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 133868adab370114e95ee5beff225123
-    m_Address: NumberOfTargets3
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1363c255b76044b0884b6cd942155da2
     m_Address: ChooseCityDialogue1
     m_ReadOnly: 1
@@ -85,22 +78,8 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 18294afe848fcce47bde5acfeb34f3d5
-    m_Address: StreamOfWords4
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 19bc3f780a4806145afac28b6e3276b3
     m_Address: Question 8
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1ba4b2b4ffb4f9f4aa342a3c0421a55b
-    m_Address: NumberOfTargets1
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
@@ -120,13 +99,6 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 264e41f1ca7c5964a94f57ea6eb094ae
-    m_Address: Quiz1
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2a7727b179ae54249b20264c0ebd5bde
     m_Address: Tazy_3_ChooseCity
     m_ReadOnly: 1
@@ -134,22 +106,8 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 370cebb09fae438449196c6852c97bd3
-    m_Address: ThreeInRow5
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 38761477732b44444adc908a1a5bd9e7
     m_Address: fish
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3aa69e5d2f93b6341b9a7837a4877109
-    m_Address: FindTheItem5
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
@@ -169,22 +127,8 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 408a587d6c96c5e4883d6e59c5227e8b
-    m_Address: ThreeInRow6
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 409a8f0144104c3458a0879b1e7355c9
     m_Address: Insects
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 40de9f74c5e691b41b4802fc46daa9b8
-    m_Address: Fishing6
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
@@ -206,13 +150,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 46ed9e9412f7f4b47a9d32833bacf141
     m_Address: ThreeInRow2
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 47efe0ef003e6f946a8548888952ee68
-    m_Address: Fishing
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
@@ -258,29 +195,8 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 626e6f7d7ee83394c94738807a5b9e5b
-    m_Address: StreamOfWords6
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 62b696210eb5aa94590ad95c376c290d
     m_Address: "\u041A\u04AF\u043C\u0456\u0441 \u043A\u0435\u0441\u0435\u0433\u0456"
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 654a3467c2baaa94d945838e93441735
-    m_Address: Quiz5
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6b06654a662989540a15372dff36b6d8
-    m_Address: StreamOfWords5
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
@@ -307,13 +223,6 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6e869bbe5b821af42b62864304f83f0d
-    m_Address: Puzzle4
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6f6597b40e3af984383bc8b12b693ea9
     m_Address: Branch
     m_ReadOnly: 1
@@ -330,13 +239,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 779e765e8ef712946913a6b5b071c54d
     m_Address: arrangeNames8_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7ae7aed2239e33047a71340bfabbe4b8
-    m_Address: FindTheItem1
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
@@ -384,20 +286,6 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 89bacaea4bd5afa4da7370b1e95d9ff0
-    m_Address: ThreeInRow7
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8ba8a9ec7ca66884a8ac680b0475428b
-    m_Address: Quiz4
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8e42cbe65857d8c4dbc503b8220d2899
     m_Address: "\u0411\u04E9\u0440i\u043A"
     m_ReadOnly: 1
@@ -433,13 +321,6 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 95f2c9aaa22e16d4ea91a32f0db8c933
-    m_Address: StreamOfWords2
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a133e2eb78c5c8244bd5a763e7280332
     m_Address: Rabbit
     m_ReadOnly: 1
@@ -461,48 +342,13 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a85e33c58891fa04ba1486ded2a00213
-    m_Address: Fishing5
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a912e16448b3f7042941ab484f44b80f
-    m_Address: Fishing3
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: aa0c96a897bb2520f8d789afe9cb43d5
     m_Address: Assets/Settings/Localization/Tables/Main Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: aa3b7b4e2ed657b44bb4f7aa77bffcef
-    m_Address: ThreeInRow3
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ad58a283edb83ea4b9d7b4367347bcb4
-    m_Address: StreamOfWords3
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b2ad75cacd19b4840a84b74db8f62eba
     m_Address: Question 1
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b34d76d2a957c3c40a0b94ee0d383648
-    m_Address: Puzzle1
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
@@ -522,43 +368,8 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d2894f97d2996454baaa6f15703c3fd9
-    m_Address: FindTheItem4
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d29393a90f4021148876439596cdf979
-    m_Address: Puzzle5
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d6fe90737f29e2141bd0dfb1b9a907c6
     m_Address: Fishing4
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: da519de225d35ce43a439e28332d2b99
-    m_Address: ThreeInRow1
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: db7a2978c95b9b14bb72bf11f08e71a4
-    m_Address: StreamOfWords1
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: dea360ce9f188614ab3520fb475e190d
-    m_Address: Puzzle3
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
@@ -571,22 +382,8 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e7b2e7585620dd044be3c682c1e78f3d
-    m_Address: stuffToolsFinish_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ec08c1ad26399284d8397732b5933c05
     m_Address: Question 6
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ed7ab1463739d424fa8bf8ba38015941
-    m_Address: Puzzle9
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
@@ -608,13 +405,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f5ad58cb4ee45a64fb310b126796ac49
     m_Address: Bird
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f615dab6ebc9b344c8c925c1743991fc
-    m_Address: FindTheItem6
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk

@@ -15,24 +15,6 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Kazakh (kk)
   m_GUID: 723cd68c2376e9542842a38f1d59a842
   m_SerializeEntries:
-  - m_GUID: 0fcfb7c57451a5b448517bbf08810245
-    m_Address: stuffTools2_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 129c1245158283041889436bfcdb54f9
-    m_Address: arrangeNames4_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 16b08d093f3322c49a94dbba480e3586
-    m_Address: rocketlaunch5_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1900ec0a4177da243b97f4d02c8e68eb
     m_Address: rocketlaunch1_KK
     m_ReadOnly: 1
@@ -45,74 +27,14 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-kk
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 39cd5ae4a2ba19e419a6a61b12134b3e
-    m_Address: stuffTools1_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3d91d30ad7f00ad47919b704b6c09372
     m_Address: stuffTools4_KK
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5e5f2ea4c8dc9e84fb9dcb9704d33c1a
-    m_Address: arrangeNames3_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 61362829c704db74fa9f4fb06d4b49b2
-    m_Address: rocketlaunch4_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6e8464ae8f504d3489fb10ad27c291e9
-    m_Address: arrangeNames5_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7770a708cdac0a142ad4670d611c47c0
     m_Address: rocketlaunch2_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 81a1ad28e76201846ad052b3c2a480fa
-    m_Address: rocketlaunch3_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9cf8ac000e2fb9b4a94e945916285ca2
-    m_Address: stuffTools3_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c29736964531d1b43aa472eac759738d
-    m_Address: arrangeNames2_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cb1c4819adcbcc54a8a7490f75261b77
-    m_Address: arrangeNames6_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: db60f78f0614a084090db6a8d0b8b8b2
-    m_Address: stuffTools5_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fffca069bf0135c4182418507f49383e
-    m_Address: rocketlaunchFinish_KK
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk

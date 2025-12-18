@@ -1,30 +1,38 @@
 using UnityEngine;
 using UnityEditor;
+using System.IO;
+using System.Collections.Generic;
+
+// ВАЖНО: Addressables должны быть установлены через Package Manager
+#if UNITY_EDITOR
 using UnityEditor.AddressableAssets;
 using UnityEditor.AddressableAssets.Settings;
-using System.IO;
+using UnityEditor.AddressableAssets.Settings.GroupSchemas;
+#endif
 
 public class SetupAddressablesForGooglePlay
 {
+#if UNITY_EDITOR
     [MenuItem("Tools/Setup Addressables for Google Play")]
     static void Setup()
     {
         Debug.Log("=== Starting setup ===");
         
-        // ШАГ 1: Получить настройки Addressables
+        // Проверка что Addressables установлен
         var settings = AddressableAssetSettingsDefaultObject.Settings;
         if (settings == null)
         {
-            Debug.LogError("Addressables not initialized! Go to: Window → Addressables → Groups → Create Settings");
+            Debug.LogError("Addressables not initialized! Steps:");
+            Debug.LogError("1. Window → Package Manager → Unity Registry → Addressables → Install");
+            Debug.LogError("2. Window → Asset Management → Addressables → Groups → Create Addressables Settings");
             return;
         }
         Debug.Log("✓ Addressables settings found");
 
-        // ШАГ 2: Создать или найти группу для больших файлов
-        var group = settings.FindGroup("LargeAssets");
+        // Найти или создать группу
+        AddressableAssetGroup group = settings.FindGroup("LargeAssets");
         if (group == null)
         {
-            // Создать новую группу
             group = settings.CreateGroup("LargeAssets", false, false, false, null);
             Debug.Log("✓ Created new group: LargeAssets");
         }
@@ -33,97 +41,116 @@ public class SetupAddressablesForGooglePlay
             Debug.Log("✓ Found existing group: LargeAssets");
         }
 
-        // ШАГ 3: Настроить компрессию для группы
-        var schema = group.GetSchema<UnityEditor.AddressableAssets.Settings.GroupSchemas.BundledAssetGroupSchema>();
+        // Настроить компрессию
+        BundledAssetGroupSchema schema = group.GetSchema<BundledAssetGroupSchema>();
         if (schema != null)
         {
-            // LZ4 = быстрое сжатие, хорошо для runtime загрузки
-            schema.Compression = UnityEngine.ResourceManagement.ResourceProviders.BundledAssetGroupSchema.BundleCompressionMode.LZ4;
-            
-            // PackTogether = все ресурсы группы в один файл
-            schema.BundleMode = UnityEditor.AddressableAssets.Settings.GroupSchemas.BundledAssetGroupSchema.BundlePackingMode.PackTogether;
-            
+            schema.Compression = BundledAssetGroupSchema.BundleCompressionMode.LZ4;
+            schema.BundleMode = BundledAssetGroupSchema.BundlePackingMode.PackTogether;
             Debug.Log("✓ Configured compression: LZ4, PackTogether");
         }
 
-        // ШАГ 4: Найти и добавить большие файлы
-        long minSize = 500 * 1024; // 500 KB - минимальный размер файла
+        // Найти большие файлы
+        long minSize = 500 * 1024; // 500 KB
         int totalCount = 0;
+        List<string> addedFiles = new List<string>();
 
-        // 4.1 Текстуры
-        Debug.Log("Searching for large textures...");
-        int textureCount = AddAssetsOfType(settings, group, "t:Texture2D", minSize);
+        // Текстуры
+        Debug.Log("\n--- Searching Textures ---");
+        int textureCount = AddAssetsOfType(settings, group, "t:Texture2D", minSize, addedFiles);
         totalCount += textureCount;
-        Debug.Log($"✓ Found {textureCount} large textures");
-
-        // 4.2 Аудио
-        Debug.Log("Searching for large audio clips...");
-        int audioCount = AddAssetsOfType(settings, group, "t:AudioClip", minSize);
+        
+        // Аудио
+        Debug.Log("\n--- Searching Audio ---");
+        int audioCount = AddAssetsOfType(settings, group, "t:AudioClip", minSize, addedFiles);
         totalCount += audioCount;
-        Debug.Log($"✓ Found {audioCount} large audio clips");
+        
+        // Модели/Префабы
+        Debug.Log("\n--- Searching Prefabs ---");
+        int prefabCount = AddAssetsOfType(settings, group, "t:GameObject", minSize, addedFiles);
+        totalCount += prefabCount;
 
-        // 4.3 3D Модели
-        Debug.Log("Searching for large models...");
-        int modelCount = AddAssetsOfType(settings, group, "t:GameObject", minSize);
-        totalCount += modelCount;
-        Debug.Log($"✓ Found {modelCount} large models");
-
-        // ШАГ 5: Сохранить изменения
+        // Сохранить
         settings.SetDirty(AddressableAssetSettings.ModificationEvent.BatchModification, null, true, true);
         AssetDatabase.SaveAssets();
         
-        Debug.Log($"=== Setup Complete! ===");
+        Debug.Log("\n=== Setup Complete! ===");
         Debug.Log($"Total assets marked as Addressable: {totalCount}");
-        Debug.Log("");
-        Debug.Log("NEXT STEPS:");
-        Debug.Log("1. Window → Addressables → Groups → Build → New Build → Default Build Script");
-        Debug.Log("2. Wait for build to complete (2-5 minutes)");
-        Debug.Log("3. File → Build Settings → Build (AAB)");
+        
+        if (totalCount > 0)
+        {
+            Debug.Log("\nAdded files (first 10):");
+            for (int i = 0; i < Mathf.Min(10, addedFiles.Count); i++)
+            {
+                Debug.Log($"  ✓ {addedFiles[i]}");
+            }
+            
+            Debug.Log("\nNEXT STEPS:");
+            Debug.Log("1. Window → Asset Management → Addressables → Groups");
+            Debug.Log("2. Build → New Build → Default Build Script");
+            Debug.Log("3. Wait 2-5 minutes");
+            Debug.Log("4. File → Build Settings → Build (AAB)");
+        }
+        else
+        {
+            Debug.LogWarning("\n⚠ NO FILES ADDED!");
+            Debug.LogWarning("Possible reasons:");
+            Debug.LogWarning("• All files are < 500 KB");
+            Debug.LogWarning("• Files are in Resources folder (can't be Addressable)");
+            Debug.LogWarning("• Files are in Packages folder (system files)");
+            Debug.LogWarning("\nTry: Change minSize to 100 KB in the script");
+        }
     }
 
-    // ВСПОМОГАТЕЛЬНАЯ ФУНКЦИЯ: добавить ресурсы определённого типа
-    static int AddAssetsOfType(AddressableAssetSettings settings, AddressableAssetGroup group, string assetType, long minSize)
+    static int AddAssetsOfType(AddressableAssetSettings settings, AddressableAssetGroup group, 
+                               string assetType, long minSize, List<string> addedFiles)
     {
         int count = 0;
         string[] guids = AssetDatabase.FindAssets(assetType);
+        
+        Debug.Log($"Found {guids.Length} total assets of type {assetType}");
 
         foreach (string guid in guids)
         {
-            // Получить путь к файлу
             string path = AssetDatabase.GUIDToAssetPath(guid);
             
-            // ПРОПУСТИТЬ системные файлы
-            if (path.StartsWith("Packages/")) continue;          // Unity пакеты
-            if (path.Contains("TextMesh Pro")) continue;          // TextMesh Pro
-            if (path.Contains("Resources")) continue;             // Resources папка (нельзя сделать Addressable)
+            // Пропустить системные файлы
+            if (path.StartsWith("Packages/")) continue;
+            if (path.Contains("TextMesh Pro")) continue;
+            if (path.Contains("Resources")) continue;
+            if (path.Contains("Editor")) continue; // Editor-only ресурсы
             
             // Проверить размер файла
             FileInfo fileInfo = new FileInfo(path);
             if (!fileInfo.Exists) continue;
-            if (fileInfo.Length < minSize) continue; // Слишком маленький файл
+            
+            long fileSizeKB = fileInfo.Length / 1024;
+            
+            // Показать первые 5 для диагностики
+            if (count < 5)
+            {
+                Debug.Log($"  Checking: {Path.GetFileName(path)} → {fileSizeKB} KB");
+            }
+            
+            if (fileInfo.Length < minSize) continue;
             
             try
             {
                 // Добавить в Addressables
-                var entry = settings.CreateOrMoveEntry(guid, group, false, false);
-                
-                // Установить адрес = имя файла (для удобной загрузки)
+                AddressableAssetEntry entry = settings.CreateOrMoveEntry(guid, group, false, false);
                 entry.address = Path.GetFileNameWithoutExtension(path);
                 
+                addedFiles.Add($"{Path.GetFileName(path)} ({fileSizeKB} KB)");
                 count++;
-                
-                // Логировать каждый 10-й файл для прогресса
-                if (count % 10 == 0)
-                {
-                    Debug.Log($"  Processing... {count} files");
-                }
             }
             catch (System.Exception e)
             {
                 Debug.LogWarning($"Could not add {path}: {e.Message}");
             }
         }
-
+        
+        Debug.Log($"→ Added {count} assets (> {minSize / 1024} KB)");
         return count;
     }
+#endif
 }
