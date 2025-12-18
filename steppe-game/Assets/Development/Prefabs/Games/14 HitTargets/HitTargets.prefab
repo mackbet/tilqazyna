@@ -1887,24 +1887,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7a3057bffffc11b4f82fc094a8ee05ab, type: 2}
   - {fileID: 11400000, guid: ffa2b720f9329c343b27351673e401c0, type: 2}
   - {fileID: 11400000, guid: a3807d2282fa042449f019352d6e79ee, type: 2}
-  - {fileID: 11400000, guid: 4afa669913ecdca498083aefb6997bd7, type: 2}
   - {fileID: 11400000, guid: 74eabfaa85e39044393d6282af5f005e, type: 2}
-  - {fileID: 11400000, guid: 5af30aff22969d84bad791cc3bf64a5d, type: 2}
   - {fileID: 11400000, guid: 3b9f0a8c772bbb14a98bd08427b10972, type: 2}
   - {fileID: 11400000, guid: 8ba543e7a33b7f448b4a192b50c3d2f6, type: 2}
   - {fileID: 11400000, guid: 14d11cd655707d24dbf2a02beefb581b, type: 2}
   - {fileID: 11400000, guid: d1f4d516a94cbf24ea2db17324381e6b, type: 2}
   - {fileID: 11400000, guid: 81e01b2c6865fe448be9621851396469, type: 2}
   - {fileID: 11400000, guid: a3c747d29d3f3dd4d9004d6a457dba81, type: 2}
-  - {fileID: 11400000, guid: 64e6c8989ded9d143a9241b4d47b478e, type: 2}
-  - {fileID: 11400000, guid: 8bc931d48effa82479be329dfad47d60, type: 2}
   - {fileID: 11400000, guid: 9727419e33b6dd7429350a17f9a651eb, type: 2}
   - {fileID: 11400000, guid: 5cf4efb8bcc2eac46a653e6b86bb7fd4, type: 2}
-  - {fileID: 11400000, guid: ff12d95f59726f247ab72a419258a511, type: 2}
   - {fileID: 11400000, guid: c1b13fb4de86d084bb47c57ae5797c73, type: 2}
-  spawnInterval: 1
+  spawnInterval: 0.8
   spawnDuration: 2
-  gameDuration: 20
+  gameDuration: 30
   startLives: 3
   correctWordProbability: 0.5
   hitEffectPrefab: {fileID: 1639153778409746041, guid: 7930b29917a1eef4b9de81d5f606c85b, type: 3}

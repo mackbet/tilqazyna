@@ -216,8 +216,8 @@ RectTransform:
   m_GameObject: {fileID: 8308260210116554726}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2365834821011006931}
   m_Father: {fileID: 4025609687811247190}
@@ -308,19 +308,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2013955060926872869}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7300590894235645829}
-        m_TargetAssemblyTypeName: GameView, Assembly-CSharp
-        m_MethodName: Close
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &3397380692913938075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1498,17 +1486,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6048242576276063430, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
   m_PrefabInstance: {fileID: 3663675500695943728}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7201036352935178334 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5852644448141855342, guid: af08e37e7b8bd2a45ab0c17f8b4e0f8b, type: 3}
-  m_PrefabInstance: {fileID: 3663675500695943728}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67ed7958eb4779347af6755de2a5f649, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StreamOfWordsTarget
 --- !u!1001 &4014397643608572315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1524,6 +1501,10 @@ PrefabInstance:
     - target: {fileID: 2488284045119347068, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_text
       value: "\u0421\u04E9\u0437 c\u0430\u0440\u049B\u044B\u0442\u044B"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488284045119347068, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3075755175789649611, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1543,6 +1524,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3075755175789649611, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3215562817317932678, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3954375581061687396, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
@@ -1720,13 +1705,13 @@ MonoBehaviour:
   startDelay: 1
   finishDelay: 1
   startWithDelay: 1
+  targetWord: {fileID: 7570407436909886613}
   textField: {fileID: 2780995782093421887}
   soundButton: {fileID: 3397380692913938075}
   targets:
   - {fileID: 7940889768764748639}
   - {fileID: 1344757460445739435}
   - {fileID: 7021521399991948987}
-  - {fileID: 7201036352935178334}
   - {fileID: 3625611546650866116}
   - {fileID: 3244779474515113035}
   - {fileID: 1302520369043562248}
@@ -1758,17 +1743,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7148639537272080791, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
   m_PrefabInstance: {fileID: 4014397643608572315}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7300590894235645829 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5973719103149028894, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
-  m_PrefabInstance: {fileID: 4014397643608572315}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4359368974977129264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62382b57baeccc94ab02e7a2e4d366f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameView
 --- !u!1001 &4439217872320146496
 PrefabInstance:
   m_ObjectHideFlags: 0

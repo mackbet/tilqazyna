@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "steppe-game.sln"
+    "dotnet.defaultSolution": "steppe-game.slnx"
 }

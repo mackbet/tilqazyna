@@ -324,7 +324,4 @@ public class HitTargets : GameController
         finishPanel.SetReward(2, score, 30);
         FinishGame();
     }
-
-    public float GetProgress() => gameDuration > 0 ? currentTime / gameDuration : 0f;
-    public int GetScore() => score;
 }

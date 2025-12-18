@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using DG.Tweening;
 
 public class PuzzleCompletionHandler : MonoBehaviour
 {
@@ -24,6 +25,14 @@ public class PuzzleCompletionHandler : MonoBehaviour
     [Header("Visual Effects")]
     [SerializeField] private GameObject completionEffectPrefab;
     [SerializeField] private Transform effectParent;
+
+    [Header("DOTween Animation")]
+    [SerializeField] private RectTransform animatedRectTransform;
+    [SerializeField] private float scaleUpDuration = 0.5f;
+    [SerializeField] private float displayDuration = 2f;
+    [SerializeField] private float scaleDownDuration = 0.3f;
+    [SerializeField] private Ease scaleUpEase = Ease.OutBack;
+    [SerializeField] private Ease scaleDownEase = Ease.InBack;
 
     private int lockedCount = 0;
 
@@ -126,6 +135,39 @@ public class PuzzleCompletionHandler : MonoBehaviour
             Transform parent = effectParent != null ? effectParent : transform;
             Instantiate(completionEffectPrefab, parent);
         }
+
+        // Анимация через DOTween
+        PlayCompletionAnimation();
+    }
+
+    private void PlayCompletionAnimation()
+    {
+        if (animatedRectTransform == null)
+        {
+            Debug.LogWarning("RectTransform для анимации не назначен!");
+            return;
+        }
+
+        // Убиваем все предыдущие твины на этом объекте
+        animatedRectTransform.DOKill();
+
+        // Устанавливаем начальный масштаб в 0
+        animatedRectTransform.localScale = Vector3.zero;
+
+        // Создаем последовательность анимации
+        Sequence animSequence = DOTween.Sequence();
+
+        // 1. Увеличиваем до 1
+        animSequence.Append(animatedRectTransform.DOScale(Vector3.one, scaleUpDuration).SetEase(scaleUpEase));
+
+        // 2. Ждем
+        animSequence.AppendInterval(displayDuration);
+
+        // 3. Уменьшаем до 0
+        animSequence.Append(animatedRectTransform.DOScale(Vector3.zero, scaleDownDuration).SetEase(scaleDownEase));
+
+        // Запускаем последовательность
+        animSequence.Play();
     }
 
     protected virtual void OnAllPiecesLocked()
@@ -137,6 +179,13 @@ public class PuzzleCompletionHandler : MonoBehaviour
     public void ResetHandler()
     {
         lockedCount = 0;
+        
+        // Сбрасываем анимацию
+        if (animatedRectTransform != null)
+        {
+            animatedRectTransform.DOKill();
+            animatedRectTransform.localScale = Vector3.zero;
+        }
     }
 
     public void SetPieces(PuzzlePiece[] newPieces)
@@ -173,5 +222,14 @@ public class PuzzleCompletionHandler : MonoBehaviour
     public float GetProgress()
     {
         return pieces.Length > 0 ? (float)lockedCount / pieces.Length : 0f;
+    }
+
+    private void OnDestroy()
+    {
+        // Очищаем все твины при уничтожении объекта
+        if (animatedRectTransform != null)
+        {
+            animatedRectTransform.DOKill();
+        }
     }
 }

@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: fishType
       value: Orange
       objectReference: {fileID: 0}
+    - target: {fileID: 85917058815831898, guid: 319784b0117dc184ba6a45f40de96e46, type: 3}
+      propertyPath: m_text
+      value: "\u049A\u044B\u0437\u044B\u043B"
+      objectReference: {fileID: 0}
+    - target: {fileID: 85917058815831898, guid: 319784b0117dc184ba6a45f40de96e46, type: 3}
+      propertyPath: m_fontSize
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 997979001810520081, guid: 319784b0117dc184ba6a45f40de96e46, type: 3}
       propertyPath: spriteSheet
       value: 
