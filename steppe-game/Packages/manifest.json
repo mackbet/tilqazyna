@@ -3,6 +3,7 @@
     "com.ammariqais.skiaforunity": "https://github.com/ammariqais/SkiaForUnity.git?path=SkiaUnity/Assets/SkiaSharp#3.2.3",
     "com.coffee.ui-particle": "https://github.com/mob-sakai/ParticleEffectForUGUI.git",
     "com.unity.adaptiveperformance.google.android": "5.1.6",
+    "com.unity.addressables": "2.7.6",
     "com.unity.burst": "1.8.27",
     "com.unity.collab-proxy": "2.9.3",
     "com.unity.device-simulator.devices": "1.0.0",
