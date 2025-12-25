@@ -171,6 +171,8 @@ public class RocketLaunch : GameController
         Debug.Log($"Полет успешно завершен! Время: {CurrentFlightTime:F2}с");
         targetRocket.gameObject.SetActive(false);
         finishPanel.SetReward(10, 80, 100);
+        finishPanel.SetState(true);
+        finishPanel.SetStars(3);
         FinishGame();
     }
 
@@ -197,6 +199,8 @@ public class RocketLaunch : GameController
             }, 1f, finalFlightTime)
             .SetEase(Ease.Linear);
             finishPanel.SetReward(2, 25, 10);
+            finishPanel.SetState(false);
+            finishPanel.SetStars(0);
             FinishGame();
         }
     }

@@ -300,6 +300,8 @@ public class NumberOfTargets : GameController
         }
 
         finishPanel.SetReward(10, 85, 100);
+        finishPanel.SetState(true);
+        finishPanel.SetStars(3);
         // Завершаем игру
         Invoke(nameof(FinishGame), 1f);
     }
@@ -315,6 +317,8 @@ public class NumberOfTargets : GameController
         }
 
         finishPanel.SetReward(2, 20, 50);
+        finishPanel.SetState(false);
+        finishPanel.SetStars(0);
         // Завершаем игру
         Invoke(nameof(FinishGame), 1f);
     }

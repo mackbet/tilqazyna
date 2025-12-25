@@ -88,6 +88,8 @@ public class CatchAHorse : GameController
             // Все сессии пройдены - победа
 
             finishPanel.SetReward(15, 80, 100);
+            finishPanel.SetState(true);
+            finishPanel.SetStars(3);
             FinishGame();
             return;
         }
@@ -355,6 +357,8 @@ public class CatchAHorse : GameController
         {
             isSliderMoving = false;
             finishPanel.SetReward(3, 20, 15);
+            finishPanel.SetState(false);
+            finishPanel.SetStars(0);
             FinishGame();
             return;
         }

@@ -33,13 +33,8 @@ public class LeaderCardManager : MonoBehaviour
         nameText.text = userModel.Name;
         pointsText.text = userModel.Points.ToString();
         levelText.text = userModel.Level.ToString();
-        if (userModel.Sex == CharacterSex.Boy)
-        {
-            image.sprite = boySprite;
-        }
-        else
-        {
-            image.sprite = girlSprite;
-        }
+
+        // 0 = Male, 1 = Female
+        image.sprite = userModel.Sex == 0 ? boySprite : girlSprite;
     }
 }

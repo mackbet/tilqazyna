@@ -147,6 +147,8 @@ public class CraftStuff : GameController
 
                 personImage.sprite = selectedProfession.FinalSprite;
                 finishPanel.SetReward(10, 80, 100);
+                finishPanel.SetState(true);
+                finishPanel.SetStars(3);
                 FinishGame();
             });
         });

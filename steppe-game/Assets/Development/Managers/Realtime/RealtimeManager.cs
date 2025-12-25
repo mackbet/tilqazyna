@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Firebase.Firestore;
@@ -14,20 +15,38 @@ public class RealtimeManager
 
     public async Task SaveUserData(string userName, CharacterSex userSex, int userLevel, int userPoints)
     {
-        UserModel userModel = new(modelName: userName, modelSex: userSex, modelLevel: userLevel, modelPoints: userPoints);
+        // Используем словарь вместо UserModel
+        var userData = new Dictionary<string, object>
+        {
+            { "Name", userName },
+            { "Sex", (int)userSex },
+            { "Level", userLevel },
+            { "Points", userPoints }
+        };
 
-        await firestore.Collection("Users").Document(userModel.Name).SetAsync(userModel);
+        await firestore.Collection("Users").Document(userName).SetAsync(userData);
     }
 
     public async Task<UserModel> ReadUserData(string userName)
     {
         var snapshot = await firestore.Collection("Users").Document(userName).GetSnapshotAsync();
 
-        var userModel = snapshot.ConvertTo<UserModel>();
+        if (snapshot.Exists)
+        {
+            var data = snapshot.ToDictionary();
+            
+            var userModel = new UserModel(
+                data["Name"].ToString(),
+                (CharacterSex)Convert.ToInt32(data["Sex"]),
+                Convert.ToInt32(data["Level"]),
+                Convert.ToInt32(data["Points"])
+            );
 
-        Debug.Log("Name: " + userModel.Name);
+            Debug.Log("Name: " + userModel.Name);
+            return userModel;
+        }
 
-        return userModel;
+        return null;
     }
 
     public async Task<List<UserModel>> ReadOtherUsersData(string userName)
@@ -38,7 +57,14 @@ public class RealtimeManager
 
         foreach (var doc in snapshot.Documents)
         {
-            var userModel = doc.ConvertTo<UserModel>();
+            var data = doc.ToDictionary();
+            
+            var userModel = new UserModel(
+                data["Name"].ToString(),
+                (CharacterSex)Convert.ToInt32(data["Sex"]),
+                Convert.ToInt32(data["Level"]),
+                Convert.ToInt32(data["Points"])
+            );
 
             if (userModel.Name != userName)
             {

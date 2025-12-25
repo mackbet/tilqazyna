@@ -1,5 +1,5 @@
 public enum CharacterSex
 {
-    Boy,
-    Girl,
+    Boy = 0,
+    Girl = 1
 }

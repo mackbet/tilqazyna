@@ -141,6 +141,8 @@ public class StreamOfWords : GameController
         // Завершаем игру
 
         finishPanel.SetReward(10, 85, 100);
+        finishPanel.SetState(true);
+        finishPanel.SetStars(3);
         FinishGame();
     }
 

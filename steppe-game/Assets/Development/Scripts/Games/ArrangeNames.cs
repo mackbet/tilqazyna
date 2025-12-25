@@ -30,6 +30,8 @@ public class ArrangeNames : GameController
         else
         {
             finishPanel.SetReward(8, 70, 90);
+            finishPanel.SetState(true);
+            finishPanel.SetStars(3);
             FinishGame();
         }
     }

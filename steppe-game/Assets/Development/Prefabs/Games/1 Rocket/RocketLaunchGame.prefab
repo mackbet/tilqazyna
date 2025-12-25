@@ -37112,6 +37112,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialoguePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 3674019310617578376, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
+      propertyPath: m_fontSize
+      value: 35.7
+      objectReference: {fileID: 0}
     - target: {fileID: 4420244195531666729, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: m_text
       value: 
@@ -38135,6 +38139,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7198366607822241818, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+      propertyPath: failedObjects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198366607822241818, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+      propertyPath: failedObjects.Array.data[0].state
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198366607822241818, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+      propertyPath: failedObjects.Array.data[0].gameObject
+      value: 
+      objectReference: {fileID: 5284986234091800099}
     - target: {fileID: 7231338076588010467, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1

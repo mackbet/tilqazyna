@@ -409,6 +409,8 @@ public class WordMagnet : GameController
         }
 
         finishPanel.SetReward(7 + lives * 5, 80, 80);
+        finishPanel.SetState(true);
+        finishPanel.SetStars(lives);
         FinishGame();
     }
 
@@ -422,6 +424,8 @@ public class WordMagnet : GameController
         }
 
         finishPanel.SetReward(2, 20, 30);
+        finishPanel.SetState(false);
+        finishPanel.SetStars(lives);
         FinishGame();
     }
 }

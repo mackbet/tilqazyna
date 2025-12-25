@@ -230,6 +230,8 @@ public class Quiz : GameController
         // Завершаем игру
         float value = correctAnswersCount / (float)selectedQuestions.Count;
         finishPanel.SetReward(Mathf.RoundToInt(20 * value), Mathf.RoundToInt(100 * value), Mathf.RoundToInt(150 * value));
+        finishPanel.SetState(value > 0);
+        finishPanel.SetStars(value > 0 ? Mathf.CeilToInt(value * 3) : 0);
         FinishGame();
     }
 
