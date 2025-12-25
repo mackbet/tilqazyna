@@ -114,7 +114,6 @@ public class CookingTipManager : MonoBehaviour
     private double _hintIntervalSeconds = 6.0;
     private double _initHintIntervalSeconds;
     private bool _isInitialized = false;
-    private bool _areAllGuestCreated = false;
     private bool _isFire;
 
     public void Initialize()
@@ -146,7 +145,6 @@ public class CookingTipManager : MonoBehaviour
     }
 
     private void SetHintSecsZero() => _hintIntervalSeconds = 0;
-    private void SetAllGuestCreated() => _areAllGuestCreated = true;
 
     private void OnPlayerAction()
     {
@@ -678,17 +676,14 @@ public class CookingTipManager : MonoBehaviour
     private void ResetSettings()
     {
         _hintIntervalSeconds = _initHintIntervalSeconds;
-        _areAllGuestCreated = false;
     }
 
     private void OnEnable()
     {
         _dragDropManager.OnIngredientAdded += OnIngredientAdded;
         _cookingManager.OnDoughPlateClickedAction += OnPlayerAction;
-        _cookingManager.OnRollingPinClickedAction += OnPlayerAction;
-        _cookingManager.OnKnifeClickedAction += OnPlayerAction;
         _cookingManager.OnOnionClickedAction += OnPlayerAction;
-        CookingManager.OnKumisBottleClickedAction += OnPlayerAction;
+        //CookingManager.OnKumisBottleClickedAction += OnPlayerAction;
         _cookingManager.OnCauldronClickedAction += OnPlayerAction;
         _cookingManager.OnPotClickedAction += OnPlayerAction;
         GuestManager.OnComplete += OnPlayerAction;
@@ -696,17 +691,14 @@ public class CookingTipManager : MonoBehaviour
         LevelManager.OnNextLevelClickedAction += OnPlayerAction;
 
         CookingManager.OnPotTimerStarted += SetHintSecsZero;
-        GuestManager.OnAllGuestsCreated += SetAllGuestCreated;
     }
     
     private void OnDisable()
     {
         _dragDropManager.OnIngredientAdded -= OnIngredientAdded;
         _cookingManager.OnDoughPlateClickedAction -= OnPlayerAction;
-        _cookingManager.OnRollingPinClickedAction -= OnPlayerAction;
-        _cookingManager.OnKnifeClickedAction -= OnPlayerAction;
         _cookingManager.OnOnionClickedAction -= OnPlayerAction;
-        CookingManager.OnKumisBottleClickedAction -= OnPlayerAction;
+        //CookingManager.OnKumisBottleClickedAction -= OnPlayerAction;
         _cookingManager.OnCauldronClickedAction -= OnPlayerAction;
         _cookingManager.OnPotClickedAction -= OnPlayerAction;
         GuestManager.OnComplete -= OnPlayerAction;
@@ -714,7 +706,6 @@ public class CookingTipManager : MonoBehaviour
         LevelManager.OnNextLevelClickedAction -= OnPlayerAction;
 
         CookingManager.OnPotTimerStarted -= SetHintSecsZero;
-        GuestManager.OnAllGuestsCreated -= SetAllGuestCreated;
         
         ResetSettings();
     }

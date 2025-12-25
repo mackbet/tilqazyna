@@ -4,20 +4,28 @@ using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Dialogue : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI display;
     [SerializeField] private DialoguePhrase[] dialoguePhrases;
     [SerializeField] private bool playEveryTime = false;
+    [SerializeField] private Button nextButton;
 
     private bool isPlayed = false;
     private CancellationTokenSource cancellationTokenSource;
     private DialoguePhrase currentPhrase;
+    private TaskCompletionSource<bool> buttonClickedTCS;
 
     private void OnEnable()
     {
         if (isPlayed && !playEveryTime) return;
+
+        if (nextButton != null)
+        {
+            nextButton.onClick.AddListener(OnNextButtonClicked);
+        }
 
         cancellationTokenSource = new CancellationTokenSource();
         _ = PlayDialogueAsync(cancellationTokenSource.Token);
@@ -26,10 +34,16 @@ public class Dialogue : MonoBehaviour
 
     private void OnDisable()
     {
+        if (nextButton != null)
+        {
+            nextButton.onClick.RemoveListener(OnNextButtonClicked);
+        }
+
         currentPhrase?.Stop();
         cancellationTokenSource?.Cancel();
         cancellationTokenSource?.Dispose();
         cancellationTokenSource = null;
+        buttonClickedTCS = null;
     }
 
     private async Task PlayDialogueAsync(CancellationToken token)
@@ -39,10 +53,31 @@ public class Dialogue : MonoBehaviour
             currentPhrase = phrase;
             display.text = phrase.Phrase.LocalizedString.GetLocalizedString();
 
-            await phrase.Play(token);
+            if (nextButton != null)
+            {
+                nextButton.gameObject.SetActive(true);
+            }
+
+            buttonClickedTCS = new TaskCompletionSource<bool>();
+            await phrase.Play(token, buttonClickedTCS);
+
+            if (nextButton != null)
+            {
+                nextButton.gameObject.SetActive(false);
+            }
 
             currentPhrase = null;
         }
+
+        if (nextButton != null)
+        {
+            nextButton.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnNextButtonClicked()
+    {
+        buttonClickedTCS?.TrySetResult(true);
     }
 
     [Serializable]
@@ -58,7 +93,7 @@ public class Dialogue : MonoBehaviour
 
         private AudioSource audioSource;
 
-        public async Task Play(CancellationToken token)
+        public async Task Play(CancellationToken token, TaskCompletionSource<bool> buttonClickedTCS)
         {
             ActivateObjects(onStartedActivateables);
             OnStartedEvent?.Invoke();
@@ -67,30 +102,27 @@ public class Dialogue : MonoBehaviour
             if (phrase.LocalizedAudio == null || phrase.LocalizedAudio.IsEmpty)
             {
                 Debug.LogWarning($"LocalizedAudio не настроен для фразы. Пропускаем воспроизведение.");
-                await Task.Delay(TimeSpan.FromSeconds(delayAfterPhrase), token);
-                ActivateObjects(onFinishedActivateables);
-                return;
             }
-
-            var loadOp = phrase.LocalizedAudio.LoadAssetAsync();
-
-            while (!loadOp.IsDone)
+            else
             {
-                await Task.Yield();
-                token.ThrowIfCancellationRequested();
+                var loadOp = phrase.LocalizedAudio.LoadAssetAsync();
+
+                while (!loadOp.IsDone)
+                {
+                    await Task.Yield();
+                    token.ThrowIfCancellationRequested();
+                }
+
+                if (loadOp.Result != null)
+                {
+                    audioSource = AudioManager.Instance.PlaySound(loadOp.Result, 1f);
+                }
             }
 
-            float audioLength = 0;
-
-            if (loadOp.Result != null)
-            {
-                audioSource = AudioManager.Instance.PlaySound(loadOp.Result, 1f);
-                audioLength = loadOp.Result.length;
-            }
-
+            // Ждем нажатия кнопки
             try
             {
-                await Task.Delay(TimeSpan.FromSeconds(audioLength + delayAfterPhrase), token);
+                await buttonClickedTCS.Task;
             }
             catch (OperationCanceledException)
             {
@@ -98,9 +130,10 @@ public class Dialogue : MonoBehaviour
                 throw;
             }
 
+            Stop();
+
             ActivateObjects(onFinishedActivateables);
             OnEndedEvent?.Invoke();
-            audioSource = null;
         }
 
         public void Stop()

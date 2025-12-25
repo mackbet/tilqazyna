@@ -14,31 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Localization-Assets-Kazakh (kk)
   m_GUID: 723cd68c2376e9542842a38f1d59a842
-  m_SerializeEntries:
-  - m_GUID: 1900ec0a4177da243b97f4d02c8e68eb
-    m_Address: rocketlaunch1_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 26871d431fe5d414f9426e1a94690aaa
-    m_Address: arrangeNames1_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3d91d30ad7f00ad47919b704b6c09372
-    m_Address: stuffTools4_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7770a708cdac0a142ad4670d611c47c0
-    m_Address: rocketlaunch2_KK
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: b2812d830086c3c3e9abb97cbd5be879, type: 2}
   m_SchemaSet:

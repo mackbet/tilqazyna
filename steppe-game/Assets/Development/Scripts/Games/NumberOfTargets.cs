@@ -27,7 +27,6 @@ public class NumberOfTargets : GameController
     [SerializeField] private int minNumber = 0;
     [SerializeField] private int maxNumber = 10;
     [SerializeField] private float timeToAnswer = 10f;
-    [SerializeField] private bool allowManualSubmit = false;
 
     [Header("Sounds")]
     [SerializeField] private AudioClip correctSound;

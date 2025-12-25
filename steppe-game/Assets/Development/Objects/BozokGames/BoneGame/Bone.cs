@@ -143,7 +143,7 @@ namespace Development.Managers.Bozok.BoneGame
             TouchTranslator.OnEndDragAction += OnEndDrag;
         }
 
-        protected void OnDisable()
+        protected virtual void OnDisable()
         {
             BozokBoneQuizManager.ChangeGameModeToDefault -= SetDropCoroutine;
             TouchTranslator.OnBeginDragAction -= OnBeginDrag;

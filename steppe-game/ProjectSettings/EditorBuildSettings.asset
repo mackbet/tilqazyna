@@ -5,24 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Development/Scenes/SplashScreen.unity
-    guid: 869a597d8e5af46a9a4caa29a3b4cea1
-  - enabled: 0
-    path: Assets/Development/Scenes/CharecterCreation.unity
-    guid: ad51d46f2180c4aa58ff74d4fe05fb24
-  - enabled: 0
-    path: Assets/Development/Scenes/Prototypes/QuizScene.unity
-    guid: f8f79ce3c7c104137b277715926fc7c4
-  - enabled: 0
-    path: Assets/Development/Scenes/Prototypes/CookingScene.unity
-    guid: cdb520df1602247918f5bd172fb33acc
   - enabled: 1
     path: Assets/Development/Scenes/GameScene.unity
     guid: f2df0fb741d2248458766650078a37bb
-  - enabled: 0
-    path: Assets/Development/Scenes/BozokAllScene.unity
-    guid: bde3832343f878e4786c01b7f9e4eeb6
   - enabled: 1
     path: Assets/Development/Scenes/BozokIntro.unity
     guid: e7a76c3ab62d3384c898e36bb06381aa

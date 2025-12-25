@@ -33,7 +33,6 @@ public class BozokBoneShootingGameManager : MonoBehaviour
 
     public static event Action OnStartNewQuiz;
     public static event Action OnContinueQuiz;
-    public static event Action Disable;
 
     private int currentQuestion = 1;
 
@@ -87,14 +86,12 @@ public class BozokBoneShootingGameManager : MonoBehaviour
     {
         BozokBoneQuizManager.OnNextButtonTap += ContinueTap;
         BozokBoneQuizManager.OnBoneShootingOffLowerUI += DisableLowerUI;
-        BozokBoneQuizManager.ResetBones += ResetAllBones;
     }
 
     private void OnDisable()
     {
         BozokBoneQuizManager.OnNextButtonTap -= ContinueTap;
         BozokBoneQuizManager.OnBoneShootingOffLowerUI -= DisableLowerUI;
-        BozokBoneQuizManager.ResetBones -= ResetAllBones;
     }
 
     private IEnumerator EnableTutorialForThreeSecond(bool tutorialButtonEnabled)

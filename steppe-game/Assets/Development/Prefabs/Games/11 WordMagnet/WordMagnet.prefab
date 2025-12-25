@@ -11363,6 +11363,14 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u0421\u04E9\u0437 \u041C\u0430\u0433\u043D\u0438\u0442\u0456"
       objectReference: {fileID: 0}
+    - target: {fileID: 2488284045119347068, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488284045119347068, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 1099764
+      objectReference: {fileID: 0}
     - target: {fileID: 3075755175789649611, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

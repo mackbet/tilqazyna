@@ -4,20 +4,28 @@ using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class SimpleDialogue : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI display;
     [SerializeField] private DialogueEntry[] dialogueEntries;
     [SerializeField] private bool playEveryTime = false;
+    [SerializeField] private Button nextButton;
 
     private bool isPlayed = false;
     private CancellationTokenSource cancellationTokenSource;
     private AudioSource currentAudioSource;
+    private TaskCompletionSource<bool> buttonClickedTCS;
 
     private void OnEnable()
     {
         if (isPlayed && !playEveryTime) return;
+
+        if (nextButton != null)
+        {
+            nextButton.onClick.AddListener(OnNextButtonClicked);
+        }
 
         cancellationTokenSource = new CancellationTokenSource();
         _ = PlayDialogueAsync(cancellationTokenSource.Token);
@@ -26,10 +34,16 @@ public class SimpleDialogue : MonoBehaviour
 
     private void OnDisable()
     {
+        if (nextButton != null)
+        {
+            nextButton.onClick.RemoveListener(OnNextButtonClicked);
+        }
+
         StopCurrentAudio();
         cancellationTokenSource?.Cancel();
         cancellationTokenSource?.Dispose();
         cancellationTokenSource = null;
+        buttonClickedTCS = null;
     }
 
     private async Task PlayDialogueAsync(CancellationToken token)
@@ -41,31 +55,48 @@ public class SimpleDialogue : MonoBehaviour
 
             display.text = entry.text;
 
+            if (nextButton != null)
+            {
+                nextButton.gameObject.SetActive(true);
+            }
+
             if (entry.audioClip != null)
             {
                 currentAudioSource = AudioManager.Instance.PlaySound(entry.audioClip, 1f);
-                float audioLength = entry.audioClip.length;
-
-                try
-                {
-                    await Task.Delay(TimeSpan.FromSeconds(audioLength + entry.delayAfter), token);
-                }
-                catch (OperationCanceledException)
-                {
-                    StopCurrentAudio();
-                    throw;
-                }
-
-                currentAudioSource = null;
             }
-            else
+
+            // Ждем нажатия кнопки
+            buttonClickedTCS = new TaskCompletionSource<bool>();
+            try
             {
-                await Task.Delay(TimeSpan.FromSeconds(entry.delayAfter), token);
+                await buttonClickedTCS.Task;
+            }
+            catch (OperationCanceledException)
+            {
+                StopCurrentAudio();
+                throw;
+            }
+
+            StopCurrentAudio();
+
+            if (nextButton != null)
+            {
+                nextButton.gameObject.SetActive(false);
             }
 
             ActivateObjects(entry.onFinishedActivateables);
             entry.onFinishedEvent?.Invoke();
         }
+
+        if (nextButton != null)
+        {
+            nextButton.gameObject.SetActive(false);
+        }
+    }
+
+    private void OnNextButtonClicked()
+    {
+        buttonClickedTCS?.TrySetResult(true);
     }
 
     private void StopCurrentAudio()
