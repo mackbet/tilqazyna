@@ -3,7 +3,7 @@ using UnityEngine;
 public class ParallaxController : MonoBehaviour
 {
     [SerializeField] private ParallaxLayer[] parallaxLayers;
-
+    [SerializeField] private bool startOnStart = true;
     private bool isInitialized = false;
 
     private void Start()
@@ -39,7 +39,8 @@ public class ParallaxController : MonoBehaviour
             }
         }
 
-        isInitialized = true;
+        if (startOnStart)
+            isInitialized = true;
     }
 
     private void Update()

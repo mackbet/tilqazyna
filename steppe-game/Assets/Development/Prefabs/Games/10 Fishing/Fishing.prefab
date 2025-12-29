@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7879488099290308885
 RectTransform:
   m_ObjectHideFlags: 0
@@ -141,7 +141,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0/5
+  m_text: '0/5
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4793e2780364b74468f907dd98547d47, type: 2}
   m_sharedMaterial: {fileID: -316614527868378198, guid: 4793e2780364b74468f907dd98547d47, type: 2}
@@ -513,7 +515,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[2].onFinishedActivateables.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[3].onFinishedActivateables.Array.size
@@ -595,6 +597,10 @@ PrefabInstance:
       propertyPath: dialoguePhrases.Array.data[2].onFinishedActivateables.Array.data[0].gameObject
       value: 
       objectReference: {fileID: 3114867927569721264}
+    - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
+      propertyPath: dialoguePhrases.Array.data[2].onFinishedActivateables.Array.data[1].gameObject
+      value: 
+      objectReference: {fileID: 3239730455750248507}
     - target: {fileID: 932588743354132972, guid: d230053f974381c45b7bc3547eb1787f, type: 3}
       propertyPath: dialoguePhrases.Array.data[3].onFinishedActivateables.Array.data[0].gameObject
       value: 
@@ -1172,18 +1178,26 @@ MonoBehaviour:
   fishContainer: {fileID: 1042392189725360847}
   gameArea: {fileID: 1042392189725360847}
   fishPrefabs:
+  - {fileID: 7827987461012154418, guid: fd90672e349e13f4b8e627c67f0051b6, type: 3}
+  - {fileID: 7827987461012154418, guid: 94afb538a044ea44899750bec519f5b2, type: 3}
+  - {fileID: 7827987461012154418, guid: b734b784aafc98546b5c4d13f8265578, type: 3}
   - {fileID: -4171844458747505336, guid: 319784b0117dc184ba6a45f40de96e46, type: 3}
   - {fileID: 7970481930168297839, guid: 499419036c621b841b7112fbbccebc56, type: 3}
   - {fileID: 7827987461012154418, guid: 21ac20bda0d20ec4b86df5713558c4e0, type: 3}
+  - {fileID: 7827987461012154418, guid: 1c4bf90768a8bfc4cb2308d16912252a, type: 3}
   - {fileID: 7526708135188698479, guid: 0bb65fa09553e874e9e318b050b77ee9, type: 3}
   - {fileID: 1001607848180319113, guid: fb2a0dcffa01bc546b4aab34a076fc7d, type: 3}
   - {fileID: 6966476344122542859, guid: 6207db95f4f009e48a1524aa0f75e1a1, type: 3}
   targetFishTypes:
+  - Black
+  - Blue
+  - Brown
   - Green
   - Orange
   - Purple
+  - Red
   - Yellow
-  fishToCatch: 5
+  fishToCatch: 3
   spawnInterval: 1.1
   maxFishOnScreen: 17
   minSpawnHeight: 0.15

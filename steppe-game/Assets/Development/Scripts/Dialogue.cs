@@ -98,10 +98,12 @@ public class Dialogue : MonoBehaviour
             ActivateObjects(onStartedActivateables);
             OnStartedEvent?.Invoke();
 
+            float audioDuration = 0f;
+
             // Проверяем LocalizedAudio
             if (phrase.LocalizedAudio == null || phrase.LocalizedAudio.IsEmpty)
             {
-                Debug.LogWarning($"LocalizedAudio не настроен для фразы. Пропускаем воспроизведение.");
+                Debug.LogWarning($"LocalizedAudio не настроен для фразы. Используем только delayAfterPhrase.");
             }
             else
             {
@@ -116,13 +118,17 @@ public class Dialogue : MonoBehaviour
                 if (loadOp.Result != null)
                 {
                     audioSource = AudioManager.Instance.PlaySound(loadOp.Result, 1f);
+                    audioDuration = loadOp.Result.length;
                 }
             }
 
-            // Ждем нажатия кнопки
+            // Вычисляем общую длительность: длина аудио + задержка после
+            float totalDuration = audioDuration + delayAfterPhrase;
+
+            // Ждем либо нажатия кнопки, либо окончания времени
             try
             {
-                await buttonClickedTCS.Task;
+                await WaitForButtonOrTime(totalDuration, token, buttonClickedTCS);
             }
             catch (OperationCanceledException)
             {
@@ -134,6 +140,32 @@ public class Dialogue : MonoBehaviour
 
             ActivateObjects(onFinishedActivateables);
             OnEndedEvent?.Invoke();
+        }
+
+        private async Task WaitForButtonOrTime(float duration, CancellationToken token, TaskCompletionSource<bool> buttonClickedTCS)
+        {
+            float elapsed = 0f;
+
+            while (elapsed < duration)
+            {
+                // Проверяем, была ли нажата кнопка
+                if (buttonClickedTCS.Task.IsCompleted)
+                {
+                    return;
+                }
+
+                // Проверяем отмену
+                if (token.IsCancellationRequested)
+                {
+                    throw new OperationCanceledException(token);
+                }
+
+                // Ждем один кадр
+                await Task.Yield();
+
+                // Увеличиваем время на deltaTime (игровое время)
+                elapsed += Time.deltaTime;
+            }
         }
 
         public void Stop()

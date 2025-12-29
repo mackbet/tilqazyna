@@ -451,6 +451,18 @@ MonoBehaviour:
     m_Key: Wolf
     m_Metadata:
       m_Items: []
+  - m_Id: 14811770528092160
+    m_Key: Ladybug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14814104977035264
+    m_Key: Deer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 14814953790918656
+    m_Key: Elik
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - rid: 4486272774368133209
@@ -896,6 +908,18 @@ MonoBehaviour:
           - kk
           - ru
         - m_KeyId: 5417734012817408
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 14811770528092160
+          m_TableCodes:
+          - ru
+          - kk
+        - m_KeyId: 14814104977035264
+          m_TableCodes:
+          - kk
+          - ru
+        - m_KeyId: 14814953790918656
           m_TableCodes:
           - kk
           - ru

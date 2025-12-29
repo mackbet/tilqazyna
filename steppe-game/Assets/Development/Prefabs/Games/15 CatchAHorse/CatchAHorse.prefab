@@ -241,6 +241,7 @@ MonoBehaviour:
     uvOffsetX: 0
     nextSpawnTime: 0
     isActive: 0
+  startOnStart: 0
 --- !u!1 &1083289450888510516
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,7 +297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1100167171532556118
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6450,7 +6451,7 @@ RectTransform:
   m_GameObject: {fileID: 7159632170645338448}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8106722718478020270}
@@ -6863,10 +6864,6 @@ PrefabInstance:
       value: DialoguePanel(simple)
       objectReference: {fileID: 0}
     - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
-      propertyPath: display
-      value: 
-      objectReference: {fileID: 3248455470570665906}
-    - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
       propertyPath: dialogueEntries.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -7061,17 +7058,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
---- !u!114 &3248455470570665906 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4985362655149146299, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
-  m_PrefabInstance: {fileID: 7510673639472117513}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3734839012217863170 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6624678138156944139, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
@@ -7252,10 +7238,10 @@ PrefabInstance:
       addedObject: {fileID: 2121578750452814394}
     - targetCorrespondingSourceObject: {fileID: 30355100260634061, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6493231191313553828}
+      addedObject: {fileID: 1394532282840446454}
     - targetCorrespondingSourceObject: {fileID: 30355100260634061, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1394532282840446454}
+      addedObject: {fileID: 6493231191313553828}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 849376715505048235, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       insertIndex: -1

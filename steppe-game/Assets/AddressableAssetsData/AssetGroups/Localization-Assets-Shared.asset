@@ -22,8 +22,22 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17d309f94a40e89498ac510ba93f168d
+    m_Address: Elik
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2a7727b179ae54249b20264c0ebd5bde
     m_Address: Tazy_3_ChooseCity
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a0e990bd0e1fcb429667b23c71f36d9
+    m_Address: Ladybug
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
@@ -38,6 +52,13 @@ MonoBehaviour:
     m_Address: Assets/Settings/Localization/Tables/Main Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fcd4eede864de4a47ad7e1ff62e1a09b
+    m_Address: Deer
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: b2812d830086c3c3e9abb97cbd5be879, type: 2}

@@ -3925,6 +3925,18 @@ MonoBehaviour:
     m_Key: CatchAHorse
     m_Metadata:
       m_Items: []
+  - m_Id: 140244806102306816
+    m_Key: Ladybug
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140246828260151296
+    m_Key: Deer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 140248392781680640
+    m_Key: Elik
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

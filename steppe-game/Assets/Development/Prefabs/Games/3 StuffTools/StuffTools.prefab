@@ -2179,7 +2179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CraftTools
   finishPanel: {fileID: 6458895144655552865}
-  startDelay: 5
+  startDelay: 0
   finishDelay: 3
   startWithDelay: 1
   personImage: {fileID: 5484546267271033805}

@@ -68,12 +68,12 @@ public class WordMagnet : GameController
         UpdateCategoryUI();
         UpdateScoreUI();
 
-        // Инициализируем параллакс
-        if (parallaxController != null)
-        {
-            parallaxController.InitializeLayers();
-            parallaxController.ResumeParallax();
-        }
+        // // Инициализируем параллакс
+        // if (parallaxController != null)
+        // {
+        //     parallaxController.InitializeLayers();
+        //     parallaxController.ResumeParallax();
+        // }
 
         // Очищаем активные коробки
         ClearBoxes();

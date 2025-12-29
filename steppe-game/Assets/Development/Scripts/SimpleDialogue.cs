@@ -60,16 +60,20 @@ public class SimpleDialogue : MonoBehaviour
                 nextButton.gameObject.SetActive(true);
             }
 
+            float duration = entry.delayAfter;
+            
             if (entry.audioClip != null)
             {
                 currentAudioSource = AudioManager.Instance.PlaySound(entry.audioClip, 1f);
+                duration = entry.audioClip.length + entry.delayAfter;
             }
 
-            // Ждем нажатия кнопки
+            // Ждем либо нажатия кнопки, либо окончания времени (с учетом игрового времени)
             buttonClickedTCS = new TaskCompletionSource<bool>();
+            
             try
             {
-                await buttonClickedTCS.Task;
+                await WaitForButtonOrTime(duration, token);
             }
             catch (OperationCanceledException)
             {
@@ -86,11 +90,39 @@ public class SimpleDialogue : MonoBehaviour
 
             ActivateObjects(entry.onFinishedActivateables);
             entry.onFinishedEvent?.Invoke();
+            
+            buttonClickedTCS = null;
         }
 
         if (nextButton != null)
         {
             nextButton.gameObject.SetActive(false);
+        }
+    }
+
+    private async Task WaitForButtonOrTime(float duration, CancellationToken token)
+    {
+        float elapsed = 0f;
+        
+        while (elapsed < duration)
+        {
+            // Проверяем, была ли нажата кнопка
+            if (buttonClickedTCS.Task.IsCompleted)
+            {
+                return;
+            }
+            
+            // Проверяем отмену
+            if (token.IsCancellationRequested)
+            {
+                throw new OperationCanceledException(token);
+            }
+            
+            // Ждем один кадр
+            await Task.Yield();
+            
+            // Увеличиваем время на deltaTime (игровое время)
+            elapsed += Time.deltaTime;
         }
     }
 
@@ -121,6 +153,7 @@ public class SimpleDialogue : MonoBehaviour
         [TextArea(2, 5)]
         public string text;
         public AudioClip audioClip;
+        [Tooltip("Задержка после окончания аудио (или базовая длительность, если аудио нет)")]
         public float delayAfter = 0.5f;
         public ActivateableObject[] onStartedActivateables;
         public ActivateableObject[] onFinishedActivateables;
