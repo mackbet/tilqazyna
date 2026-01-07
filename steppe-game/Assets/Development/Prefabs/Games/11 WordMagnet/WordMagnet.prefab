@@ -12334,11 +12334,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4c7613a5d42a04548a34765411845759, type: 2}
   availableCategories:
   - {fileID: 11400000, guid: 6ef2146c7cef3fe4085cabd3e94819a3, type: 2}
-  - {fileID: 11400000, guid: 274821c0c2d89644e89445515813ba58, type: 2}
   - {fileID: 11400000, guid: 41b56c100ef331548a7e0dc0575612db, type: 2}
   - {fileID: 11400000, guid: 4c36ef22819b11444898d5f08b65e67f, type: 2}
   - {fileID: 11400000, guid: a5d714dc2b6a1e4469b42ce3035d4dd3, type: 2}
-  - {fileID: 11400000, guid: 3419643923597524699b9f9f27c52866, type: 2}
   - {fileID: 11400000, guid: 10c2a681049ab8444aadf794c5cdc6b8, type: 2}
   gameDuration: 40
   startLives: 3
