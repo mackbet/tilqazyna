@@ -872,7 +872,7 @@ MonoBehaviour:
   questionSound: {fileID: 3373531490548778526}
   questionPanel: {fileID: 8085013042465241337}
   rememberItemsPanel: {fileID: 3477251917601804188}
-  roundsCount: 3
+  roundsCount: 5
   showItemsDuration: 5
   delayBeforeShuffle: 1
   shuffleDuration: 1

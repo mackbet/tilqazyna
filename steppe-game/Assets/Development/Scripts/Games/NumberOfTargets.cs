@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NumberOfTargets : GameController
 {
@@ -11,6 +13,10 @@ public class NumberOfTargets : GameController
     [SerializeField] private TextMeshProUGUI timerText;
     [SerializeField] private CustomButton increaseButton;
     [SerializeField] private CustomButton decreaseButton;
+    [SerializeField] private Image glow;
+    [SerializeField] private RectTransform picture;
+    [SerializeField] private GameObject gameUI;
+    [SerializeField] private float pictureTime = 0.5f;
 
     [Header("Groups")]
     [SerializeField] private TargetGroup[] groups;
@@ -21,7 +27,6 @@ public class NumberOfTargets : GameController
     [SerializeField] private int minNumber = 0;
     [SerializeField] private int maxNumber = 10;
     [SerializeField] private float timeToAnswer = 10f;
-    [SerializeField] private bool allowManualSubmit = false;
 
     [Header("Sounds")]
     [SerializeField] private AudioClip correctSound;
@@ -97,6 +102,8 @@ public class NumberOfTargets : GameController
         currentTime = timeToAnswer;
         isTimerRunning = true;
         UpdateTimerDisplay();
+
+        PlayAnimation();
     }
 
     private void StopTimer()
@@ -248,6 +255,21 @@ public class NumberOfTargets : GameController
         isAnswering = false;
     }
 
+    private void PlayAnimation()
+    {
+        gameUI.SetActive(true);
+        picture.gameObject.SetActive(true);
+        glow.gameObject.SetActive(true);
+        glow.color = Color.white;
+        picture.localScale = Vector3.one * 1.5f;
+
+        // Анимация цвета с белого в прозрачный
+        glow.DOColor(new Color(1f, 1f, 1f, 0f), pictureTime).SetEase(Ease.Linear);
+
+        // Анимация масштаба с 1.5 до 1
+        picture.DOScale(Vector3.one, pictureTime).SetEase(Ease.OutBack);
+    }
+
     private void OnSubmitClicked()
     {
         if (isAnswering) return;
@@ -278,6 +300,8 @@ public class NumberOfTargets : GameController
         }
 
         finishPanel.SetReward(10, 85, 100);
+        finishPanel.SetState(true);
+        finishPanel.SetStars(3);
         // Завершаем игру
         Invoke(nameof(FinishGame), 1f);
     }
@@ -293,6 +317,8 @@ public class NumberOfTargets : GameController
         }
 
         finishPanel.SetReward(2, 20, 50);
+        finishPanel.SetState(false);
+        finishPanel.SetStars(0);
         // Завершаем игру
         Invoke(nameof(FinishGame), 1f);
     }

@@ -36,11 +36,11 @@ public class LocalizableText : MonoBehaviour
             display.text = LocalizedString.GetLocalizedString();
     }
 
-    private void OnValidate()
-    {
-        if (!display) display = GetComponent<TextMeshProUGUI>();
+    // private void OnValidate()
+    // {
+    //     if (!display) display = GetComponent<TextMeshProUGUI>();
 
-        if (display.text == "")
-            Localize();
-    }
+    //     if (display.text == "")
+    //         Localize();
+    // }
 }

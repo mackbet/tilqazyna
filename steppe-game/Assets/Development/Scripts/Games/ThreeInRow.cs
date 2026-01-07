@@ -414,6 +414,8 @@ public class ThreeInRow : GameController
         {
             isEnded = true;
             finishPanel.SetReward(10, 60, currentScore);
+            finishPanel.SetState(true);
+            finishPanel.SetStars(3);
             FinishGame();
         }
         else if (movesLeft <= 0)

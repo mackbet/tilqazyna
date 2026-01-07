@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -11,7 +10,7 @@ public class Quiz : GameController
     [SerializeField] private QuizButton[] buttons;
 
     [Header("Questions")]
-    [SerializeField] private QuizQuestion[] questions;
+    [SerializeField] private QuizQuestionSimple[] questions;
     [SerializeField] private int questionsCount = 5;
 
     [Header("Sounds")]
@@ -21,9 +20,9 @@ public class Quiz : GameController
     [Header("Settings")]
     [SerializeField] private float delayAfterAnswer = 1f;
 
-    private List<QuizQuestion> selectedQuestions = new List<QuizQuestion>();
+    private List<QuizQuestionSimple> selectedQuestions = new List<QuizQuestionSimple>();
     private int currentQuestionIndex = 0;
-    private QuizQuestion currentQuestion;
+    private QuizQuestionSimple currentQuestion;
     private int correctAnswersCount = 0;
     private bool isAnswering = false;
 
@@ -62,8 +61,14 @@ public class Quiz : GameController
     {
         selectedQuestions.Clear();
 
+        if (questions == null || questions.Length == 0)
+        {
+            Debug.LogError("Нет доступных вопросов для викторины!");
+            return;
+        }
+
         // Создаем список доступных вопросов
-        List<QuizQuestion> availableQuestions = new List<QuizQuestion>(questions);
+        List<QuizQuestionSimple> availableQuestions = new List<QuizQuestionSimple>(questions);
 
         // Выбираем случайные вопросы
         int count = Mathf.Min(questionsCount, availableQuestions.Count);
@@ -87,19 +92,19 @@ public class Quiz : GameController
             return;
         }
 
-        currentQuestion = selectedQuestions[currentQuestionIndex];
         isAnswering = false;
+        currentQuestion = selectedQuestions[currentQuestionIndex];
 
         // Обновляем текст вопроса
-        if (questionField != null && currentQuestion.Question.LocalizedString != null)
+        if (questionField != null && currentQuestion.Question != null)
         {
-            questionField.text = currentQuestion.Question.LocalizedString.GetLocalizedString();
+            questionField.text = currentQuestion.Question.text;
         }
 
         // Устанавливаем аудио вопроса
-        if (soundButton != null && currentQuestion.Question.LocalizedAudio != null)
+        if (soundButton != null && currentQuestion.Question.audioClip != null)
         {
-            soundButton.SetAudio(currentQuestion.Question.LocalizedAudio);
+            soundButton.SetAudio(currentQuestion.Question.audioClip);
             soundButton.PlayAudio();
         }
 
@@ -225,6 +230,8 @@ public class Quiz : GameController
         // Завершаем игру
         float value = correctAnswersCount / (float)selectedQuestions.Count;
         finishPanel.SetReward(Mathf.RoundToInt(20 * value), Mathf.RoundToInt(100 * value), Mathf.RoundToInt(150 * value));
+        finishPanel.SetState(value > 0);
+        finishPanel.SetStars(value > 0 ? Mathf.CeilToInt(value * 3) : 0);
         FinishGame();
     }
 

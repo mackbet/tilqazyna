@@ -1,0 +1,1547 @@
+fileFormatVersion: 2
+guid: d49cb610c919a8e4bb34f30bc127aaad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9003122370228216986
+    second: fish_orange2_0
+  - first:
+      213: -6700543911051193164
+    second: fish_orange2_1
+  - first:
+      213: 2891368608839868631
+    second: fish_orange2_2
+  - first:
+      213: 8995332428979525191
+    second: fish_orange2_3
+  - first:
+      213: -957642783719727297
+    second: fish_orange2_4
+  - first:
+      213: -4555024230509777002
+    second: fish_orange2_5
+  - first:
+      213: -5968381301256370954
+    second: fish_orange2_6
+  - first:
+      213: 4060657749045179765
+    second: fish_orange2_7
+  - first:
+      213: -2420870802473388578
+    second: fish_orange2_8
+  - first:
+      213: -2350920488559343807
+    second: fish_orange2_9
+  - first:
+      213: -8387927399457616466
+    second: fish_orange2_10
+  - first:
+      213: 4783453165543495982
+    second: fish_orange2_11
+  - first:
+      213: 8420850825164862938
+    second: fish_orange2_12
+  - first:
+      213: 1169655780791157819
+    second: fish_orange2_13
+  - first:
+      213: 8273769364359093560
+    second: fish_orange2_14
+  - first:
+      213: 6212185919511898027
+    second: fish_orange2_15
+  - first:
+      213: -5965522771130849239
+    second: fish_orange2_16
+  - first:
+      213: 6256662061559743153
+    second: fish_orange2_17
+  - first:
+      213: -4487360177347579058
+    second: fish_orange2_18
+  - first:
+      213: 1954719167862510825
+    second: fish_orange2_19
+  - first:
+      213: 3339901540539295496
+    second: fish_orange2_20
+  - first:
+      213: 4108645461319533455
+    second: fish_orange2_21
+  - first:
+      213: 6883714250779457367
+    second: fish_orange2_22
+  - first:
+      213: 4582185643929975740
+    second: fish_orange2_23
+  - first:
+      213: 8819472204627939948
+    second: fish_orange2_24
+  - first:
+      213: -523010686443009982
+    second: fish_orange2_25
+  - first:
+      213: -3351617841396851590
+    second: fish_orange2_26
+  - first:
+      213: -9127041746041752969
+    second: fish_orange2_27
+  - first:
+      213: 8100176376334402857
+    second: fish_orange2_28
+  - first:
+      213: -1660980752007177275
+    second: fish_orange2_29
+  - first:
+      213: 4249357655832218086
+    second: fish_orange2_30
+  - first:
+      213: 6018801511239706395
+    second: fish_orange2_31
+  - first:
+      213: -2576780741537763278
+    second: fish_orange2_32
+  - first:
+      213: 1733993785160689087
+    second: fish_orange2_33
+  - first:
+      213: -8694780743765376960
+    second: fish_orange2_34
+  - first:
+      213: 4616842916815850200
+    second: fish_orange2_35
+  - first:
+      213: -7971384862111094952
+    second: fish_orange2_36
+  - first:
+      213: -90559284308408159
+    second: fish_orange2_37
+  - first:
+      213: 6319625589516875869
+    second: fish_orange2_38
+  - first:
+      213: -8599196422359446141
+    second: fish_orange2_39
+  - first:
+      213: -3710341485383910340
+    second: fish_orange2_40
+  - first:
+      213: -6847575554112896047
+    second: fish_orange2_41
+  - first:
+      213: 6997594849554227229
+    second: fish_orange2_42
+  - first:
+      213: -5061802535590200740
+    second: fish_orange2_43
+  - first:
+      213: -5845306252621497553
+    second: fish_orange2_44
+  - first:
+      213: 479405392274072106
+    second: fish_orange2_45
+  - first:
+      213: -4247555447466096637
+    second: fish_orange2_46
+  - first:
+      213: 5852426637740432103
+    second: fish_orange2_47
+  - first:
+      213: 519251676549939125
+    second: fish_orange2_48
+  - first:
+      213: -113815521648668952
+    second: fish_orange2_49
+  - first:
+      213: 5524296592953064687
+    second: fish_orange2_50
+  - first:
+      213: -7612945666025353159
+    second: fish_orange2_51
+  - first:
+      213: -525763105384739047
+    second: fish_orange2_52
+  - first:
+      213: -5766850623862861829
+    second: fish_orange2_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fish_orange2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2105
+        width: 240
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9463da581481fc70800000000000000
+      internalID: 9003122370228216986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 2105
+        width: 241
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b413eb50d2e203a0800000000000000
+      internalID: -6700543911051193164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_2
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 2106
+        width: 240
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d0ad9c3e64302820800000000000000
+      internalID: 2891368608839868631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_3
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 2106
+        width: 237
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74650e15f27d5dc70800000000000000
+      internalID: 8995332428979525191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_4
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 2105
+        width: 233
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f5ba646f4c5b2f0800000000000000
+      internalID: -957642783719727297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_5
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 2104
+        width: 230
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69fea2d889d49c0c0800000000000000
+      internalID: -4555024230509777002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_6
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1848
+        width: 226
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f4c78e04dc0c2da0800000000000000
+      internalID: -5968381301256370954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_7
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1847
+        width: 224
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 575764e55ba5a5830800000000000000
+      internalID: 4060657749045179765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_8
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 1847
+        width: 223
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed5757bd4d6576ed0800000000000000
+      internalID: -2420870802473388578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_9
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1847
+        width: 222
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1478b38754adf5fd0800000000000000
+      internalID: -2350920488559343807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_10
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 1847
+        width: 222
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ead0099a878189b80800000000000000
+      internalID: -8387927399457616466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_11
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 1848
+        width: 224
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2910fb6f4d326240800000000000000
+      internalID: 4783453165543495982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_12
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1593
+        width: 228
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad5b18cb53fdcd470800000000000000
+      internalID: 8420850825164862938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_13
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1593
+        width: 232
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b340a8b4cb37b3010800000000000000
+      internalID: 1169655780791157819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_14
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1594
+        width: 235
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83d122c866552d270800000000000000
+      internalID: 8273769364359093560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_15
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 1594
+        width: 235
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7a0332e2e163650800000000000000
+      internalID: 6212185919511898027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_16
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1593
+        width: 234
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928ed3775a4363da0800000000000000
+      internalID: -5965522771130849239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_17
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 1592
+        width: 232
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b28eeaeef024d650800000000000000
+      internalID: 6256662061559743153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_18
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1336
+        width: 229
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e43b6f991b1b9b1c0800000000000000
+      internalID: -4487360177347579058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_19
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1336
+        width: 225
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e497140abe802b10800000000000000
+      internalID: 1954719167862510825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_20
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1335
+        width: 221
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807ef9c61c6b95e20800000000000000
+      internalID: 3339901540539295496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_21
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 1335
+        width: 218
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f83c8fd4747d40930800000000000000
+      internalID: 4108645461319533455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_22
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 1335
+        width: 213
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757f00db3add78f50800000000000000
+      internalID: 6883714250779457367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_23
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 1335
+        width: 210
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbb3751d091379f30800000000000000
+      internalID: 4582185643929975740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_24
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1079
+        width: 206
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6297471e3f056a70800000000000000
+      internalID: 8819472204627939948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_25
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1080
+        width: 202
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 248c4dc3d84edb8f0800000000000000
+      internalID: -523010686443009982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_26
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1081
+        width: 208
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7cdda4b459ac71d0800000000000000
+      internalID: -3351617841396851590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_27
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 1082
+        width: 215
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 772350d93eb365180800000000000000
+      internalID: -9127041746041752969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_28
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 1082
+        width: 224
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9254c696f7b996070800000000000000
+      internalID: 8100176376334402857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_29
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 1082
+        width: 229
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cbd9d96ec203f8e0800000000000000
+      internalID: -1660980752007177275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_30
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 825
+        width: 233
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e9477f1640c8fa30800000000000000
+      internalID: 4249357655832218086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_31
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 824
+        width: 234
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b17e603e514178350800000000000000
+      internalID: 6018801511239706395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_32
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 824
+        width: 232
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 230f294619f6d3cd0800000000000000
+      internalID: -2576780741537763278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_33
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 824
+        width: 230
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5ec371922601810800000000000000
+      internalID: 1733993785160689087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_34
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 824
+        width: 227
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04045fffafee55780800000000000000
+      internalID: -8694780743765376960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_35
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 823
+        width: 224
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8da4698fb22521040800000000000000
+      internalID: 4616842916815850200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_36
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 567
+        width: 221
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85721fdb3b3ff5190800000000000000
+      internalID: -7971384862111094952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_37
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 568
+        width: 220
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a80fab8fc44ebef0800000000000000
+      internalID: -90559284308408159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_38
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 569
+        width: 221
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d583f98adf1d3b750800000000000000
+      internalID: 6319625589516875869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_39
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 569
+        width: 223
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38d84731a6489a880800000000000000
+      internalID: -8599196422359446141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_40
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 570
+        width: 228
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3cfb48c318328cc0800000000000000
+      internalID: -3710341485383910340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_41
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 570
+        width: 231
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d3c374405688f0a0800000000000000
+      internalID: -6847575554112896047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_42
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 314
+        width: 234
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1068c9d0737c1160800000000000000
+      internalID: 6997594849554227229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_43
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 313
+        width: 235
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a79f6996dd0c9b0800000000000000
+      internalID: -5061802535590200740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_44
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 312
+        width: 233
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2b3029deec41eea0800000000000000
+      internalID: -5845306252621497553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_45
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 312
+        width: 231
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2227ed0aa037a600800000000000000
+      internalID: 479405392274072106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_46
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 311
+        width: 228
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 308020633d6ad05c0800000000000000
+      internalID: -4247555447466096637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_47
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 311
+        width: 225
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ea5d80050ff73150800000000000000
+      internalID: 5852426637740432103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_48
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 55
+        width: 224
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bff8c116a0c43700800000000000000
+      internalID: 519251676549939125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_49
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 56
+        width: 222
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee8436d265ab6ef0800000000000000
+      internalID: -113815521648668952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_50
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 57
+        width: 220
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec3ed87b7e3aac40800000000000000
+      internalID: 5524296592953064687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_51
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 58
+        width: 221
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 930953a7042695690800000000000000
+      internalID: -7612945666025353159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_52
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 58
+        width: 222
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91f4983cd3d14b8f0800000000000000
+      internalID: -525763105384739047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_orange2_53
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 58
+        width: 223
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bff0ae369e708ffa0800000000000000
+      internalID: -5766850623862861829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fish_orange2_0: 9003122370228216986
+      fish_orange2_1: -6700543911051193164
+      fish_orange2_10: -8387927399457616466
+      fish_orange2_11: 4783453165543495982
+      fish_orange2_12: 8420850825164862938
+      fish_orange2_13: 1169655780791157819
+      fish_orange2_14: 8273769364359093560
+      fish_orange2_15: 6212185919511898027
+      fish_orange2_16: -5965522771130849239
+      fish_orange2_17: 6256662061559743153
+      fish_orange2_18: -4487360177347579058
+      fish_orange2_19: 1954719167862510825
+      fish_orange2_2: 2891368608839868631
+      fish_orange2_20: 3339901540539295496
+      fish_orange2_21: 4108645461319533455
+      fish_orange2_22: 6883714250779457367
+      fish_orange2_23: 4582185643929975740
+      fish_orange2_24: 8819472204627939948
+      fish_orange2_25: -523010686443009982
+      fish_orange2_26: -3351617841396851590
+      fish_orange2_27: -9127041746041752969
+      fish_orange2_28: 8100176376334402857
+      fish_orange2_29: -1660980752007177275
+      fish_orange2_3: 8995332428979525191
+      fish_orange2_30: 4249357655832218086
+      fish_orange2_31: 6018801511239706395
+      fish_orange2_32: -2576780741537763278
+      fish_orange2_33: 1733993785160689087
+      fish_orange2_34: -8694780743765376960
+      fish_orange2_35: 4616842916815850200
+      fish_orange2_36: -7971384862111094952
+      fish_orange2_37: -90559284308408159
+      fish_orange2_38: 6319625589516875869
+      fish_orange2_39: -8599196422359446141
+      fish_orange2_4: -957642783719727297
+      fish_orange2_40: -3710341485383910340
+      fish_orange2_41: -6847575554112896047
+      fish_orange2_42: 6997594849554227229
+      fish_orange2_43: -5061802535590200740
+      fish_orange2_44: -5845306252621497553
+      fish_orange2_45: 479405392274072106
+      fish_orange2_46: -4247555447466096637
+      fish_orange2_47: 5852426637740432103
+      fish_orange2_48: 519251676549939125
+      fish_orange2_49: -113815521648668952
+      fish_orange2_5: -4555024230509777002
+      fish_orange2_50: 5524296592953064687
+      fish_orange2_51: -7612945666025353159
+      fish_orange2_52: -525763105384739047
+      fish_orange2_53: -5766850623862861829
+      fish_orange2_6: -5968381301256370954
+      fish_orange2_7: 4060657749045179765
+      fish_orange2_8: -2420870802473388578
+      fish_orange2_9: -2350920488559343807
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

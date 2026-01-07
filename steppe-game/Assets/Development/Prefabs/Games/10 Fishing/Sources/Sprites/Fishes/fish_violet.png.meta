@@ -1,0 +1,1547 @@
+fileFormatVersion: 2
+guid: 8ec32f0579cf1ce4290d0494b16073bd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2748789443413765862
+    second: fish_violet_0
+  - first:
+      213: 4712002256410929437
+    second: fish_violet_1
+  - first:
+      213: -2973748927010109465
+    second: fish_violet_2
+  - first:
+      213: 8876030174117215413
+    second: fish_violet_3
+  - first:
+      213: 848244211927971210
+    second: fish_violet_4
+  - first:
+      213: -818566499179943924
+    second: fish_violet_5
+  - first:
+      213: 3787331455563836639
+    second: fish_violet_6
+  - first:
+      213: -7865272284816818227
+    second: fish_violet_7
+  - first:
+      213: 6095834841525725590
+    second: fish_violet_8
+  - first:
+      213: -7770604586808580302
+    second: fish_violet_9
+  - first:
+      213: 587391940877855416
+    second: fish_violet_10
+  - first:
+      213: 5354860576526445269
+    second: fish_violet_11
+  - first:
+      213: -2193737760404523299
+    second: fish_violet_12
+  - first:
+      213: 5078171948233324080
+    second: fish_violet_13
+  - first:
+      213: 5915249133742010018
+    second: fish_violet_14
+  - first:
+      213: 1273928839065538293
+    second: fish_violet_15
+  - first:
+      213: -153580328259674875
+    second: fish_violet_16
+  - first:
+      213: 5016720496281105433
+    second: fish_violet_17
+  - first:
+      213: 4429989035382603287
+    second: fish_violet_18
+  - first:
+      213: -8035199047742136527
+    second: fish_violet_19
+  - first:
+      213: -4268765352574789421
+    second: fish_violet_20
+  - first:
+      213: 8856921415121974299
+    second: fish_violet_21
+  - first:
+      213: 5296686083391886284
+    second: fish_violet_22
+  - first:
+      213: 6979374533190491682
+    second: fish_violet_23
+  - first:
+      213: -1265261870186653558
+    second: fish_violet_24
+  - first:
+      213: -597264358537513693
+    second: fish_violet_25
+  - first:
+      213: -8266388994501218602
+    second: fish_violet_26
+  - first:
+      213: 8194916519157720557
+    second: fish_violet_27
+  - first:
+      213: -7604798507167300675
+    second: fish_violet_28
+  - first:
+      213: 1596126311551965046
+    second: fish_violet_29
+  - first:
+      213: -5531383212169719519
+    second: fish_violet_30
+  - first:
+      213: -4777634197021538673
+    second: fish_violet_31
+  - first:
+      213: -2492972027084568959
+    second: fish_violet_32
+  - first:
+      213: -8564233616418109170
+    second: fish_violet_33
+  - first:
+      213: 8682360631650979193
+    second: fish_violet_34
+  - first:
+      213: -3496794434304755578
+    second: fish_violet_35
+  - first:
+      213: 8750057127346905470
+    second: fish_violet_36
+  - first:
+      213: 7703185422554728094
+    second: fish_violet_37
+  - first:
+      213: 8376282027238049761
+    second: fish_violet_38
+  - first:
+      213: -6345347551539834447
+    second: fish_violet_39
+  - first:
+      213: 655482630991279639
+    second: fish_violet_40
+  - first:
+      213: -6631654587276318238
+    second: fish_violet_41
+  - first:
+      213: -8751866711100494774
+    second: fish_violet_42
+  - first:
+      213: 7704420459349109820
+    second: fish_violet_43
+  - first:
+      213: 7263737739199212463
+    second: fish_violet_44
+  - first:
+      213: -4074145982149114381
+    second: fish_violet_45
+  - first:
+      213: 196684255269901287
+    second: fish_violet_46
+  - first:
+      213: 8918285756388149517
+    second: fish_violet_47
+  - first:
+      213: -8222906106935982778
+    second: fish_violet_48
+  - first:
+      213: 4949200308287890584
+    second: fish_violet_49
+  - first:
+      213: -2085292573745190225
+    second: fish_violet_50
+  - first:
+      213: -3908917378762435128
+    second: fish_violet_51
+  - first:
+      213: 8473165932003584470
+    second: fish_violet_52
+  - first:
+      213: -3134974735971204058
+    second: fish_violet_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fish_violet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2105
+        width: 240
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a119afe90965ad9d0800000000000000
+      internalID: -2748789443413765862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 2105
+        width: 241
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1966324615646140800000000000000
+      internalID: 4712002256410929437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_2
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 2106
+        width: 240
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e70d524b1f1bb6d0800000000000000
+      internalID: -2973748927010109465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_3
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 2106
+        width: 237
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bcb7e78a6efd2b70800000000000000
+      internalID: 8876030174117215413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_4
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 2105
+        width: 233
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a857fb6dd9195cb00800000000000000
+      internalID: 848244211927971210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_5
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 2104
+        width: 230
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c08285f1b1ed3a4f0800000000000000
+      internalID: -818566499179943924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_6
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1848
+        width: 226
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdcab8784ed4f8430800000000000000
+      internalID: 3787331455563836639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_7
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1847
+        width: 224
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcfb4c96780f8d290800000000000000
+      internalID: -7865272284816818227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_8
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 1847
+        width: 223
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6992792cd71c89450800000000000000
+      internalID: 6095834841525725590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_9
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1847
+        width: 222
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 237e0497c44492490800000000000000
+      internalID: -7770604586808580302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_10
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 1847
+        width: 222
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8baa3fbabd5d62800800000000000000
+      internalID: 587391940877855416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_11
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 1848
+        width: 224
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5da2a95b259405a40800000000000000
+      internalID: 5354860576526445269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_12
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1593
+        width: 228
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd63abc31274e81e0800000000000000
+      internalID: -2193737760404523299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_13
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1593
+        width: 232
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 036fcca4b7a497640800000000000000
+      internalID: 5078171948233324080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_14
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1594
+        width: 235
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ae21ae2fbf271250800000000000000
+      internalID: 5915249133742010018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_15
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 1594
+        width: 235
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe80a19787eda110800000000000000
+      internalID: 1273928839065538293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_16
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1593
+        width: 234
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d1891518f5eddf0800000000000000
+      internalID: -153580328259674875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_17
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 1592
+        width: 232
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 914b14e26b8fe9540800000000000000
+      internalID: 5016720496281105433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_18
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1336
+        width: 229
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71efadc7e8b7a7d30800000000000000
+      internalID: 4429989035382603287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_19
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1336
+        width: 225
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13fd5c3d90d3d7090800000000000000
+      internalID: -8035199047742136527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_20
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1335
+        width: 221
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d8d84a578c42c4c0800000000000000
+      internalID: -4268765352574789421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_21
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 1335
+        width: 218
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1435efd91b1aea70800000000000000
+      internalID: 8856921415121974299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_22
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 1335
+        width: 213
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc314570eeb918940800000000000000
+      internalID: 5296686083391886284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_23
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 1335
+        width: 210
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e1a3dd828bbd060800000000000000
+      internalID: 6979374533190491682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_24
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1079
+        width: 206
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a889daf5803e07ee0800000000000000
+      internalID: -1265261870186653558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_25
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1080
+        width: 202
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325be58fa3716b7f0800000000000000
+      internalID: -597264358537513693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_26
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1081
+        width: 208
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6de6e87b103e74d80800000000000000
+      internalID: -8266388994501218602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_27
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 1082
+        width: 215
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de56068d7213ab170800000000000000
+      internalID: 8194916519157720557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_28
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 1082
+        width: 224
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db34fd7bc04567690800000000000000
+      internalID: -7604798507167300675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_29
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 1082
+        width: 229
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67795b87c64962610800000000000000
+      internalID: 1596126311551965046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_30
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 825
+        width: 233
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 121901a66449c33b0800000000000000
+      internalID: -5531383212169719519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_31
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 824
+        width: 234
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f86c5c3c20f62bdb0800000000000000
+      internalID: -4777634197021538673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_32
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 824
+        width: 232
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18683a2562f276dd0800000000000000
+      internalID: -2492972027084568959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_33
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 824
+        width: 230
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0980ffa6eab52980800000000000000
+      internalID: -8564233616418109170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_34
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 824
+        width: 227
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97d846d4ef0fd7870800000000000000
+      internalID: 8682360631650979193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_35
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 823
+        width: 224
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 688b3b22df3e87fc0800000000000000
+      internalID: -3496794434304755578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_36
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 567
+        width: 221
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7123e7f8927e6970800000000000000
+      internalID: 8750057127346905470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_37
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 568
+        width: 220
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96875e145637ea60800000000000000
+      internalID: 7703185422554728094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_38
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 569
+        width: 221
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e74304df188e3470800000000000000
+      internalID: 8376282027238049761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_39
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 569
+        width: 223
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b1d21e550cc0f7a0800000000000000
+      internalID: -6345347551539834447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_40
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 570
+        width: 228
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7167ca0eafdb81900800000000000000
+      internalID: 655482630991279639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_41
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 570
+        width: 231
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e92e44f941a7f3a0800000000000000
+      internalID: -6631654587276318238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_42
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 314
+        width: 234
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ce94b789f1b8680800000000000000
+      internalID: -8751866711100494774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_43
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 313
+        width: 235
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3c61c786999bea60800000000000000
+      internalID: 7704420459349109820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_44
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 312
+        width: 233
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fab61962dfafdc460800000000000000
+      internalID: 7263737739199212463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_45
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 312
+        width: 231
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f5cae2a0d9b577c0800000000000000
+      internalID: -4074145982149114381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_46
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 311
+        width: 228
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e35640c943cab200800000000000000
+      internalID: 196684255269901287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_47
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 311
+        width: 225
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0901f2f4ad14cb70800000000000000
+      internalID: 8918285756388149517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_48
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 55
+        width: 224
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 645c0ba667e52ed80800000000000000
+      internalID: -8222906106935982778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_49
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 56
+        width: 222
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 894e0c955771fa440800000000000000
+      internalID: 4949200308287890584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_50
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 57
+        width: 220
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faa6829d37d8f03e0800000000000000
+      internalID: -2085292573745190225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_51
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 58
+        width: 221
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c59386ba5cb0c9c0800000000000000
+      internalID: -3908917378762435128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_52
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 58
+        width: 222
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d9e30cb58bb69570800000000000000
+      internalID: 8473165932003584470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_violet_53
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 58
+        width: 223
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 624cc9266155e74d0800000000000000
+      internalID: -3134974735971204058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fish_violet_0: -2748789443413765862
+      fish_violet_1: 4712002256410929437
+      fish_violet_10: 587391940877855416
+      fish_violet_11: 5354860576526445269
+      fish_violet_12: -2193737760404523299
+      fish_violet_13: 5078171948233324080
+      fish_violet_14: 5915249133742010018
+      fish_violet_15: 1273928839065538293
+      fish_violet_16: -153580328259674875
+      fish_violet_17: 5016720496281105433
+      fish_violet_18: 4429989035382603287
+      fish_violet_19: -8035199047742136527
+      fish_violet_2: -2973748927010109465
+      fish_violet_20: -4268765352574789421
+      fish_violet_21: 8856921415121974299
+      fish_violet_22: 5296686083391886284
+      fish_violet_23: 6979374533190491682
+      fish_violet_24: -1265261870186653558
+      fish_violet_25: -597264358537513693
+      fish_violet_26: -8266388994501218602
+      fish_violet_27: 8194916519157720557
+      fish_violet_28: -7604798507167300675
+      fish_violet_29: 1596126311551965046
+      fish_violet_3: 8876030174117215413
+      fish_violet_30: -5531383212169719519
+      fish_violet_31: -4777634197021538673
+      fish_violet_32: -2492972027084568959
+      fish_violet_33: -8564233616418109170
+      fish_violet_34: 8682360631650979193
+      fish_violet_35: -3496794434304755578
+      fish_violet_36: 8750057127346905470
+      fish_violet_37: 7703185422554728094
+      fish_violet_38: 8376282027238049761
+      fish_violet_39: -6345347551539834447
+      fish_violet_4: 848244211927971210
+      fish_violet_40: 655482630991279639
+      fish_violet_41: -6631654587276318238
+      fish_violet_42: -8751866711100494774
+      fish_violet_43: 7704420459349109820
+      fish_violet_44: 7263737739199212463
+      fish_violet_45: -4074145982149114381
+      fish_violet_46: 196684255269901287
+      fish_violet_47: 8918285756388149517
+      fish_violet_48: -8222906106935982778
+      fish_violet_49: 4949200308287890584
+      fish_violet_5: -818566499179943924
+      fish_violet_50: -2085292573745190225
+      fish_violet_51: -3908917378762435128
+      fish_violet_52: 8473165932003584470
+      fish_violet_53: -3134974735971204058
+      fish_violet_6: 3787331455563836639
+      fish_violet_7: -7865272284816818227
+      fish_violet_8: 6095834841525725590
+      fish_violet_9: -7770604586808580302
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

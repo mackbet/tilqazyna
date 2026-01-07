@@ -40,13 +40,11 @@ public class CookingManager : MonoBehaviour
     private IngredientType? _activeFireContainer;
 
     public event Action OnDoughPlateClickedAction;
-    public event Action OnRollingPinClickedAction;
-    public event Action OnKnifeClickedAction;
     public event Action OnOnionClickedAction;
-    public static event Action OnKumisBottleClickedAction;
+    //public static event Action OnKumisBottleClickedAction;
     public event Action OnCauldronClickedAction;
     public event Action OnPotClickedAction;
-    public static event Action OnPotTimerStarted; 
+    public static event Action OnPotTimerStarted;
 
     private void Awake()
     {
@@ -209,7 +207,6 @@ public class CookingManager : MonoBehaviour
             if (recipe != null && (recipe.Result == IngredientType.DoughBershmakCutted ||
                                     recipe.Result == IngredientType.BershmakMeatCutted))
             {
-                OnKnifeClickedAction?.Invoke();
                 ProcessRecipe(IngredientType.Board, recipe);
                 _soundManager.PlayKnifeSound();
 
@@ -223,9 +220,8 @@ public class CookingManager : MonoBehaviour
                     _soundManager.PlayDoughCutSound();
                 }
             }
-            else if(recipe != null && recipe.Result == IngredientType.Baursak)
+            else if (recipe != null && recipe.Result == IngredientType.Baursak)
             {
-                OnKnifeClickedAction?.Invoke();
                 ProcessRecipe(IngredientType.Board, recipe);
                 _soundManager.PlayRollingPinSound();
             }
@@ -329,7 +325,7 @@ public class CookingManager : MonoBehaviour
         {
             foreach (var i in ingr.Where(ingredient => order[orderOriginal] != null))
             {
-                foreach(var dish in order[orderOriginal].GetUncompletedDishes())
+                foreach (var dish in order[orderOriginal].GetUncompletedDishes())
                 {
                     if (dish.DishData.dishType == i && dish.IsCompleted != true)
                     {
@@ -341,7 +337,7 @@ public class CookingManager : MonoBehaviour
 
                         _soundManager.PlayOrderCompletedSound();
 
-                        return;   
+                        return;
                     }
                 }
             }
@@ -349,7 +345,7 @@ public class CookingManager : MonoBehaviour
             var inedx = orderOriginal == 0 ? 1 : 0;
             foreach (var i in ingr.Where(ingredient => order[inedx] != null))
             {
-                foreach(var dish in order[inedx].GetUncompletedDishes())
+                foreach (var dish in order[inedx].GetUncompletedDishes())
                 {
                     if (dish.DishData.dishType == i && dish.IsCompleted != true)
                     {
@@ -362,7 +358,7 @@ public class CookingManager : MonoBehaviour
 
                         _soundManager.PlayOrderCompletedSound();
 
-                        return;   
+                        return;
                     }
                 }
             }
@@ -385,11 +381,11 @@ public class CookingManager : MonoBehaviour
             //_cookingTipManager.ShowTip("Сначала добавьте необходимые ингредиенты!");
             return;
         }
-        
+
         if (targetContainer == IngredientType.TrashBin)
         {
             if (_ingredients.TryGetValue(ingredient, out var ingredients) &&
-                (ingredients.Contains(IngredientType.BaursakBurned) || 
+                (ingredients.Contains(IngredientType.BaursakBurned) ||
                  ingredients.Contains(IngredientType.MilkBurned)))
             {
                 _ingredients.Remove(ingredient);
@@ -435,7 +431,7 @@ public class CookingManager : MonoBehaviour
                         if ((!(sourceContainer is IngredientType.Bowl1 or IngredientType.Bowl2 &&
                                targetContainer is IngredientType.Bowl1 or IngredientType.Bowl2)
                              || targetContainer == IngredientType.Bowl1 && ingredient == IngredientType.Bowl2 ||
-                             targetContainer == IngredientType.Bowl2 && ingredient == IngredientType.Bowl1) )
+                             targetContainer == IngredientType.Bowl2 && ingredient == IngredientType.Bowl1))
                         {
                             sourceIngredients.RemoveAt(j);
                             _cookingView.ClearView(sourceContainer);
@@ -462,7 +458,7 @@ public class CookingManager : MonoBehaviour
                 {
                     _cookingView.AddIngredientView(sourceContainer, remainingIngredient);
                 }
-                
+
                 if ((sourceContainer == IngredientType.Pot || sourceContainer == IngredientType.Pot2) && sourceIngredients.Count == 0)
                 {
                     _ingredients.Remove(sourceContainer);
@@ -499,7 +495,7 @@ public class CookingManager : MonoBehaviour
                 StartFireForContainer(targetContainer);
             }
 
-            if (targetContainer is IngredientType.Pot or IngredientType.Pot2 && 
+            if (targetContainer is IngredientType.Pot or IngredientType.Pot2 &&
                 targetIngredients.Contains(IngredientType.Baursak) &&
                 targetIngredients.Contains(IngredientType.Oil))
             {
@@ -545,7 +541,7 @@ public class CookingManager : MonoBehaviour
         {
             return false;
         }
-        
+
         if (ingredientType is IngredientType.BaursakCooked or IngredientType.BershmakCooked
             or IngredientType.KurutCooked or IngredientType.MeatCooked or IngredientType.KurutBoiled)
         {

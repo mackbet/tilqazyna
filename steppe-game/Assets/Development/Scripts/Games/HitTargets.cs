@@ -299,6 +299,8 @@ public class HitTargets : GameController
         }
 
         finishPanel.SetReward(7 + lives * 5, score, 80);
+        finishPanel.SetState(true);
+        finishPanel.SetStars(lives);
         FinishGame();
     }
 
@@ -322,9 +324,8 @@ public class HitTargets : GameController
         }
 
         finishPanel.SetReward(2, score, 30);
+        finishPanel.SetState(false);
+        finishPanel.SetStars(lives);
         FinishGame();
     }
-
-    public float GetProgress() => gameDuration > 0 ? currentTime / gameDuration : 0f;
-    public int GetScore() => score;
 }

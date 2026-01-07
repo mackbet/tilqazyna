@@ -4079,8 +4079,8 @@ MonoBehaviour:
   itemTypesCount: 5
   scoreText: {fileID: 8065759746432328154}
   movesText: {fileID: 6893275616470603618}
-  movesLimit: 7
-  scoreGoal: 250
+  movesLimit: 12
+  scoreGoal: 350
   matchSound: {fileID: 8300000, guid: 7c91c2876bd4c7e4ba7ad4a7cc67fdfe, type: 3}
   swapSound: {fileID: 8300000, guid: 505fcb448a0082e408f841d98344095a, type: 3}
   invalidSound: {fileID: 8300000, guid: 893f48ecb04dd3e4db7da1449028a354, type: 3}

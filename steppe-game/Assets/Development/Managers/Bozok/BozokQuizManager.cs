@@ -13,7 +13,6 @@ public class BozokQuizManager : MonoBehaviour
     public static event Action<int> OnStarAppear;
     public static event Action OnBoneShootingOffLowerUI;
     public static event Action GameCompleted;
-    public static event Action ResetBones;
 
     [Header("Quiz info")]
     [SerializeField] public BozokQuizInfo quizInfo;

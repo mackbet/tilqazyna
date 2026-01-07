@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
   m_GUID: 192b193ae0a9889b595c687f20eddb64
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 1363c255b76044b0884b6cd942155da2
+    m_Address: Assets/Development/Music/ChooseCityDialogue1.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: b2812d830086c3c3e9abb97cbd5be879, type: 2}
   m_SchemaSet:

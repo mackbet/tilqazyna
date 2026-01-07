@@ -64,6 +64,8 @@ public class Puzzle : GameController
         if (lockedCount >= pieces.Length)
         {
             finishPanel.SetReward(8, 70, 100);
+            finishPanel.SetState(true);
+            finishPanel.SetStars(lives);
             FinishGame();
         }
     }

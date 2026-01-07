@@ -83,7 +83,6 @@ GameObject:
   - component: {fileID: 6739634687657352749}
   - component: {fileID: 368020402352956736}
   - component: {fileID: 5354210339722772605}
-  - component: {fileID: 8748008879339365363}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -138,7 +137,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0421\u04E9\u0437 \u041C\u0430\u0433\u043D\u0438\u0442\u0456"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 92110b4d00f4c4b0d812834f0521e8e8, type: 2}
   m_sharedMaterial: {fileID: -316614527868378198, guid: 92110b4d00f4c4b0d812834f0521e8e8, type: 2}
@@ -165,7 +164,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.65
+  m_fontSize: 42
   m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -209,31 +208,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &8748008879339365363
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574065331044907995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aece3add078b1647bfcd8ceab63d5b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BigDreamLab.LocalizationSystem.LocalizableText
-  display: {fileID: 5354210339722772605}
-  <LocalizedString>k__BackingField:
-    m_TableReference:
-      m_TableCollectionName: GUID:aa0c96a897bb2520f8d789afe9cb43d5
-    m_TableEntryReference:
-      m_KeyId: 134334272144297984
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 0
-    m_LocalVariables: []
-  references:
-    version: 2
-    RefIds: []
 --- !u!1 &2243921985379788379
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +632,7 @@ RectTransform:
   m_Father: {fileID: 1492450251533703730}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.38}
-  m_AnchorMax: {x: 1, y: 0.55}
+  m_AnchorMax: {x: 1, y: 0.56}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5461,7 +5435,7 @@ ParticleSystemRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5496666961237409502}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -10513,7 +10487,7 @@ ParticleSystemRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7562226248468367343}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -10673,7 +10647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &237974963326723427
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11039,7 +11013,7 @@ RectTransform:
   m_GameObject: {fileID: 8925909905946069380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3070199370363818548}
@@ -11250,7 +11224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
       propertyPath: dialogueEntries.Array.data[0].onFinishedActivateables.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
       propertyPath: dialogueEntries.Array.data[3].onFinishedActivateables.Array.size
@@ -11263,6 +11237,10 @@ PrefabInstance:
     - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
       propertyPath: dialogueEntries.Array.data[0].onFinishedActivateables.Array.data[0].state
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
+      propertyPath: dialogueEntries.Array.data[0].onFinishedActivateables.Array.data[1].state
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
       propertyPath: dialogueEntries.Array.data[3].onFinishedActivateables.Array.data[0].state
@@ -11280,6 +11258,10 @@ PrefabInstance:
       propertyPath: dialogueEntries.Array.data[0].onFinishedActivateables.Array.data[0].gameObject
       value: 
       objectReference: {fileID: 6180911466306398114}
+    - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
+      propertyPath: dialogueEntries.Array.data[0].onFinishedActivateables.Array.data[1].gameObject
+      value: 
+      objectReference: {fileID: 1744106835493882633}
     - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
       propertyPath: dialogueEntries.Array.data[3].onFinishedActivateables.Array.data[0].gameObject
       value: 
@@ -11363,6 +11345,10 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u0421\u04E9\u0437 \u041C\u0430\u0433\u043D\u0438\u0442\u0456"
       objectReference: {fileID: 0}
+    - target: {fileID: 2488284045119347068, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4279289844
+      objectReference: {fileID: 0}
     - target: {fileID: 3075755175789649611, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -11401,6 +11387,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6524795500799679385, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6524795500799679385, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6524795500799679385, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
@@ -12457,6 +12447,7 @@ MonoBehaviour:
     uvOffsetX: 0
     nextSpawnTime: 0
     isActive: 0
+  startOnStart: 1
 --- !u!114 &8590708784181319653 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7198366607822241818, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
@@ -12565,6 +12556,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Floating Joystick
       objectReference: {fileID: 0}
+    - target: {fileID: 8170153791668043269, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8170153791961219459, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
       propertyPath: m_Type
       value: 0
@@ -12646,12 +12641,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8170153791668043268, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
   m_PrefabInstance: {fileID: 7590386691846616332}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1744106835493882633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8170153791668043269, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
+  m_PrefabInstance: {fileID: 7590386691846616332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1744106835493882637 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8170153791668043265, guid: 0d230cc8be529a542a08cb878ab14b18, type: 3}
   m_PrefabInstance: {fileID: 7590386691846616332}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1744106835493882633}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a47f546fc70ec8428172694e78e4288, type: 3}
@@ -12802,7 +12802,7 @@ PrefabInstance:
     - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
       propertyPath: dialogueEntries.Array.data[2].audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: e1e26f422a1881442ade089fcad578d8, type: 3}
+      objectReference: {fileID: 8300000, guid: 8031078c89b389147923cacc2dbf4fc2, type: 3}
     - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
       propertyPath: dialogueEntries.Array.data[3].audioClip
       value: 
@@ -12833,7 +12833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
       propertyPath: dialogueEntries.Array.data[2].onFinishedActivateables.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
       propertyPath: dialogueEntries.Array.data[3].onFinishedActivateables.Array.size
@@ -12849,6 +12849,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
       propertyPath: dialogueEntries.Array.data[2].onFinishedActivateables.Array.data[1].state
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
+      propertyPath: dialogueEntries.Array.data[2].onFinishedActivateables.Array.data[2].state
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
@@ -12871,6 +12875,10 @@ PrefabInstance:
       propertyPath: dialogueEntries.Array.data[2].onFinishedActivateables.Array.data[1].gameObject
       value: 
       objectReference: {fileID: 6180911466306398114}
+    - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
+      propertyPath: dialogueEntries.Array.data[2].onFinishedActivateables.Array.data[2].gameObject
+      value: 
+      objectReference: {fileID: 7704108540657498033}
     - target: {fileID: 7397679988174239180, guid: a4f30e8ce95939b488ce10ae98859220, type: 3}
       propertyPath: dialogueEntries.Array.data[3].onFinishedActivateables.Array.data[0].gameObject
       value: 

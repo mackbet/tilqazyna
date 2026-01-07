@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static SimpleDialogue;
 
 public class QuizButton : CustomButton
 {
@@ -11,12 +12,12 @@ public class QuizButton : CustomButton
     [SerializeField] private Color correctColor = Color.green;
     [SerializeField] private Color wrongColor = Color.red;
 
-    private Phrase currentAnswer;
+    private QuizField currentAnswer;
     private int answerIndex;
 
     public event Action<QuizButton, int> OnAnswerClicked;
 
-    public Phrase CurrentAnswer => currentAnswer;
+    public QuizField CurrentAnswer => currentAnswer;
     public int AnswerIndex => answerIndex;
 
 #if UNITY_EDITOR
@@ -32,14 +33,14 @@ public class QuizButton : CustomButton
     }
 #endif
 
-    public void Initialize(Phrase answer, int index)
+    public void Initialize(QuizField answer, int index)
     {
         currentAnswer = answer;
         answerIndex = index;
 
-        if (answerText != null && answer.LocalizedString != null)
+        if (answerText != null && answer != null)
         {
-            answerText.text = answer.LocalizedString.GetLocalizedString();
+            answerText.text = answer.text;
         }
 
         ResetVisuals();

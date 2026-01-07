@@ -1,5 +1,4 @@
 using Development.Managers.Bozok.HorseGame;
-using Gilzoide.LottiePlayer;
 using UnityEngine;
 
 namespace Development.Objects.SevenTreasuresGame.Frisky

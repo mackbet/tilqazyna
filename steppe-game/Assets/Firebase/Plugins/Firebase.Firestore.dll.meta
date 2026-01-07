@@ -4,12 +4,16 @@ labels:
 - gvh
 - gvh_version-12.4.1
 - gvhp_exportpath-Firebase/Plugins/Firebase.Firestore.dll
-timeCreated: 1480838400
 PluginImporter:
-  serializedVersion: 1
+  externalObjects: {}
+  serializedVersion: 3
   iconMap: {}
   executionOrder: {}
+  defineConstraints: []
   isPreloaded: 0
+  isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
   platformData:
     Android:
       enabled: 1
@@ -17,30 +21,20 @@ PluginImporter:
         CPU: AnyCPU
     Any:
       enabled: 0
-      settings: {}
+      settings:
+        Exclude Editor: 0
+        Exclude Linux64: 0
+        Exclude OSXUniversal: 0
+        Exclude Win: 0
+        Exclude Win64: 0
+        Exclude iOS: 0
     Editor:
       enabled: 1
       settings:
         CPU: AnyCPU
         DefaultValueInitialized: true
         OS: AnyOS
-    Linux:
-      enabled: 1
-      settings:
-        CPU: x86
     Linux64:
-      enabled: 1
-      settings:
-        CPU: x86_64
-    LinuxUniversal:
-      enabled: 1
-      settings:
-        CPU: AnyCPU
-    OSXIntel:
-      enabled: 1
-      settings:
-        CPU: x86
-    OSXIntel64:
       enabled: 1
       settings:
         CPU: x86_64
@@ -48,10 +42,7 @@ PluginImporter:
       enabled: 1
       settings:
         CPU: AnyCPU
-    Web:
-      enabled: 0
-      settings: {}
-    WebStreamed:
+    WebGL:
       enabled: 0
       settings: {}
     Win:
@@ -67,15 +58,17 @@ PluginImporter:
       settings:
         CPU: AnyCPU
     iOS:
-      enabled: 0
+      enabled: 1
       settings:
-        CompileFlags:
-        FrameworkDependencies:
+        AddToEmbeddedBinaries: false
+        CPU: AnyCPU
+        CompileFlags: 
+        FrameworkDependencies: 
     tvOS:
       enabled: 0
       settings:
-        CompileFlags:
-        FrameworkDependencies:
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+        CompileFlags: 
+        FrameworkDependencies: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1547 @@
+fileFormatVersion: 2
+guid: 46a7de413c00f014ab8f2951e5c1c54f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -321200409152959830
+    second: fish_LBlue_0
+  - first:
+      213: 8190910193124246628
+    second: fish_LBlue_1
+  - first:
+      213: -56566098392311318
+    second: fish_LBlue_2
+  - first:
+      213: -1199170847087856910
+    second: fish_LBlue_3
+  - first:
+      213: 3462310135038019302
+    second: fish_LBlue_4
+  - first:
+      213: 2937754049713319105
+    second: fish_LBlue_5
+  - first:
+      213: -3831698877332663852
+    second: fish_LBlue_6
+  - first:
+      213: 4329582770004323669
+    second: fish_LBlue_7
+  - first:
+      213: 3801810399348522074
+    second: fish_LBlue_8
+  - first:
+      213: -2934667575565395936
+    second: fish_LBlue_9
+  - first:
+      213: -189960604998121663
+    second: fish_LBlue_10
+  - first:
+      213: 3916608406519496577
+    second: fish_LBlue_11
+  - first:
+      213: 2384697114767007211
+    second: fish_LBlue_12
+  - first:
+      213: 144280506859858195
+    second: fish_LBlue_13
+  - first:
+      213: -1303894016157357471
+    second: fish_LBlue_14
+  - first:
+      213: 556424641049770497
+    second: fish_LBlue_15
+  - first:
+      213: -4217524361533505340
+    second: fish_LBlue_16
+  - first:
+      213: 3630862443511039184
+    second: fish_LBlue_17
+  - first:
+      213: -8486011675183562415
+    second: fish_LBlue_18
+  - first:
+      213: -2715371154308905497
+    second: fish_LBlue_19
+  - first:
+      213: 7371770570037240769
+    second: fish_LBlue_20
+  - first:
+      213: -1492776509475428653
+    second: fish_LBlue_21
+  - first:
+      213: -2024043960254598764
+    second: fish_LBlue_22
+  - first:
+      213: 4358255774501775236
+    second: fish_LBlue_23
+  - first:
+      213: 1966717161595714076
+    second: fish_LBlue_24
+  - first:
+      213: 1440068285564859355
+    second: fish_LBlue_25
+  - first:
+      213: -1051387228941220571
+    second: fish_LBlue_26
+  - first:
+      213: -2801802027583433235
+    second: fish_LBlue_27
+  - first:
+      213: 8394118946828324096
+    second: fish_LBlue_28
+  - first:
+      213: -8991447699692840642
+    second: fish_LBlue_29
+  - first:
+      213: -3349122728196088722
+    second: fish_LBlue_30
+  - first:
+      213: 6808620825024393048
+    second: fish_LBlue_31
+  - first:
+      213: -4403828423861271572
+    second: fish_LBlue_32
+  - first:
+      213: -8508086284920905582
+    second: fish_LBlue_33
+  - first:
+      213: -2781977630423348702
+    second: fish_LBlue_34
+  - first:
+      213: 156474610176234029
+    second: fish_LBlue_35
+  - first:
+      213: -5242700899542537116
+    second: fish_LBlue_36
+  - first:
+      213: 1836627660246015095
+    second: fish_LBlue_37
+  - first:
+      213: -3341002295000882454
+    second: fish_LBlue_38
+  - first:
+      213: 7702235848457365415
+    second: fish_LBlue_39
+  - first:
+      213: -7219108592202443987
+    second: fish_LBlue_40
+  - first:
+      213: 6604326814168001741
+    second: fish_LBlue_41
+  - first:
+      213: 7463431570252819482
+    second: fish_LBlue_42
+  - first:
+      213: 5937519784902159034
+    second: fish_LBlue_43
+  - first:
+      213: 4559083612718253984
+    second: fish_LBlue_44
+  - first:
+      213: -4855139400237905254
+    second: fish_LBlue_45
+  - first:
+      213: -7947104748010958592
+    second: fish_LBlue_46
+  - first:
+      213: -1845725692427862919
+    second: fish_LBlue_47
+  - first:
+      213: -6090226187748815269
+    second: fish_LBlue_48
+  - first:
+      213: 5040688816183992196
+    second: fish_LBlue_49
+  - first:
+      213: -8455665379318508372
+    second: fish_LBlue_50
+  - first:
+      213: 3183071338558570034
+    second: fish_LBlue_51
+  - first:
+      213: 526606392696696608
+    second: fish_LBlue_52
+  - first:
+      213: 2082839825000244101
+    second: fish_LBlue_53
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fish_LBlue_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2105
+        width: 240
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaa4abefdedda8bf0800000000000000
+      internalID: -321200409152959830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 2105
+        width: 241
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4640c406c65fba170800000000000000
+      internalID: 8190910193124246628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_2
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 2106
+        width: 240
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae91ff6ee69073ff0800000000000000
+      internalID: -56566098392311318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_3
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 2106
+        width: 237
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f2f252d770bb5fe0800000000000000
+      internalID: -1199170847087856910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_4
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 2105
+        width: 233
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e60d2549b89c0030800000000000000
+      internalID: 3462310135038019302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_5
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 2104
+        width: 230
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cca0aa4ebff4c820800000000000000
+      internalID: 2937754049713319105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_6
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1848
+        width: 226
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d1d25a1c2213dac0800000000000000
+      internalID: -3831698877332663852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_7
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1847
+        width: 224
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55d62c71794c51c30800000000000000
+      internalID: 4329582770004323669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_8
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 1847
+        width: 223
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5cfd845a6eb2c430800000000000000
+      internalID: 3801810399348522074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_9
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1847
+        width: 222
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02851987367f547d0800000000000000
+      internalID: -2934667575565395936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_10
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 1847
+        width: 222
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 147c4c116df1d5df0800000000000000
+      internalID: -189960604998121663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_11
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 1848
+        width: 224
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f37ea38969a5630800000000000000
+      internalID: 3916608406519496577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_12
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1593
+        width: 228
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bed16962465281120800000000000000
+      internalID: 2384697114767007211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_13
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1593
+        width: 232
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31925674b56900200800000000000000
+      internalID: 144280506859858195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_14
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 1594
+        width: 235
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16aee26fc43a7ede0800000000000000
+      internalID: -1303894016157357471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_15
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 1594
+        width: 235
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10abb025341d8b700800000000000000
+      internalID: 556424641049770497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_16
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1593
+        width: 234
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c04d3740f75875c0800000000000000
+      internalID: -4217524361533505340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_17
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 1592
+        width: 232
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d448cdb72a636230800000000000000
+      internalID: 3630862443511039184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_18
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1336
+        width: 229
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 151cddc9751ab3a80800000000000000
+      internalID: -8486011675183562415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_19
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1336
+        width: 225
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e543126250115ad0800000000000000
+      internalID: -2715371154308905497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_20
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 1335
+        width: 221
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c3afb0b64acd4660800000000000000
+      internalID: 7371770570037240769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_21
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 1335
+        width: 218
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d66ba77ca7984be0800000000000000
+      internalID: -1492776509475428653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_22
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 1335
+        width: 213
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 491ff33fdb629e3e0800000000000000
+      internalID: -2024043960254598764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_23
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 1335
+        width: 210
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487297f2982ab7c30800000000000000
+      internalID: 4358255774501775236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_24
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 1079
+        width: 206
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1ab39e96de2b4b10800000000000000
+      internalID: 1966717161595714076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_25
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1080
+        width: 202
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd33665d9762cf310800000000000000
+      internalID: 1440068285564859355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_26
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1081
+        width: 208
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5258391c2e8b861f0800000000000000
+      internalID: -1051387228941220571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_27
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 1082
+        width: 215
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de59be686effd19d0800000000000000
+      internalID: -2801802027583433235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_28
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 1082
+        width: 224
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00d041c45b6ed7470800000000000000
+      internalID: 8394118946828324096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_29
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 1082
+        width: 229
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e391e43b4f5f73380800000000000000
+      internalID: -8991447699692840642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_30
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 825
+        width: 233
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6c5fa48f968581d0800000000000000
+      internalID: -3349122728196088722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_31
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 824
+        width: 234
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85fe7e511941d7e50800000000000000
+      internalID: 6808620825024393048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_32
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 824
+        width: 232
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce30bf7816572e2c0800000000000000
+      internalID: -4403828423861271572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_33
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 824
+        width: 230
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290aae40a943de980800000000000000
+      internalID: -8508086284920905582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_34
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 824
+        width: 227
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a888da51e6469d0800000000000000
+      internalID: -2781977630423348702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_35
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 823
+        width: 224
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d221ce334d8eb2200800000000000000
+      internalID: 156474610176234029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_36
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 567
+        width: 221
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46c65231f4f2e37b0800000000000000
+      internalID: -5242700899542537116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_37
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 568
+        width: 220
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77cde9940230d7910800000000000000
+      internalID: 1836627660246015095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_38
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 569
+        width: 221
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae225b43d1062a1d0800000000000000
+      internalID: -3341002295000882454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_39
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 569
+        width: 223
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a7a49b22b6d3ea60800000000000000
+      internalID: 7702235848457365415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_40
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 570
+        width: 228
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d239dcedbf290db90800000000000000
+      internalID: -7219108592202443987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_41
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 570
+        width: 231
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcc221b0f3847ab50800000000000000
+      internalID: 6604326814168001741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_42
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 314
+        width: 234
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1cea5e587f639760800000000000000
+      internalID: 7463431570252819482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_43
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 313
+        width: 235
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba62f939ce466250800000000000000
+      internalID: 5937519784902159034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_44
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 312
+        width: 233
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a74065046e154f30800000000000000
+      internalID: 4559083612718253984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_45
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 312
+        width: 231
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9a01d960741f9cb0800000000000000
+      internalID: -4855139400237905254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_46
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 311
+        width: 228
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0019cf5565636b190800000000000000
+      internalID: -7947104748010958592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_47
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 311
+        width: 225
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97c7606034aa266e0800000000000000
+      internalID: -1845725692427862919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_48
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 55
+        width: 224
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e4375bc8b2b7ba0800000000000000
+      internalID: -6090226187748815269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_49
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 56
+        width: 222
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48f5ee785cf14f540800000000000000
+      internalID: 5040688816183992196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_50
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 57
+        width: 220
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4d626332177aa80800000000000000
+      internalID: -8455665379318508372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_51
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 58
+        width: 221
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23eb28d848a8c2c20800000000000000
+      internalID: 3183071338558570034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_52
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 58
+        width: 222
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02fe22d59b1ee4700800000000000000
+      internalID: 526606392696696608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fish_LBlue_53
+      rect:
+        serializedVersion: 2
+        x: 1299
+        y: 58
+        width: 223
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5832d2519cbb7ec10800000000000000
+      internalID: 2082839825000244101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fish_LBlue_0: -321200409152959830
+      fish_LBlue_1: 8190910193124246628
+      fish_LBlue_10: -189960604998121663
+      fish_LBlue_11: 3916608406519496577
+      fish_LBlue_12: 2384697114767007211
+      fish_LBlue_13: 144280506859858195
+      fish_LBlue_14: -1303894016157357471
+      fish_LBlue_15: 556424641049770497
+      fish_LBlue_16: -4217524361533505340
+      fish_LBlue_17: 3630862443511039184
+      fish_LBlue_18: -8486011675183562415
+      fish_LBlue_19: -2715371154308905497
+      fish_LBlue_2: -56566098392311318
+      fish_LBlue_20: 7371770570037240769
+      fish_LBlue_21: -1492776509475428653
+      fish_LBlue_22: -2024043960254598764
+      fish_LBlue_23: 4358255774501775236
+      fish_LBlue_24: 1966717161595714076
+      fish_LBlue_25: 1440068285564859355
+      fish_LBlue_26: -1051387228941220571
+      fish_LBlue_27: -2801802027583433235
+      fish_LBlue_28: 8394118946828324096
+      fish_LBlue_29: -8991447699692840642
+      fish_LBlue_3: -1199170847087856910
+      fish_LBlue_30: -3349122728196088722
+      fish_LBlue_31: 6808620825024393048
+      fish_LBlue_32: -4403828423861271572
+      fish_LBlue_33: -8508086284920905582
+      fish_LBlue_34: -2781977630423348702
+      fish_LBlue_35: 156474610176234029
+      fish_LBlue_36: -5242700899542537116
+      fish_LBlue_37: 1836627660246015095
+      fish_LBlue_38: -3341002295000882454
+      fish_LBlue_39: 7702235848457365415
+      fish_LBlue_4: 3462310135038019302
+      fish_LBlue_40: -7219108592202443987
+      fish_LBlue_41: 6604326814168001741
+      fish_LBlue_42: 7463431570252819482
+      fish_LBlue_43: 5937519784902159034
+      fish_LBlue_44: 4559083612718253984
+      fish_LBlue_45: -4855139400237905254
+      fish_LBlue_46: -7947104748010958592
+      fish_LBlue_47: -1845725692427862919
+      fish_LBlue_48: -6090226187748815269
+      fish_LBlue_49: 5040688816183992196
+      fish_LBlue_5: 2937754049713319105
+      fish_LBlue_50: -8455665379318508372
+      fish_LBlue_51: 3183071338558570034
+      fish_LBlue_52: 526606392696696608
+      fish_LBlue_53: 2082839825000244101
+      fish_LBlue_6: -3831698877332663852
+      fish_LBlue_7: 4329582770004323669
+      fish_LBlue_8: 3801810399348522074
+      fish_LBlue_9: -2934667575565395936
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

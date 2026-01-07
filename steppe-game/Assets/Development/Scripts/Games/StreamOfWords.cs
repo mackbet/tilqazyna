@@ -2,10 +2,14 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using DG.Tweening;
 
 public class StreamOfWords : GameController
 {
     [Header("UI")]
+    [SerializeField] private RectTransform targetWord;
+    [SerializeField] private float scaleUpDuration = 0.5f;
+    [SerializeField] private Ease scaleUpEase = Ease.OutBack;
     [SerializeField] private TextMeshProUGUI textField;
     [SerializeField] private SoundButton soundButton;
     [SerializeField] private StreamOfWordsTarget[] targets;
@@ -18,6 +22,7 @@ public class StreamOfWords : GameController
     private List<StreamOfWordsTarget> selectedTargets = new List<StreamOfWordsTarget>();
     private int currentWordIndex = 0;
     private StreamOfWordsTarget currentCorrectTarget;
+    private bool isTargetWordShown = false;
 
     protected override void InitializeGame()
     {
@@ -69,6 +74,7 @@ public class StreamOfWords : GameController
 
     public void ShowCurrentWord()
     {
+        PlayCompletionAnimation();
         if (currentWordIndex >= selectedTargets.Count)
         {
             // Все слова пройдены
@@ -135,6 +141,8 @@ public class StreamOfWords : GameController
         // Завершаем игру
 
         finishPanel.SetReward(10, 85, 100);
+        finishPanel.SetState(true);
+        finishPanel.SetStars(3);
         FinishGame();
     }
 
@@ -149,6 +157,34 @@ public class StreamOfWords : GameController
         }
 
         InitializeGame();
+    }
+
+    private void PlayCompletionAnimation()
+    {
+        if (isTargetWordShown)
+            return;
+
+        if (targetWord == null)
+        {
+            Debug.LogWarning("RectTransform для анимации не назначен!");
+            return;
+        }
+        isTargetWordShown = true;
+
+        // Убиваем все предыдущие твины на этом объекте
+        targetWord.DOKill();
+
+        // Устанавливаем начальный масштаб в 0
+        targetWord.localScale = Vector3.zero;
+
+        // Создаем последовательность анимации
+        Sequence animSequence = DOTween.Sequence();
+
+        // 1. Увеличиваем до 1
+        animSequence.Append(targetWord.DOScale(Vector3.one, scaleUpDuration).SetEase(scaleUpEase));
+
+        // Запускаем последовательность
+        animSequence.Play();
     }
 
     // Методы для получения информации о прогрессе
