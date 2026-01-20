@@ -17,7 +17,7 @@ MonoBehaviour:
       \u0436\u0430\u0493\u0430\u0436\u0430\u0439\u044B\u043D\u0434\u0430\u0493\u044B
       \u0435\u04A3 \u043A\u04E9\u043F \u043A\u0435\u0437\u0434\u0435\u0441\u0435\u0442\u0456\u043D
       \u049B\u04B1\u0441 \u049B\u0430\u0439\u0441\u044B?"
-    audioClip: {fileID: 8300000, guid: 74de12fc7e120044084cbdd8c16672b1, type: 3}
+    audioClip: {fileID: 8300000, guid: f801d61c02e503f4b906f7b816289cc2, type: 3}
   <Answers>k__BackingField:
   - text: "\u0422\u044B\u0440\u043D\u0430"
     audioClip: {fileID: 0}

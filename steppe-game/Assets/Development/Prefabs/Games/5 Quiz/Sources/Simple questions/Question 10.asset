@@ -16,7 +16,7 @@ MonoBehaviour:
     text: "\u0410\u043B\u0430\u043A\u04E9\u043B \u0431\u0430\u043B\u0448\u044B\u0493\u044B
       \u043D\u0435\u0433\u0435 \u043F\u0430\u0439\u0434\u0430\u043B\u044B \u0434\u0435\u043F
       \u0430\u0439\u0442\u044B\u043B\u0430\u0434\u044B?"
-    audioClip: {fileID: 8300000, guid: 4d7d26753f441894392649b84edbf5c6, type: 3}
+    audioClip: {fileID: 8300000, guid: fc5c088208ad31f4c8a2b9830ba9fb06, type: 3}
   <Answers>k__BackingField:
   - text: "\u041E\u043B \u0442\u04D9\u0442\u0442\u0456 \u0431\u043E\u043B\u0493\u0430\u043D\u0434\u044B\u049B\u0442\u0430\u043D"
     audioClip: {fileID: 0}

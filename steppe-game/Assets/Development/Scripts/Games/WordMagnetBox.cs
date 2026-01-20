@@ -1,14 +1,15 @@
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
-using UnityEngine.UI;
 
 public class WordMagnetBox : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI wordText;
     [SerializeField] private RectTransform rectTransform;
     [SerializeField] private RectTransform model;
-
+    [SerializeField] private RectTransform wrongEffectTransform;
+    [SerializeField] private ParticleSystem wrongEffect;
+    [SerializeField] private bool isWrong = false;
     private WordData wordData;
     private float speed;
     private bool isCaptured = false;
@@ -88,6 +89,13 @@ public class WordMagnetBox : MonoBehaviour
 
         // Уменьшение размера всего объекта при захвате
         rectTransform.DOScale(0f, 0.3f).SetEase(Ease.InQuad);
+
+        if (isWrong && wrongEffect)
+        {
+            wrongEffectTransform.parent.SetParent(transform.parent.parent);
+            Destroy(wrongEffectTransform.gameObject, wrongEffect.main.duration);
+            wrongEffect.Play();
+        }
     }
 
     public bool IsOutOfBounds(float screenWidth, float screenHeight)

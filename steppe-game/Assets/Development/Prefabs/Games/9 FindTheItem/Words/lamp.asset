@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: lamp
   m_EditorClassIdentifier: Assembly-CSharp::FindTheItemVariant
   sprite: {fileID: 21300000, guid: 6aa530e3f9268f94ba1ec12897079357, type: 3}
-  audioClip: {fileID: 8300000, guid: 7e5525884adad6947bca2dd20810cbb0, type: 3}
+  audioClip: {fileID: 8300000, guid: cb816e79c16b1d748aa475d851cb6208, type: 3}
   itemName: "\u0428\u0430\u043C"

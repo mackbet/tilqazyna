@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: wheel
   m_EditorClassIdentifier: Assembly-CSharp::FindTheItemVariant
   sprite: {fileID: 21300000, guid: b6a521163cd88bb449db432bdac73207, type: 3}
-  audioClip: {fileID: 8300000, guid: 7954e6103151fbb4aaba8e0f5d6ca7df, type: 3}
+  audioClip: {fileID: 8300000, guid: bc3ae30483809674a85abc3e2a2018ef, type: 3}
   itemName: "\u0414\u04E9\u04A3\u0433\u0435\u043B\u0435\u043A"

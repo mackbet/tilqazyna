@@ -1,0 +1,3627 @@
+fileFormatVersion: 2
+guid: d76f9d792f49ebf40999bd8c7d092f6c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3997519849894879572
+    second: flamingo_3_L_0
+  - first:
+      213: -8346061120073966800
+    second: flamingo_3_L_1
+  - first:
+      213: 1758062993201801868
+    second: flamingo_3_L_2
+  - first:
+      213: -119511793606670838
+    second: flamingo_3_L_3
+  - first:
+      213: -4426796143771528270
+    second: flamingo_3_L_4
+  - first:
+      213: 186869648113640549
+    second: flamingo_3_L_5
+  - first:
+      213: 1636217137923443159
+    second: flamingo_3_L_6
+  - first:
+      213: 1551508678732866311
+    second: flamingo_3_L_7
+  - first:
+      213: 7887321190162298837
+    second: flamingo_3_L_8
+  - first:
+      213: -3390656890008614911
+    second: flamingo_3_L_9
+  - first:
+      213: -7405837432454858242
+    second: flamingo_3_L_10
+  - first:
+      213: 7057195938098390237
+    second: flamingo_3_L_11
+  - first:
+      213: -547438850702830340
+    second: flamingo_3_L_12
+  - first:
+      213: -5491794497231023077
+    second: flamingo_3_L_13
+  - first:
+      213: -5067284297939206685
+    second: flamingo_3_L_14
+  - first:
+      213: -7887273152225211663
+    second: flamingo_3_L_15
+  - first:
+      213: 8335789937999927439
+    second: flamingo_3_L_16
+  - first:
+      213: -3897139960455131385
+    second: flamingo_3_L_17
+  - first:
+      213: 8218247689472276894
+    second: flamingo_3_L_18
+  - first:
+      213: 8241725036359407554
+    second: flamingo_3_L_19
+  - first:
+      213: -1433355897194556720
+    second: flamingo_3_L_20
+  - first:
+      213: 5171902546859641003
+    second: flamingo_3_L_21
+  - first:
+      213: -3608077851674300270
+    second: flamingo_3_L_22
+  - first:
+      213: 6048032825495042765
+    second: flamingo_3_L_23
+  - first:
+      213: -1730956800203735156
+    second: flamingo_3_L_24
+  - first:
+      213: 6479605460344059408
+    second: flamingo_3_L_25
+  - first:
+      213: -7540988053273163096
+    second: flamingo_3_L_26
+  - first:
+      213: -4735717899809702989
+    second: flamingo_3_L_27
+  - first:
+      213: 7721333181735416288
+    second: flamingo_3_L_28
+  - first:
+      213: -6901935265347474345
+    second: flamingo_3_L_29
+  - first:
+      213: 3677295267093863240
+    second: flamingo_3_L_30
+  - first:
+      213: -3520681847076354370
+    second: flamingo_3_L_31
+  - first:
+      213: 9152837076056918991
+    second: flamingo_3_L_32
+  - first:
+      213: 1237891287888185671
+    second: flamingo_3_L_33
+  - first:
+      213: -184675987877698255
+    second: flamingo_3_L_34
+  - first:
+      213: -5772782026594163801
+    second: flamingo_3_L_35
+  - first:
+      213: 6622387888556103827
+    second: flamingo_3_L_36
+  - first:
+      213: 4333898933058708377
+    second: flamingo_3_L_37
+  - first:
+      213: -7263220947887926875
+    second: flamingo_3_L_38
+  - first:
+      213: 6099489737413641108
+    second: flamingo_3_L_39
+  - first:
+      213: -3325010261158995889
+    second: flamingo_3_L_40
+  - first:
+      213: -4414340040061254667
+    second: flamingo_3_L_41
+  - first:
+      213: -1952779242590622881
+    second: flamingo_3_L_42
+  - first:
+      213: -5494489756495547335
+    second: flamingo_3_L_43
+  - first:
+      213: 6672600071566113398
+    second: flamingo_3_L_44
+  - first:
+      213: -7809614531258667432
+    second: flamingo_3_L_45
+  - first:
+      213: 1856843040738451045
+    second: flamingo_3_L_46
+  - first:
+      213: 3928972766862155983
+    second: flamingo_3_L_47
+  - first:
+      213: 8044344845754553048
+    second: flamingo_3_L_48
+  - first:
+      213: -5095647135918896092
+    second: flamingo_3_L_49
+  - first:
+      213: 4952906757939003318
+    second: flamingo_3_L_50
+  - first:
+      213: 415312644428849262
+    second: flamingo_3_L_51
+  - first:
+      213: -636116917310123548
+    second: flamingo_3_L_52
+  - first:
+      213: -1829595351085649439
+    second: flamingo_3_L_53
+  - first:
+      213: -4992732538894702703
+    second: flamingo_3_L_54
+  - first:
+      213: -7861518781129352175
+    second: flamingo_3_L_55
+  - first:
+      213: 7402846060098507446
+    second: flamingo_3_L_56
+  - first:
+      213: 3347140823470243586
+    second: flamingo_3_L_57
+  - first:
+      213: 8254188906921862319
+    second: flamingo_3_L_58
+  - first:
+      213: -5637685994402226024
+    second: flamingo_3_L_59
+  - first:
+      213: 4271354016884945719
+    second: flamingo_3_L_60
+  - first:
+      213: 1300262188831074363
+    second: flamingo_3_L_61
+  - first:
+      213: 7314399131526830508
+    second: flamingo_3_L_62
+  - first:
+      213: 8877391058068828613
+    second: flamingo_3_L_63
+  - first:
+      213: 9094048702214470725
+    second: flamingo_3_L_64
+  - first:
+      213: -981052157728055407
+    second: flamingo_3_L_65
+  - first:
+      213: -499708398130813635
+    second: flamingo_3_L_66
+  - first:
+      213: -1708491697107738392
+    second: flamingo_3_L_67
+  - first:
+      213: -5539693479850214572
+    second: flamingo_3_L_68
+  - first:
+      213: 4481653754875096782
+    second: flamingo_3_L_69
+  - first:
+      213: -542432264398457352
+    second: flamingo_3_L_70
+  - first:
+      213: 6924428121157923899
+    second: flamingo_3_L_71
+  - first:
+      213: 3414151562354353818
+    second: flamingo_3_L_72
+  - first:
+      213: -8487286684157103869
+    second: flamingo_3_L_73
+  - first:
+      213: -7052620399683272264
+    second: flamingo_3_L_74
+  - first:
+      213: 4835482529439906925
+    second: flamingo_3_L_75
+  - first:
+      213: 2666503532267675871
+    second: flamingo_3_L_76
+  - first:
+      213: -5784162568284368206
+    second: flamingo_3_L_77
+  - first:
+      213: 4167575767183220665
+    second: flamingo_3_L_78
+  - first:
+      213: -2681812835515800711
+    second: flamingo_3_L_79
+  - first:
+      213: 3216005792751865055
+    second: flamingo_3_L_80
+  - first:
+      213: -3279663230867485808
+    second: flamingo_3_L_81
+  - first:
+      213: -4385996116651817900
+    second: flamingo_3_L_82
+  - first:
+      213: -8277596641114615108
+    second: flamingo_3_L_83
+  - first:
+      213: -4395027086084080848
+    second: flamingo_3_L_84
+  - first:
+      213: -3096717458475602046
+    second: flamingo_3_L_85
+  - first:
+      213: -7583462266629574485
+    second: flamingo_3_L_86
+  - first:
+      213: 4988739653437320483
+    second: flamingo_3_L_87
+  - first:
+      213: 3580050069962682109
+    second: flamingo_3_L_88
+  - first:
+      213: -7504695986472981921
+    second: flamingo_3_L_89
+  - first:
+      213: 1428832885410942976
+    second: flamingo_3_L_90
+  - first:
+      213: 3509658826581964153
+    second: flamingo_3_L_91
+  - first:
+      213: 3510763623634920757
+    second: flamingo_3_L_92
+  - first:
+      213: -5810688928028438321
+    second: flamingo_3_L_93
+  - first:
+      213: 3726363418213812960
+    second: flamingo_3_L_94
+  - first:
+      213: 1398256888975900490
+    second: flamingo_3_L_95
+  - first:
+      213: -5176199983028121781
+    second: flamingo_3_L_96
+  - first:
+      213: -6807024927202078045
+    second: flamingo_3_L_97
+  - first:
+      213: 445729027618028171
+    second: flamingo_3_L_98
+  - first:
+      213: 4132455911018738167
+    second: flamingo_3_L_99
+  - first:
+      213: -6074897754563511706
+    second: flamingo_3_L_100
+  - first:
+      213: -2427434149257366167
+    second: flamingo_3_L_101
+  - first:
+      213: -2553616652484429578
+    second: flamingo_3_L_102
+  - first:
+      213: -5012243786119288588
+    second: flamingo_3_L_103
+  - first:
+      213: -4845211193215278416
+    second: flamingo_3_L_104
+  - first:
+      213: -1858639385550546395
+    second: flamingo_3_L_105
+  - first:
+      213: 4780429157622102939
+    second: flamingo_3_L_106
+  - first:
+      213: -2207069428688753184
+    second: flamingo_3_L_107
+  - first:
+      213: 8465422131126567122
+    second: flamingo_3_L_108
+  - first:
+      213: -1010100769715926105
+    second: flamingo_3_L_109
+  - first:
+      213: 3040556538932950209
+    second: flamingo_3_L_110
+  - first:
+      213: 3560883671298408737
+    second: flamingo_3_L_111
+  - first:
+      213: 7124490702564901833
+    second: flamingo_3_L_112
+  - first:
+      213: -3962217803608595005
+    second: flamingo_3_L_113
+  - first:
+      213: 354461556237688462
+    second: flamingo_3_L_114
+  - first:
+      213: 7376522312999840009
+    second: flamingo_3_L_115
+  - first:
+      213: -1191573169912766705
+    second: flamingo_3_L_116
+  - first:
+      213: -3880211044685668985
+    second: flamingo_3_L_117
+  - first:
+      213: -8369560227011159647
+    second: flamingo_3_L_118
+  - first:
+      213: -2283732335616484089
+    second: flamingo_3_L_119
+  - first:
+      213: 8588131076023913052
+    second: flamingo_3_L_120
+  - first:
+      213: 6801443259833691024
+    second: flamingo_3_L_121
+  - first:
+      213: -4960859009970048208
+    second: flamingo_3_L_122
+  - first:
+      213: -9052431680870894354
+    second: flamingo_3_L_123
+  - first:
+      213: -7858629500733240225
+    second: flamingo_3_L_124
+  - first:
+      213: -4164184009391605011
+    second: flamingo_3_L_125
+  - first:
+      213: 3238716548976893701
+    second: flamingo_3_L_126
+  - first:
+      213: 3653983494026794559
+    second: flamingo_3_L_127
+  - first:
+      213: -3390428761262349468
+    second: flamingo_3_L_128
+  - first:
+      213: -4526074418199003218
+    second: flamingo_3_L_129
+  - first:
+      213: -7635550272842642163
+    second: flamingo_3_L_130
+  - first:
+      213: 7444317788199305858
+    second: flamingo_3_L_131
+  - first:
+      213: 4534731101149965436
+    second: flamingo_3_L_132
+  - first:
+      213: 8285959314910605613
+    second: flamingo_3_L_133
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: flamingo_3_L_0
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 413
+        width: 207
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 451ae8baf1b0a7730800000000000000
+      internalID: 3997519849894879572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_1
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 413
+        width: 207
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03bda4071a5dc2c80800000000000000
+      internalID: -8346061120073966800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_2
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 413
+        width: 207
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8aad8a4af4e56810800000000000000
+      internalID: 1758062993201801868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_3
+      rect:
+        serializedVersion: 2
+        x: 1276
+        y: 413
+        width: 207
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a06ca9b28a8675ef0800000000000000
+      internalID: -119511793606670838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_4
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 413
+        width: 208
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b3dd658c5cd092c0800000000000000
+      internalID: -4426796143771528270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_5
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 413
+        width: 208
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 564ad1374f4e79200800000000000000
+      internalID: 186869648113640549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_6
+      rect:
+        serializedVersion: 2
+        x: 2476
+        y: 413
+        width: 208
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d9455161d205b610800000000000000
+      internalID: 1636217137923443159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_7
+      rect:
+        serializedVersion: 2
+        x: 2876
+        y: 413
+        width: 208
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 703eecd4ce0188510800000000000000
+      internalID: 1551508678732866311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_8
+      rect:
+        serializedVersion: 2
+        x: 3276
+        y: 413
+        width: 207
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d7f80965d4657d60800000000000000
+      internalID: 7887321190162298837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_9
+      rect:
+        serializedVersion: 2
+        x: 3676
+        y: 413
+        width: 207
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1084ec3e587f1f0d0800000000000000
+      internalID: -3390656890008614911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_10
+      rect:
+        serializedVersion: 2
+        x: 4076
+        y: 413
+        width: 209
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef9bc3ec71e293990800000000000000
+      internalID: -7405837432454858242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_11
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 413
+        width: 207
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd42fa8a05230f160800000000000000
+      internalID: 7057195938098390237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_12
+      rect:
+        serializedVersion: 2
+        x: 4877
+        y: 413
+        width: 191
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf41c97044b1768f0800000000000000
+      internalID: -547438850702830340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_13
+      rect:
+        serializedVersion: 2
+        x: 5277
+        y: 413
+        width: 192
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b149915600a39c3b0800000000000000
+      internalID: -5491794497231023077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_14
+      rect:
+        serializedVersion: 2
+        x: 5679
+        y: 413
+        width: 188
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed3b6557c36da9b0800000000000000
+      internalID: -5067284297939206685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_15
+      rect:
+        serializedVersion: 2
+        x: 6079
+        y: 413
+        width: 188
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa042b4bd6ca8290800000000000000
+      internalID: -7887273152225211663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_16
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f88d2c0a8ccaea370800000000000000
+      internalID: 8335789937999927439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_17
+      rect:
+        serializedVersion: 2
+        x: 6880
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f87199ad39ae9c0800000000000000
+      internalID: -3897139960455131385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_18
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e997b2f3bb41d0270800000000000000
+      internalID: 8218247689472276894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_19
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c755a8014d706270800000000000000
+      internalID: 8241725036359407554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_20
+      rect:
+        serializedVersion: 2
+        x: 8080
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d2d10fd762bb1ce0800000000000000
+      internalID: -1433355897194556720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_21
+      rect:
+        serializedVersion: 2
+        x: 8480
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8c186e6f946c740800000000000000
+      internalID: 5171902546859641003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_22
+      rect:
+        serializedVersion: 2
+        x: 8880
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290bff07f488dedc0800000000000000
+      internalID: -3608077851674300270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_23
+      rect:
+        serializedVersion: 2
+        x: 9280
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcab8899fcdeee350800000000000000
+      internalID: 6048032825495042765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_24
+      rect:
+        serializedVersion: 2
+        x: 9680
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8f3f4216f76af7e0800000000000000
+      internalID: -1730956800203735156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_25
+      rect:
+        serializedVersion: 2
+        x: 10080
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0163d74f5de2ce950800000000000000
+      internalID: 6479605460344059408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_26
+      rect:
+        serializedVersion: 2
+        x: 10480
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aa4035c157095790800000000000000
+      internalID: -7540988053273163096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_27
+      rect:
+        serializedVersion: 2
+        x: 10880
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb326939a9574eb0800000000000000
+      internalID: -4735717899809702989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_28
+      rect:
+        serializedVersion: 2
+        x: 11280
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e1b6c19e9fa72b60800000000000000
+      internalID: 7721333181735416288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_29
+      rect:
+        serializedVersion: 2
+        x: 11680
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75ce836b1766730a0800000000000000
+      internalID: -6901935265347474345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_30
+      rect:
+        serializedVersion: 2
+        x: 12080
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84bda51ff80680330800000000000000
+      internalID: 3677295267093863240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_31
+      rect:
+        serializedVersion: 2
+        x: 12480
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb609d17386042fc0800000000000000
+      internalID: -3520681847076354370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_32
+      rect:
+        serializedVersion: 2
+        x: 12880
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcbc56da3d8650f70800000000000000
+      internalID: 9152837076056918991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_33
+      rect:
+        serializedVersion: 2
+        x: 13280
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7494025519fdd2110800000000000000
+      internalID: 1237891287888185671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_34
+      rect:
+        serializedVersion: 2
+        x: 13680
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1356100ea26ef6df0800000000000000
+      internalID: -184675987877698255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_35
+      rect:
+        serializedVersion: 2
+        x: 14080
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a368131555f2efa0800000000000000
+      internalID: -5772782026594163801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_36
+      rect:
+        serializedVersion: 2
+        x: 14480
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3985c3e92b277eb50800000000000000
+      internalID: 6622387888556103827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_37
+      rect:
+        serializedVersion: 2
+        x: 14880
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 993a86d1e1a152c30800000000000000
+      internalID: 4333898933058708377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_38
+      rect:
+        serializedVersion: 2
+        x: 15280
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a1d6f3b70bd33b90800000000000000
+      internalID: -7263220947887926875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_39
+      rect:
+        serializedVersion: 2
+        x: 15680
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4934ea5899db5a450800000000000000
+      internalID: 6099489737413641108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_40
+      rect:
+        serializedVersion: 2
+        x: 16080
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f48d61db8c03bd1d0800000000000000
+      internalID: -3325010261158995889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_41
+      rect:
+        serializedVersion: 2
+        x: 16480
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f38d5a2f1d1db2c0800000000000000
+      internalID: -4414340040061254667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_42
+      rect:
+        serializedVersion: 2
+        x: 16880
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5b21a800a556e4e0800000000000000
+      internalID: -1952779242590622881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_43
+      rect:
+        serializedVersion: 2
+        x: 17280
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9347f027da6afb3b0800000000000000
+      internalID: -5494489756495547335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_44
+      rect:
+        serializedVersion: 2
+        x: 17680
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67ab1f18966d99c50800000000000000
+      internalID: 6672600071566113398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_45
+      rect:
+        serializedVersion: 2
+        x: 18080
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e299ff5fcae9390800000000000000
+      internalID: -7809614531258667432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_46
+      rect:
+        serializedVersion: 2
+        x: 18480
+        y: 413
+        width: 187
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56e1fd658e4d4c910800000000000000
+      internalID: 1856843040738451045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_47
+      rect:
+        serializedVersion: 2
+        x: 18880
+        y: 413
+        width: 187
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0a0053ae3868630800000000000000
+      internalID: 3928972766862155983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_48
+      rect:
+        serializedVersion: 2
+        x: 19279
+        y: 413
+        width: 188
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d2d1f5340143af60800000000000000
+      internalID: 8044344845754553048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_49
+      rect:
+        serializedVersion: 2
+        x: 19679
+        y: 413
+        width: 189
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42c41d28def9849b0800000000000000
+      internalID: -5095647135918896092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_50
+      rect:
+        serializedVersion: 2
+        x: 20079
+        y: 413
+        width: 189
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bff59864724cb440800000000000000
+      internalID: 4952906757939003318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_51
+      rect:
+        serializedVersion: 2
+        x: 20478
+        y: 413
+        width: 190
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e60e8e156ac73c500800000000000000
+      internalID: 415312644428849262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_52
+      rect:
+        serializedVersion: 2
+        x: 20877
+        y: 413
+        width: 195
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e11d14b80f0c27f0800000000000000
+      internalID: -636116917310123548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_53
+      rect:
+        serializedVersion: 2
+        x: 21276
+        y: 413
+        width: 201
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e175d7c8b8fb96e0800000000000000
+      internalID: -1829595351085649439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_54
+      rect:
+        serializedVersion: 2
+        x: 21676
+        y: 413
+        width: 201
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 197a5a0653046bab0800000000000000
+      internalID: -4992732538894702703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_55
+      rect:
+        serializedVersion: 2
+        x: 22075
+        y: 413
+        width: 204
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c19b7125646e290800000000000000
+      internalID: -7861518781129352175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_56
+      rect:
+        serializedVersion: 2
+        x: 22475
+        y: 413
+        width: 206
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b2521b05413cb660800000000000000
+      internalID: 7402846060098507446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_57
+      rect:
+        serializedVersion: 2
+        x: 22874
+        y: 413
+        width: 207
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20ff62458de637e20800000000000000
+      internalID: 3347140823470243586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_58
+      rect:
+        serializedVersion: 2
+        x: 23273
+        y: 413
+        width: 210
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa42c0a0415cc8270800000000000000
+      internalID: 8254188906921862319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_59
+      rect:
+        serializedVersion: 2
+        x: 23673
+        y: 413
+        width: 211
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890e574357ae2c1b0800000000000000
+      internalID: -5637685994402226024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_60
+      rect:
+        serializedVersion: 2
+        x: 24073
+        y: 413
+        width: 214
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7337d5609d5e64b30800000000000000
+      internalID: 4271354016884945719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_61
+      rect:
+        serializedVersion: 2
+        x: 24473
+        y: 413
+        width: 214
+        height: 367
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b38e52852957b0210800000000000000
+      internalID: 1300262188831074363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_62
+      rect:
+        serializedVersion: 2
+        x: 24873
+        y: 413
+        width: 215
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca9151cb147f18560800000000000000
+      internalID: 7314399131526830508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_63
+      rect:
+        serializedVersion: 2
+        x: 25273
+        y: 413
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c1fb640224d23b70800000000000000
+      internalID: 8877391058068828613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_64
+      rect:
+        serializedVersion: 2
+        x: 25673
+        y: 413
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54c7891cc1d843e70800000000000000
+      internalID: 9094048702214470725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_65
+      rect:
+        serializedVersion: 2
+        x: 26073
+        y: 413
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19f1d78a24a9262f0800000000000000
+      internalID: -981052157728055407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_66
+      rect:
+        serializedVersion: 2
+        x: 26473
+        y: 413
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3522260cdda019f0800000000000000
+      internalID: -499708398130813635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_67
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e0603c7ad73a48e0800000000000000
+      internalID: -1708491697107738392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_68
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45bfaf0712e0f13b0800000000000000
+      internalID: -5539693479850214572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_69
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece20a16858023e30800000000000000
+      internalID: 4481653754875096782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_70
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f5b1ddbab4e878f0800000000000000
+      internalID: -542432264398457352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_71
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b34f75260b2881060800000000000000
+      internalID: 6924428121157923899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_72
+      rect:
+        serializedVersion: 2
+        x: 2073
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96e97bc1c0816f20800000000000000
+      internalID: 3414151562354353818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_73
+      rect:
+        serializedVersion: 2
+        x: 2473
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 301b9e37ab9173a80800000000000000
+      internalID: -8487286684157103869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_74
+      rect:
+        serializedVersion: 2
+        x: 2873
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b18435ec1f002e90800000000000000
+      internalID: -7052620399683272264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_75
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6c7fd4bdb51b1340800000000000000
+      internalID: 4835482529439906925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_76
+      rect:
+        serializedVersion: 2
+        x: 3673
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd0a329b5d2510520800000000000000
+      internalID: 2666503532267675871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_77
+      rect:
+        serializedVersion: 2
+        x: 4073
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b29c4a3ac68abfa0800000000000000
+      internalID: -5784162568284368206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_78
+      rect:
+        serializedVersion: 2
+        x: 4473
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf5b79541436d930800000000000000
+      internalID: 4167575767183220665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_79
+      rect:
+        serializedVersion: 2
+        x: 4873
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9736ff85f6948cad0800000000000000
+      internalID: -2681812835515800711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_80
+      rect:
+        serializedVersion: 2
+        x: 5273
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdcc298ba3c81ac20800000000000000
+      internalID: 3216005792751865055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_81
+      rect:
+        serializedVersion: 2
+        x: 5673
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09bcb3dfaab4c72d0800000000000000
+      internalID: -3279663230867485808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_82
+      rect:
+        serializedVersion: 2
+        x: 6073
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 454c9b815cfc123c0800000000000000
+      internalID: -4385996116651817900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_83
+      rect:
+        serializedVersion: 2
+        x: 6473
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb2956426b1102d80800000000000000
+      internalID: -8277596641114615108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_84
+      rect:
+        serializedVersion: 2
+        x: 6873
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03bfcbba62ab103c0800000000000000
+      internalID: -4395027086084080848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_85
+      rect:
+        serializedVersion: 2
+        x: 7273
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28fafcde0ef3605d0800000000000000
+      internalID: -3096717458475602046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_86
+      rect:
+        serializedVersion: 2
+        x: 7673
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba037f55f3122c690800000000000000
+      internalID: -7583462266629574485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_87
+      rect:
+        serializedVersion: 2
+        x: 8073
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d690888409b3540800000000000000
+      internalID: 4988739653437320483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_88
+      rect:
+        serializedVersion: 2
+        x: 8473
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfeec3a1294eea130800000000000000
+      internalID: 3580050069962682109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_89
+      rect:
+        serializedVersion: 2
+        x: 8873
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a6afa03c6f9d790800000000000000
+      internalID: -7504695986472981921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_90
+      rect:
+        serializedVersion: 2
+        x: 9273
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 000d05260fb34d310800000000000000
+      internalID: 1428832885410942976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_91
+      rect:
+        serializedVersion: 2
+        x: 9673
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9757b399b10d4b030800000000000000
+      internalID: 3509658826581964153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_92
+      rect:
+        serializedVersion: 2
+        x: 10073
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5356f153aecb8b030800000000000000
+      internalID: 3510763623634920757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_93
+      rect:
+        serializedVersion: 2
+        x: 10473
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0d190d4394c5fa0800000000000000
+      internalID: -5810688928028438321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_94
+      rect:
+        serializedVersion: 2
+        x: 10873
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ea05a629c3b6b330800000000000000
+      internalID: 3726363418213812960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_95
+      rect:
+        serializedVersion: 2
+        x: 11273
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4fb6247b3b976310800000000000000
+      internalID: 1398256888975900490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_96
+      rect:
+        serializedVersion: 2
+        x: 11673
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4fc9354a817a28b0800000000000000
+      internalID: -5176199983028121781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_97
+      rect:
+        serializedVersion: 2
+        x: 12073
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a214e4d4e69881a0800000000000000
+      internalID: -6807024927202078045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_98
+      rect:
+        serializedVersion: 2
+        x: 12473
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ab045603c8f2600800000000000000
+      internalID: 445729027618028171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_99
+      rect:
+        serializedVersion: 2
+        x: 12873
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f13c32a1ce695930800000000000000
+      internalID: 4132455911018738167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_100
+      rect:
+        serializedVersion: 2
+        x: 13273
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66a7c6cada0a1bba0800000000000000
+      internalID: -6074897754563511706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_101
+      rect:
+        serializedVersion: 2
+        x: 13673
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 965bcd99085005ed0800000000000000
+      internalID: -2427434149257366167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_102
+      rect:
+        serializedVersion: 2
+        x: 14073
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f8b4282f2bbf8cd0800000000000000
+      internalID: -2553616652484429578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_103
+      rect:
+        serializedVersion: 2
+        x: 14473
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f863b025dee07ab0800000000000000
+      internalID: -5012243786119288588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_104
+      rect:
+        serializedVersion: 2
+        x: 14873
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b228ae371a52ccb0800000000000000
+      internalID: -4845211193215278416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_105
+      rect:
+        serializedVersion: 2
+        x: 15273
+        y: 13
+        width: 217
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a95ba8359c436e0800000000000000
+      internalID: -1858639385550546395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_106
+      rect:
+        serializedVersion: 2
+        x: 15673
+        y: 13
+        width: 216
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9b3cf5bdfe775240800000000000000
+      internalID: 4780429157622102939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_107
+      rect:
+        serializedVersion: 2
+        x: 16073
+        y: 13
+        width: 216
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ede1645c0aee51e0800000000000000
+      internalID: -2207069428688753184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_108
+      rect:
+        serializedVersion: 2
+        x: 16473
+        y: 13
+        width: 211
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0878793983b7570800000000000000
+      internalID: 8465422131126567122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_109
+      rect:
+        serializedVersion: 2
+        x: 16873
+        y: 13
+        width: 211
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7abcbb1a3b66bf1f0800000000000000
+      internalID: -1010100769715926105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_110
+      rect:
+        serializedVersion: 2
+        x: 17274
+        y: 13
+        width: 205
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c4f696001a323a20800000000000000
+      internalID: 3040556538932950209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_111
+      rect:
+        serializedVersion: 2
+        x: 17675
+        y: 13
+        width: 203
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1210b3a25dcca6130800000000000000
+      internalID: 3560883671298408737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_112
+      rect:
+        serializedVersion: 2
+        x: 18075
+        y: 13
+        width: 202
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c344fbfb864fd260800000000000000
+      internalID: 7124490702564901833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_113
+      rect:
+        serializedVersion: 2
+        x: 18476
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c56e2d76ef5309c0800000000000000
+      internalID: -3962217803608595005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_114
+      rect:
+        serializedVersion: 2
+        x: 18876
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e541a48ec4be400800000000000000
+      internalID: 354461556237688462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_115
+      rect:
+        serializedVersion: 2
+        x: 19276
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 909291016fbae5660800000000000000
+      internalID: 7376522312999840009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_116
+      rect:
+        serializedVersion: 2
+        x: 19676
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f9673e38ea67fe0800000000000000
+      internalID: -1191573169912766705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_117
+      rect:
+        serializedVersion: 2
+        x: 20076
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d96f3fc98b62ac0800000000000000
+      internalID: -3880211044685668985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_118
+      rect:
+        serializedVersion: 2
+        x: 20476
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a913ce315959db80800000000000000
+      internalID: -8369560227011159647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_119
+      rect:
+        serializedVersion: 2
+        x: 20876
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70d918d5a8d8e40e0800000000000000
+      internalID: -2283732335616484089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_120
+      rect:
+        serializedVersion: 2
+        x: 21276
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a06e636bb2f2770800000000000000
+      internalID: 8588131076023913052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_121
+      rect:
+        serializedVersion: 2
+        x: 21676
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09bac56fb94936e50800000000000000
+      internalID: 6801443259833691024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_122
+      rect:
+        serializedVersion: 2
+        x: 22076
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03370f1a30d772bb0800000000000000
+      internalID: -4960859009970048208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_123
+      rect:
+        serializedVersion: 2
+        x: 22476
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee4b23c195d4f5280800000000000000
+      internalID: -9052431680870894354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_124
+      rect:
+        serializedVersion: 2
+        x: 22876
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5cc36b1b1a80f290800000000000000
+      internalID: -7858629500733240225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_125
+      rect:
+        serializedVersion: 2
+        x: 23276
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deaf9dcc4b8d536c0800000000000000
+      internalID: -4164184009391605011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_126
+      rect:
+        serializedVersion: 2
+        x: 23676
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50f52f5ba8b32fc20800000000000000
+      internalID: 3238716548976893701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_127
+      rect:
+        serializedVersion: 2
+        x: 24076
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f369b90d0ae85b230800000000000000
+      internalID: 3653983494026794559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_128
+      rect:
+        serializedVersion: 2
+        x: 24476
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463a0b04107c2f0d0800000000000000
+      internalID: -3390428761262349468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_129
+      rect:
+        serializedVersion: 2
+        x: 24876
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaff34cfb472031c0800000000000000
+      internalID: -4526074418199003218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_130
+      rect:
+        serializedVersion: 2
+        x: 25276
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0dc3925b73190690800000000000000
+      internalID: -7635550272842642163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_131
+      rect:
+        serializedVersion: 2
+        x: 25676
+        y: 13
+        width: 201
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282cdb036978f4760800000000000000
+      internalID: 7444317788199305858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_132
+      rect:
+        serializedVersion: 2
+        x: 26076
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7ca5f319e99eee30800000000000000
+      internalID: 4534731101149965436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flamingo_3_L_133
+      rect:
+        serializedVersion: 2
+        x: 26476
+        y: 13
+        width: 200
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d21f5949814adf270800000000000000
+      internalID: 8285959314910605613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      flamingo_3_L_0: 3997519849894879572
+      flamingo_3_L_1: -8346061120073966800
+      flamingo_3_L_10: -7405837432454858242
+      flamingo_3_L_100: -6074897754563511706
+      flamingo_3_L_101: -2427434149257366167
+      flamingo_3_L_102: -2553616652484429578
+      flamingo_3_L_103: -5012243786119288588
+      flamingo_3_L_104: -4845211193215278416
+      flamingo_3_L_105: -1858639385550546395
+      flamingo_3_L_106: 4780429157622102939
+      flamingo_3_L_107: -2207069428688753184
+      flamingo_3_L_108: 8465422131126567122
+      flamingo_3_L_109: -1010100769715926105
+      flamingo_3_L_11: 7057195938098390237
+      flamingo_3_L_110: 3040556538932950209
+      flamingo_3_L_111: 3560883671298408737
+      flamingo_3_L_112: 7124490702564901833
+      flamingo_3_L_113: -3962217803608595005
+      flamingo_3_L_114: 354461556237688462
+      flamingo_3_L_115: 7376522312999840009
+      flamingo_3_L_116: -1191573169912766705
+      flamingo_3_L_117: -3880211044685668985
+      flamingo_3_L_118: -8369560227011159647
+      flamingo_3_L_119: -2283732335616484089
+      flamingo_3_L_12: -547438850702830340
+      flamingo_3_L_120: 8588131076023913052
+      flamingo_3_L_121: 6801443259833691024
+      flamingo_3_L_122: -4960859009970048208
+      flamingo_3_L_123: -9052431680870894354
+      flamingo_3_L_124: -7858629500733240225
+      flamingo_3_L_125: -4164184009391605011
+      flamingo_3_L_126: 3238716548976893701
+      flamingo_3_L_127: 3653983494026794559
+      flamingo_3_L_128: -3390428761262349468
+      flamingo_3_L_129: -4526074418199003218
+      flamingo_3_L_13: -5491794497231023077
+      flamingo_3_L_130: -7635550272842642163
+      flamingo_3_L_131: 7444317788199305858
+      flamingo_3_L_132: 4534731101149965436
+      flamingo_3_L_133: 8285959314910605613
+      flamingo_3_L_14: -5067284297939206685
+      flamingo_3_L_15: -7887273152225211663
+      flamingo_3_L_16: 8335789937999927439
+      flamingo_3_L_17: -3897139960455131385
+      flamingo_3_L_18: 8218247689472276894
+      flamingo_3_L_19: 8241725036359407554
+      flamingo_3_L_2: 1758062993201801868
+      flamingo_3_L_20: -1433355897194556720
+      flamingo_3_L_21: 5171902546859641003
+      flamingo_3_L_22: -3608077851674300270
+      flamingo_3_L_23: 6048032825495042765
+      flamingo_3_L_24: -1730956800203735156
+      flamingo_3_L_25: 6479605460344059408
+      flamingo_3_L_26: -7540988053273163096
+      flamingo_3_L_27: -4735717899809702989
+      flamingo_3_L_28: 7721333181735416288
+      flamingo_3_L_29: -6901935265347474345
+      flamingo_3_L_3: -119511793606670838
+      flamingo_3_L_30: 3677295267093863240
+      flamingo_3_L_31: -3520681847076354370
+      flamingo_3_L_32: 9152837076056918991
+      flamingo_3_L_33: 1237891287888185671
+      flamingo_3_L_34: -184675987877698255
+      flamingo_3_L_35: -5772782026594163801
+      flamingo_3_L_36: 6622387888556103827
+      flamingo_3_L_37: 4333898933058708377
+      flamingo_3_L_38: -7263220947887926875
+      flamingo_3_L_39: 6099489737413641108
+      flamingo_3_L_4: -4426796143771528270
+      flamingo_3_L_40: -3325010261158995889
+      flamingo_3_L_41: -4414340040061254667
+      flamingo_3_L_42: -1952779242590622881
+      flamingo_3_L_43: -5494489756495547335
+      flamingo_3_L_44: 6672600071566113398
+      flamingo_3_L_45: -7809614531258667432
+      flamingo_3_L_46: 1856843040738451045
+      flamingo_3_L_47: 3928972766862155983
+      flamingo_3_L_48: 8044344845754553048
+      flamingo_3_L_49: -5095647135918896092
+      flamingo_3_L_5: 186869648113640549
+      flamingo_3_L_50: 4952906757939003318
+      flamingo_3_L_51: 415312644428849262
+      flamingo_3_L_52: -636116917310123548
+      flamingo_3_L_53: -1829595351085649439
+      flamingo_3_L_54: -4992732538894702703
+      flamingo_3_L_55: -7861518781129352175
+      flamingo_3_L_56: 7402846060098507446
+      flamingo_3_L_57: 3347140823470243586
+      flamingo_3_L_58: 8254188906921862319
+      flamingo_3_L_59: -5637685994402226024
+      flamingo_3_L_6: 1636217137923443159
+      flamingo_3_L_60: 4271354016884945719
+      flamingo_3_L_61: 1300262188831074363
+      flamingo_3_L_62: 7314399131526830508
+      flamingo_3_L_63: 8877391058068828613
+      flamingo_3_L_64: 9094048702214470725
+      flamingo_3_L_65: -981052157728055407
+      flamingo_3_L_66: -499708398130813635
+      flamingo_3_L_67: -1708491697107738392
+      flamingo_3_L_68: -5539693479850214572
+      flamingo_3_L_69: 4481653754875096782
+      flamingo_3_L_7: 1551508678732866311
+      flamingo_3_L_70: -542432264398457352
+      flamingo_3_L_71: 6924428121157923899
+      flamingo_3_L_72: 3414151562354353818
+      flamingo_3_L_73: -8487286684157103869
+      flamingo_3_L_74: -7052620399683272264
+      flamingo_3_L_75: 4835482529439906925
+      flamingo_3_L_76: 2666503532267675871
+      flamingo_3_L_77: -5784162568284368206
+      flamingo_3_L_78: 4167575767183220665
+      flamingo_3_L_79: -2681812835515800711
+      flamingo_3_L_8: 7887321190162298837
+      flamingo_3_L_80: 3216005792751865055
+      flamingo_3_L_81: -3279663230867485808
+      flamingo_3_L_82: -4385996116651817900
+      flamingo_3_L_83: -8277596641114615108
+      flamingo_3_L_84: -4395027086084080848
+      flamingo_3_L_85: -3096717458475602046
+      flamingo_3_L_86: -7583462266629574485
+      flamingo_3_L_87: 4988739653437320483
+      flamingo_3_L_88: 3580050069962682109
+      flamingo_3_L_89: -7504695986472981921
+      flamingo_3_L_9: -3390656890008614911
+      flamingo_3_L_90: 1428832885410942976
+      flamingo_3_L_91: 3509658826581964153
+      flamingo_3_L_92: 3510763623634920757
+      flamingo_3_L_93: -5810688928028438321
+      flamingo_3_L_94: 3726363418213812960
+      flamingo_3_L_95: 1398256888975900490
+      flamingo_3_L_96: -5176199983028121781
+      flamingo_3_L_97: -6807024927202078045
+      flamingo_3_L_98: 445729027618028171
+      flamingo_3_L_99: 4132455911018738167
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

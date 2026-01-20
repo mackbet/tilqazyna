@@ -1,0 +1,23 @@
+# ninja log v5
+326	43560	7905542881375122	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	a4733d783c13c3a2
+449	3314	7905542480889387	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	ed1eec16f26a5a44
+3326	4726	7905542494751639	D:/Work/tilqazyna/steppe-game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/284s63u6/obj/arm64-v8a/libswappywrapper.so	81a8e43b58349d76
+390	40771	7905542854175549	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	544e8c801ea4e820
+91	40874	7905542854713753	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	8d0570ae20e92249
+428	44153	7905542889240969	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	9da62ef8f8041d3f
+299	41015	7905542856483677	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	4ccd1553c9263ab7
+275	41236	7905542859754422	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	749a864c279251e7
+409	40968	7905542856185472	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	bb26b1066abd54e
+342	43614	7905542881519771	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	bf99b9ad99ea2144
+44163	44919	7905542897000558	D:/Work/tilqazyna/steppe-game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/284s63u6/obj/arm64-v8a/libgame.so	7b70ec88033e7e4d
+369	2937	7905550327616983	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	ed1eec16f26a5a44
+2943	4488	7905550343019556	D:/Work/tilqazyna/steppe-game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/284s63u6/obj/arm64-v8a/libswappywrapper.so	81a8e43b58349d76
+66	37319	7905550670544257	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	4ccd1553c9263ab7
+309	37396	7905550669308396	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	544e8c801ea4e820
+220	37430	7905550669542990	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	8d0570ae20e92249
+328	37689	7905550672162335	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	bb26b1066abd54e
+272	37795	7905550676004572	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	749a864c279251e7
+345	38743	7905550684940204	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	9da62ef8f8041d3f
+294	39170	7905550689381158	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	bf99b9ad99ea2144
+237	39324	7905550690859216	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	a4733d783c13c3a2
+39332	41312	7905550709726767	D:/Work/tilqazyna/steppe-game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/284s63u6/obj/arm64-v8a/libgame.so	7b70ec88033e7e4d

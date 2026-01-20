@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: pickaxe
   m_EditorClassIdentifier: Assembly-CSharp::FindTheItemVariant
   sprite: {fileID: 21300000, guid: fba04829c6f68df43a52a40f935e7c85, type: 3}
-  audioClip: {fileID: 8300000, guid: 7b89effd90de50c4b9888450fec39751, type: 3}
+  audioClip: {fileID: 8300000, guid: 05e82a1e5858c2c45be2c8877839dd06, type: 3}
   itemName: "\u049A\u0430\u0439\u043B\u0430"
