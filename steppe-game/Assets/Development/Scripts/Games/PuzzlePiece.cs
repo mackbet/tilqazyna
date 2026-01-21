@@ -49,39 +49,6 @@ public class PuzzlePiece : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         SetRandomPosition();
     }
 
-    private Sprite CreateMaskedSprite(Texture2D sourceTexture, Texture2D maskTexture)
-    {
-        int width = Mathf.Min(sourceTexture.width, maskTexture.width);
-        int height = Mathf.Min(sourceTexture.height, maskTexture.height);
-
-        Texture2D maskedTexture = new Texture2D(width, height, TextureFormat.RGBA32, false);
-
-        for (int y = 0; y < height; y++)
-        {
-            for (int x = 0; x < width; x++)
-            {
-                Color sourceColor = sourceTexture.GetPixel(x, y);
-                Color maskColor = maskTexture.GetPixel(x, y);
-
-                // Применяем альфа-канал маски к исходному цвету
-                sourceColor.a *= maskColor.a;
-                maskedTexture.SetPixel(x, y, sourceColor);
-            }
-        }
-
-        maskedTexture.Apply();
-
-        // Создаем спрайт из замаскированной текстуры
-        Sprite sprite = Sprite.Create(
-            maskedTexture,
-            new Rect(0, 0, width, height),
-            new Vector2(0.5f, 0.5f),
-            100f
-        );
-
-        return sprite;
-    }
-
     private void SetRandomPosition()
     {
         RectTransform canvasRect = canvas.GetComponent<RectTransform>();

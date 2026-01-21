@@ -1,0 +1,1339 @@
+fileFormatVersion: 2
+guid: cd9f3ef393131984aaa11901edf508ce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 361065100750283579
+    second: zhayin2 1_0
+  - first:
+      213: -2567537587378937627
+    second: zhayin2 1_1
+  - first:
+      213: -1020316505953560135
+    second: zhayin2 1_2
+  - first:
+      213: -5116058873970773442
+    second: zhayin2 1_3
+  - first:
+      213: -5776360470749692456
+    second: zhayin2 1_4
+  - first:
+      213: -4444359837004632230
+    second: zhayin2 1_5
+  - first:
+      213: -3356169935625253255
+    second: zhayin2 1_6
+  - first:
+      213: -5985086986003033678
+    second: zhayin2 1_7
+  - first:
+      213: -7850941519763622019
+    second: zhayin2 1_8
+  - first:
+      213: -974881614485410024
+    second: zhayin2 1_9
+  - first:
+      213: -5742249195596471491
+    second: zhayin2 1_10
+  - first:
+      213: -7629456208362650082
+    second: zhayin2 1_11
+  - first:
+      213: 3650559212597375841
+    second: zhayin2 1_12
+  - first:
+      213: 7080880101405454117
+    second: zhayin2 1_13
+  - first:
+      213: -3970614809559767625
+    second: zhayin2 1_14
+  - first:
+      213: -3752203463369428504
+    second: zhayin2 1_15
+  - first:
+      213: -4052115829401619134
+    second: zhayin2 1_16
+  - first:
+      213: 4029006145305146434
+    second: zhayin2 1_17
+  - first:
+      213: -8900056914413790539
+    second: zhayin2 1_18
+  - first:
+      213: -245844840260755706
+    second: zhayin2 1_19
+  - first:
+      213: 1148369224123408476
+    second: zhayin2 1_20
+  - first:
+      213: 6165531820338114904
+    second: zhayin2 1_21
+  - first:
+      213: 6111953958151941879
+    second: zhayin2 1_22
+  - first:
+      213: -7653504531555066704
+    second: zhayin2 1_23
+  - first:
+      213: -7683125059482178583
+    second: zhayin2 1_24
+  - first:
+      213: -3318597821371473360
+    second: zhayin2 1_25
+  - first:
+      213: 8534496210950337653
+    second: zhayin2 1_26
+  - first:
+      213: -3036548164755842516
+    second: zhayin2 1_27
+  - first:
+      213: 7721887833752916204
+    second: zhayin2 1_28
+  - first:
+      213: 1272247037473631486
+    second: zhayin2 1_29
+  - first:
+      213: 6055050530052061422
+    second: zhayin2 1_30
+  - first:
+      213: -4250554199697518750
+    second: zhayin2 1_31
+  - first:
+      213: 6906348602532914852
+    second: zhayin2 1_32
+  - first:
+      213: 7083845225617829667
+    second: zhayin2 1_33
+  - first:
+      213: 6812482227092253320
+    second: zhayin2 1_34
+  - first:
+      213: 8759944202168696781
+    second: zhayin2 1_35
+  - first:
+      213: -3492566555128809854
+    second: zhayin2 1_36
+  - first:
+      213: 1453197273174396555
+    second: zhayin2 1_37
+  - first:
+      213: 2545416375582620770
+    second: zhayin2 1_38
+  - first:
+      213: 7953654107335895591
+    second: zhayin2 1_39
+  - first:
+      213: -8164802732354710009
+    second: zhayin2 1_40
+  - first:
+      213: 5424857263572290855
+    second: zhayin2 1_41
+  - first:
+      213: 4412331339439528701
+    second: zhayin2 1_42
+  - first:
+      213: -6729179761612860024
+    second: zhayin2 1_43
+  - first:
+      213: -243136986685916353
+    second: zhayin2 1_44
+  - first:
+      213: -1270610669038523155
+    second: zhayin2 1_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: zhayin2 1_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 736
+        width: 376
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33e20fcbc2c20500800000000000000
+      internalID: 361065100750283579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_1
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 737
+        width: 380
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e0a0dcea264e5cd0800000000000000
+      internalID: -2567537587378937627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_2
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 737
+        width: 380
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b99b203b8b17d1f0800000000000000
+      internalID: -1020316505953560135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_3
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 739
+        width: 388
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e32bcf66f8b1009b0800000000000000
+      internalID: -5116058873970773442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_4
+      rect:
+        serializedVersion: 2
+        x: 1828
+        y: 739
+        width: 388
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd3b5e91ce36dfa0800000000000000
+      internalID: -5776360470749692456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_5
+      rect:
+        serializedVersion: 2
+        x: 2267
+        y: 740
+        width: 395
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f635586467252c0800000000000000
+      internalID: -4444359837004632230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_6
+      rect:
+        serializedVersion: 2
+        x: 2713
+        y: 740
+        width: 395
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97e063da93d7c61d0800000000000000
+      internalID: -3356169935625253255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_7
+      rect:
+        serializedVersion: 2
+        x: 3153
+        y: 742
+        width: 402
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b1d979b813b0fca0800000000000000
+      internalID: -5985086986003033678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_8
+      rect:
+        serializedVersion: 2
+        x: 3599
+        y: 742
+        width: 402
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77bf1aa84adb0390800000000000000
+      internalID: -7850941519763622019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_9
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 555
+        width: 344
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81fa98636568872f0800000000000000
+      internalID: -974881614485410024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_10
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 555
+        width: 344
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3323b4c7ce6f40b0800000000000000
+      internalID: -5742249195596471491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_11
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 553
+        width: 351
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e164527400abe1690800000000000000
+      internalID: -7629456208362650082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_12
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 553
+        width: 351
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 163756a234469a230800000000000000
+      internalID: 3650559212597375841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_13
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 552
+        width: 359
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52f6765afe6544260800000000000000
+      internalID: 7080880101405454117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_14
+      rect:
+        serializedVersion: 2
+        x: 2302
+        y: 552
+        width: 359
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b5e8403eda85e8c0800000000000000
+      internalID: -3970614809559767625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_15
+      rect:
+        serializedVersion: 2
+        x: 2740
+        y: 553
+        width: 367
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e1ffd084de7debc0800000000000000
+      internalID: -3752203463369428504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_16
+      rect:
+        serializedVersion: 2
+        x: 3186
+        y: 553
+        width: 367
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24577c74f1ef3c7c0800000000000000
+      internalID: -4052115829401619134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_17
+      rect:
+        serializedVersion: 2
+        x: 3625
+        y: 552
+        width: 375
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24477c81eb7e9e730800000000000000
+      internalID: 4029006145305146434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_18
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 379
+        width: 381
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba5b9f0465ac7480800000000000000
+      internalID: -8900056914413790539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_19
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 376
+        width: 369
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60f156a9b65969cf0800000000000000
+      internalID: -245844840260755706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_20
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 376
+        width: 369
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c50edda99b3dfef00800000000000000
+      internalID: 1148369224123408476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_21
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 375
+        width: 358
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 851fe92368e509550800000000000000
+      internalID: 6165531820338114904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_22
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 375
+        width: 358
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe603f0eb502d450800000000000000
+      internalID: 6111953958151941879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_23
+      rect:
+        serializedVersion: 2
+        x: 2313
+        y: 372
+        width: 346
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc51d5bd2a49c590800000000000000
+      internalID: -7653504531555066704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_24
+      rect:
+        serializedVersion: 2
+        x: 2759
+        y: 373
+        width: 346
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eba9a0277e006590800000000000000
+      internalID: -7683125059482178583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_25
+      rect:
+        serializedVersion: 2
+        x: 3211
+        y: 370
+        width: 341
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 032a4c83dd8f1f1d0800000000000000
+      internalID: -3318597821371473360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_26
+      rect:
+        serializedVersion: 2
+        x: 3657
+        y: 373
+        width: 341
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 574bc9e061f907670800000000000000
+      internalID: 8534496210950337653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_27
+      rect:
+        serializedVersion: 2
+        x: 3941
+        y: 370
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a1d5058830cd5d0800000000000000
+      internalID: -3036548164755842516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_28
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 198
+        width: 417
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce0d04e8218a92b60800000000000000
+      internalID: 7721887833752916204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_29
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 198
+        width: 417
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efca82f90fde7a110800000000000000
+      internalID: 1272247037473631486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_30
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 198
+        width: 412
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee83bc4406cd70450800000000000000
+      internalID: 6055050530052061422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_31
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 198
+        width: 412
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f0c7cc97ff205c0800000000000000
+      internalID: -4250554199697518750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_32
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 198
+        width: 403
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a66dfc667748df50800000000000000
+      internalID: 6906348602532914852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_33
+      rect:
+        serializedVersion: 2
+        x: 2252
+        y: 198
+        width: 403
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32f2ccc63bfde4260800000000000000
+      internalID: 7083845225617829667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_34
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 197
+        width: 392
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88aee70dd7cca8e50800000000000000
+      internalID: 6812482227092253320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_35
+      rect:
+        serializedVersion: 2
+        x: 3155
+        y: 197
+        width: 392
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcff186f6d2919970800000000000000
+      internalID: 8759944202168696781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_36
+      rect:
+        serializedVersion: 2
+        x: 3613
+        y: 194
+        width: 381
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2863327f839e78fc0800000000000000
+      internalID: -3492566555128809854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_37
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 8
+        width: 400
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e4028783bca2410800000000000000
+      internalID: 1453197273174396555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_38
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 11
+        width: 404
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26c701815b2235320800000000000000
+      internalID: 2545416375582620770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_39
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 11
+        width: 404
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a2516354e016e60800000000000000
+      internalID: 7953654107335895591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_40
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 12
+        width: 409
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 706dbd48c2bc0be80800000000000000
+      internalID: -8164802732354710009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_41
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 11
+        width: 409
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d8c6860f6f84b40800000000000000
+      internalID: 5424857263572290855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_42
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 13
+        width: 414
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfadd96c9ffbb3d30800000000000000
+      internalID: 4412331339439528701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_43
+      rect:
+        serializedVersion: 2
+        x: 2690
+        y: 13
+        width: 414
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8855157d8a62d92a0800000000000000
+      internalID: -6729179761612860024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_44
+      rect:
+        serializedVersion: 2
+        x: 3131
+        y: 13
+        width: 418
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3bb3d4e23430acf0800000000000000
+      internalID: -243136986685916353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: zhayin2 1_45
+      rect:
+        serializedVersion: 2
+        x: 3577
+        y: 13
+        width: 418
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dec23281452ed5ee0800000000000000
+      internalID: -1270610669038523155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      zhayin2 1_0: 361065100750283579
+      zhayin2 1_1: -2567537587378937627
+      zhayin2 1_10: -5742249195596471491
+      zhayin2 1_11: -7629456208362650082
+      zhayin2 1_12: 3650559212597375841
+      zhayin2 1_13: 7080880101405454117
+      zhayin2 1_14: -3970614809559767625
+      zhayin2 1_15: -3752203463369428504
+      zhayin2 1_16: -4052115829401619134
+      zhayin2 1_17: 4029006145305146434
+      zhayin2 1_18: -8900056914413790539
+      zhayin2 1_19: -245844840260755706
+      zhayin2 1_2: -1020316505953560135
+      zhayin2 1_20: 1148369224123408476
+      zhayin2 1_21: 6165531820338114904
+      zhayin2 1_22: 6111953958151941879
+      zhayin2 1_23: -7653504531555066704
+      zhayin2 1_24: -7683125059482178583
+      zhayin2 1_25: -3318597821371473360
+      zhayin2 1_26: 8534496210950337653
+      zhayin2 1_27: -3036548164755842516
+      zhayin2 1_28: 7721887833752916204
+      zhayin2 1_29: 1272247037473631486
+      zhayin2 1_3: -5116058873970773442
+      zhayin2 1_30: 6055050530052061422
+      zhayin2 1_31: -4250554199697518750
+      zhayin2 1_32: 6906348602532914852
+      zhayin2 1_33: 7083845225617829667
+      zhayin2 1_34: 6812482227092253320
+      zhayin2 1_35: 8759944202168696781
+      zhayin2 1_36: -3492566555128809854
+      zhayin2 1_37: 1453197273174396555
+      zhayin2 1_38: 2545416375582620770
+      zhayin2 1_39: 7953654107335895591
+      zhayin2 1_4: -5776360470749692456
+      zhayin2 1_40: -8164802732354710009
+      zhayin2 1_41: 5424857263572290855
+      zhayin2 1_42: 4412331339439528701
+      zhayin2 1_43: -6729179761612860024
+      zhayin2 1_44: -243136986685916353
+      zhayin2 1_45: -1270610669038523155
+      zhayin2 1_5: -4444359837004632230
+      zhayin2 1_6: -3356169935625253255
+      zhayin2 1_7: -5985086986003033678
+      zhayin2 1_8: -7850941519763622019
+      zhayin2 1_9: -974881614485410024
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

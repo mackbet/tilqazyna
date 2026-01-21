@@ -18,13 +18,14 @@ public class WordMagnet : GameController
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI categoryText; // Текст категории на магните
     [SerializeField] private TextMeshProUGUI scoreText; // Счет
+    [SerializeField] private TextMeshProUGUI progressText; // Прогресс (например "5/10")
 
     [Header("Word Data")]
     [SerializeField] private WordData[] allWords; // Все доступные слова
     [SerializeField] private WordCategory[] availableCategories; // Доступные категории
 
     [Header("Game Settings")]
-    [SerializeField] private float gameDuration = 60f; // Длительность игры
+    [SerializeField] private int targetCorrectWords = 10; // Целевое количество правильных слов для победы
     [SerializeField] private int startLives = 3; // Начальное количество жизней
     [SerializeField] private float spawnInterval = 2f; // Интервал спавна коробок
     [SerializeField] private float boxSpeed = 150f; // Скорость движения коробок
@@ -49,7 +50,7 @@ public class WordMagnet : GameController
     private List<WordMagnetBox> activeBoxes = new List<WordMagnetBox>();
     private Coroutine spawnCoroutine;
     private bool isGameActive = false;
-    private float gameTimer;
+    private int correctWordsCaptured = 0; // Количество собранных правильных слов
     private int score = 0;
 
     protected override void InitializeGame()
@@ -58,7 +59,7 @@ public class WordMagnet : GameController
 
         SetLives(startLives);
         score = 0;
-        gameTimer = gameDuration;
+        correctWordsCaptured = 0;
         isGameActive = true;
 
         // Выбираем случайную категорию
@@ -67,6 +68,7 @@ public class WordMagnet : GameController
         // Инициализируем UI
         UpdateCategoryUI();
         UpdateScoreUI();
+        UpdateProgressUI();
 
         // // Инициализируем параллакс
         // if (parallaxController != null)
@@ -106,7 +108,6 @@ public class WordMagnet : GameController
         if (!isGameActive) return;
 
         UpdateMagnetMovement();
-        UpdateGameTimer();
         UpdateBoxes();
         CheckMagnetCapture();
     }
@@ -207,13 +208,11 @@ public class WordMagnet : GameController
         }
     }
 
-    private void UpdateGameTimer()
+    private void UpdateProgressUI()
     {
-        gameTimer -= Time.deltaTime;
-
-        if (gameTimer <= 0)
+        if (progressText != null)
         {
-            WinGame();
+            progressText.text = $"{correctWordsCaptured}/{targetCorrectWords}";
         }
     }
 
@@ -347,9 +346,11 @@ public class WordMagnet : GameController
 
         if (isCorrect)
         {
-            // Правильное слово - добавляем очки
+            // Правильное слово - добавляем очки и увеличиваем счетчик
             score++;
+            correctWordsCaptured++;
             UpdateScoreUI();
+            UpdateProgressUI();
 
             if (box.WordData.AudioClip)
                 AudioManager.Instance.PlaySound(box.WordData.AudioClip);
@@ -359,6 +360,12 @@ public class WordMagnet : GameController
                     AudioManager.Instance.PlaySound(correctCaptureSound);
                 if (Random.Range(0f, 1f) > 0.5f)
                     AudioManager.Instance.PlaySound(correctLines[Random.Range(0, correctLines.Length)]);
+            }
+
+            // Проверяем, достигли ли мы цели
+            if (correctWordsCaptured >= targetCorrectWords)
+            {
+                WinGame();
             }
         }
         else

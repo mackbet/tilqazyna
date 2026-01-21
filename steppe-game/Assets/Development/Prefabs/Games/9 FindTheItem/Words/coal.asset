@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: coal
   m_EditorClassIdentifier: Assembly-CSharp::FindTheItemVariant
   sprite: {fileID: 21300000, guid: 0c7b55c66f00e264a9a76da91cd37ca4, type: 3}
-  audioClip: {fileID: 8300000, guid: 930bff00f86662b4e9e6b95e07808339, type: 3}
+  audioClip: {fileID: 8300000, guid: 0933dc1574b1ceb44b06950e2b5410b0, type: 3}
   itemName: "\u041A\u04E9\u043C\u0456\u0440"

@@ -44,6 +44,11 @@ public class Quiz : GameController
         correctAnswersCount = 0;
     }
 
+    public void SetQuestionCount(int count)
+    {
+        questionsCount = count;
+    }
+
     protected override void OnDisable()
     {
         base.OnDisable();

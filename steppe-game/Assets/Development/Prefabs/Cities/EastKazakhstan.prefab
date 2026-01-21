@@ -677,11 +677,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6866935611633611527, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: m_text
-      value: " \u041A\u0430\u0442\u043E\u043D\u049B\u0430\u0440\u0430\u0493\u0430\u0439"
+      value: "\u049A\u0430\u0442\u043E\u043D\u049B\u0430\u0440\u0430\u0493\u0430\u0439"
       objectReference: {fileID: 0}
     - target: {fileID: 6866935611633611527, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: m_fontSize
-      value: 18.85
+      value: 19.7
       objectReference: {fileID: 0}
     - target: {fileID: 7094043963711371333, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: gameView

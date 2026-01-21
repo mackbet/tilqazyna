@@ -19,15 +19,15 @@ MonoBehaviour:
   m_PlatformBuildProfile:
     rid: 5790557202356371457
   m_OverrideGlobalSceneList: 0
-  m_Scenes: []
+  m_Scenes:
+  - m_enabled: 0
+    m_path: Assets/Development/Scenes/Prototypes/QuizScene.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings: []
   references:
     version: 2
     RefIds:
-    - rid: -2
-      type: {class: , ns: , asm: }
     - rid: 5790557202356371457
       type: {class: AndroidPlatformBuildSettings, ns: UnityEditor.Android, asm: UnityEditor.Android.Extensions}
       data:

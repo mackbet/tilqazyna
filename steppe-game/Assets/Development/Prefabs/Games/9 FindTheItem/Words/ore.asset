@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ore
   m_EditorClassIdentifier: Assembly-CSharp::FindTheItemVariant
   sprite: {fileID: 21300000, guid: 2d8745b23459d6d4b885fd035a27efc4, type: 3}
-  audioClip: {fileID: 8300000, guid: 7ab1a958cfb4f7143926e0aff18fe48f, type: 3}
+  audioClip: {fileID: 8300000, guid: d988395a2c4fdf1409005787d0070a22, type: 3}
   itemName: "\u041A\u0435\u043D"

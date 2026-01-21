@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: helmet
   m_EditorClassIdentifier: Assembly-CSharp::FindTheItemVariant
   sprite: {fileID: 21300000, guid: bf3bde85dbeae554ab90ef0cc5b044df, type: 3}
-  audioClip: {fileID: 8300000, guid: f9b46464e58b1c04ba685b7bb5921d5b, type: 3}
+  audioClip: {fileID: 8300000, guid: df2716c610511684ca99907677ffd78d, type: 3}
   itemName: "\u0414\u0443\u043B\u044B\u0493\u0430"

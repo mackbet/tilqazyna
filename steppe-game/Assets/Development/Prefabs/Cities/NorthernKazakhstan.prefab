@@ -71,7 +71,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e0b9b73839f68e2489f8563f10a8da56, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0fd42fcc0be66a24ab7e1d47b570e152, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -525,7 +525,7 @@ PrefabInstance:
     - target: {fileID: 7094043963711371333, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: gameView
       value: 
-      objectReference: {fileID: 2184600796579946686, guid: be23ad13105f179449265d46e90e4663, type: 3}
+      objectReference: {fileID: 2282983578739080331, guid: 7aabf50386e7f014da2ae8e4a54fe22f, type: 3}
     - target: {fileID: 7094043963711371333, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: gameTitle.m_TableEntryReference.m_KeyId
       value: 134330042117410816
@@ -703,7 +703,7 @@ PrefabInstance:
     - target: {fileID: 7094043963711371333, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: gameView
       value: 
-      objectReference: {fileID: 5060640302467539425, guid: 66b3f0ca9fa1b814a81a786aab704e5e, type: 3}
+      objectReference: {fileID: 5060640302467539425, guid: a08fac61cd27dd4438a9667d98f17e09, type: 3}
     - target: {fileID: 7094043963711371333, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: gameTitle.m_TableEntryReference.m_KeyId
       value: 134329636893118464
@@ -990,11 +990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6866935611633611527, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: m_text
-      value: "\u049A\u043E\u0440\u0493\u0430\u043B\u0436\u044B\u043D \u049B\u043E\u0440\u044B\u0493\u044B"
+      value: "\u049A\u043E\u0440\u0493\u0430\u043B\u0436\u044B\u04A3 \u049B\u043E\u0440\u044B\u0493\u044B"
       objectReference: {fileID: 0}
     - target: {fileID: 6866935611633611527, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: m_fontSize
-      value: 19
+      value: 18.95
       objectReference: {fileID: 0}
     - target: {fileID: 7094043963711371333, guid: f69223cf99b95fc49994b28fc2a959cf, type: 3}
       propertyPath: gameView

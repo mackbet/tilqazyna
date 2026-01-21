@@ -4353,6 +4353,8 @@ MonoBehaviour:
   oneStar: {fileID: 3942048888390525632}
   twoStars: {fileID: 6284921960361910573}
   threeStars: {fileID: 4898387414326536023}
+  passedObjects: []
+  failedObjects: []
 --- !u!1 &9027299388517465089
 GameObject:
   m_ObjectHideFlags: 0

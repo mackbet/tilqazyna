@@ -1,8 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
+
+[Serializable]
+public class FishingLevel
+{
+    public string levelName;
+    public Sprite levelIcon; // Иконка для кнопки уровня
+
+    [Header("Fish Settings")]
+    public Fish[] fishPrefabs; // Префабы рыб для этого уровня
+    public string[] targetFishTypes; // Типы рыб которые нужно поймать
+    public int fishToCatch = 5; // Сколько нужно поймать целевых рыб
+
+    [Header("Difficulty")]
+    public float spawnInterval = 2f; // Интервал спавна рыб
+    public int maxFishOnScreen = 5; // Максимум рыб на экране
+}
 
 public class Fishing : GameController
 {
@@ -11,14 +29,18 @@ public class Fishing : GameController
     [SerializeField] private RectTransform fishContainer; // Контейнер для рыб
     [SerializeField] private RectTransform gameArea; // Игровая область
 
-    [Header("Fish Prefabs")]
-    [SerializeField] private Fish[] fishPrefabs; // Префабы всех видов рыб
-    [SerializeField] private string[] targetFishTypes; // Типы рыб которые нужно поймать (Fish.fishType)
+    [Header("Levels")]
+    [SerializeField] private FishingLevel[] levels; // Массив уровней
+
+    [Header("UI Panels")]
+    [SerializeField] private GameObject levelSelectionPanel; // Панель выбора уровня
+    [SerializeField] private GameObject gamePanel; // Панель игры
+
+    [Header("Level Selection")]
+    [SerializeField] private Transform levelButtonsContainer; // Контейнер для кнопок уровней
+    [SerializeField] private CustomButton levelButtonPrefab; // Префаб кнопки уровня
 
     [Header("Game Settings")]
-    [SerializeField] private int fishToCatch = 5; // Сколько нужно поймать целевых рыб
-    [SerializeField] private float spawnInterval = 2f; // Интервал спавна рыб
-    [SerializeField] private int maxFishOnScreen = 5; // Максимум рыб на экране
     [SerializeField][Range(0f, 1f)] private float minSpawnHeight = 0.2f; // Минимальная высота спавна (0 = низ, 1 = верх)
     [SerializeField][Range(0f, 1f)] private float maxSpawnHeight = 0.8f; // Максимальная высота спавна (0 = низ, 1 = верх)
 
@@ -38,18 +60,104 @@ public class Fishing : GameController
     private bool isGameActive = false;
     private AudioSource noise;
 
+    private FishingLevel currentLevel; // Текущий выбранный уровень
+    private List<CustomButton> levelButtons = new List<CustomButton>();
+    private Dictionary<int, Action> levelButtonActions = new Dictionary<int, Action>(); // Для корректной отписки
+
     protected override void InitializeGame()
     {
         base.InitializeGame();
 
+        // Показываем панель выбора уровня
+        ShowLevelSelection();
+    }
+
+    private void ShowLevelSelection()
+    {
+        // Показываем панель выбора, скрываем игру
+        if (levelSelectionPanel != null)
+            levelSelectionPanel.SetActive(true);
+
+        if (gamePanel != null)
+            gamePanel.SetActive(false);
+
+        // Создаем кнопки для каждого уровня
+        CreateLevelButtons();
+    }
+
+    private void CreateLevelButtons()
+    {
+        // Отписываемся от старых кнопок
+        foreach (var kvp in levelButtonActions)
+        {
+            if (levelButtons.Count > kvp.Key && levelButtons[kvp.Key] != null)
+            {
+                levelButtons[kvp.Key].OnButtonClicked -= kvp.Value;
+            }
+        }
+        levelButtonActions.Clear();
+
+        // Очищаем предыдущие кнопки
+        foreach (var button in levelButtons)
+        {
+            if (button != null)
+                Destroy(button.gameObject);
+        }
+        levelButtons.Clear();
+
+        // Создаем кнопку для каждого уровня
+        if (levels != null && levelButtonPrefab != null && levelButtonsContainer != null)
+        {
+            for (int i = 0; i < levels.Length; i++)
+            {
+                int levelIndex = i; // Захватываем индекс для замыкания
+                FishingLevel level = levels[i];
+
+                // Создаем кнопку
+                CustomButton levelButton = Instantiate(levelButtonPrefab, levelButtonsContainer);
+
+                levelButton.Image.sprite = level.levelIcon;
+                levelButton.Label.text = level.levelName;
+
+                // Создаем действие и сохраняем его
+                Action buttonAction = () => OnLevelSelected(levelIndex);
+                levelButtonActions[i] = buttonAction;
+
+                // Подписываемся на событие нажатия
+                levelButton.OnButtonClicked += buttonAction;
+
+                levelButtons.Add(levelButton);
+            }
+        }
+    }
+
+    private void OnLevelSelected(int levelIndex)
+    {
+        if (levelIndex < 0 || levelIndex >= levels.Length)
+            return;
+
+        currentLevel = levels[levelIndex];
+        StartLevel();
+    }
+
+    private void StartLevel()
+    {
+        // Скрываем панель выбора, показываем игру
+        if (levelSelectionPanel != null)
+            levelSelectionPanel.SetActive(false);
+
+        if (gamePanel != null)
+            gamePanel.SetActive(true);
+
+        // Инициализируем игру с параметрами уровня
         caughtCount = 0;
         activeFish.Clear();
         isGameActive = true;
 
-        // Выбираем случайный целевой тип рыбы
-        if (targetFishTypes != null && targetFishTypes.Length > 0)
+        // Выбираем случайный целевой тип рыбы из уровня
+        if (currentLevel.targetFishTypes != null && currentLevel.targetFishTypes.Length > 0)
         {
-            currentTargetFishType = targetFishTypes[Random.Range(0, targetFishTypes.Length)];
+            currentTargetFishType = currentLevel.targetFishTypes[Random.Range(0, currentLevel.targetFishTypes.Length)];
             ShowTargetFish();
         }
 
@@ -61,7 +169,7 @@ public class Fishing : GameController
             fishingRod.OnFishCaught += OnFishCaught;
         }
 
-        // Запускаем спавн рыб
+        // Запускаем спавн рыб с интервалом из уровня
         spawnCoroutine = StartCoroutine(SpawnFishRoutine());
     }
 
@@ -69,9 +177,9 @@ public class Fishing : GameController
     {
         while (isGameActive)
         {
-            yield return new WaitForSeconds(spawnInterval);
+            yield return new WaitForSeconds(currentLevel.spawnInterval);
 
-            if (isGameActive && activeFish.Count < maxFishOnScreen)
+            if (isGameActive && activeFish.Count < currentLevel.maxFishOnScreen)
             {
                 SpawnRandomFish();
             }
@@ -80,11 +188,12 @@ public class Fishing : GameController
 
     private void SpawnRandomFish()
     {
-        if (fishPrefabs == null || fishPrefabs.Length == 0)
+        // Используем рыб из текущего уровня
+        if (currentLevel.fishPrefabs == null || currentLevel.fishPrefabs.Length == 0)
             return;
 
-        // Выбираем случайный префаб рыбы
-        Fish fishPrefab = fishPrefabs[Random.Range(0, fishPrefabs.Length)];
+        // Выбираем случайную рыбу из списка рыб текущего уровня
+        Fish fishPrefab = currentLevel.fishPrefabs[Random.Range(0, currentLevel.fishPrefabs.Length)];
 
         // Определяем сторону спавна (слева или справа)
         bool spawnFromLeft = Random.value > 0.5f;
@@ -143,7 +252,7 @@ public class Fishing : GameController
             UpdateUI();
 
             // Проверяем победу
-            if (caughtCount >= fishToCatch)
+            if (caughtCount >= currentLevel.fishToCatch)
             {
                 StartCoroutine(WinGame());
             }
@@ -188,27 +297,37 @@ public class Fishing : GameController
     {
         if (progressText != null)
         {
-            progressText.text = $"{caughtCount}/{fishToCatch}";
+            progressText.text = $"{caughtCount}/{currentLevel.fishToCatch}";
         }
     }
 
     private void ShowTargetFish()
     {
-        if (targetFishImage == null || fishPrefabs == null) return;
+        // Используем рыб из текущего уровня
+        if (targetFishImage == null || currentLevel.fishPrefabs == null) return;
 
-        // Находим префаб рыбы с нужным типом
-        Fish targetFishPrefab = System.Array.Find(fishPrefabs, fish => fish.FishType == currentTargetFishType);
+        // Находим префаб рыбы с нужным типом в списке рыб текущего уровня
+        Fish targetFishPrefab = Array.Find(currentLevel.fishPrefabs, fish => fish.FishType == currentTargetFishType);
 
         if (targetFishPrefab != null && targetFishPrefab.FishSprite != null)
         {
             targetFishImage.sprite = targetFishPrefab.FishSprite;
+
+            // Получаем AspectRatioFitter и устанавливаем соотношение сторон
+            AspectRatioFitter aspectRatioFitter = targetFishImage.GetComponent<AspectRatioFitter>();
+            if (aspectRatioFitter != null)
+            {
+                Sprite sprite = targetFishPrefab.FishSprite;
+                aspectRatioFitter.aspectRatio = sprite.rect.width / sprite.rect.height;
+            }
         }
     }
 
     protected override void OnEnable()
     {
         base.OnEnable();
-        noise = AudioManager.Instance.PlaySound(noiseSound, 1, true);
+        if (noiseSound != null)
+            noise = AudioManager.Instance.PlaySound(noiseSound, 1, true);
     }
 
     protected override void OnDisable()
@@ -230,6 +349,15 @@ public class Fishing : GameController
             fishingRod.OnFishCaught -= OnFishCaught;
         }
 
+        // Отписываемся от кнопок уровней
+        foreach (var kvp in levelButtonActions)
+        {
+            if (levelButtons.Count > kvp.Key && levelButtons[kvp.Key] != null)
+            {
+                levelButtons[kvp.Key].OnButtonClicked -= kvp.Value;
+            }
+        }
+
         // Очищаем активных рыб
         foreach (var fish in activeFish)
         {
@@ -244,6 +372,4 @@ public class Fishing : GameController
         if (noise)
             Destroy(noise.gameObject);
     }
-
-
 }

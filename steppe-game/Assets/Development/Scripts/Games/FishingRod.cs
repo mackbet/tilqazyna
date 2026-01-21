@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 
 public class FishingRod : MonoBehaviour, IPointerDownHandler
 {
-    public bool IsEnabled { get; set; } = false;
     [SerializeField] private RectTransform hook;
     [SerializeField] private Image lineImage;
     [SerializeField] private float descendSpeed = 500f;
@@ -34,10 +33,12 @@ public class FishingRod : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (!isActive && IsEnabled)
+        if (!isActive)
         {
             Vector2 clickPosition = GetClickPosition(eventData.position);
             CastToPosition(clickPosition);
+
+            Debug.Log("OnPointerDown");
         }
     }
 
@@ -63,6 +64,7 @@ public class FishingRod : MonoBehaviour, IPointerDownHandler
 
     public void CastToPosition(Vector2 targetPosition)
     {
+        Debug.Log("CastToPosition");
         if (isActive) return;
 
         if (castCoroutine != null)
@@ -70,6 +72,8 @@ public class FishingRod : MonoBehaviour, IPointerDownHandler
             StopCoroutine(castCoroutine);
         }
 
+
+        Debug.Log("OnPointerDown5");
         if (castSound != null && AudioManager.Instance != null)
         {
             AudioManager.Instance.PlaySound(castSound);
