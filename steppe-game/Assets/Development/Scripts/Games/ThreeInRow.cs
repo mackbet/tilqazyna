@@ -10,6 +10,9 @@ public class ThreeInRow : GameController
     [SerializeField] private int rows = 5;
     [SerializeField] private int columns = 5;
 
+    [SerializeField] private GameObject selectionPanel;
+    [SerializeField] private GameObject gamePanel;
+
     [Header("Items")]
     [SerializeField] private ThreeInRowItem itemPrefab;
 
@@ -19,6 +22,9 @@ public class ThreeInRow : GameController
     [Header("UI")]
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private TextMeshProUGUI movesText;
+    [SerializeField] private RectTransform itemTextContainer;
+    [SerializeField] private TextMeshProUGUI itemTextDisplay;
+    [SerializeField] private float textAnimationDuration = 0.3f;
 
     [Header("Sounds")]
     [SerializeField] private AudioClip matchSound;
@@ -38,11 +44,15 @@ public class ThreeInRow : GameController
         InitializeCells();
         FillGrid();
         UpdateUI();
+
+        gamePanel.SetActive(true);
+        selectionPanel.SetActive(false);
     }
 
     public void SetLevel(ThreeInRowLevelData level)
     {
         currentLevel = level;
+        movesLeft = currentLevel.movesLimit;
     }
 
     private void InitializeCells()
@@ -251,16 +261,30 @@ public class ThreeInRow : GameController
             foreach (var item in matches)
                 matchedTypes.Add(item.ItemType);
 
-            // Озвучка предметов
+            // Озвучка предметов с отображением текста
             foreach (int itemType in matchedTypes)
             {
                 if (itemType >= 0 && itemType < currentLevel.availableItems.Length)
                 {
-                    AudioClip itemAudio = currentLevel.availableItems[itemType].audioClip;
-                    if (itemAudio != null)
+                    ThreeInRowItemData itemData = currentLevel.availableItems[itemType];
+
+                    // Показываем текст с анимацией увеличения
+                    if (!string.IsNullOrEmpty(itemData.itemText))
                     {
-                        AudioManager.Instance.PlaySound(itemAudio);
-                        yield return new WaitForSeconds(itemAudio.length + 0.1f);
+                        yield return StartCoroutine(ShowItemText(itemData.itemText));
+                    }
+
+                    // Воспроизводим озвучку
+                    if (itemData.audioClip != null)
+                    {
+                        AudioManager.Instance.PlaySound(itemData.audioClip);
+                        yield return new WaitForSeconds(itemData.audioClip.length);
+                    }
+
+                    // Скрываем текст с анимацией уменьшения
+                    if (!string.IsNullOrEmpty(itemData.itemText))
+                    {
+                        yield return StartCoroutine(HideItemText());
                     }
                 }
             }
@@ -335,11 +359,9 @@ public class ThreeInRow : GameController
 
     private void UpdateUI()
     {
-        if (scoreText != null)
-            scoreText.text = $"{currentScore}";
+        scoreText.text = $"{currentScore}/{currentLevel.scoreGoal}";
 
-        if (movesText != null)
-            movesText.text = $"{movesLeft}";
+        movesText.text = $"{movesLeft}";
     }
 
     private void CheckGameEnd()
@@ -529,5 +551,46 @@ public class ThreeInRow : GameController
     {
         ThreeInRowCell cell = GetCellAt(col, row);
         return cell != null ? cell.Item : null;
+    }
+
+    private IEnumerator ShowItemText(string text)
+    {
+        if (itemTextContainer == null || itemTextDisplay == null)
+            yield break;
+
+        itemTextDisplay.text = text;
+        itemTextContainer.localScale = Vector3.zero;
+        itemTextContainer.gameObject.SetActive(true);
+
+        // Анимация увеличения
+        float elapsed = 0f;
+        while (elapsed < textAnimationDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / textAnimationDuration;
+            float scale = Mathf.SmoothStep(0f, 1f, t);
+            itemTextContainer.localScale = Vector3.one * scale;
+            yield return null;
+        }
+        itemTextContainer.localScale = Vector3.one;
+    }
+
+    private IEnumerator HideItemText()
+    {
+        if (itemTextContainer == null)
+            yield break;
+
+        // Анимация уменьшения
+        float elapsed = 0f;
+        while (elapsed < textAnimationDuration)
+        {
+            elapsed += Time.deltaTime;
+            float t = elapsed / textAnimationDuration;
+            float scale = Mathf.SmoothStep(1f, 0f, t);
+            itemTextContainer.localScale = Vector3.one * scale;
+            yield return null;
+        }
+        itemTextContainer.localScale = Vector3.zero;
+        itemTextContainer.gameObject.SetActive(false);
     }
 }

@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cd02ad7d61a63ac4cbccce1911687bc0, type: 2}
   - {fileID: 11400000, guid: b1703565ad4e55a489e0dd242d4b8a3f, type: 2}
   - {fileID: 11400000, guid: 8bbc841f3ec655c4fb3d0ff8d954c043, type: 2}
-  scoreGoal: 350
+  scoreGoal: 500
   movesLimit: 12
   coinsReward: 10
   experienceReward: 60

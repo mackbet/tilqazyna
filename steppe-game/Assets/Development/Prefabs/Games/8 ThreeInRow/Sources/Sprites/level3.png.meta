@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 951ef9a8b56d09f4c8808a710c114f86
+guid: 0ed5a9bb3e012a54c9b8d7d3d04acccd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1296596447470584015
-    second: temir 1_0
+      213: 4884507600531770345
+    second: altyn (3)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 3
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: temir 1_0
+      name: altyn (3)_0
       rect:
         serializedVersion: 2
-        x: 47
-        y: 41
-        width: 221
-        height: 205
+        x: 21
+        y: 23
+        width: 251
+        height: 250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc0848c699f6ef110800000000000000
-      internalID: 1296596447470584015
+      spriteID: 9eb446098c149c340800000000000000
+      internalID: 4884507600531770345
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      temir 1_0: 1296596447470584015
+      altyn (3)_0: 4884507600531770345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

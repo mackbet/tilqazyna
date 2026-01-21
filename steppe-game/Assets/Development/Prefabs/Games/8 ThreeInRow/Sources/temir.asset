@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f36648781d0784ba243343e70dacc2, type: 3}
   m_Name: temir
   m_EditorClassIdentifier: Assembly-CSharp::ThreeInRowItemData
-  icon: {fileID: 21300000, guid: 951ef9a8b56d09f4c8808a710c114f86, type: 3}
+  icon: {fileID: 21300000, guid: 9b493c73bff3de84596974a81e2ecec2, type: 3}
   audioClip: {fileID: 8300000, guid: 54a9742da9d393b47b4c835085991150, type: 3}
   itemText: "\u0422\u0435\u043C\u0456\u0440"
