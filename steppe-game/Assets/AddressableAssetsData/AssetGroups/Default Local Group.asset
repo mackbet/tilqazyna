@@ -25,42 +25,10 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 00c7ccd887318944493420de83e97bc8
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Simple questions/Question
-      7.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 013de080b80043347b7c00e7a4cf767e
-    m_Address: Fishing2
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0203bddc44ea2fa4eba5f3a9d5dda57d
-    m_Address: "\u0421\u044B\u0440\u0493\u0430"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 02705e691d30bb34eb9146b5651adda1
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Simple questions/Question
-      14.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 032fb78e3c72d1846ba4575d116fd629
     m_Address: "Assets/Development/Prefabs/Games/6 Puzzle/Sources/Audio/Words/\u0422\u0430\u0441.mp3"
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 03560192cc28dfd4094d52d0e49541a3
-    m_Address: arrangeNames6_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 04a2627b7cc0e394d8f2c13c0ab1c3d3
     m_Address: NumberOfTargets2
@@ -81,33 +49,8 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0c618de5881506444a7d088ba2e2e5af
-    m_Address: "\u0421\u0430\u0434\u0430\u049B \u043F\u0435\u043D \u0436\u0435\u0431\u0435"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0dc4ddd898482b041bed3283ae8e37be
-    m_Address: "\u041A\u04E9\u0440\u0456\u043A"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0e7773b2c589ca545b1e9a2b0a6eb883
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Simple questions/Question
-      15.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0ec2a46077fb889429a67d2a53c28b1c
     m_Address: "Assets/Development/Prefabs/Games/6 Puzzle/Sources/Audio/Words/\u0416\u0435\u0440.mp3"
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 0fcfb7c57451a5b448517bbf08810245
-    m_Address: Assets/Development/Prefabs/Games/3 StuffTools/Sources/Audio/stuffTools2_KK.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -116,55 +59,10 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 129c1245158283041889436bfcdb54f9
-    m_Address: Assets/Development/Prefabs/Games/2 ArrangeNames/Sources/Audio/arrangeNames4_KK.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 12ecfac3987bcfc409484bd9afc3b1bd
-    m_Address: "Assets/Development/Prefabs/Games/8 ThreeInRow/Sources/Audio/Words/\u0410\u043B\u0442\u044B\u043D.mp3"
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 133868adab370114e95ee5beff225123
-    m_Address: Assets/Development/Prefabs/Games/7 NumberOfTargets/Sources/Audio/NumberOfTargets3.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 140b8dde190fb5c429d9ef92c652bed6
-    m_Address: "\u0421\u0430\u0443\u044B\u0442"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 158c0b3865a5a284db396a31585e49c8
-    m_Address: FindTheItem3
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 16b08d093f3322c49a94dbba480e3586
-    m_Address: Assets/Development/Prefabs/Games/1 Rocket/Sources/Audio/rocketlaunch5_KK.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 17ff83243799ba34082ff4cdfee6edbb
     m_Address: Assets/Development/Prefabs/Games/15 CatchAHorse/Sources/Audios/Botay_3.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 18294afe848fcce47bde5acfeb34f3d5
-    m_Address: Assets/Development/Prefabs/Games/4 StreamOfWords/Sources/Audio/StreamOfWords4.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1900ec0a4177da243b97f4d02c8e68eb
-    m_Address: rocketlaunch1_KK
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 19bc3f780a4806145afac28b6e3276b3
     m_Address: Question 8
@@ -178,57 +76,15 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1ba4b2b4ffb4f9f4aa342a3c0421a55b
-    m_Address: Assets/Development/Prefabs/Games/7 NumberOfTargets/Sources/Audio/NumberOfTargets1.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1d3dacddc8a0e62489bf642f306dbd06
     m_Address: Assets/Development/Prefabs/Games/7 NumberOfTargets/Sources/Audio/CameraShutter.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2311abf57133e6b4f9764e71d24bf8c2
-    m_Address: Bear
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 231ee1db7a32e76438a79d137d2b7a9a
-    m_Address: River
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 23d8bd75d5596be4392a26443725dff5
-    m_Address: arrangeNames4_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2472055d4886fd943ac57fce71fe7ed1
-    m_Address: stuffTools4_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 25df4bf3547ed064386223d39e0465e0
     m_Address: Assets/Development/Prefabs/Games/10 Fishing/Sources/Audio/Sounds/sealSound.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 264e41f1ca7c5964a94f57ea6eb094ae
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Audio/Quiz1.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 26871d431fe5d414f9426e1a94690aaa
-    m_Address: arrangeNames1_KK
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 27a2d482831c6c848801556aa3bfd75d
     m_Address: Assets/Development/Prefabs/Games/12 WordSlicer/Sources/Audios/Burabay_3.wav
@@ -245,12 +101,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 2f3144ad20f0d7b44bf6f538ff94f864
-    m_Address: arrangeNames2_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 323a2eb6ab71f034e97f62984092ed8e
     m_Address: Assets/Development/Prefabs/Games/12 WordSlicer/Sources/Sounds/click.mp3
     m_ReadOnly: 0
@@ -258,11 +108,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 33130d0757cee9047b2dc4934be3ab8b
     m_Address: "Assets/Development/Prefabs/Games/6 Puzzle/Sources/Audio/Words/\u0411\u04B1\u043B\u0442.mp3"
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 370cebb09fae438449196c6852c97bd3
-    m_Address: Assets/Development/Prefabs/Games/8 ThreeInRow/Sources/Audio/ThreeInRow5.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -283,16 +128,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 39cd5ae4a2ba19e419a6a61b12134b3e
-    m_Address: Assets/Development/Prefabs/Games/3 StuffTools/Sources/Audio/stuffTools1_KK.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3aa69e5d2f93b6341b9a7837a4877109
-    m_Address: Assets/Development/Prefabs/Games/9 FindTheItem/Sources/Audio/FindTheItem5.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3d42e6b74da01ac4bb34207b973fee6e
     m_Address: Question 7
     m_ReadOnly: 0
@@ -305,49 +140,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3d91d30ad7f00ad47919b704b6c09372
-    m_Address: stuffTools4_KK
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3dce85950a9cd8c4cb8f0b02ea4b366c
-    m_Address: arrangeNames5_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3fdb6256d5140e04791da8430e656e20
-    m_Address: Field
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 408a587d6c96c5e4883d6e59c5227e8b
-    m_Address: Assets/Development/Prefabs/Games/8 ThreeInRow/Sources/Audio/ThreeInRow6.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 409a8f0144104c3458a0879b1e7355c9
-    m_Address: Insects
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 40de9f74c5e691b41b4802fc46daa9b8
-    m_Address: Assets/Development/Prefabs/Games/10 Fishing/Sources/Audio/Fishing6.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 414eaa976b2a4034b82e45bace609d0c
-    m_Address: Horse
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 42907889feca0c94faff1895e359a7a4
     m_Address: Question 5
     m_ReadOnly: 0
@@ -355,32 +147,8 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4351d2e9418b77744a1d970c746bc2bd
-    m_Address: "Assets/Development/Prefabs/Games/8 ThreeInRow/Sources/Audio/Words/\u0422\u0435\u043C\u0456\u0440.mp3"
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 450a91e63e25d724aaafe794d2a73a13
-    m_Address: stuffTools3_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4600948c335bc5f488c5e00572bd0df5
     m_Address: Assets/Development/Prefabs/Games/12 WordSlicer/Sources/Sounds/birds.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 46ed9e9412f7f4b47a9d32833bacf141
-    m_Address: ThreeInRow2
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 47c40a143520b8c4c854542cda1b62ca
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Simple questions/Question
-      6.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -389,59 +157,10 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 47efe0ef003e6f946a8548888952ee68
-    m_Address: Assets/Development/Prefabs/Games/10 Fishing/Sources/Audio/Fishing1.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 495d0d51a18c06f48acc4c89a890976a
-    m_Address: Quiz3
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4aadbd1d40c7c534ebb7bfbdf1e38fcb
     m_Address: Assets/Development/Prefabs/Games/13 Chase/Sources/Sounds/roar.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4c790c5a78c00a748a9d9c6c449f68d3
-    m_Address: Leaf
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4d780fcd39167a44da0e04c6ff13c35f
-    m_Address: "\u0411\u04B1\u043B\u0493\u0430\u0440\u044B \u0431\u0456\u043B\u0435\u043A\u0448\u0435"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4d7d26753f441894392649b84edbf5c6
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Simple questions/Question
-      10.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4e98dcb275c3bf04eadc9c18ecf3b269
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Simple questions/Question
-      8.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 505fcb448a0082e408f841d98344095a
-    m_Address: Assets/Development/Prefabs/Games/8 ThreeInRow/Sources/Audio/Words/miss.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 51b1373bef8ce864283be282c3f40998
-    m_Address: rocketlaunch3_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 55d26bb4e82294e49ae585c36403aa11
     m_Address: Assets/Development/Prefabs/Games/7 NumberOfTargets/Sources/Audio/Numbers/10.mp3
@@ -460,58 +179,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5e5f2ea4c8dc9e84fb9dcb9704d33c1a
-    m_Address: Assets/Development/Prefabs/Games/2 ArrangeNames/Sources/Audio/arrangeNames3_KK.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5ef8e2aa034272f4a91dba9303dea160
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Simple questions/Question
-      5.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5fadc61d462ccca418b300852d5805a8
-    m_Address: Ceiling
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 60193f84734091744bd857c10ea88817
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Simple questions/Question
-      3.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 603085811ec204f44a43fa0fc4398067
-    m_Address: rocketlaunch1_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 605769bb9c8e8e746af81340b5e802ef
-    m_Address: "Assets/Development/Prefabs/Games/9 FindTheItem/Sources/Audio/Words/\u0411\u0430\u043B\u0493\u0430.mp3"
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 61362829c704db74fa9f4fb06d4b49b2
-    m_Address: Assets/Development/Prefabs/Games/1 Rocket/Sources/Audio/rocketlaunch4_KK.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 626e6f7d7ee83394c94738807a5b9e5b
-    m_Address: Assets/Development/Prefabs/Games/4 StreamOfWords/Sources/Audio/StreamOfWords6.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 62b696210eb5aa94590ad95c376c290d
-    m_Address: "\u041A\u04AF\u043C\u0456\u0441 \u043A\u0435\u0441\u0435\u0433\u0456"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 62bda523c30fcd74fa6855f36aed4f66
     m_Address: Assets/Development/Prefabs/Games/10 Fishing/Sources/Audio/Sounds/caught.mp3
     m_ReadOnly: 0
@@ -522,45 +189,15 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 654a3467c2baaa94d945838e93441735
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Audio/Quiz5.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 66716479f4e5bf446b2079133bfc24ad
     m_Address: Assets/Development/Prefabs/Games/15 CatchAHorse/Sources/Sounds/miss.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6b06654a662989540a15372dff36b6d8
-    m_Address: Assets/Development/Prefabs/Games/4 StreamOfWords/Sources/Audio/StreamOfWords5.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6b536573d57db7d41916a3d63c28175f
-    m_Address: Tree
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6b548c6a429332248aa1aeeff669c9da
-    m_Address: "\u0411\u04AF\u0440\u043A\u0456\u0442"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6bd6b7a3e03ea774c90dafbaf05c40c9
     m_Address: Assets/Development/Prefabs/Games/15 CatchAHorse/Sources/Audios/Botay_1.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6c80ffb1196232f48a8cd008575969ba
-    m_Address: arrangeNames3_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6cade2e0edf85a64c87b9fd9801f1d8b
     m_Address: Assets/Development/Prefabs/Games/1 Rocket/Sources/Audio/rocketlaunch5_KZ.mp3
@@ -582,45 +219,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6e63fea3879025040afefd5c74fcc2e8
-    m_Address: "\u049A\u044B\u043B\u044B\u0448"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6e8464ae8f504d3489fb10ad27c291e9
-    m_Address: Assets/Development/Prefabs/Games/2 ArrangeNames/Sources/Audio/arrangeNames5_KK.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6e869bbe5b821af42b62864304f83f0d
-    m_Address: Assets/Development/Prefabs/Games/6 Puzzle/Sources/Audio/Puzzle4.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6f6597b40e3af984383bc8b12b693ea9
-    m_Address: Branch
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 72adccd46dc65354e95f5bdc0f69a0a2
-    m_Address: Puzzle8
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 74ca2ddf3ebeaa849a45f45a22d46aaa
     m_Address: Assets/Development/Prefabs/Games/14 HitTargets/Sources/Audios/Bozzhyra_5.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 74de12fc7e120044084cbdd8c16672b1
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Simple questions/Question
-      4.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -629,41 +229,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7770a708cdac0a142ad4670d611c47c0
-    m_Address: rocketlaunch2_KK
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 779e765e8ef712946913a6b5b071c54d
-    m_Address: arrangeNames8_KK
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 78d0800f098675744bb16f2927880188
-    m_Address: Assets/Development/Prefabs/Games/2 ArrangeNames/Sources/Audio/arrangeNames1_KZ.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7954e6103151fbb4aaba8e0f5d6ca7df
-    m_Address: "Assets/Development/Prefabs/Games/9 FindTheItem/Sources/Audio/Words/\u0414\u04E9\u04A3\u0433\u0435\u043B\u0435\u043A.mp3"
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 79fda8ed13caca64b84bc4f777e15a3c
     m_Address: Assets/Development/Prefabs/Games/3 StuffTools/Sources/Audio/stuffTools4_KZ.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7ab1a958cfb4f7143926e0aff18fe48f
-    m_Address: "Assets/Development/Prefabs/Games/9 FindTheItem/Sources/Audio/Words/\u041A\u0435\u043D.mp3"
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7ae7aed2239e33047a71340bfabbe4b8
-    m_Address: Assets/Development/Prefabs/Games/9 FindTheItem/Sources/Audio/FindTheItem1.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -672,22 +239,10 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7b89effd90de50c4b9888450fec39751
-    m_Address: "Assets/Development/Prefabs/Games/9 FindTheItem/Sources/Audio/Words/\u049A\u0430\u0439\u043B\u0430.mp3"
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7c91c2876bd4c7e4ba7ad4a7cc67fdfe
     m_Address: Assets/Development/Prefabs/Games/8 ThreeInRow/Sources/StoneBroken.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7d16abfeb07707d4f9111f999d09df7a
-    m_Address: "\u049A\u0430\u043B\u049B\u0430\u043D"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7d6e42f58302e744cb41aa2cffcc7506
     m_Address: seal
@@ -695,18 +250,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-kk
     - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7e422d072d266cd45b48fd9d5aca385e
-    m_Address: Fish
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7e5525884adad6947bca2dd20810cbb0
-    m_Address: "Assets/Development/Prefabs/Games/9 FindTheItem/Sources/Audio/Words/\u0428\u0430\u043C.mp3"
-    m_ReadOnly: 0
-    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7e5a4e45bca6a1145bb02e71feea5ad1
     m_Address: Assets/Development/Prefabs/Games/7 NumberOfTargets/Sources/Audio/Numbers/2.mp3
@@ -730,20 +273,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 81a1ad28e76201846ad052b3c2a480fa
-    m_Address: Assets/Development/Prefabs/Games/1 Rocket/Sources/Audio/rocketlaunch3_KK.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 81f1fc6d95910d04d9310f3987dedfc1
     m_Address: Question 4
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8386fd4871955934993ff87e7a0967f7
-    m_Address: Question 2
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale-kk
@@ -761,32 +292,10 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 88497aa9fce324e4abffb44c34c08b13
-    m_Address: Assets/Development/Prefabs/Games/9 FindTheItem/Sources/Audio/shuffleSound.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 893f48ecb04dd3e4db7da1449028a354
     m_Address: Assets/Development/Prefabs/Games/3 StuffTools/Sources/Audio/Sounds/Incorrect.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 89bacaea4bd5afa4da7370b1e95d9ff0
-    m_Address: Assets/Development/Prefabs/Games/8 ThreeInRow/Sources/Audio/ThreeInRow7.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8ba8a9ec7ca66884a8ac680b0475428b
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Audio/Quiz4.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8e42cbe65857d8c4dbc503b8220d2899
-    m_Address: "\u0411\u04E9\u0440i\u043A"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8ef9ca4d5b483c847a2292c7a435c90e
     m_Address: Question 10
@@ -802,57 +311,13 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8f745bebd68ced04c887adef743f544e
-    m_Address: NumberOfTargets4
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8fc090436e5bd4449b187a725cbc6cd0
-    m_Address: "\u0415\u0440-\u0442\u04B1\u0440\u043C\u0430\u043D"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 930bff00f86662b4e9e6b95e07808339
-    m_Address: "Assets/Development/Prefabs/Games/9 FindTheItem/Sources/Audio/Words/\u041A\u04E9\u043C\u0456\u0440.mp3"
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 95e8ff9051bb92245b6165cb1afcef8b
     m_Address: Assets/Development/Prefabs/Games/3 StuffTools/Sources/Audio/stuffTools1_KZ.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 95f2c9aaa22e16d4ea91a32f0db8c933
-    m_Address: Assets/Development/Prefabs/Games/4 StreamOfWords/Sources/Audio/StreamOfWords2.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 99c7b40943a9a00449f3866b41128a51
-    m_Address: Assets/Development/Prefabs/Games/2 ArrangeNames/Sources/Audio/arrangeNames4_KZ.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9a69c12f11b3a6b4bb8743fca7b40fb7
     m_Address: Assets/Development/Prefabs/Games/12 WordSlicer/Sources/Audios/Burabay_1.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9b50af162267cdb4382146a3c23b79b8
-    m_Address: Assets/Development/Prefabs/Games/11 WordMagnet/Sources/Audios/Bayanaul_4.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9c6cde52c473c5e42a40dcba795d66e6
-    m_Address: "Assets/Development/Prefabs/Games/8 ThreeInRow/Sources/Audio/Words/\u0422\u0430\u0441.mp3"
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9cf8ac000e2fb9b4a94e945916285ca2
-    m_Address: Assets/Development/Prefabs/Games/3 StuffTools/Sources/Audio/stuffTools3_KK.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -876,22 +341,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a133e2eb78c5c8244bd5a763e7280332
-    m_Address: Rabbit
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a16a1a33f58c4c04c9d8849f6e386b51
     m_Address: NumberOfTargets5
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a403ba79b865d4440a94baff2d2bff1d
-    m_Address: Puzzle2
     m_ReadOnly: 0
     m_SerializedLabels:
     - Locale-kk
@@ -904,11 +355,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a78996ed8f6e77641b2c9c6f7d03f072
     m_Address: Assets/Development/Prefabs/Games/15 CatchAHorse/Sources/Audios/Botay_5.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a85e33c58891fa04ba1486ded2a00213
-    m_Address: Assets/Development/Prefabs/Games/10 Fishing/Sources/Audio/Fishing5.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -927,48 +373,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: aa3b7b4e2ed657b44bb4f7aa77bffcef
-    m_Address: Assets/Development/Prefabs/Games/8 ThreeInRow/Sources/Audio/ThreeInRow3.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ab5b79ad694a7b146b3c211b29ebf6c3
-    m_Address: stuffTools2_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ace6505b64d78c84da05a105ed4a49fe
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Simple questions/Question
-      9.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ad58a283edb83ea4b9d7b4367347bcb4
-    m_Address: Assets/Development/Prefabs/Games/4 StreamOfWords/Sources/Audio/StreamOfWords3.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ae1c625e8933e5641a8996451f27aaf2
     m_Address: Assets/Development/Prefabs/Games/11 WordMagnet/Sources/Audios/Bayanaul_1.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b2ad75cacd19b4840a84b74db8f62eba
-    m_Address: Question 1
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b34d76d2a957c3c40a0b94ee0d383648
-    m_Address: Assets/Development/Prefabs/Games/6 Puzzle/Sources/Audio/Puzzle1.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b403fbab43d39a64b99aaf42dc0b337f
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Simple questions/Question
-      11.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -977,56 +383,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b4daace1b48da1543871355d07e6006e
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Simple questions/Question
-      13.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b5bb8871df089c546a5a1ac5dbf81f04
-    m_Address: Mountains
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b80af3fbd20434b42b495ef2302b5a43
-    m_Address: rocketlaunch4_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b856afa075821b447b2affe93cf65165
     m_Address: Assets/Development/Prefabs/Games/11 WordMagnet/Sources/Sounds/Bayanaul_right_2.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bacbcc9aeb2e9774ba7c288a01560efa
-    m_Address: Wolf
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bc16348a1fdb06249aef98c4ef31998e
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Simple questions/Question
-      1.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: be35ce79e737c8e498098ebe765f630e
-    m_Address: Assets/Development/Prefabs/Games/2 ArrangeNames/Sources/Audio/arrangeNames3_KZ.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: be5b79e8fd0e714429442b59fa667b93
-    m_Address: arrangeNames1_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bf03c7dcc56f3704cbc589d780514703
-    m_Address: "Assets/Development/Prefabs/Games/8 ThreeInRow/Sources/Audio/Words/\u041A\u04AF\u043C\u0456\u0441.mp3"
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -1034,22 +392,6 @@ MonoBehaviour:
     m_Address: Assets/Development/Prefabs/Games/11 WordMagnet/Sources/Sounds/Bayanaul_wrong_1.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c0f545b6904ae3241bc98745e3af8f8a
-    m_Address: Assets/Development/Prefabs/Games/2 ArrangeNames/Sources/Audio/arrangeNames6_KZ.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c29736964531d1b43aa472eac759738d
-    m_Address: Assets/Development/Prefabs/Games/2 ArrangeNames/Sources/Audio/arrangeNames2_KK.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c3a9267e263d2b54b808cd1c106e3337
-    m_Address: stuffTools5_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c4d429a36b7bc424fad39315deea3340
     m_Address: Assets/Development/Prefabs/Games/1 Rocket/Sources/Audio/rocketlaunch3_KZ.mp3
@@ -1066,23 +408,8 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cad5770dcb7cf4e4d93edf32aca47ebd
-    m_Address: Assets/Development/Prefabs/Games/2 ArrangeNames/Sources/Audio/arrangeNames5_KZ.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cb1c4819adcbcc54a8a7490f75261b77
-    m_Address: Assets/Development/Prefabs/Games/2 ArrangeNames/Sources/Audio/arrangeNames6_KK.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cf3fafdbf8e92404bbf6dc701cbd31a4
     m_Address: Assets/Development/Prefabs/Games/13 Chase/Sources/Sounds/jump.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cf8c6cef90010a24b9b487a8a8bb1a93
-    m_Address: Assets/Development/Prefabs/Games/2 ArrangeNames/Sources/Audio/arrangeNames2_KZ.mp3
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -1090,35 +417,6 @@ MonoBehaviour:
     m_Address: "Assets/Development/Prefabs/Games/6 Puzzle/Sources/Audio/Words/\u0414\u0430\u043B\u0430.mp3"
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d2894f97d2996454baaa6f15703c3fd9
-    m_Address: Assets/Development/Prefabs/Games/9 FindTheItem/Sources/Audio/FindTheItem4.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d29393a90f4021148876439596cdf979
-    m_Address: Assets/Development/Prefabs/Games/6 Puzzle/Sources/Audio/Puzzle5.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d6fe90737f29e2141bd0dfb1b9a907c6
-    m_Address: Fishing4
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d86a08bfff1fe714cae010ba94569d68
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Simple questions/Question
-      2.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d8c80bc6d6428a547be00922520ca639
-    m_Address: rocketlaunch2_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d8efc9778d4d4e2498540f0067f20357
     m_Address: Assets/Development/Prefabs/Games/3 StuffTools/Sources/Audio/stuffTools3_KZ.mp3
@@ -1135,32 +433,10 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: da519de225d35ce43a439e28332d2b99
-    m_Address: Assets/Development/Prefabs/Games/8 ThreeInRow/Sources/Audio/ThreeInRow1.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: db60f78f0614a084090db6a8d0b8b8b2
-    m_Address: Assets/Development/Prefabs/Games/3 StuffTools/Sources/Audio/stuffTools5_KK.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: db7a2978c95b9b14bb72bf11f08e71a4
-    m_Address: Assets/Development/Prefabs/Games/4 StreamOfWords/Sources/Audio/StreamOfWords1.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dea360ce9f188614ab3520fb475e190d
     m_Address: Assets/Development/Prefabs/Games/6 Puzzle/Sources/Audio/Puzzle3.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e15b0742de9e5784bbcdc3706fdc3e6c
-    m_Address: Forest
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e65ac0669e4878644b357e0354d1a6bd
     m_Address: Assets/Development/Prefabs/Games/12 WordSlicer/Sources/Sounds/splash.wav
@@ -1204,68 +480,8 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ec156c0334e10544d9c549c23b4edf12
-    m_Address: "Assets/Development/Prefabs/Games/8 ThreeInRow/Sources/Audio/Words/\u041C\u044B\u0441.mp3"
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ed7ab1463739d424fa8bf8ba38015941
-    m_Address: Assets/Development/Prefabs/Games/6 Puzzle/Sources/Audio/Puzzle9.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ef39ee9002779fb46babdbc495f793dd
-    m_Address: rocketlaunch5_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: eff5b95e2c2e84240a4d83aed504d28a
-    m_Address: stuffTools1_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f14403ae2d416104eb28010749d60dd4
-    m_Address: rocketlaunch5_RU
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f1ac1a127ace18f4895115e1cd22aa6c
     m_Address: Assets/Development/Prefabs/Games/11 WordMagnet/Sources/Audios/Bayanaul_2.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f2853a4e075d98641ab374b0747a4366
-    m_Address: "\u0411\u0456\u043B\u0435\u0437\u0456\u043A"
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f49452951be5df343965bd90f861a8af
-    m_Address: arrangeNames7_KK
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f5ad58cb4ee45a64fb310b126796ac49
-    m_Address: Bird
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f5b6df4f3e3aa2544b1077011e3c6be4
-    m_Address: Assets/Development/Prefabs/Games/5 Quiz/Sources/Simple questions/Question
-      12.mp3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f615dab6ebc9b344c8c925c1743991fc
-    m_Address: Assets/Development/Prefabs/Games/9 FindTheItem/Sources/Audio/FindTheItem6.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -1291,29 +507,10 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f959de0202e07f34f8c7c4caf8ca09e0
-    m_Address: Quiz2
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f9b46464e58b1c04ba685b7bb5921d5b
-    m_Address: "Assets/Development/Prefabs/Games/9 FindTheItem/Sources/Audio/Words/\u0414\u0443\u043B\u044B\u0493\u0430.mp3"
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: facdc8923fc7e164caa9039d0341d787
     m_Address: Assets/Development/Prefabs/Games/11 WordMagnet/Sources/Sounds/Bayanaul_wrong_3.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fb04b27220891bc4f9e0da7de167d824
-    m_Address: FindTheItem2
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fb12b35121573624bbc2021e488b20b1
     m_Address: Assets/Development/Prefabs/Games/15 CatchAHorse/Sources/Audios/Botay_4.wav
@@ -1322,25 +519,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fbfe1cfe400ed3f479943f27a31e676b
     m_Address: Assets/Development/Prefabs/Games/11 WordMagnet/Sources/Sounds/Bayanaul_right_3.wav
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ff89e94fda34e6048b1de196f8dfd14d
-    m_Address: Flower
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ffca2154f80949a4289cd074de94de95
-    m_Address: ThreeInRow4
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Locale-kk
-    - Locale-ru
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fffca069bf0135c4182418507f49383e
-    m_Address: Assets/Development/Prefabs/Games/1 Rocket/Sources/Audio/rocketlaunchFinish_KK.wav
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

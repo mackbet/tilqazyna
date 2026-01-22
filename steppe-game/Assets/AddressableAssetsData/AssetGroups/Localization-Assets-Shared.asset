@@ -15,6 +15,34 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 92bc637b8a39f1ec3800f3ecba815b59
   m_SerializeEntries:
+  - m_GUID: 01b0b99f32dc76c44804feb26649b37a
+    m_Address: Puzzle2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 056dc88d54b0e2d46842f941e3780d2d
+    m_Address: FindTheItem1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c56f4cd49f9f9c43a3355d2c8da70a7
+    m_Address: Fishing6
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 12ff7c99432c7e84cb5e642ac0bded32
+    m_Address: FindTheItem4
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1363c255b76044b0884b6cd942155da2
     m_Address: ChooseCityDialogue1
     m_ReadOnly: 1
@@ -22,8 +50,71 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 17d309f94a40e89498ac510ba93f168d
-    m_Address: Elik
+  - m_GUID: 179b93f269c242041a0aa8a2e6f692e8
+    m_Address: arrangeNames3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1becfd737a6ac5f458651e594a8ddc04
+    m_Address: Puzzle4
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f7dd0dc0b3c7ad42974d890939713c5
+    m_Address: stuffTools4
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2378a5f7bf1bb3b4384209c2a2aef887
+    m_Address: "\u049A\u044B\u043B\u044B\u0448"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2619d2cde8783424bb2f10579a61ac46
+    m_Address: NumberOfTargets3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27d1121a28bf2464d83ca0a0326e5e31
+    m_Address: Flower
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27d821d105b5f8d46bbb477b460bcfa7
+    m_Address: stuffTools5
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 288b83cea15641445b406c3e3ca81657
+    m_Address: arrangeNames4
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 29492557e49e9554c8f3d177119f0fef
+    m_Address: Steppe_games_Gulbinaz_Qorgaljyn (mp3cut.net)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a288adf3c70b104e942f12518c85cb5
+    m_Address: ThreeInRow5
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
@@ -36,8 +127,120 @@ MonoBehaviour:
     - Locale-kk
     - Locale-ru
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5a0e990bd0e1fcb429667b23c71f36d9
-    m_Address: Ladybug
+  - m_GUID: 2d4da84af02ac514fbeaa6c2a5c4e918
+    m_Address: Forest
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 31589a83e8f71a542afbb0dbca62d6ea
+    m_Address: Quiz4
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 333eaea8721d9c344a1a556a58b3e36b
+    m_Address: stuffTools2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 367e9c8af7257f749a34f1fe3b2973e2
+    m_Address: "\u049A\u0430\u043B\u049B\u0430\u043D"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36ad704792616c447a9b5152450c05c4
+    m_Address: Tree
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3a9f811742bf5a84c860afd3820eb02d
+    m_Address: rocketlaunch5
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ba5f65b5fbcec04a878ffb5cda14d6c
+    m_Address: Leaf
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44e63a79e6644cf4dbe1bb8ea444f21e
+    m_Address: Puzzle9
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47a25f645131bef4892fc0da40249b7c
+    m_Address: "\u0421\u0430\u0443\u044B\u0442"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 487057dac68d7a4479a3d466ef10869f
+    m_Address: Quiz2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4bc7c20144722ca4db6ec37c62d95cb7
+    m_Address: arrangeNames1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d77ac96dd71da94bbd67a6aebb7d849
+    m_Address: Wolf
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f09f7d88c98b0149bb519f642b149a8
+    m_Address: StreamOfWords3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5102fc0dbf5594c469a60b9484da8c23
+    m_Address: stuffTools1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 510e57223b633a941b04cb80807bd2f8
+    m_Address: "\u0411\u04E9\u0440i\u043A"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 53176be1d1652724fa80ae0237ba24c4
+    m_Address: Branch
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56eec0937f9a1634d91dfc38f8e5e421
+    m_Address: Deer
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
@@ -48,13 +251,377 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61489f6faf828c141b10e12a554d660a
+    m_Address: rocketlaunch4
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62109f9ff512fe74ab8e3638939af0f6
+    m_Address: Mountains
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c0cde17f32e06b449eef69e5728a1c7
+    m_Address: ThreeInRow6
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f28ce2c3b2bcef449b7189a95dcd645
+    m_Address: Horse
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6fe9824cc3578cf40bade99b02d246d4
+    m_Address: arrangeNames5
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70b2b0758f7be774a8de7b924003c707
+    m_Address: rocketlaunch2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7334bf9b0cc78d849b7a0271a1fdeac4
+    m_Address: NumberOfTargets4
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 77669fd00aaf12044bfb99e917600136
+    m_Address: Fishing2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7891c0f72a00d574e954a3a5063ef353
+    m_Address: ThreeInRow4
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 792f46e0bbeae9746aabaaef4bee4342
+    m_Address: FindTheItem3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c0078a3287b51e4c8adb8507ca54c0e
+    m_Address: rocketlaunch1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 840b6b963d490e34c9fe847f0bd4d0a0
+    m_Address: "\u041A\u04AF\u043C\u0456\u0441 \u043A\u0435\u0441\u0435\u0433\u0456"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 859f3bfb11cf3cf44905139cbdecd810
+    m_Address: StreamOfWords4
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86aeed4bf9411ee4ba0ae3a262b04824
+    m_Address: StreamOfWords6
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86eb2135788c5d7448cd8e1f4cf449d6
+    m_Address: Fish
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 877776906408ba64aa8414256eb0314f
+    m_Address: arrangeNames7
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 892982d15de7ceb45b55a94cfa572f8d
+    m_Address: "\u0411\u04AF\u0440\u043A\u0456\u0442"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 894bf214897c34944abb1d1af385817e
+    m_Address: Puzzle5
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b324dc35c7b0274198185bc05bc5fdb
+    m_Address: rocketlaunchFinish
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c59650132c323b43b9492884654bbc8
+    m_Address: ThreeInRow3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ebd18bfc57212b4abef851bf2ed18fb
+    m_Address: arrangeNames2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92b44888bf5097444b97763032d9381e
+    m_Address: stuffTools3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93662af071f4e394f9fffb32b8727ff5
+    m_Address: arrangeNames8
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 96d11777113f95d4d94fbc784609221d
+    m_Address: Elik
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e7ad9063cfa68444951f853288a7c08
+    m_Address: StreamOfWords1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a4d8cf2a0dffab045857611c416e46c0
+    m_Address: Ladybug
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7d755c2376712f478fb19035aadaf45
+    m_Address: "\u0411\u0456\u043B\u0435\u0437\u0456\u043A"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7f3b82407323a54890c2e778b5ed2c4
+    m_Address: Quiz5
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: aa0c96a897bb2520f8d789afe9cb43d5
     m_Address: Assets/Settings/Localization/Tables/Main Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fcd4eede864de4a47ad7e1ff62e1a09b
-    m_Address: Deer
+  - m_GUID: b143b40e82355b94bb430a02ba91180c
+    m_Address: Ceiling
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b1ed7fef55af8b748957dbc552789169
+    m_Address: "\u0421\u0430\u0434\u0430\u049B \u043F\u0435\u043D \u0436\u0435\u0431\u0435"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2192ee386023ff47af94d26760a6929
+    m_Address: Bird
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b57c39aa0e1762143b5b715da02f5d79
+    m_Address: Puzzle1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8c02c69c5ef43147a833eb8617734ed
+    m_Address: Bear
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bdaf5c6d1872a1245b78fb5dd8af43c1
+    m_Address: rocketlaunch3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d01febdef37bb6a4d8d6734213daa779
+    m_Address: StreamOfWords5
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6da50234f80a444f953d11f6a23de1f
+    m_Address: "\u041A\u04E9\u0440\u0456\u043A"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d73242260ebae514f8aa10b100a4d30e
+    m_Address: "\u0411\u04B1\u043B\u0493\u0430\u0440\u044B \u0431\u0456\u043B\u0435\u043A\u0448\u0435"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbbe8fb676b7c6742ac157416071ecb0
+    m_Address: StreamOfWords2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbf7c5aeda1cfbf4289ae4aada75ed2c
+    m_Address: Steppe_games_Gulbinaz_Kaspii (mp3cut.net)
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e14c1bd25ddf74a408eb267af7952250
+    m_Address: Field
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e57dd41b9b2fafb429d9b5405d887762
+    m_Address: "\u0415\u0440-\u0442\u04B1\u0440\u043C\u0430\u043D"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e85d61fe63086fe42ae643da1c682a21
+    m_Address: Puzzle8
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e9df52c76c36fd1408b14bf6b69a4072
+    m_Address: Fishing5
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eec54c1adc98207469a125b47c40868a
+    m_Address: arrangeNames6
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f07a1b41e279d03459087b990b9961e5
+    m_Address: "\u0421\u044B\u0440\u0493\u0430"
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1134653e92106f4a9c9e01beca1c3e2
+    m_Address: Quiz3
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1754bc9921491e48b38e8d923370554
+    m_Address: Rabbit
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6b9235074a42d945959e66ac376f8d2
+    m_Address: Question 1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f84091c0635d9a44387de91b958b4e28
+    m_Address: ThreeInRow1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc5f13dd68c28eb44bd563bc484b59bf
+    m_Address: FindTheItem2
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fcf6a3797e0007146927f7b5a5710665
+    m_Address: Fishing4
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe2a9c0448c9c874692b5f05e30122a7
+    m_Address: Quiz1
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-kk
+    - Locale-ru
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe92118123ba10b498feabc2e0473168
+    m_Address: River
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-kk
