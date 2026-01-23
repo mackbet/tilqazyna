@@ -110,9 +110,10 @@ public class GameManager : MonoBehaviour
                 _hudManager.SetLeaderboardUIActive(true);
             }
 
-            if (value == GameScene.Cooking)
+            if (value is GameScene.Cooking or GameScene.Quiz)
             {
-                _levelManager.StartNewLevel();
+                if (value == GameScene.Cooking)
+                    _levelManager.StartNewLevel();
                 _hudManager.CookingMode(true);
             }
             else
@@ -157,9 +158,10 @@ public class GameManager : MonoBehaviour
                 _hudManager.SetLeaderboardUIActive(true);
             }
 
-            if (value == GameScene.Cooking)
+            if (value is GameScene.Cooking or GameScene.Quiz)
             {
-                _levelManager.StartNewLevel();
+                if (value == GameScene.Cooking)
+                    _levelManager.StartNewLevel();
                 _hudManager.CookingMode(true);
             }
             else
