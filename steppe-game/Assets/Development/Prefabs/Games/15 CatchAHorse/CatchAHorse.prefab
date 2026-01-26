@@ -7085,6 +7085,10 @@ PrefabInstance:
       value: "\u0416\u044B\u043B\u049B\u044B\u043D\u044B \u049B\u043E\u043B\u0493\u0430
         \u04AF\u0439\u0440\u0435\u0442"
       objectReference: {fileID: 0}
+    - target: {fileID: 2997357936921441026, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3075755175789649611, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7246,6 +7250,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 849376715505048235, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4121003273138344159}
+    - targetCorrespondingSourceObject: {fileID: 2903458761911869237, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3600429985190528323}
   m_SourcePrefab: {fileID: 100100000, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
 --- !u!224 &965085171006878727 stripped
 RectTransform:
@@ -7263,6 +7270,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1f1c3677a016ac41adc9e7a35dad5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FinishPanel
+--- !u!114 &3361178029778890854 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4680638098351558134, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+  m_PrefabInstance: {fileID: 7949339400498249104}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5051510793178604197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5051510793178604197 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2903458761911869237, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+  m_PrefabInstance: {fileID: 7949339400498249104}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3600429985190528323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5051510793178604197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daf2e6358d8ffba4a83905f1a51fb447, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameButton
+  image: {fileID: 3361178029778890854}
+  alphaHitTestMinimumThreshold: 0.1
+  gameView: {fileID: 2282983578739080331, guid: 11753e8543dc61349b6f673755de9b0e, type: 3}
+  gameTitle:
+    m_TableReference:
+      m_TableCollectionName: GUID:aa0c96a897bb2520f8d789afe9cb43d5
+    m_TableEntryReference:
+      m_KeyId: 134330897210167296
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &7320651283769878331 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 849376715505048235, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
