@@ -29,7 +29,6 @@ public class Chase : GameController, IPointerDownHandler, IPointerUpHandler
     [SerializeField] private float jumpDuration = 0.5f;
     [SerializeField] private float rollDuration = 0.3f;
     [SerializeField] private Ease jumpEase = Ease.OutQuad;
-    [SerializeField] private ParticleSystem rabbitFX;
 
     [Header("Wolf Settings")]
     [SerializeField] private float wolfCatchDistance = 50f;
@@ -263,7 +262,6 @@ public class Chase : GameController, IPointerDownHandler, IPointerUpHandler
         if (!isGameActive || isJumping || isRolling) return;
 
         isJumping = true;
-        rabbitFX.Stop();
 
         if (jumpSound != null)
         {
@@ -289,7 +287,6 @@ public class Chase : GameController, IPointerDownHandler, IPointerUpHandler
         jumpSequence.OnComplete(() =>
         {
             isJumping = false;
-            rabbitFX.Play();
         });
 
         jumpTween = jumpSequence;

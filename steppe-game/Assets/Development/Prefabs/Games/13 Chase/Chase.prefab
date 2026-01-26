@@ -10097,6 +10097,7 @@ MonoBehaviour:
   frameDuration: 0.02
   playOnEnable: 1
   pingPong: 0
+  loop: 1
 --- !u!82 &1317168899343185719
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10469,6 +10470,7 @@ MonoBehaviour:
   frameDuration: 0.02
   playOnEnable: 1
   pingPong: 0
+  loop: 1
 --- !u!1 &8966268926621473018
 GameObject:
   m_ObjectHideFlags: 0
@@ -10924,6 +10926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 760267689a943314e884535617ed70c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chase
+  finishPanel: {fileID: 6214181034005010364}
   startDelay: 1
   finishDelay: 3
   startWithDelay: 1
@@ -10982,7 +10985,6 @@ MonoBehaviour:
   jumpDuration: 0.8
   rollDuration: 0.6
   jumpEase: 7
-  rabbitFX: {fileID: 8160081662387955494}
   wolfCatchDistance: 100
   wolfMoveDuration: 1
   wolfMoveEase: 7
@@ -11237,6 +11239,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameMelody
   audioClip: {fileID: 8300000, guid: f6e1f0143d68a9e4ebe0b81ed045a806, type: 3}
   volume: 0.7
+--- !u!114 &6214181034005010364 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7198366607822241818, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+  m_PrefabInstance: {fileID: 3880001657908615078}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f1c3677a016ac41adc9e7a35dad5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinishPanel
 --- !u!224 &6263831139014385201 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7148639537272080791, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}

@@ -1,0 +1,1314 @@
+fileFormatVersion: 2
+guid: 79fa595452916844d87ce59b399538bb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8627074714411097740
+    second: lyzhnik_0
+  - first:
+      213: -110941816026121397
+    second: lyzhnik_1
+  - first:
+      213: 6928474858196421524
+    second: lyzhnik_2
+  - first:
+      213: 3689374304534649322
+    second: lyzhnik_3
+  - first:
+      213: 6256150657964331860
+    second: lyzhnik_4
+  - first:
+      213: 7596385982759330172
+    second: lyzhnik_5
+  - first:
+      213: -4315685666470319451
+    second: lyzhnik_6
+  - first:
+      213: 8763258497412032534
+    second: lyzhnik_7
+  - first:
+      213: -2689506356211904244
+    second: lyzhnik_8
+  - first:
+      213: 4495926560817846504
+    second: lyzhnik_9
+  - first:
+      213: -726714663069601195
+    second: lyzhnik_10
+  - first:
+      213: 4315587818944814307
+    second: lyzhnik_11
+  - first:
+      213: -2619794355273811752
+    second: lyzhnik_12
+  - first:
+      213: -6125620594306975958
+    second: lyzhnik_13
+  - first:
+      213: -601713635715551076
+    second: lyzhnik_14
+  - first:
+      213: -2768262395354245545
+    second: lyzhnik_15
+  - first:
+      213: 5997620236719298003
+    second: lyzhnik_16
+  - first:
+      213: -3738645186904893171
+    second: lyzhnik_17
+  - first:
+      213: 3199495159508298891
+    second: lyzhnik_18
+  - first:
+      213: 2382429900934927143
+    second: lyzhnik_19
+  - first:
+      213: -6211169121825647556
+    second: lyzhnik_20
+  - first:
+      213: -4889286730396652195
+    second: lyzhnik_21
+  - first:
+      213: 4978881767097713341
+    second: lyzhnik_22
+  - first:
+      213: 5129016650844492916
+    second: lyzhnik_23
+  - first:
+      213: -1878659989539180129
+    second: lyzhnik_24
+  - first:
+      213: -632614326811411736
+    second: lyzhnik_25
+  - first:
+      213: -1292197228925199536
+    second: lyzhnik_26
+  - first:
+      213: -8889798473082051869
+    second: lyzhnik_27
+  - first:
+      213: -8749176171289593966
+    second: lyzhnik_28
+  - first:
+      213: -6461886021748535079
+    second: lyzhnik_29
+  - first:
+      213: 2587299221193653135
+    second: lyzhnik_30
+  - first:
+      213: -7859339972029415859
+    second: lyzhnik_31
+  - first:
+      213: -3811650324633777029
+    second: lyzhnik_32
+  - first:
+      213: 6978812080529931764
+    second: lyzhnik_33
+  - first:
+      213: 8675477003730479663
+    second: lyzhnik_34
+  - first:
+      213: 6796628457526284351
+    second: lyzhnik_35
+  - first:
+      213: -1713969167873092048
+    second: lyzhnik_36
+  - first:
+      213: -2640440244993684492
+    second: lyzhnik_37
+  - first:
+      213: -879206026899613093
+    second: lyzhnik_38
+  - first:
+      213: -2443097691619723546
+    second: lyzhnik_39
+  - first:
+      213: 5845822331207931933
+    second: lyzhnik_40
+  - first:
+      213: -7229958698754418968
+    second: lyzhnik_41
+  - first:
+      213: -6471957204449989730
+    second: lyzhnik_42
+  - first:
+      213: 341230288277045731
+    second: lyzhnik_43
+  - first:
+      213: 6434718265216519620
+    second: lyzhnik_44
+  - first:
+      213: -6839125748828840312
+    second: lyzhnik_45
+  - first:
+      213: -4721792571532735820
+    second: lyzhnik_46
+  - first:
+      213: -5525607039414598513
+    second: lyzhnik_47
+  - first:
+      213: 5247812616832477044
+    second: lyzhnik_48
+  - first:
+      213: 3013885385694187178
+    second: lyzhnik_49
+  - first:
+      213: -6901513473770971700
+    second: lyzhnik_50
+  - first:
+      213: -3990523728329091244
+    second: lyzhnik_51
+  - first:
+      213: 2361255325827847271
+    second: lyzhnik_52
+  - first:
+      213: -4821327208624148952
+    second: lyzhnik_53
+  - first:
+      213: -5085495754416775748
+    second: lyzhnik_54
+  - first:
+      213: -9205837239026707794
+    second: lyzhnik_55
+  - first:
+      213: 5648700893446837884
+    second: lyzhnik_56
+  - first:
+      213: -6843464915342567066
+    second: lyzhnik_57
+  - first:
+      213: 8192096363796687438
+    second: lyzhnik_58
+  - first:
+      213: 3304674861473216058
+    second: lyzhnik_59
+  - first:
+      213: 4563931790270882041
+    second: lyzhnik_60
+  - first:
+      213: -8180468202210079173
+    second: lyzhnik_61
+  - first:
+      213: -88050845779822217
+    second: lyzhnik_62
+  - first:
+      213: 7964664131155564665
+    second: lyzhnik_63
+  - first:
+      213: -2300529880387994936
+    second: lyzhnik_64
+  - first:
+      213: 8067697193394105109
+    second: lyzhnik_65
+  - first:
+      213: 458433748994039555
+    second: lyzhnik_66
+  - first:
+      213: 1611804562444955704
+    second: lyzhnik_67
+  - first:
+      213: 6337344867592224477
+    second: lyzhnik_68
+  - first:
+      213: -8998829001521690836
+    second: lyzhnik_69
+  - first:
+      213: 1440623752324949990
+    second: lyzhnik_70
+  - first:
+      213: 1905787932723822780
+    second: lyzhnik_71
+  - first:
+      213: -5381408279490969253
+    second: lyzhnik_72
+  - first:
+      213: -3251669450295581617
+    second: lyzhnik_73
+  - first:
+      213: -601084993492341501
+    second: lyzhnik_74
+  - first:
+      213: 9054651338429162362
+    second: lyzhnik_75
+  - first:
+      213: -6263405070099155728
+    second: lyzhnik_76
+  - first:
+      213: 8917566894011613751
+    second: lyzhnik_77
+  - first:
+      213: -5472227076132610138
+    second: lyzhnik_78
+  - first:
+      213: -4653256011944820589
+    second: lyzhnik_79
+  - first:
+      213: 3997742938377172427
+    second: lyzhnik_80
+  - first:
+      213: 4493717249509123263
+    second: lyzhnik_81
+  - first:
+      213: 3979001494542496345
+    second: lyzhnik_82
+  - first:
+      213: 7871081438125891381
+    second: lyzhnik_83
+  - first:
+      213: -5105746663503812450
+    second: lyzhnik_84
+  - first:
+      213: -7274862817247273238
+    second: lyzhnik_85
+  - first:
+      213: 6601378041626340962
+    second: lyzhnik_86
+  - first:
+      213: 3092497577547411958
+    second: lyzhnik_87
+  - first:
+      213: 7129425576929212256
+    second: lyzhnik_88
+  - first:
+      213: -9027946771199531192
+    second: lyzhnik_89
+  - first:
+      213: -3820478994065617466
+    second: lyzhnik_90
+  - first:
+      213: 1060171889925582806
+    second: lyzhnik_91
+  - first:
+      213: 4680636759718131545
+    second: lyzhnik_92
+  - first:
+      213: -2580003873891271475
+    second: lyzhnik_93
+  - first:
+      213: 2001832854220691607
+    second: lyzhnik_94
+  - first:
+      213: 7688572834534989641
+    second: lyzhnik_95
+  - first:
+      213: 5469559010576241104
+    second: lyzhnik_96
+  - first:
+      213: -5188945120235852320
+    second: lyzhnik_97
+  - first:
+      213: -6991956743348213622
+    second: lyzhnik_98
+  - first:
+      213: 3093399526583990072
+    second: lyzhnik_99
+  - first:
+      213: 9210568996162717865
+    second: lyzhnik_100
+  - first:
+      213: 450170525004009603
+    second: lyzhnik_101
+  - first:
+      213: -6663273417313337721
+    second: lyzhnik_102
+  - first:
+      213: -1204625961360827202
+    second: lyzhnik_103
+  - first:
+      213: 7620831546490834238
+    second: lyzhnik_104
+  - first:
+      213: -2768858618502258853
+    second: lyzhnik_105
+  - first:
+      213: 7363918112572442354
+    second: lyzhnik_106
+  - first:
+      213: 4578011628185321892
+    second: lyzhnik_107
+  - first:
+      213: -8399487873454176801
+    second: lyzhnik_108
+  - first:
+      213: 504933869601849561
+    second: lyzhnik_109
+  - first:
+      213: 6091116975036503607
+    second: lyzhnik_110
+  - first:
+      213: -7405522636498551198
+    second: lyzhnik_111
+  - first:
+      213: 6419622285016387275
+    second: lyzhnik_112
+  - first:
+      213: 9092444331154647154
+    second: lyzhnik_113
+  - first:
+      213: 6671454918179834768
+    second: lyzhnik_114
+  - first:
+      213: -5253140777639215711
+    second: lyzhnik_115
+  - first:
+      213: 6637950734057386912
+    second: lyzhnik_116
+  - first:
+      213: -4218220345291399117
+    second: lyzhnik_117
+  - first:
+      213: -7873244340712394369
+    second: lyzhnik_118
+  - first:
+      213: -2258377741995504097
+    second: lyzhnik_119
+  - first:
+      213: 2237694323045459824
+    second: lyzhnik_120
+  - first:
+      213: 6221689496997385359
+    second: lyzhnik_121
+  - first:
+      213: -4957214085363845379
+    second: lyzhnik_122
+  - first:
+      213: 3418875656383731744
+    second: lyzhnik_123
+  - first:
+      213: -8227572958974960353
+    second: lyzhnik_124
+  - first:
+      213: -7944475686621848543
+    second: lyzhnik_125
+  - first:
+      213: 7983715675676833970
+    second: lyzhnik_126
+  - first:
+      213: 8090505680784025382
+    second: lyzhnik_127
+  - first:
+      213: 3667230983860567033
+    second: lyzhnik_128
+  - first:
+      213: -1322481744001258157
+    second: lyzhnik_129
+  - first:
+      213: -2514351948170992890
+    second: lyzhnik_130
+  - first:
+      213: 5754041195440610674
+    second: lyzhnik_131
+  - first:
+      213: -380424209677169123
+    second: lyzhnik_132
+  - first:
+      213: 4541053505336680683
+    second: lyzhnik_133
+  - first:
+      213: 492173817071345475
+    second: lyzhnik_134
+  - first:
+      213: 4910471879667467924
+    second: lyzhnik_135
+  - first:
+      213: 3505775031468449567
+    second: lyzhnik_136
+  - first:
+      213: -5563697372071816997
+    second: lyzhnik_137
+  - first:
+      213: 6452837269245942340
+    second: lyzhnik_138
+  - first:
+      213: 3754725598119422483
+    second: lyzhnik_139
+  - first:
+      213: 6280631295634793437
+    second: lyzhnik_140
+  - first:
+      213: -5686900249954154425
+    second: lyzhnik_141
+  - first:
+      213: -3139331674736347740
+    second: lyzhnik_142
+  - first:
+      213: -1797380520509751955
+    second: lyzhnik_143
+  - first:
+      213: 649156262786324763
+    second: lyzhnik_144
+  - first:
+      213: -9152829705540338064
+    second: lyzhnik_145
+  - first:
+      213: -3628080689549841113
+    second: lyzhnik_146
+  - first:
+      213: -8174907942536751927
+    second: lyzhnik_147
+  - first:
+      213: -5104828395229763545
+    second: lyzhnik_148
+  - first:
+      213: 5782339109084946365
+    second: lyzhnik_149
+  - first:
+      213: -7423555474856289072
+    second: lyzhnik_150
+  - first:
+      213: 180757553160021265
+    second: lyzhnik_151
+  - first:
+      213: -858874119905754085
+    second: lyzhnik_152
+  - first:
+      213: -9166659470807209235
+    second: lyzhnik_153
+  - first:
+      213: 4202339851570949129
+    second: lyzhnik_154
+  - first:
+      213: 2562929972659895951
+    second: lyzhnik_155
+  - first:
+      213: -8044791835789425469
+    second: lyzhnik_156
+  - first:
+      213: -5871396631589111352
+    second: lyzhnik_157
+  - first:
+      213: -5871424058875490199
+    second: lyzhnik_158
+  - first:
+      213: -3706693013952762016
+    second: lyzhnik_159
+  - first:
+      213: -435637243188027539
+    second: lyzhnik_160
+  - first:
+      213: 5388765074277402381
+    second: lyzhnik_161
+  - first:
+      213: -125969625563981470
+    second: lyzhnik_162
+  - first:
+      213: -4459087055741169320
+    second: lyzhnik_163
+  - first:
+      213: -2945682409769298138
+    second: lyzhnik_164
+  - first:
+      213: -2441811031993719352
+    second: lyzhnik_165
+  - first:
+      213: 2357473589988190795
+    second: lyzhnik_166
+  - first:
+      213: 2256156384311217875
+    second: lyzhnik_167
+  - first:
+      213: -9210907596211260203
+    second: lyzhnik_168
+  - first:
+      213: -43463071255414633
+    second: lyzhnik_169
+  - first:
+      213: -5440604276106592526
+    second: lyzhnik_170
+  - first:
+      213: 6344050345252902728
+    second: lyzhnik_171
+  - first:
+      213: 8636936651035925827
+    second: lyzhnik_172
+  - first:
+      213: -2645062722679028780
+    second: lyzhnik_173
+  - first:
+      213: -8286746386905910436
+    second: lyzhnik_174
+  - first:
+      213: 9170004002692766053
+    second: lyzhnik_175
+  - first:
+      213: -9031473662497944578
+    second: lyzhnik_176
+  - first:
+      213: 4633873206867413104
+    second: lyzhnik_177
+  - first:
+      213: -8589376453201518534
+    second: lyzhnik_178
+  - first:
+      213: -7243994026697732911
+    second: lyzhnik_179
+  - first:
+      213: 2980149921485457689
+    second: lyzhnik_180
+  - first:
+      213: -5133947369763788439
+    second: lyzhnik_181
+  - first:
+      213: 2288614900478630902
+    second: lyzhnik_182
+  - first:
+      213: 7500812556269863197
+    second: lyzhnik_183
+  - first:
+      213: 568923332297828719
+    second: lyzhnik_184
+  - first:
+      213: -8661586460074441164
+    second: lyzhnik_185
+  - first:
+      213: 2943419044033034522
+    second: lyzhnik_186
+  - first:
+      213: -8527333896033946188
+    second: lyzhnik_187
+  - first:
+      213: 2251885916214021587
+    second: lyzhnik_188
+  - first:
+      213: -1795408119318096034
+    second: lyzhnik_189
+  - first:
+      213: -8881047492393142923
+    second: lyzhnik_190
+  - first:
+      213: 271333391976735350
+    second: lyzhnik_191
+  - first:
+      213: 9101562836631364437
+    second: lyzhnik_192
+  - first:
+      213: 5462347094953161446
+    second: lyzhnik_193
+  - first:
+      213: -5024699024413806361
+    second: lyzhnik_194
+  - first:
+      213: -5956401476455080235
+    second: lyzhnik_195
+  - first:
+      213: -3107649816586376237
+    second: lyzhnik_196
+  - first:
+      213: -5623918339794208068
+    second: lyzhnik_197
+  - first:
+      213: 544349354778076826
+    second: lyzhnik_198
+  - first:
+      213: 8173386293639104463
+    second: lyzhnik_199
+  - first:
+      213: 3740613981999615136
+    second: lyzhnik_200
+  - first:
+      213: 4952317662908774588
+    second: lyzhnik_201
+  - first:
+      213: -5362143230110951951
+    second: lyzhnik_202
+  - first:
+      213: -4802717601036406056
+    second: lyzhnik_203
+  - first:
+      213: 7529042210010316568
+    second: lyzhnik_204
+  - first:
+      213: 2559345708024517550
+    second: lyzhnik_205
+  - first:
+      213: -5616843739571525806
+    second: lyzhnik_206
+  - first:
+      213: -6275294462420916160
+    second: lyzhnik_207
+  - first:
+      213: -521975476462671886
+    second: lyzhnik_208
+  - first:
+      213: 7825978209513025046
+    second: lyzhnik_209
+  - first:
+      213: -5082803520020901479
+    second: lyzhnik_210
+  - first:
+      213: 3788807497639508450
+    second: lyzhnik_211
+  - first:
+      213: 3619285729285460762
+    second: lyzhnik_212
+  - first:
+      213: -953918097197562105
+    second: lyzhnik_213
+  - first:
+      213: 4083159692862554944
+    second: lyzhnik_214
+  - first:
+      213: -8777989483700759415
+    second: lyzhnik_215
+  - first:
+      213: 9017189770621007427
+    second: lyzhnik_216
+  - first:
+      213: -3079321801077181389
+    second: lyzhnik_217
+  - first:
+      213: 4461139787101916628
+    second: lyzhnik_218
+  - first:
+      213: 4959716431753280253
+    second: lyzhnik_219
+  - first:
+      213: -7937260405273081430
+    second: lyzhnik_220
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Skier_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2980846e5907fe049b1925758b54307a
+      internalID: -2019462918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 948efefaafa49af4fa1ab91857f3cc55
+      internalID: 345723081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8e44180b33ac64286e23d972b3d35c
+      internalID: -1609776123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_3
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235cf0d0eb1d3834f8227c43278d7a23
+      internalID: -493430819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25956fd12dd1b3d4a8cd9b6994f866ee
+      internalID: 164917155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_5
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46dbf148c2b8c444bc42a4caca1f23d
+      internalID: -680079883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_6
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c284dfaf3298b94e8f170738490dda0
+      internalID: -1711130071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_7
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb73e4267750544dafa9871534aadd0
+      internalID: -1785196785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_8
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88190602af2d91648b347585a37ae392
+      internalID: 1896672528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_9
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e0b1c5a8d35f6459655a057a462b11
+      internalID: -846788506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_10
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ab82173ec8a41449f27a9683bbad6e
+      internalID: -629881756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 571d3c3470ae86143a8600bb92e70553
+      internalID: 1465597968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_12
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11a2a87967d54b4488402701432c19a
+      internalID: -538252998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_13
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75cb064c631113e4db31a8abafebc939
+      internalID: 1667343054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ba40a0802f77f46aa8ae492087947e
+      internalID: 1610068597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_15
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfcdc60ecd4fff4b8249b34bd267579
+      internalID: 1251898553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_16
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1c252737824e14388db30cdd28180c
+      internalID: 1994705622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_17
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ee45cc4ee1bfa4e968c190fa302571
+      internalID: 1157126689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_18
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f12f8f165801f49ab17cbb9214a3e6
+      internalID: -2085338103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_19
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3f001067403b4942ac0630eed0fdce1
+      internalID: 799719133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_20
+      rect:
+        serializedVersion: 2
+        x: 4608
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331d5781f4ada2946b7eac4b9589e7c1
+      internalID: 831648815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skier_21
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7652d2860a8fb428d9e136b1b498f0
+      internalID: 1510514589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 43b30df1b70c6614b9dd1d66c76cf412
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":11.0,"y":2.0},"gridSpriteSize":{"x":512.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Skier_0: -2019462918
+      Skier_1: 345723081
+      Skier_10: -629881756
+      Skier_11: 1465597968
+      Skier_12: -538252998
+      Skier_13: 1667343054
+      Skier_14: 1610068597
+      Skier_15: 1251898553
+      Skier_16: 1994705622
+      Skier_17: 1157126689
+      Skier_18: -2085338103
+      Skier_19: 799719133
+      Skier_2: -1609776123
+      Skier_20: 831648815
+      Skier_21: 1510514589
+      Skier_3: -493430819
+      Skier_4: 164917155
+      Skier_5: -680079883
+      Skier_6: -1711130071
+      Skier_7: -1785196785
+      Skier_8: 1896672528
+      Skier_9: -846788506
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

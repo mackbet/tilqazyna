@@ -21,6 +21,7 @@ public class DancingOnIce : GameController
 
     [Header("Character")]
     [SerializeField] private RectTransform character;
+    [SerializeField] private SpriteAnimController characterAnimController;
     [SerializeField] private float characterMoveSpeed = 500f;
     [SerializeField] private RectTransform characterParticles;
 
@@ -132,6 +133,12 @@ public class DancingOnIce : GameController
         }
 
         isInputEnabled = true;
+
+        // Запускаем анимацию ожидания
+        if (characterAnimController != null)
+        {
+            characterAnimController.Play("idle", loop: true);
+        }
     }
 
     private void ResetRound()
@@ -395,6 +402,12 @@ public class DancingOnIce : GameController
 
         isCharacterMoving = true;
 
+        // Запускаем анимацию ходьбы
+        if (characterAnimController != null)
+        {
+            characterAnimController.Play("walking", loop: true);
+        }
+
         // Активируем систему частиц
         characterParticles.position = character.position;
 
@@ -455,11 +468,17 @@ public class DancingOnIce : GameController
             );
         }
 
+        // Запускаем анимацию прыжка
+        if (characterAnimController != null)
+        {
+            characterAnimController.Play("jumping", false);
+        }
+
         // Увеличиваем счетчик сессий после успешного завершения
         currentSessionIndex++;
 
         // Переходим к следующему слову или завершаем игру
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(endDelay);
 
         if (currentSessionIndex < sessionsCount)
         {
@@ -490,6 +509,12 @@ public class DancingOnIce : GameController
             SetupUI();
             SpawnLetters();
             isInputEnabled = true;
+
+            // Запускаем анимацию ожидания
+            if (characterAnimController != null)
+            {
+                characterAnimController.Play("idle", loop: true);
+            }
         }
     }
 
