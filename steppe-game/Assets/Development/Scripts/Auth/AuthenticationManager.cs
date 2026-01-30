@@ -1,10 +1,13 @@
 using UnityEngine;
 using System;
 using System.Threading.Tasks;
+#if UNITY_ANDROID
+using GooglePlayGames;
+#endif
+using Firebase.Auth;
 
 /// <summary>
-/// Менеджер аутентификации для Google и Apple Sign-In
-/// Работает как заглушка для тестирования UI и логики без реальной авторизации
+/// Менеджер аутентификации для Google Play Games и Firebase
 /// </summary>
 public class AuthenticationManager : MonoBehaviour
 {
@@ -18,11 +21,14 @@ public class AuthenticationManager : MonoBehaviour
     // Состояние
     private UserData currentUser;
     private bool isAuthenticated = false;
+    private FirebaseAuth firebaseAuth;
+    private FirebaseUser firebaseUser;
 
-    // Настройки для тестирования
-    [Header("Test Mode Settings")]
-    [SerializeField] private bool testMode = true;
+    // Настройки
+    [Header("Settings")]
+    [SerializeField] private bool testMode = false;
     [SerializeField] private float simulatedDelay = 1.5f;
+    [SerializeField] private bool autoSignInOnStart = true;
 
     void Awake()
     {
@@ -34,43 +40,73 @@ public class AuthenticationManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            return;
+        }
+
+        InitializeGooglePlayGames();
+    }
+
+    private void Start()
+    {
+        // Инициализируем Firebase Auth
+        firebaseAuth = FirebaseAuth.DefaultInstance;
+
+        if (autoSignInOnStart && !testMode)
+        {
+            // Автоматический вход при запуске
+            SignInWithGoogle();
         }
     }
 
+    private void InitializeGooglePlayGames()
+    {
+#if UNITY_ANDROID
+        PlayGamesPlatform.DebugLogEnabled = true;
+        PlayGamesPlatform.Activate();
+        Debug.Log("Google Play Games initialized");
+#endif
+    }
+
     /// <summary>
-    /// Вход через Google
+    /// Вход через Google Play Games + Firebase
     /// </summary>
     public async void SignInWithGoogle()
     {
-        Debug.Log("🔵 Начало входа через Google...");
+        Debug.Log("Начало входа через Google Play Games...");
 
         if (testMode)
         {
             await SimulateGoogleSignIn();
+            return;
         }
-        else
-        {
-            // TODO: Реальная авторизация через Google Play Games или Firebase
-            RealGoogleSignIn();
-        }
+
+#if UNITY_ANDROID
+        await RealGoogleSignIn();
+#else
+        Debug.LogWarning("Google Play Games доступен только на Android");
+        OnLoginFailed?.Invoke("Google Play Games доступен только на Android");
+#endif
     }
 
     /// <summary>
-    /// Вход через Apple
+    /// Вход через Apple (для iOS)
     /// </summary>
     public async void SignInWithApple()
     {
-        Debug.Log("🍎 Начало входа через Apple...");
+        Debug.Log("Начало входа через Apple...");
 
         if (testMode)
         {
             await SimulateAppleSignIn();
+            return;
         }
-        else
-        {
-            // TODO: Реальная авторизация через Apple Sign-In
-            RealAppleSignIn();
-        }
+
+#if UNITY_IOS
+        await RealAppleSignIn();
+#else
+        Debug.LogWarning("Apple Sign-In доступен только на iOS");
+        OnLoginFailed?.Invoke("Apple Sign-In доступен только на iOS");
+#endif
     }
 
     /// <summary>
@@ -78,27 +114,136 @@ public class AuthenticationManager : MonoBehaviour
     /// </summary>
     public void SignOut()
     {
-        Debug.Log("🚪 Выход из аккаунта");
+        Debug.Log("Выход из аккаунта");
+
+        // Выход из Firebase
+        if (firebaseAuth != null)
+        {
+            firebaseAuth.SignOut();
+        }
+
+        // В новой версии Google Play Games SDK нет метода SignOut
+        // Пользователь остается залогиненным в Google Play Games
 
         currentUser = null;
+        firebaseUser = null;
         isAuthenticated = false;
 
         OnLogoutSuccess?.Invoke();
     }
 
-    // ========== ТЕСТОВЫЕ МЕТОДЫ (симуляция) ==========
+    // ========== РЕАЛЬНАЯ АВТОРИЗАЦИЯ ==========
+
+#if UNITY_ANDROID
+    private async Task RealGoogleSignIn()
+    {
+        var tcs = new TaskCompletionSource<bool>();
+
+        // Шаг 1: Авторизация в Google Play Games
+        PlayGamesPlatform.Instance.Authenticate((status) =>
+        {
+            if (status == GooglePlayGames.BasicApi.SignInStatus.Success)
+            {
+                Debug.Log("Google Play Games: вход успешен");
+                tcs.SetResult(true);
+            }
+            else
+            {
+                Debug.LogError($"Google Play Games: ошибка входа - {status}");
+                tcs.SetResult(false);
+            }
+        });
+
+        bool gpgSuccess = await tcs.Task;
+
+        if (!gpgSuccess)
+        {
+            OnLoginFailed?.Invoke("Не удалось войти в Google Play Games");
+            return;
+        }
+
+        // Шаг 2: Получаем Server Auth Code для Firebase
+        var authCodeTcs = new TaskCompletionSource<string>();
+
+        PlayGamesPlatform.Instance.RequestServerSideAccess(false, (authCode) =>
+        {
+            authCodeTcs.SetResult(authCode);
+        });
+
+        string serverAuthCode = await authCodeTcs.Task;
+
+        if (string.IsNullOrEmpty(serverAuthCode))
+        {
+            // Если не получили auth code, используем данные из Google Play Games напрямую
+            Debug.LogWarning("Не удалось получить Server Auth Code, используем локальные данные");
+
+            string odlname = PlayGamesPlatform.Instance.GetUserDisplayName();
+            string odl = PlayGamesPlatform.Instance.GetUserId();
+
+            currentUser = new UserData
+            {
+                userId = odl,
+                userName = odlname,
+                email = null,
+                provider = AuthProvider.Google,
+                avatarUrl = PlayGamesPlatform.Instance.GetUserImageUrl()
+            };
+
+            isAuthenticated = true;
+            Debug.Log($"Вход успешен (без Firebase): {currentUser.userName}");
+            OnLoginSuccess?.Invoke(currentUser);
+            return;
+        }
+
+        // Шаг 3: Авторизация в Firebase с auth code
+        try
+        {
+            Credential credential = PlayGamesAuthProvider.GetCredential(serverAuthCode);
+            firebaseUser = await firebaseAuth.SignInWithCredentialAsync(credential);
+
+            currentUser = new UserData
+            {
+                userId = firebaseUser.UserId,
+                userName = firebaseUser.DisplayName ?? PlayGamesPlatform.Instance.GetUserDisplayName(),
+                email = firebaseUser.Email,
+                provider = AuthProvider.Google,
+                avatarUrl = firebaseUser.PhotoUrl?.ToString()
+            };
+
+            isAuthenticated = true;
+            Debug.Log($"Firebase вход успешен: {currentUser.userName} (ID: {currentUser.userId})");
+            OnLoginSuccess?.Invoke(currentUser);
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Firebase авторизация ошибка: {e.Message}");
+            OnLoginFailed?.Invoke($"Firebase ошибка: {e.Message}");
+        }
+    }
+#endif
+
+#if UNITY_IOS
+    private async Task RealAppleSignIn()
+    {
+        // TODO: Реализовать Apple Sign-In когда будет нужно
+        // Требуется пакет: com.unity.signin.apple
+        Debug.LogWarning("Apple Sign-In не реализован");
+        OnLoginFailed?.Invoke("Apple Sign-In не реализован");
+        await Task.CompletedTask;
+    }
+#endif
+
+    // ========== ТЕСТОВЫЕ МЕТОДЫ ==========
 
     private async Task SimulateGoogleSignIn()
     {
-        // Симулируем задержку авторизации
         await Task.Delay(TimeSpan.FromSeconds(simulatedDelay));
 
-        // Симулируем успешный вход
-        if (UnityEngine.Random.value > 0.1f) // 90% успеха
+        if (UnityEngine.Random.value > 0.1f)
         {
             currentUser = new UserData
             {
-                userId = "google_" + Guid.NewGuid().ToString().Substring(0, 8),
+                userId = "test_google_" + Guid.NewGuid().ToString().Substring(0, 8),
                 userName = "Test User (Google)",
                 email = "testuser@gmail.com",
                 provider = AuthProvider.Google,
@@ -106,27 +251,24 @@ public class AuthenticationManager : MonoBehaviour
             };
 
             isAuthenticated = true;
-            Debug.Log($"✅ Вход через Google успешен! User: {currentUser.userName}");
+            Debug.Log($"[TEST] Вход через Google успешен: {currentUser.userName}");
             OnLoginSuccess?.Invoke(currentUser);
         }
         else
         {
-            Debug.LogWarning("❌ Ошибка входа через Google");
-            OnLoginFailed?.Invoke("Не удалось войти через Google");
+            OnLoginFailed?.Invoke("Тестовая ошибка входа");
         }
     }
 
     private async Task SimulateAppleSignIn()
     {
-        // Симулируем задержку авторизации
         await Task.Delay(TimeSpan.FromSeconds(simulatedDelay));
 
-        // Симулируем успешный вход
-        if (UnityEngine.Random.value > 0.1f) // 90% успеха
+        if (UnityEngine.Random.value > 0.1f)
         {
             currentUser = new UserData
             {
-                userId = "apple_" + Guid.NewGuid().ToString().Substring(0, 8),
+                userId = "test_apple_" + Guid.NewGuid().ToString().Substring(0, 8),
                 userName = "Test User (Apple)",
                 email = "testuser@icloud.com",
                 provider = AuthProvider.Apple,
@@ -134,104 +276,36 @@ public class AuthenticationManager : MonoBehaviour
             };
 
             isAuthenticated = true;
-            Debug.Log($"✅ Вход через Apple успешен! User: {currentUser.userName}");
+            Debug.Log($"[TEST] Вход через Apple успешен: {currentUser.userName}");
             OnLoginSuccess?.Invoke(currentUser);
         }
         else
         {
-            Debug.LogWarning("❌ Ошибка входа через Apple");
-            OnLoginFailed?.Invoke("Не удалось войти через Apple");
+            OnLoginFailed?.Invoke("Тестовая ошибка входа");
         }
-    }
-
-    // ========== РЕАЛЬНЫЕ МЕТОДЫ (для продакшена) ==========
-
-    private void RealGoogleSignIn()
-    {
-        Debug.LogWarning("⚠️ Реальная авторизация Google не настроена");
-        
-        // TODO: Раскомментируйте когда настроите Google Play Games Services
-        /*
-        if (GooglePlayGamesAuth.Instance != null)
-        {
-            GooglePlayGamesAuth.Instance.Authenticate();
-            GooglePlayGamesAuth.Instance.OnAuthenticationComplete += (success) =>
-            {
-                if (success)
-                {
-                    var userInfo = GooglePlayGamesAuth.Instance.GetUserInfo();
-                    currentUser = new UserData
-                    {
-                        userId = userInfo.id,
-                        userName = userInfo.userName,
-                        email = null,
-                        provider = AuthProvider.Google,
-                        avatarUrl = null
-                    };
-                    isAuthenticated = true;
-                    OnLoginSuccess?.Invoke(currentUser);
-                }
-                else
-                {
-                    OnLoginFailed?.Invoke("Google authentication failed");
-                }
-            };
-        }
-        */
-
-        // Временная заглушка
-        OnLoginFailed?.Invoke("Google авторизация не настроена. Включите Test Mode.");
-    }
-
-    private void RealAppleSignIn()
-    {
-        Debug.LogWarning("⚠️ Реальная авторизация Apple не настроена");
-
-        // TODO: Раскомментируйте когда настроите Apple Sign-In
-        /*
-        #if UNITY_IOS
-        if (AppleAuthManager.IsCurrentPlatformSupported)
-        {
-            var loginArgs = new AppleAuthLoginArgs(
-                LoginOptions.IncludeEmail | LoginOptions.IncludeFullName);
-
-            appleAuthManager.LoginWithAppleId(
-                loginArgs,
-                credential =>
-                {
-                    var appleIdCredential = credential as IAppleIDCredential;
-                    currentUser = new UserData
-                    {
-                        userId = appleIdCredential.User,
-                        userName = appleIdCredential.FullName?.GivenName ?? "Apple User",
-                        email = appleIdCredential.Email,
-                        provider = AuthProvider.Apple,
-                        avatarUrl = null
-                    };
-                    isAuthenticated = true;
-                    OnLoginSuccess?.Invoke(currentUser);
-                },
-                error =>
-                {
-                    OnLoginFailed?.Invoke($"Apple authentication failed: {error}");
-                });
-        }
-        #endif
-        */
-
-        // Временная заглушка
-        OnLoginFailed?.Invoke("Apple авторизация не настроена. Включите Test Mode.");
     }
 
     // ========== ПУБЛИЧНЫЕ СВОЙСТВА ==========
 
     public bool IsAuthenticated => isAuthenticated;
     public UserData CurrentUser => currentUser;
+    public FirebaseUser FirebaseUser => firebaseUser;
     public bool IsTestMode => testMode;
 
     /// <summary>
-    /// Включить/выключить тестовый режим
+    /// Получить Firebase User ID (для сохранения данных)
     /// </summary>
+    public string GetUserId()
+    {
+        if (firebaseUser != null)
+            return firebaseUser.UserId;
+
+        if (currentUser != null)
+            return currentUser.userId;
+
+        return null;
+    }
+
     public void SetTestMode(bool enabled)
     {
         testMode = enabled;

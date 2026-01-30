@@ -1,0 +1,16 @@
+# Google Play Games Services
+-keep class com.google.android.gms.games.** { *; }
+-keep class com.google.android.gms.games.v2.** { *; }
+-keep class com.google.android.gms.auth.** { *; }
+-keep class com.google.android.gms.common.** { *; }
+-keep class com.google.games.** { *; }
+
+# Firebase
+-keep class com.google.firebase.** { *; }
+
+# Unity
+-keep class com.unity3d.** { *; }
+
+# Prevent stripping
+-dontwarn com.google.android.gms.**
+-dontwarn com.google.firebase.**

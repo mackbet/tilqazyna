@@ -204,6 +204,13 @@ public class GameManager : MonoBehaviour
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+
+        // Отписываемся от событий авторизации
+        if (AuthenticationManager.Instance != null)
+        {
+            AuthenticationManager.Instance.OnLoginSuccess -= OnAuthenticationSuccess;
+            AuthenticationManager.Instance.OnLoginFailed -= OnAuthenticationFailed;
+        }
     }
 
     private void PutToDontDestroyOnLoad(GameObject go)
@@ -233,6 +240,69 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        // Подписываемся на события авторизации
+        if (AuthenticationManager.Instance != null)
+        {
+            AuthenticationManager.Instance.OnLoginSuccess += OnAuthenticationSuccess;
+            AuthenticationManager.Instance.OnLoginFailed += OnAuthenticationFailed;
+
+            // Если уже авторизован - продолжаем
+            if (AuthenticationManager.Instance.IsAuthenticated)
+            {
+                OnAuthenticationSuccess(AuthenticationManager.Instance.CurrentUser);
+            }
+            // Иначе ждем авторизацию (AuthenticationManager сам запустит SignIn)
+        }
+        else
+        {
+            // Fallback на старую логику если AuthenticationManager не настроен
+            StartGameLegacy();
+        }
+    }
+
+    private async void OnAuthenticationSuccess(UserData userData)
+    {
+        Debug.Log($"Авторизация успешна: {userData.userName}");
+
+        // Проверяем есть ли данные пользователя в Firebase
+        bool userExists = await _realtimeManager.UserExists();
+
+        if (userExists)
+        {
+            // Загружаем данные пользователя
+            var userModel = await _realtimeManager.ReadCurrentUserData();
+            if (userModel != null)
+            {
+                _stateManager.PlayerName = userModel.Name;
+                _stateManager.CharacterSex = userModel.GetSexAsEnum();
+                _stateManager.PointsAmount = userModel.Points;
+                // Можно добавить загрузку других данных
+
+                OpenNewScene(_stateManager.City);
+            }
+            else
+            {
+                // Данные не загрузились - показываем экран создания персонажа
+                OpenNewScene(GameScene.ChooseCharacter);
+            }
+        }
+        else
+        {
+            // Новый пользователь - показываем экран создания персонажа
+            OpenNewScene(GameScene.ChooseCharacter);
+        }
+    }
+
+    private void OnAuthenticationFailed(string error)
+    {
+        Debug.LogWarning($"Ошибка авторизации: {error}");
+        // Показываем экран авторизации или используем гостевой режим
+        StartGameLegacy();
+    }
+
+    private void StartGameLegacy()
+    {
+        // Старая логика без авторизации
         if (string.IsNullOrEmpty(_stateManager.PlayerName))
         {
             OpenNewScene(GameScene.ChooseCharacter);

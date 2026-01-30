@@ -1,11 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_android_client_id,@string/default_web_client_id">
-  <string name="gcm_defaultSenderId" translatable="false">1017084335292</string>
-  <string name="google_storage_bucket" translatable="false">steppegame-a41f5.firebasestorage.app</string>
-  <string name="project_id" translatable="false">steppegame-a41f5</string>
-  <string name="google_api_key" translatable="false">AIzaSyCu8MRmbqnam1I-9QQSAotH4hnnuL85Ku0</string>
-  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCu8MRmbqnam1I-9QQSAotH4hnnuL85Ku0</string>
-  <string name="google_app_id" translatable="false">1:1017084335292:android:9d4cef484533bf21a3ecb9</string>
-  <string name="default_android_client_id" translatable="false">1017084335292-cagpk71envmerfht2c988hmvbg1g1jfn.apps.googleusercontent.com</string>
-  <string name="default_web_client_id" translatable="false">1017084335292-h9hnsfu3hfrtcbslrbcd2345luakp1tu.apps.googleusercontent.com</string>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id">
+  <string name="gcm_defaultSenderId" translatable="false">55329493374</string>
+  <string name="google_storage_bucket" translatable="false">steppe-games.firebasestorage.app</string>
+  <string name="project_id" translatable="false">steppe-games</string>
+  <string name="google_api_key" translatable="false">AIzaSyDXF1AeZy3R-fQWuOE9-nzfvFx5hKRLS1Y</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDXF1AeZy3R-fQWuOE9-nzfvFx5hKRLS1Y</string>
+  <string name="google_app_id" translatable="false">1:55329493374:android:3153a57e5c8bc1affd632f</string>
 </resources>
