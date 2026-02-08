@@ -30,6 +30,31 @@ public class UIPanelFinish : UIPanel
         StateManager.Instance.CurrencyAmount += coins;
         StateManager.Instance.PointsAmount += points;
         StateManager.Instance.ExperienceAmount += exp;
+
+        // Сохраняем данные и отправляем в лидерборд
+        SaveAndSubmit();
+    }
+
+    private async void SaveAndSubmit()
+    {
+        // Сохраняем данные в Cloud Save (лидерборд обновляется автоматически)
+        var realtimeManager = GetRealtimeManager();
+        if (realtimeManager != null)
+        {
+            await realtimeManager.SaveUserData(
+                StateManager.Instance.PlayerName,
+                StateManager.Instance.CharacterSex,
+                StateManager.Instance.ExperienceAmount,
+                StateManager.Instance.PointsAmount
+            );
+
+            await realtimeManager.SaveCoins(StateManager.Instance.CurrencyAmount);
+        }
+    }
+
+    private RealtimeManager GetRealtimeManager()
+    {
+        return RealtimeManager.Instance;
     }
 
     public void SetTitle(string title)

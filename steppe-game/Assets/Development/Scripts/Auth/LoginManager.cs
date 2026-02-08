@@ -1,9 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System;
 using System.Threading.Tasks;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
-using Unity.Services.Authentication.PlayerAccounts;
-
 
 #if UNITY_ANDROID
 using GooglePlayGames;
@@ -13,250 +13,437 @@ using GooglePlayGames.BasicApi;
 
 public class LoginManager : MonoBehaviour
 {
-    private async void Awake()
+    public static LoginManager Instance { get; private set; }
+
+    #region Настройки
+    [Header("Настройки сцены")]
+    [SerializeField] private string gameSceneName = "GameScene";
+    [SerializeField] private bool autoLoadSceneOnLogin = true;
+    #endregion
+
+    #region События
+    public event Action<string> OnLoginSuccess;  // передаёт playerId
+    public event Action<string> OnLoginFailed;
+    public event Action OnLogoutSuccess;
+    #endregion
+
+    #region Состояние
+    private static bool s_Activated = false;
+    private string m_GooglePlayGamesToken;
+    private bool isAuthenticated = false;
+    #endregion
+
+    #region Unity Lifecycle
+    private void Awake()
     {
-
-#if UNITY_ANDROID
-        PlayGamesPlatform.DebugLogEnabled = true;
-        PlayGamesPlatform.Activate();
-        LoginGooglePlayGames();
-#endif
-
-        if (UnityServices.State == ServicesInitializationState.Uninitialized)
+        if (Instance == null)
         {
-            Debug.Log("Services Initializing");
-            await UnityServices.InitializeAsync();
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-
-        PlayerAccountService.Instance.SignedIn += SignInOrLinkWithUnity;
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
     }
 
     private async void Start()
     {
-        if (!AuthenticationService.Instance.SessionTokenExists)
-        {
-            Debug.Log("Session Token not found");
-            return;
-        }
+        await InitializeUnityServices();
+        InitializeGooglePlayGames();
 
-        Debug.Log("Returning player signing in...");
-        await SignInAnonymouslyAsync();
+        // Пробуем автовход только через Google Play Games (не гостевой)
+        // Если не получится - покажется экран выбора авторизации
+        TryAutoLoginGooglePlayGames();
     }
+    #endregion
 
-    public async void StartAnonymousSignIn()
+    #region Инициализация
+    private async Task InitializeUnityServices()
     {
-        await SignInAnonymouslyAsync();
+        if (UnityServices.State == ServicesInitializationState.Uninitialized)
+        {
+            Debug.Log("[Auth] Инициализация Unity Services...");
+            await UnityServices.InitializeAsync();
+            Debug.Log("[Auth] Unity Services инициализированы");
+        }
     }
 
-    private async Task SignInAnonymouslyAsync()
+    private void InitializeGooglePlayGames()
     {
-        try
-        {
-            await AuthenticationService.Instance.SignInAnonymouslyAsync();
-            Debug.Log("Sign in anonymously succeeded!");
-
-            // Shows how to get the playerID
-            Debug.Log($"PlayerID: {AuthenticationService.Instance.PlayerId}");
-
-        }
-        catch (AuthenticationException ex)
-        {
-            // Compare error code to AuthenticationErrorCodes
-            // Notify the player with the proper error message
-            Debug.LogException(ex);
-        }
-        catch (RequestFailedException ex)
-        {
-            // Compare error code to CommonErrorCodes
-            // Notify the player with the proper error message
-            Debug.LogException(ex);
-        }
-    }
-
-    public async void StartUnitySignInAsync()
-    {
-        if (PlayerAccountService.Instance.IsSignedIn)
-        {
-            SignInOrLinkWithUnity();
-            return;
-        }
-
-        try
-        {
-            await PlayerAccountService.Instance.StartSignInAsync();
-        }
-        catch (RequestFailedException ex)
-        {
-            Debug.LogException(ex);
-        }
-    }
-
-    private async void SignInOrLinkWithUnity()
-    {
-        try
-        {
-            // 1. Player is not yet authenticated, signing up with Unity
-            if (!AuthenticationService.Instance.IsSignedIn)
-            {
-                Debug.Log("Signing up with Unity Player Account...");
-                await AuthenticationService.Instance.SignInWithUnityAsync(PlayerAccountService.Instance.AccessToken);
-                Debug.Log("Successfully signed up with Unity Player Account");
-                return;
-            }
-
-            // 2. Player is authenticated, but does not yet have a Unity ID, so let's link
-            if (!HasUnityID())
-            {
-                Debug.Log("Linking anonymous account to Unity...");
-                await LinkWithUnityAsync(PlayerAccountService.Instance.AccessToken);
-                Debug.Log("Successfully linked anonymous account!");
-                return;
-            }
-
-            // 3. Player has authentication and a Unity ID
-            Debug.Log("Player is already signed in to their Unity Player Account");
-        }
-        catch (RequestFailedException ex)
-        {
-            Debug.LogException(ex);
-        }
-    }
-
-    private bool HasUnityID()
-    {
-        return AuthenticationService.Instance.PlayerInfo.GetUnityId() != null;
-    }
-
-    private async Task LinkWithUnityAsync(string accessToken)
-    {
-        try
-        {
-            await AuthenticationService.Instance.LinkWithUnityAsync(accessToken);
-            Debug.Log("Link is successful.");
-        }
-        catch (AuthenticationException ex) when (ex.ErrorCode == AuthenticationErrorCodes.AccountAlreadyLinked)
-        {
-            // Prompt the player with an error message.
-            Debug.LogError("This user is already linked with another account. Log in instead.");
-        }
-        catch (AuthenticationException ex)
-        {
-            // Compare error code to AuthenticationErrorCodes
-            // Notify the player with the proper error message
-            Debug.LogException(ex);
-        }
-        catch (RequestFailedException ex)
-        {
-            // Compare error code to CommonErrorCodes
-            // Notify the player with the proper error message
-            Debug.LogException(ex);
-        }
-    }
-
 #if UNITY_ANDROID
-    private string m_GooglePlayGamesToken;
+        if (!s_Activated)
+        {
+            PlayGamesPlatform.DebugLogEnabled = true;
+            PlayGamesPlatform.Activate();
+            s_Activated = true;
+            Debug.Log("[Auth] Google Play Games активирован");
+        }
+#endif
+    }
+    #endregion
 
-    public void LoginGooglePlayGames()
+    #region Автоматический вход (только для не-гостевых аккаунтов)
+    /// <summary>
+    /// Пробует автоматический вход через Google Play Games (только Android).
+    /// Гостевой вход НЕ восстанавливается автоматически - пользователь должен выбрать.
+    /// </summary>
+    private void TryAutoLoginGooglePlayGames()
     {
+#if UNITY_ANDROID
+        Debug.Log("[Auth] Попытка автоматического входа через Google Play Games...");
+
         PlayGamesPlatform.Instance.Authenticate((status) =>
         {
             if (status == SignInStatus.Success)
             {
-                Debug.Log("Login with Google Play games successful.");
+                Debug.Log("[Auth] ========== GOOGLE PLAY GAMES СЕССИЯ ==========");
+                Debug.Log($"[Auth] ID игрока: {PlayGamesPlatform.Instance.GetUserId()}");
+                Debug.Log($"[Auth] Имя: {PlayGamesPlatform.Instance.GetUserDisplayName()}");
+                Debug.Log("[Auth] ===============================================");
 
                 PlayGamesPlatform.Instance.RequestServerSideAccess(true, code =>
                 {
-                    Debug.Log("Authorization code: " + code);
                     m_GooglePlayGamesToken = code;
-                    // This token serves as an example to be used for SignInWithGooglePlayGames
+                    // При автовходе НЕ пытаемся привязать гостевой - пользователь уже входил через Google
+                    SignInWithGooglePlayGames(tryLinkGuest: false);
                 });
             }
             else
             {
-                Debug.Log($"Google Play Games login unsuccessful, status: {status}");
+                Debug.Log($"[Auth] Автовход Google Play Games не удался (статус: {status}).");
+                Debug.Log("[Auth] Ожидание выбора способа авторизации (гостевой или Google).");
+            }
+        });
+#else
+        Debug.Log("[Auth] Платформа не Android. Ожидание выбора способа авторизации.");
+#endif
+    }
+    #endregion
+
+    #region Google Play Games
+#if UNITY_ANDROID
+    /// <summary>
+    /// Автоматический вход через Google Play Games (без диалога выбора аккаунта).
+    /// </summary>
+    public void LoginGooglePlayGames()
+    {
+        Debug.Log("[Auth] Попытка входа через Google Play Games...");
+
+        PlayGamesPlatform.Instance.Authenticate((status) =>
+        {
+            if (status == SignInStatus.Success)
+            {
+                Debug.Log("[Auth] Google Play Games: вход успешен");
+                Debug.Log($"[Auth] Имя: {PlayGamesPlatform.Instance.GetUserDisplayName()}");
+
+                PlayGamesPlatform.Instance.RequestServerSideAccess(true, code =>
+                {
+                    Debug.Log("[Auth] Код авторизации получен");
+                    m_GooglePlayGamesToken = code;
+                    // При ручном входе пытаемся привязать гостевой аккаунт если он есть
+                    SignInWithGooglePlayGames(tryLinkGuest: true);
+                });
+            }
+            else
+            {
+                Debug.LogWarning($"[Auth] Вход не удался. Статус: {status}");
+                OnLoginFailed?.Invoke($"Google Play Games вход не удался: {status}");
             }
         });
     }
 
-    public void StartSignInWithGooglePlayGames()
+    /// <summary>
+    /// Ручной вход с диалогом выбора аккаунта Google Play Games.
+    /// </summary>
+    public void ManuallyLoginGooglePlayGames()
     {
-        if (!PlayGamesPlatform.Instance.IsAuthenticated())
-        {
-            Debug.LogWarning("Not yet authenticated with Google Play Games -- attempting login again");
-            LoginGooglePlayGames();
-            return;
-        }
+        Debug.Log("[Auth] Открытие диалога выбора аккаунта Google Play Games...");
 
-        SignInOrLinkWithGooglePlayGames();
+        PlayGamesPlatform.Instance.ManuallyAuthenticate((status) =>
+        {
+            if (status == SignInStatus.Success)
+            {
+                Debug.Log("[Auth] ========== ВХОД ВЫПОЛНЕН УСПЕШНО ==========");
+                Debug.Log($"[Auth] ID игрока: {PlayGamesPlatform.Instance.GetUserId()}");
+                Debug.Log($"[Auth] Имя: {PlayGamesPlatform.Instance.GetUserDisplayName()}");
+                Debug.Log($"[Auth] Аватар: {PlayGamesPlatform.Instance.GetUserImageUrl()}");
+                Debug.Log("[Auth] ============================================");
+
+                PlayGamesPlatform.Instance.RequestServerSideAccess(true, code =>
+                {
+                    Debug.Log("[Auth] Код авторизации получен");
+                    m_GooglePlayGamesToken = code;
+                    // При ручном входе пытаемся привязать гостевой аккаунт если он есть
+                    SignInWithGooglePlayGames(tryLinkGuest: true);
+                });
+            }
+            else
+            {
+                Debug.LogWarning($"[Auth] Вход отменён или не удался. Статус: {status}");
+                OnLoginFailed?.Invoke($"Вход отменён: {status}");
+            }
+        });
+    }
+#endif
+    #endregion
+
+    #region Гостевой вход
+    /// <summary>
+    /// Гостевой (анонимный) вход без привязки к аккаунту.
+    /// Если уже есть сохранённая гостевая сессия - восстанавливает её.
+    /// Если нет - создаёт новый гостевой аккаунт.
+    /// </summary>
+    public async void SignInAsGuest()
+    {
+        Debug.Log("[Auth] Гостевой вход...");
+
+        try
+        {
+            // Если уже авторизован - используем текущую сессию
+            if (AuthenticationService.Instance.IsSignedIn)
+            {
+                Debug.Log("[Auth] Пользователь уже авторизован");
+                isAuthenticated = true;
+                string odl = AuthenticationService.Instance.PlayerId;
+                OnLoginSuccess?.Invoke(odl);
+
+                if (autoLoadSceneOnLogin)
+                {
+                    LoadGameScene();
+                }
+                return;
+            }
+
+            // Пробуем войти (если есть сохранённый токен - восстановит сессию)
+            await AuthenticationService.Instance.SignInAnonymouslyAsync();
+
+            isAuthenticated = true;
+            string odl2 = AuthenticationService.Instance.PlayerId;
+
+            Debug.Log("[Auth] ========== ГОСТЕВОЙ ВХОД УСПЕШЕН ==========");
+            Debug.Log($"[Auth] Unity Player ID: {odl2}");
+            Debug.Log("[Auth] ============================================");
+
+            OnLoginSuccess?.Invoke(odl2);
+
+            if (autoLoadSceneOnLogin)
+            {
+                LoadGameScene();
+            }
+        }
+        catch (Exception ex) when (ex is AuthenticationException || ex is RequestFailedException)
+        {
+            Debug.LogWarning($"[Auth] Ошибка гостевого входа: {ex.Message}");
+
+            // Если есть токен и ошибка связана с невалидным токеном - очищаем и пробуем снова
+            if (AuthenticationService.Instance.SessionTokenExists)
+            {
+                Debug.Log("[Auth] Очистка невалидного токена и повторная попытка...");
+                AuthenticationService.Instance.ClearSessionToken();
+
+                await RetryGuestSignIn();
+                return;
+            }
+
+            OnLoginFailed?.Invoke(ex.Message);
+        }
     }
 
-    private async void SignInOrLinkWithGooglePlayGames()
+    /// <summary>
+    /// Повторная попытка гостевого входа после очистки токена
+    /// </summary>
+    private async Task RetryGuestSignIn()
+    {
+        try
+        {
+            await AuthenticationService.Instance.SignInAnonymouslyAsync();
+
+            isAuthenticated = true;
+            string odl = AuthenticationService.Instance.PlayerId;
+
+            Debug.Log("[Auth] ========== НОВЫЙ ГОСТЕВОЙ АККАУНТ ==========");
+            Debug.Log($"[Auth] Unity Player ID: {odl}");
+            Debug.Log("[Auth] =============================================");
+
+            OnLoginSuccess?.Invoke(odl);
+
+            if (autoLoadSceneOnLogin)
+            {
+                LoadGameScene();
+            }
+        }
+        catch (Exception retryEx)
+        {
+            Debug.LogError($"[Auth] Повторная попытка не удалась: {retryEx.Message}");
+            OnLoginFailed?.Invoke(retryEx.Message);
+        }
+    }
+    #endregion
+
+    #region Unity Authentication
+    /// <summary>
+    /// Вход в Unity Services через Google Play Games.
+    /// </summary>
+    /// <param name="tryLinkGuest">Пытаться ли привязать гостевой аккаунт к Google (true при ручном входе, false при автовходе)</param>
+    private async void SignInWithGooglePlayGames(bool tryLinkGuest)
     {
         if (string.IsNullOrEmpty(m_GooglePlayGamesToken))
         {
-            Debug.LogWarning("Authorization code is null or empty!");
+            Debug.LogWarning("[Auth] Код авторизации пустой!");
+            OnLoginFailed?.Invoke("Код авторизации пустой");
             return;
         }
 
-        if (!AuthenticationService.Instance.IsSignedIn)
-        {
-            await SignInWithGooglePlayGamesAsync(m_GooglePlayGamesToken);
-        }
-        else
-        {
-            await LinkWithGooglePlayGamesAsync(m_GooglePlayGamesToken);
-        }
-    }
-
-    private async Task SignInWithGooglePlayGamesAsync(string authCode)
-    {
         try
         {
-            await AuthenticationService.Instance.SignInWithGooglePlayGamesAsync(authCode);
-            Debug.Log("Sign in with Google Play Games is successful.");
-        }
+            bool hasGuestSession = AuthenticationService.Instance.SessionTokenExists;
 
+            // Пытаемся привязать гостевой аккаунт только если:
+            // 1. tryLinkGuest = true (ручной вход, не автовход)
+            // 2. Есть сохранённая сессия
+            // 3. Ещё не авторизованы
+            if (tryLinkGuest && hasGuestSession && !AuthenticationService.Instance.IsSignedIn)
+            {
+                Debug.Log("[Auth] Найден гостевой аккаунт. Пытаемся привязать к Google...");
+
+                try
+                {
+                    // Входим в гостевой аккаунт
+                    await AuthenticationService.Instance.SignInAnonymouslyAsync();
+                    string guestId = AuthenticationService.Instance.PlayerId;
+                    Debug.Log($"[Auth] Вошли в гостевой аккаунт: {guestId}");
+
+                    // Пробуем привязать Google к гостевому аккаунту
+                    await AuthenticationService.Instance.LinkWithGooglePlayGamesAsync(m_GooglePlayGamesToken);
+                    Debug.Log("[Auth] Гостевой аккаунт успешно привязан к Google Play Games!");
+                }
+                catch (AuthenticationException linkEx)
+                {
+                    // Привязка не удалась - возможно Google уже привязан к другому аккаунту
+                    Debug.LogWarning($"[Auth] Не удалось привязать гостевой аккаунт: {linkEx.Message}");
+                    Debug.Log("[Auth] Выходим из гостевого и входим через Google...");
+
+                    // Выходим из гостевого
+                    AuthenticationService.Instance.SignOut();
+                    // Очищаем гостевой токен
+                    AuthenticationService.Instance.ClearSessionToken();
+
+                    // Входим напрямую через Google
+                    await AuthenticationService.Instance.SignInWithGooglePlayGamesAsync(m_GooglePlayGamesToken);
+                }
+            }
+            else if (!AuthenticationService.Instance.IsSignedIn)
+            {
+                // Просто входим через Google (автовход или нет гостевой сессии)
+                Debug.Log("[Auth] Вход в Unity Services через Google Play Games...");
+                await AuthenticationService.Instance.SignInWithGooglePlayGamesAsync(m_GooglePlayGamesToken);
+            }
+
+            isAuthenticated = true;
+            string odl = AuthenticationService.Instance.PlayerId;
+
+            Debug.Log("[Auth] ========== UNITY AUTH УСПЕШНО ==========");
+            Debug.Log($"[Auth] Unity Player ID: {odl}");
+            Debug.Log($"[Auth] Гостевой: {IsGuest}");
+            Debug.Log("[Auth] =========================================");
+
+            OnLoginSuccess?.Invoke(odl);
+
+            if (autoLoadSceneOnLogin)
+            {
+                LoadGameScene();
+            }
+        }
         catch (AuthenticationException ex)
         {
-            // Compare error code to AuthenticationErrorCodes
-            // Notify the player with the proper error message
-            Debug.LogException(ex);
+            Debug.LogError($"[Auth] Ошибка аутентификации: {ex.Message}");
+            OnLoginFailed?.Invoke(ex.Message);
         }
-
         catch (RequestFailedException ex)
         {
-            // Compare error code to CommonErrorCodes
-            // Notify the player with the proper error message
-            Debug.LogException(ex);
+            Debug.LogError($"[Auth] Ошибка запроса: {ex.Message}");
+            OnLoginFailed?.Invoke(ex.Message);
         }
     }
+    #endregion
 
-    private async Task LinkWithGooglePlayGamesAsync(string authCode)
+    #region Выход
+    public void SignOut()
     {
-        try
-        {
-            await AuthenticationService.Instance.LinkWithGooglePlayGamesAsync(authCode);
-            Debug.Log("Link is successful.");
-        }
-        catch (AuthenticationException ex) when (ex.ErrorCode == AuthenticationErrorCodes.AccountAlreadyLinked)
-        {
-            // Prompt the player with an error message.
-            Debug.LogWarning("This user is already linked with another account. Log in instead.");
-        }
+        Debug.Log("[Auth] Выход из аккаунта...");
 
-        catch (AuthenticationException ex)
-        {
-            // Compare error code to AuthenticationErrorCodes
-            // Notify the player with the proper error message
-            Debug.LogException(ex);
-        }
-        catch (RequestFailedException ex)
-        {
-            // Compare error code to CommonErrorCodes
-            // Notify the player with the proper error message
-            Debug.LogException(ex);
-        }
+        AuthenticationService.Instance.SignOut();
+
+        isAuthenticated = false;
+
+        Debug.Log("[Auth] Выход выполнен");
+        OnLogoutSuccess?.Invoke();
+    }
+    #endregion
+
+    #region Загрузка сцены
+    /// <summary>
+    /// Загрузить игровую сцену
+    /// </summary>
+    public void LoadGameScene()
+    {
+        Debug.Log($"[Auth] Загрузка сцены: {gameSceneName}");
+        SceneManager.LoadScene(gameSceneName);
     }
 
+    /// <summary>
+    /// Загрузить указанную сцену
+    /// </summary>
+    public void LoadScene(string sceneName)
+    {
+        Debug.Log($"[Auth] Загрузка сцены: {sceneName}");
+        SceneManager.LoadScene(sceneName);
+    }
+    #endregion
+
+    #region Публичные свойства и методы
+    public bool IsAuthenticated => isAuthenticated && AuthenticationService.Instance.IsSignedIn;
+
+    /// <summary>
+    /// Проверить, гостевой ли это аккаунт
+    /// </summary>
+    public bool IsGuest => AuthenticationService.Instance.IsSignedIn && AuthenticationService.Instance.PlayerInfo?.Identities?.Count == 0;
+
+    /// <summary>
+    /// Получить Unity Player ID для сохранения данных
+    /// </summary>
+    public string GetUserId()
+    {
+        if (AuthenticationService.Instance.IsSignedIn)
+            return AuthenticationService.Instance.PlayerId;
+
+        return null;
+    }
+
+    /// <summary>
+    /// Получить имя пользователя из Google Play Games
+    /// </summary>
+    public string GetUserName()
+    {
+#if UNITY_ANDROID
+        if (PlayGamesPlatform.Instance.IsAuthenticated())
+            return PlayGamesPlatform.Instance.GetUserDisplayName();
 #endif
+        return null;
+    }
+
+    /// <summary>
+    /// Получить URL аватара из Google Play Games
+    /// </summary>
+    public string GetAvatarUrl()
+    {
+#if UNITY_ANDROID
+        if (PlayGamesPlatform.Instance.IsAuthenticated())
+            return PlayGamesPlatform.Instance.GetUserImageUrl();
+#endif
+        return null;
+    }
+    #endregion
 }

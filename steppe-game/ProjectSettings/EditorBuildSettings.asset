@@ -8,13 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Development/Scenes/LogInScene.unity
     guid: 2d6933f0e5d8d0944b438969642edcb4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Development/Scenes/GameScene.unity
     guid: f2df0fb741d2248458766650078a37bb
-  - enabled: 0
+  - enabled: 1
     path: Assets/Development/Scenes/BozokIntro.unity
     guid: e7a76c3ab62d3384c898e36bb06381aa
-  - enabled: 0
+  - enabled: 1
     path: Assets/Development/Scenes/BozokGames.unity
     guid: f250e162687b0914781bbe59fe62d524
   m_configObjects:

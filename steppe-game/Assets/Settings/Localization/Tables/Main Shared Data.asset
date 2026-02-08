@@ -3949,6 +3949,10 @@ MonoBehaviour:
     m_Key: Guest
     m_Metadata:
       m_Items: []
+  - m_Id: 155161771978170368
+    m_Key: Select the authorization method
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -17,7 +17,6 @@ public class AuthUI : MonoBehaviour
     [SerializeField] private GameObject profilePanel;
     [SerializeField] private TextMeshProUGUI userNameText;
     [SerializeField] private TextMeshProUGUI userIdText;
-    [SerializeField] private TextMeshProUGUI providerText;
     [SerializeField] private Button signOutButton;
 
     [Header("Loading")]
@@ -27,11 +26,11 @@ public class AuthUI : MonoBehaviour
     private void Start()
     {
         // Подписка на события
-        if (AuthenticationManager.Instance != null)
+        if (LoginManager.Instance != null)
         {
-            AuthenticationManager.Instance.OnLoginSuccess += OnLoginSuccess;
-            AuthenticationManager.Instance.OnLoginFailed += OnLoginFailed;
-            AuthenticationManager.Instance.OnLogoutSuccess += OnLogoutSuccess;
+            LoginManager.Instance.OnLoginSuccess += OnLoginSuccess;
+            LoginManager.Instance.OnLoginFailed += OnLoginFailed;
+            LoginManager.Instance.OnLogoutSuccess += OnLogoutSuccess;
         }
 
         // Привязка кнопок
@@ -47,11 +46,11 @@ public class AuthUI : MonoBehaviour
     private void OnDestroy()
     {
         // Отписка от событий
-        if (AuthenticationManager.Instance != null)
+        if (LoginManager.Instance != null)
         {
-            AuthenticationManager.Instance.OnLoginSuccess -= OnLoginSuccess;
-            AuthenticationManager.Instance.OnLoginFailed -= OnLoginFailed;
-            AuthenticationManager.Instance.OnLogoutSuccess -= OnLogoutSuccess;
+            LoginManager.Instance.OnLoginSuccess -= OnLoginSuccess;
+            LoginManager.Instance.OnLoginFailed -= OnLoginFailed;
+            LoginManager.Instance.OnLogoutSuccess -= OnLogoutSuccess;
         }
     }
 
@@ -61,28 +60,36 @@ public class AuthUI : MonoBehaviour
     {
         UpdateStatusText("Вход через Google...");
         ShowLoadingScreen("Авторизация через Google");
-        AuthenticationManager.Instance?.SignInWithGoogle();
+#if UNITY_ANDROID
+        LoginManager.Instance?.ManuallyLoginGooglePlayGames();
+#else
+        UpdateStatusText("Google Play Games доступен только на Android");
+        ShowLoginScreen();
+#endif
     }
 
     private void OnAppleSignInClick()
     {
         UpdateStatusText("Вход через Apple...");
         ShowLoadingScreen("Авторизация через Apple");
-        AuthenticationManager.Instance?.SignInWithApple();
+        // TODO: Реализовать Sign In with Apple для iOS
+        UpdateStatusText("Apple Sign-In пока не реализован");
+        ShowLoginScreen();
     }
 
     private void OnSignOutClick()
     {
-        AuthenticationManager.Instance?.SignOut();
+        LoginManager.Instance?.SignOut();
     }
 
     // ========== ОБРАБОТЧИКИ СОБЫТИЙ ==========
 
-    private void OnLoginSuccess(UserData userData)
+    private void OnLoginSuccess(string odl)
     {
-        Debug.Log($"UI: Успешный вход - {userData}");
-        ShowProfileScreen(userData);
-        UpdateStatusText($"Добро пожаловать, {userData.userName}!");
+        string userName = LoginManager.Instance?.GetUserName() ?? "Игрок";
+        Debug.Log($"UI: Успешный вход - {userName} (ID: {odl})");
+        ShowProfileScreen(odl, userName);
+        UpdateStatusText($"Добро пожаловать, {userName}!");
     }
 
     private void OnLoginFailed(string error)
@@ -108,21 +115,17 @@ public class AuthUI : MonoBehaviour
         loadingPanel?.SetActive(false);
     }
 
-    private void ShowProfileScreen(UserData userData)
+    private void ShowProfileScreen(string odl, string userName)
     {
         loginPanel?.SetActive(false);
         profilePanel?.SetActive(true);
         loadingPanel?.SetActive(false);
 
-        // Обновление информации о пользователе
         if (userNameText != null)
-            userNameText.text = $"Имя: {userData.userName}";
+            userNameText.text = $"Имя: {userName}";
 
         if (userIdText != null)
-            userIdText.text = $"ID: {userData.userId}";
-
-        if (providerText != null)
-            providerText.text = $"Провайдер: {userData.provider}";
+            userIdText.text = $"ID: {odl}";
     }
 
     private void ShowLoadingScreen(string message)

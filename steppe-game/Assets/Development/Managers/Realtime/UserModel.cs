@@ -1,16 +1,19 @@
 public class UserModel
 {
     public string Name { get; set; }
-    public int Level { get; set; }
+    public int Experience { get; set; }
     public int Points { get; set; }
     public int Sex { get; set; }
 
-    public UserModel(string modelName, CharacterSex modelSex, int modelLevel, int modelPoints)
+    // Уровень рассчитывается из опыта
+    public int Level => Experience / 80;
+
+    public UserModel(string name, CharacterSex sex, int experience, int points)
     {
-        Name = modelName;
-        Sex = (int)modelSex;
-        Level = modelLevel;
-        Points = modelPoints;
+        Name = name;
+        Sex = (int)sex;
+        Experience = experience;
+        Points = points;
     }
 
     public CharacterSex GetSexAsEnum()
