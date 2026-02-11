@@ -37,8 +37,10 @@ public class DragDropManager : MonoBehaviour
 
     private Dictionary<RectTransform, ObjectState> _objectStates;
     private GameObject _currentDraggedObject;
+    private RectTransform _currentDraggedRect;
     private Vector2 _dragOffset;
     private Vector2 _currentVelocity;
+    private Vector2 _targetDragPosition;
 
     private readonly HashSet<RectTransform> _lockedObjects = new();
 
@@ -74,8 +76,10 @@ public class DragDropManager : MonoBehaviour
 
         OnIngredientGrabbed?.Invoke();
         _currentDraggedObject = draggableObject;
+        _currentDraggedRect = rectTransform;
 
         _isDragging = true;
+        _currentVelocity = Vector2.zero;
 
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
             _canvasRectTransform,
@@ -84,6 +88,7 @@ public class DragDropManager : MonoBehaviour
             out var localMousePosition
         );
         _dragOffset = rectTransform.anchoredPosition - localMousePosition;
+        _targetDragPosition = rectTransform.anchoredPosition;
     }
 
     public void DragObject(RectTransform rectTransform, PointerEventData eventData)
@@ -97,13 +102,7 @@ public class DragDropManager : MonoBehaviour
             out var localMousePosition
         );
 
-        var targetPosition = localMousePosition + _dragOffset;
-        rectTransform.anchoredPosition = Vector2.SmoothDamp(
-            rectTransform.anchoredPosition,
-            targetPosition,
-            ref _currentVelocity,
-            _smoothTime
-        );
+        _targetDragPosition = localMousePosition + _dragOffset;
     }
 
     public void StopDragging(RectTransform rectTransform, PointerEventData eventData, IngredientType ingredientType)
@@ -215,6 +214,15 @@ public class DragDropManager : MonoBehaviour
                 _isDragging = false;
                 ResetAllObjects();
             }
+        }
+        else if (_isDragging && _currentDraggedRect != null && !_lockedObjects.Contains(_currentDraggedRect))
+        {
+            _currentDraggedRect.anchoredPosition = Vector2.SmoothDamp(
+                _currentDraggedRect.anchoredPosition,
+                _targetDragPosition,
+                ref _currentVelocity,
+                _smoothTime
+            );
         }
     }
 

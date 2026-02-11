@@ -143,7 +143,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 1.7.7
+  bundleVersion: 1.8.1
   preloadedAssets:
   - {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   - {fileID: 11400000, guid: 0deddc60ed864832d931a12eaf9f1422, type: 2}
@@ -180,7 +180,7 @@ PlayerSettings:
     iPhone: 81
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 177
+  AndroidBundleVersionCode: 181
   AndroidMinSdkVersion: 24
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -274,7 +274,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 2
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Work/tilqazyna.keystore
+  AndroidKeystoreName: C:/Work/Aruzhan/tilqazyna.keystore
   AndroidKeyaliasName: steppe games
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidEnableArm64MTE: 0

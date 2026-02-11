@@ -37,6 +37,12 @@ public class Dialogue : MonoBehaviour
         if (nextButton != null)
         {
             nextButton.onClick.RemoveListener(OnNextButtonClicked);
+
+            // Скрываем кнопку если перезапуск не предусмотрен
+            if (!playEveryTime)
+            {
+                nextButton.gameObject.SetActive(false);
+            }
         }
 
         currentPhrase?.Stop();
@@ -91,8 +97,6 @@ public class Dialogue : MonoBehaviour
         public UnityEvent OnStartedEvent;
         public UnityEvent OnEndedEvent;
 
-        private AudioSource audioSource;
-
         public async Task Play(CancellationToken token, TaskCompletionSource<bool> buttonClickedTCS)
         {
             ActivateObjects(onStartedActivateables);
@@ -117,7 +121,7 @@ public class Dialogue : MonoBehaviour
 
                 if (loadOp.Result != null)
                 {
-                    audioSource = AudioManager.Instance.PlaySound(loadOp.Result, 1f);
+                    SoundManager.Instance.PlayVoice(loadOp.Result);
                     audioDuration = loadOp.Result.length;
                 }
             }
@@ -170,12 +174,7 @@ public class Dialogue : MonoBehaviour
 
         public void Stop()
         {
-            if (audioSource != null && audioSource.gameObject != null)
-            {
-                audioSource.Stop();
-                Destroy(audioSource.gameObject);
-                audioSource = null;
-            }
+            SoundManager.Instance?.StopVoice();
         }
 
         private void ActivateObjects(ActivateableObject[] objects)

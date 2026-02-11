@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: -4171844458747505336, guid: 319784b0117dc184ba6a45f40de96e46, type: 3}
+      propertyPath: invertDirection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 85917058815831898, guid: 319784b0117dc184ba6a45f40de96e46, type: 3}
       propertyPath: m_text
       value: "\u0428\u043E\u0440\u0442\u0430\u043D"

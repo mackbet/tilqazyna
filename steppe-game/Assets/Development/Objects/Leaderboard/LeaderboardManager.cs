@@ -114,6 +114,12 @@ public class LeaderboardManager : MonoBehaviour
 
         try
         {
+            // Отправляем текущие очки игрока, чтобы он появился в списке
+            var sm = _stateManager != null ? _stateManager : StateManager.Instance;
+            if (sm != null && (LoginManager.Instance?.IsAuthenticated ?? false))
+            {
+                await SubmitScore(sm.PointsAmount);
+            }
             // Получаем топ игроков из Unity Leaderboards с метаданными
             var options = new GetScoresOptions
             {

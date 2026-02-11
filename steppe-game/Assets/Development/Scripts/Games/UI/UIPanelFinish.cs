@@ -23,16 +23,19 @@ public class UIPanelFinish : UIPanel
     {
         base.Show();
 
-        coinField.text = coins + " " + coinText;
-        pointField.text = points + " " + pointText;
-        expField.text = StateManager.Instance.ExperienceAmount.ToString();
-
+        // Сначала начисляем награды
         StateManager.Instance.CurrencyAmount += coins;
         StateManager.Instance.PointsAmount += points;
         StateManager.Instance.ExperienceAmount += exp;
 
+        // Затем выводим актуальные значения
+        coinField.text = coins + " " + coinText;
+        pointField.text = points + " " + pointText;
+        expField.text = StateManager.Instance.ExperienceAmount.ToString();
+
         // Сохраняем данные и отправляем в лидерборд
         SaveAndSubmit();
+        SoundManager.Instance.PlayExpGainSound();
     }
 
     private async void SaveAndSubmit()

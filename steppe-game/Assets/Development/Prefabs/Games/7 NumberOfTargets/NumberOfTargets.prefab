@@ -5874,8 +5874,15 @@ MonoBehaviour:
   gameUI: {fileID: 3346644167375249630}
   pictureTime: 1
   groups:
-  - <Name>k__BackingField: "\u0421\u0443\u0440\u0435\u0442\u0442\u0435 \u049B\u0430\u043D\u0448\u0430
-      \u049B\u043E\u049B\u0438\u049B\u0430\u0437 \u0431\u0430\u0440?"
+  - <Name>k__BackingField:
+      m_TableReference:
+        m_TableCollectionName: GUID:aa0c96a897bb2520f8d789afe9cb43d5
+      m_TableEntryReference:
+        m_KeyId: 156383208488980480
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     <Audio>k__BackingField: {fileID: 8300000, guid: 4a6dc189eaa7f434ba51a4d1fff2b838, type: 3}
     <Sprite>k__BackingField: {fileID: 21300000, guid: e625d3c2ebebc954eb801137aed490dc, type: 3}
     <Objects>k__BackingField:
@@ -5892,8 +5899,15 @@ MonoBehaviour:
     - {fileID: 1108648790904457514}
     - {fileID: 3355547052260437714}
     - {fileID: 5742706820801364018}
-  - <Name>k__BackingField: "\u0421\u0443\u0440\u0435\u0442\u0442\u0435 \u049B\u0430\u043D\u0448\u0430
-      \u0430\u049B\u049B\u0443 \u0431\u0430\u0440?"
+  - <Name>k__BackingField:
+      m_TableReference:
+        m_TableCollectionName: GUID:aa0c96a897bb2520f8d789afe9cb43d5
+      m_TableEntryReference:
+        m_KeyId: 156383204357591040
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     <Audio>k__BackingField: {fileID: 8300000, guid: 65c8332bb5cee854a9548dc82dbaf425, type: 3}
     <Sprite>k__BackingField: {fileID: 21300000, guid: 57cf2c8ec5221f84083f366978ade560, type: 3}
     <Objects>k__BackingField:
@@ -5918,6 +5932,9 @@ MonoBehaviour:
   wrongSound: {fileID: 8300000, guid: 893f48ecb04dd3e4db7da1449028a354, type: 3}
   buttonClickSound: {fileID: 0}
   tickSound: {fileID: 0}
+  references:
+    version: 2
+    RefIds: []
 --- !u!224 &2205862138902500317 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 30355100260634061, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using System.Collections;
 using System.Threading.Tasks;
 using Unity.Services.Authentication;
 using Unity.Services.Core;
@@ -19,6 +20,7 @@ public class LoginManager : MonoBehaviour
     [Header("Настройки сцены")]
     [SerializeField] private string gameSceneName = "GameScene";
     [SerializeField] private bool autoLoadSceneOnLogin = true;
+    [SerializeField] private GameObject curtain;
     #endregion
 
     #region События
@@ -114,10 +116,12 @@ public class LoginManager : MonoBehaviour
             {
                 Debug.Log($"[Auth] Автовход Google Play Games не удался (статус: {status}).");
                 Debug.Log("[Auth] Ожидание выбора способа авторизации (гостевой или Google).");
+                if (curtain != null) curtain.SetActive(false);
             }
         });
 #else
         Debug.Log("[Auth] Платформа не Android. Ожидание выбора способа авторизации.");
+        if (curtain != null) curtain.SetActive(false);
 #endif
     }
     #endregion
@@ -237,10 +241,16 @@ public class LoginManager : MonoBehaviour
         {
             Debug.LogWarning($"[Auth] Ошибка гостевого входа: {ex.Message}");
 
-            // Если есть токен и ошибка связана с невалидным токеном - очищаем и пробуем снова
-            if (AuthenticationService.Instance.SessionTokenExists)
+            // Проверяем, связана ли ошибка с невалидным/удалённым аккаунтом
+            bool isInvalidTokenError = ex.Message.Contains("INVALID_SESSION_TOKEN") ||
+                                       ex.Message.Contains("401") ||
+                                       ex.Message.Contains("session token is not valid") ||
+                                       (ex is RequestFailedException rfe && rfe.ErrorCode == 401);
+
+            // Если ошибка связана с невалидным токеном ИЛИ есть сохранённый токен - очищаем и создаём новый аккаунт
+            if (isInvalidTokenError || AuthenticationService.Instance.SessionTokenExists)
             {
-                Debug.Log("[Auth] Очистка невалидного токена и повторная попытка...");
+                Debug.Log("[Auth] Обнаружена проблема с сессией. Очистка токена и создание нового гостевого аккаунта...");
                 AuthenticationService.Instance.ClearSessionToken();
 
                 await RetryGuestSignIn();
@@ -319,14 +329,29 @@ public class LoginManager : MonoBehaviour
                     await AuthenticationService.Instance.LinkWithGooglePlayGamesAsync(m_GooglePlayGamesToken);
                     Debug.Log("[Auth] Гостевой аккаунт успешно привязан к Google Play Games!");
                 }
-                catch (AuthenticationException linkEx)
+                catch (Exception linkEx) when (linkEx is AuthenticationException || linkEx is RequestFailedException)
                 {
-                    // Привязка не удалась - возможно Google уже привязан к другому аккаунту
-                    Debug.LogWarning($"[Auth] Не удалось привязать гостевой аккаунт: {linkEx.Message}");
-                    Debug.Log("[Auth] Выходим из гостевого и входим через Google...");
+                    // Проверяем, связана ли ошибка с невалидным/удалённым гостевым аккаунтом
+                    bool isInvalidTokenError = linkEx.Message.Contains("INVALID_SESSION_TOKEN") ||
+                                               linkEx.Message.Contains("401") ||
+                                               linkEx.Message.Contains("session token is not valid");
 
-                    // Выходим из гостевого
-                    AuthenticationService.Instance.SignOut();
+                    if (isInvalidTokenError)
+                    {
+                        Debug.LogWarning($"[Auth] Гостевой аккаунт недействителен: {linkEx.Message}");
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"[Auth] Не удалось привязать гостевой аккаунт: {linkEx.Message}");
+                    }
+
+                    Debug.Log("[Auth] Очищаем гостевую сессию и входим через Google...");
+
+                    // Выходим из гостевого (если был вход)
+                    if (AuthenticationService.Instance.IsSignedIn)
+                    {
+                        AuthenticationService.Instance.SignOut();
+                    }
                     // Очищаем гостевой токен
                     AuthenticationService.Instance.ClearSessionToken();
 
@@ -390,7 +415,7 @@ public class LoginManager : MonoBehaviour
     public void LoadGameScene()
     {
         Debug.Log($"[Auth] Загрузка сцены: {gameSceneName}");
-        SceneManager.LoadScene(gameSceneName);
+        StartCoroutine(LoadSceneWithCurtain(gameSceneName));
     }
 
     /// <summary>
@@ -399,6 +424,13 @@ public class LoginManager : MonoBehaviour
     public void LoadScene(string sceneName)
     {
         Debug.Log($"[Auth] Загрузка сцены: {sceneName}");
+        StartCoroutine(LoadSceneWithCurtain(sceneName));
+    }
+
+    private IEnumerator LoadSceneWithCurtain(string sceneName)
+    {
+        if (curtain != null) curtain.SetActive(true);
+        yield return null;
         SceneManager.LoadScene(sceneName);
     }
     #endregion

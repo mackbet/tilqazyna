@@ -3,13 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 [Serializable]
 public class FishingLevel
 {
-    public string levelName;
+    public LocalizedString levelName;
     public Sprite levelIcon; // Иконка для кнопки уровня
 
     [Header("Fish Settings")]
@@ -117,7 +119,7 @@ public class Fishing : GameController
                 CustomButton levelButton = Instantiate(levelButtonPrefab, levelButtonsContainer);
 
                 levelButton.Image.sprite = level.levelIcon;
-                levelButton.Label.text = level.levelName;
+                levelButton.Label.text = level.levelName.GetLocalizedString();
 
                 // Создаем действие и сохраняем его
                 Action buttonAction = () => OnLevelSelected(levelIndex);
@@ -328,11 +330,23 @@ public class Fishing : GameController
         base.OnEnable();
         if (noiseSound != null)
             noise = AudioManager.Instance.PlaySound(noiseSound, 1, true);
+
+        LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
+    }
+
+    private void OnLocaleChanged(Locale locale)
+    {
+        for (int i = 0; i < levelButtons.Count; i++)
+        {
+            if (i < levels.Length && levelButtons[i] != null)
+                levelButtons[i].Label.text = levels[i].levelName.GetLocalizedString();
+        }
     }
 
     protected override void OnDisable()
     {
         base.OnDisable();
+        LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
 
         // Останавливаем игру
         isGameActive = false;

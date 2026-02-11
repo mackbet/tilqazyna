@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 
 public class HitTargets : GameController
 {
@@ -54,6 +55,7 @@ public class HitTargets : GameController
     protected override void InitializeGame()
     {
         base.InitializeGame();
+        LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
 
         SetLives(startLives);
         currentTime = 0f;
@@ -119,9 +121,12 @@ public class HitTargets : GameController
         }
     }
 
+    private void OnLocaleChanged(Locale locale) => UpdateScoreUI();
+
     protected override void OnDisable()
     {
         base.OnDisable();
+        LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
 
         if (spawners != null)
         {

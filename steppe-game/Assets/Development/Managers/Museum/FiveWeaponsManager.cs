@@ -11,14 +11,12 @@ public class FiveWeaponsManager : MonoBehaviour
     [SerializeField] GameObject bowLock;
     [SerializeField] GameObject mazeLock;
 
-    private StateManager _stateManager;
+    private StateManager _stateManager => StateManager.Instance;
 
     public static event Action OnClickMuseumWeaponButtonAction;
 
     public void Initialize(StateManager stateManager)
     {
-        _stateManager = stateManager;
-
         buyWeaponPopup.Initialize(stateManager);
     }
 
@@ -31,6 +29,8 @@ public class FiveWeaponsManager : MonoBehaviour
 
     private void SetLocks()
     {
+        if (_stateManager == null) return;
+
         swordLock.SetActive(!_stateManager.IsSwordBought);
 
         axeLock.SetActive(!_stateManager.IsAxeBought);

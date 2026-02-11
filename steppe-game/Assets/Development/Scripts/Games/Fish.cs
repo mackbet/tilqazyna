@@ -13,6 +13,7 @@ public class Fish : MonoBehaviour
     [SerializeField] private float moveSpeed = 2f; // Скорость движения
     [SerializeField] private AudioClip fishSound; // Звук, который издает рыба
     [SerializeField] private float soundDelay = 0.5f; // Задержка перед воспроизведением звука
+    [SerializeField] private bool invertDirection; // Включить если спрайт смотрит влево
 
     private RectTransform rectTransform;
     private Vector2 direction; // Направление движения
@@ -36,16 +37,8 @@ public class Fish : MonoBehaviour
         // Зеркалим весь объект рыбы
         Vector3 scale = rectTransform.localScale;
 
-        if (direction.x < 0)
-        {
-            // Движется влево - зеркалим
-            scale.x = -Mathf.Abs(scale.x);
-        }
-        else
-        {
-            // Движется вправо - нормальный scale
-            scale.x = Mathf.Abs(scale.x);
-        }
+        bool flipSprite = invertDirection ? direction.x > 0 : direction.x < 0;
+        scale.x = flipSprite ? -Mathf.Abs(scale.x) : Mathf.Abs(scale.x);
 
         rectTransform.localScale = scale;
 

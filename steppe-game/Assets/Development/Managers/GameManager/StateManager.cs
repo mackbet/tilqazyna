@@ -52,6 +52,7 @@ public class StateManager : MonoBehaviour
 
     private const string MusicVolumeKey = "MusicVolume";
     private const string SoundVolumeKey = "SoundVolume";
+    private const string VoiceVolumeKey = "VoiceVolume";
 
     #endregion
 
@@ -412,6 +413,7 @@ public class StateManager : MonoBehaviour
         {
             if (ExperienceAmount == value) return;
             PlayerPrefs.SetInt(ExperienceAmountKey, value);
+            StateChanged?.Invoke();
         }
     }
 
@@ -433,6 +435,17 @@ public class StateManager : MonoBehaviour
         {
             if (SoundVolume == value) return;
             PlayerPrefs.SetInt(SoundVolumeKey, value);
+            StateChanged?.Invoke();
+        }
+    }
+
+    public int VoiceVolume
+    {
+        get => PlayerPrefs.GetInt(VoiceVolumeKey, 5);
+        set
+        {
+            if (VoiceVolume == value) return;
+            PlayerPrefs.SetInt(VoiceVolumeKey, value);
             StateChanged?.Invoke();
         }
     }

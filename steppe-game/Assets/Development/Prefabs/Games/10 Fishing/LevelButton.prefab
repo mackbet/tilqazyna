@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2152656168618421933}
   - component: {fileID: 6117300773812182490}
   - component: {fileID: 8420383988409095727}
+  - component: {fileID: 130606234382655573}
   m_Layer: 5
   m_Name: Subtitle
   m_TagString: Untagged
@@ -157,6 +158,31 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &130606234382655573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5815124234888497486}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aece3add078b1647bfcd8ceab63d5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizableText
+  display: {fileID: 6117300773812182490}
+  <LocalizedString>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:aa0c96a897bb2520f8d789afe9cb43d5
+    m_TableEntryReference:
+      m_KeyId: 156403398442373120
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &6877173416921251441
 GameObject:
   m_ObjectHideFlags: 0

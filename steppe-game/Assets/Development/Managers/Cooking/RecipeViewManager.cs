@@ -44,7 +44,7 @@ public class RecipeViewManager : MonoBehaviour
             return;
         }
 
-        cookingManager.PlayReciepeSound();
+        //cookingManager.PlayReciepeSound();
         // Hide the currently active window if any
         if (activeWindow != null)
         {

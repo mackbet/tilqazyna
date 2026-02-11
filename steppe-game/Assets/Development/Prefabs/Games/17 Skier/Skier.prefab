@@ -10823,12 +10823,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3954375581061687396, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3954375581061687396, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: <LocalizedString>k__BackingField.m_TableEntryReference.m_KeyId
-      value: 134226793938964480
+      value: 156318342076059648
       objectReference: {fileID: 0}
     - target: {fileID: 4223061571471607050, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_AnchorMax.y
@@ -11410,7 +11406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameMelody
   audioClip: {fileID: 8300000, guid: f6e1f0143d68a9e4ebe0b81ed045a806, type: 3}
-  volume: 0.7
+  volume: 1
 --- !u!114 &6214181034005010364 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7198366607822241818, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}

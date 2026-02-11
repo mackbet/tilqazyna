@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 6856221480257437953}
   - component: {fileID: 2595165984041363450}
   - component: {fileID: 2104894380702560551}
+  - component: {fileID: 6994079206555463864}
   m_Layer: 5
   m_Name: Subtitle
   m_TagString: Untagged
@@ -298,6 +299,31 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &6994079206555463864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4843665016608284438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aece3add078b1647bfcd8ceab63d5b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizableText
+  display: {fileID: 2595165984041363450}
+  <LocalizedString>k__BackingField:
+    m_TableReference:
+      m_TableCollectionName: GUID:aa0c96a897bb2520f8d789afe9cb43d5
+    m_TableEntryReference:
+      m_KeyId: 156403398442373120
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &5027030375385971700
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +669,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3923269237047611976}
     m_Modifications:
+    - target: {fileID: 130606234382655573, guid: 166eceb8ad722d0458c8cf26bb217f94, type: 3}
+      propertyPath: <LocalizedString>k__BackingField.m_TableEntryReference.m_KeyId
+      value: 144652958675652608
+      objectReference: {fileID: 0}
     - target: {fileID: 4932395209828472810, guid: 166eceb8ad722d0458c8cf26bb217f94, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1210,6 +1240,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3923269237047611976}
     m_Modifications:
+    - target: {fileID: 130606234382655573, guid: 166eceb8ad722d0458c8cf26bb217f94, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 130606234382655573, guid: 166eceb8ad722d0458c8cf26bb217f94, type: 3}
+      propertyPath: <LocalizedString>k__BackingField.m_TableEntryReference.m_KeyId
+      value: 136420501509787648
+      objectReference: {fileID: 0}
     - target: {fileID: 4932395209828472810, guid: 166eceb8ad722d0458c8cf26bb217f94, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1373,7 +1411,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 849376715505048235, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_Name
-      value: GameSelection
+      value: GameSelection(Burabay)
       objectReference: {fileID: 0}
     - target: {fileID: 3075755175789649611, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1660,6 +1698,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3923269237047611976}
     m_Modifications:
+    - target: {fileID: 130606234382655573, guid: 166eceb8ad722d0458c8cf26bb217f94, type: 3}
+      propertyPath: <LocalizedString>k__BackingField.m_TableEntryReference.m_KeyId
+      value: 156318342076059648
+      objectReference: {fileID: 0}
     - target: {fileID: 4932395209828472810, guid: 166eceb8ad722d0458c8cf26bb217f94, type: 3}
       propertyPath: m_Sprite
       value: 

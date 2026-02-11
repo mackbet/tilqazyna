@@ -11975,7 +11975,7 @@ MonoBehaviour:
   magnetSpeed: 250
   magnetRotationSpeed: 360
   magnetCaptureRadius: 250
-  correctWordProbability: 0.4
+  correctWordProbability: 0.5
   minRotationAngle: -15
   maxRotationAngle: 15
   correctCaptureSound: {fileID: 8300000, guid: a952bc3dc0b2b5f45bf35fcaa2f3c5af, type: 3}

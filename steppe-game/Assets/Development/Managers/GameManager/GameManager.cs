@@ -110,7 +110,17 @@ public class GameManager : MonoBehaviour
 
         _hudManager.SetLeaderboardUIActive(scene is not (GameScene.Quiz or GameScene.Cooking));
 
-        if (scene is GameScene.Cooking or GameScene.Quiz)
+        bool showBackButton = scene is GameScene.Cooking
+            or GameScene.Quiz
+            or GameScene.Museum
+            or GameScene.MuseumFiveWeapons
+            or GameScene.MuseumSevenTreasures
+            or GameScene.MuseumWeapon
+            or GameScene.Bozok
+            or GameScene.AlmatyMuseum
+            or GameScene.AltynAdam;
+
+        if (showBackButton)
         {
             if (scene == GameScene.Cooking)
                 _levelManager.StartNewLevel();
@@ -295,7 +305,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            OpenNewScene(_stateManager.City);
+            OpenNewScene(GameScene.ChooseCity);
         }
     }
 

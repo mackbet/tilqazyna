@@ -39,7 +39,6 @@ public class ArrangeNamesPlug : CustomImageButton, IDragHandler
         initialParent = transform.parent;
         initialSiblingIndex = transform.GetSiblingIndex();
         initialPivot = rectTransform.pivot;
-        Debug.Log($"[{gameObject.name}] Start: initialParent = {initialParent.name}, siblingIndex = {initialSiblingIndex}, pivot = {initialPivot}");
     }
 
     protected override void OnPressed()

@@ -15,7 +15,6 @@ public class SimpleDialogue : MonoBehaviour
 
     private bool isPlayed = false;
     private CancellationTokenSource cancellationTokenSource;
-    private AudioSource currentAudioSource;
     private TaskCompletionSource<bool> buttonClickedTCS;
 
     private void OnEnable()
@@ -61,10 +60,10 @@ public class SimpleDialogue : MonoBehaviour
             }
 
             float duration = entry.delayAfter;
-            
+
             if (entry.audioClip != null)
             {
-                currentAudioSource = AudioManager.Instance.PlaySound(entry.audioClip, 1f);
+                SoundManager.Instance.PlayVoice(entry.audioClip);
                 duration = entry.audioClip.length + entry.delayAfter;
             }
 
@@ -133,12 +132,7 @@ public class SimpleDialogue : MonoBehaviour
 
     private void StopCurrentAudio()
     {
-        if (currentAudioSource != null && currentAudioSource.gameObject != null)
-        {
-            currentAudioSource.Stop();
-            Destroy(currentAudioSource.gameObject);
-            currentAudioSource = null;
-        }
+        SoundManager.Instance?.StopVoice();
     }
 
     private void ActivateObjects(ActivateableObject[] objects)
