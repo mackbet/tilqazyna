@@ -8,94 +8,79 @@ public class AuthExample : MonoBehaviour
     private void Start()
     {
         // Подписка на события авторизации
-        AuthenticationManager.Instance.OnLoginSuccess += HandleLoginSuccess;
-        AuthenticationManager.Instance.OnLoginFailed += HandleLoginFailed;
-        AuthenticationManager.Instance.OnLogoutSuccess += HandleLogout;
+        if (LoginManager.Instance != null)
+        {
+            LoginManager.Instance.OnLoginSuccess += HandleLoginSuccess;
+            LoginManager.Instance.OnLoginFailed += HandleLoginFailed;
+            LoginManager.Instance.OnLogoutSuccess += HandleLogout;
 
-        // Проверка состояния при запуске
-        if (AuthenticationManager.Instance.IsAuthenticated)
-        {
-            Debug.Log("Пользователь уже авторизован");
-            ShowMainGame();
-        }
-        else
-        {
-            Debug.Log("Пользователь не авторизован");
-            ShowLoginScreen();
+            // Проверка состояния при запуске
+            if (LoginManager.Instance.IsAuthenticated)
+            {
+                Debug.Log("Пользователь уже авторизован");
+                ShowMainGame();
+            }
+            else
+            {
+                Debug.Log("Пользователь не авторизован");
+                ShowLoginScreen();
+            }
         }
     }
 
     private void OnDestroy()
     {
         // Отписка от событий
-        if (AuthenticationManager.Instance != null)
+        if (LoginManager.Instance != null)
         {
-            AuthenticationManager.Instance.OnLoginSuccess -= HandleLoginSuccess;
-            AuthenticationManager.Instance.OnLoginFailed -= HandleLoginFailed;
-            AuthenticationManager.Instance.OnLogoutSuccess -= HandleLogout;
+            LoginManager.Instance.OnLoginSuccess -= HandleLoginSuccess;
+            LoginManager.Instance.OnLoginFailed -= HandleLoginFailed;
+            LoginManager.Instance.OnLogoutSuccess -= HandleLogout;
         }
     }
 
     // ========== ОБРАБОТЧИКИ СОБЫТИЙ ==========
 
-    private void HandleLoginSuccess(UserData userData)
+    private void HandleLoginSuccess(string odl)
     {
-        Debug.Log($"✅ Авторизация успешна!");
-        Debug.Log($"   User ID: {userData.userId}");
-        Debug.Log($"   User Name: {userData.userName}");
-        Debug.Log($"   Provider: {userData.provider}");
-        Debug.Log($"   Email: {userData.email ?? "не указан"}");
+        string userName = LoginManager.Instance?.GetUserName();
 
-        // Здесь можно отправить данные на сервер
-        SendUserDataToServer(userData);
+        Debug.Log($"Авторизация успешна!");
+        Debug.Log($"   Player ID: {odl}");
+        Debug.Log($"   User Name: {userName}");
 
-        // Показать главный экран игры
         ShowMainGame();
     }
 
     private void HandleLoginFailed(string error)
     {
-        Debug.LogError($"❌ Ошибка авторизации: {error}");
-        
-        // Показать сообщение об ошибке пользователю
+        Debug.LogError($"Ошибка авторизации: {error}");
         ShowErrorMessage(error);
     }
 
     private void HandleLogout()
     {
-        Debug.Log("🚪 Пользователь вышел из аккаунта");
-        
-        // Вернуться к экрану входа
+        Debug.Log("Пользователь вышел из аккаунта");
         ShowLoginScreen();
     }
 
     // ========== ИГРОВАЯ ЛОГИКА ==========
 
-    private void SendUserDataToServer(UserData userData)
-    {
-        // TODO: Отправка данных на ваш backend
-        Debug.Log($"📤 Отправка данных пользователя на сервер...");
-        
-        // Пример:
-        // StartCoroutine(SendToServerCoroutine(userData));
-    }
-
     private void ShowMainGame()
     {
-        Debug.Log("🎮 Загрузка главного экрана игры...");
+        Debug.Log("Загрузка главного экрана игры...");
         // TODO: Загрузить главную сцену игры
-        // SceneManager.LoadScene("MainGame");
     }
 
     private void ShowLoginScreen()
     {
-        Debug.Log("🔐 Показ экрана входа...");
+        Debug.Log("Показ экрана входа...");
         // TODO: Показать UI входа
     }
 
     private void ShowErrorMessage(string error)
     {
-        Debug.Log($"💬 Показ ошибки пользователю: {error}");
+        Debug.Log($"Показ ошибки пользователю: {error}");
         // TODO: Показать popup с ошибкой
     }
 
@@ -103,34 +88,35 @@ public class AuthExample : MonoBehaviour
 
     public void OnGoogleLoginButtonClick()
     {
-        Debug.Log("🔵 Кнопка Google нажата");
-        AuthenticationManager.Instance?.SignInWithGoogle();
+        Debug.Log("Кнопка Google нажата");
+#if UNITY_ANDROID
+        LoginManager.Instance?.ManuallyLoginGooglePlayGames();
+#else
+        Debug.LogWarning("Google Play Games доступен только на Android");
+#endif
     }
 
     public void OnAppleLoginButtonClick()
     {
-        Debug.Log("🍎 Кнопка Apple нажата");
-        AuthenticationManager.Instance?.SignInWithApple();
+        Debug.Log("Кнопка Apple нажата");
+        // TODO: Реализовать Sign In with Apple для iOS
+        Debug.LogWarning("Apple Sign-In пока не реализован");
     }
 
     public void OnLogoutButtonClick()
     {
-        Debug.Log("🚪 Кнопка выхода нажата");
-        AuthenticationManager.Instance?.SignOut();
+        Debug.Log("Кнопка выхода нажата");
+        LoginManager.Instance?.SignOut();
     }
 
     // ========== ДОПОЛНИТЕЛЬНЫЕ УТИЛИТЫ ==========
 
     /// <summary>
-    /// Получить текущего пользователя
+    /// Получить ID текущего пользователя
     /// </summary>
-    public UserData GetCurrentUser()
+    public string GetCurrentUserId()
     {
-        if (AuthenticationManager.Instance.IsAuthenticated)
-        {
-            return AuthenticationManager.Instance.CurrentUser;
-        }
-        return null;
+        return LoginManager.Instance?.GetUserId();
     }
 
     /// <summary>
@@ -138,51 +124,6 @@ public class AuthExample : MonoBehaviour
     /// </summary>
     public bool IsUserLoggedIn()
     {
-        return AuthenticationManager.Instance.IsAuthenticated;
-    }
-
-    /// <summary>
-    /// Переключить тестовый режим
-    /// </summary>
-    public void ToggleTestMode()
-    {
-        bool currentMode = AuthenticationManager.Instance.IsTestMode;
-        AuthenticationManager.Instance.SetTestMode(!currentMode);
-        Debug.Log($"Test Mode переключен: {!currentMode}");
+        return LoginManager.Instance != null && LoginManager.Instance.IsAuthenticated;
     }
 }
-
-// ========== ПРИМЕР ИНТЕГРАЦИИ С СЕРВЕРОМ ==========
-
-/*
-using System.Collections;
-using UnityEngine.Networking;
-
-public class ServerAPI
-{
-    private const string SERVER_URL = "https://your-server.com/api";
-
-    public static IEnumerator SendUserData(UserData userData)
-    {
-        string json = JsonUtility.ToJson(userData);
-        
-        using (UnityWebRequest request = UnityWebRequest.Post($"{SERVER_URL}/auth", json))
-        {
-            request.SetRequestHeader("Content-Type", "application/json");
-            
-            yield return request.SendWebRequest();
-
-            if (request.result == UnityWebRequest.Result.Success)
-            {
-                Debug.Log("Данные успешно отправлены на сервер");
-                string response = request.downloadHandler.text;
-                Debug.Log($"Ответ сервера: {response}");
-            }
-            else
-            {
-                Debug.LogError($"Ошибка отправки: {request.error}");
-            }
-        }
-    }
-}
-*/

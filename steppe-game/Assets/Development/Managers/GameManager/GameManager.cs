@@ -40,8 +40,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Canvas _cookingCanvas;
     [SerializeField] private Canvas _museumCanvas;
     [SerializeField] private Canvas _museumWeaponPointAndClickCanvas;
-    //[SerializeField] private BozokIntroManager _bozokIntro;
-    //[SerializeField] private GameObject _bozokMap;
     private GameObject _museumFiveWeapons;
     private GameObject _museumSevenTreasures;
 
@@ -58,16 +56,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private bool openAllQuiz;
 
-    // [Header("Bozok Managers")] [SerializeField]
-    // private BozokGameManager _bozokGameManager;
-
-    //[SerializeField] private BozokHorseQuizManager _horseQuizManager;
-    //[SerializeField] private BozokBallQuizManager _ballQuizManager;
-    //[SerializeField] private BozokBowQuizManager _bowQuizManager;
-    //[SerializeField] private BozokBoneQuizManager _boneQuizManager;
-
     private GameScene _currentGameScene;
     private GameScene _previousGameScene;
+    private bool _isLoadingScene = false;
 
     private GameScene CurrentGameScene
     {
@@ -75,52 +66,7 @@ public class GameManager : MonoBehaviour
         set
         {
             _soundManager.OnSceneChanged(value);
-
-            if (value == GameScene.Astana)
-            {
-                if (!_stateManager.IsStartTutorialShown)
-                {
-                    _tutorialManager.StartTutorial();
-                    _tutorialManager.StartTutorialComplete += () => _stateManager.IsStartTutorialShown = true;
-                }
-
-                if (_stateManager.IsTutorialTiltabetComplete && !_stateManager.IsQuizTutorialShown)
-                {
-                    _tutorialManager.QuizTutorial();
-                    _tutorialManager.QuizTutorialComplete += () => _stateManager.IsQuizTutorialShown = true;
-                }
-
-                _stateManager.City = GameScene.Astana;
-            }
-            else if (value == GameScene.Almaty)
-            {
-                _stateManager.City = GameScene.Almaty;
-            }
-            else if (value == GameScene.Cooking && !_stateManager.IsTutorialTiltabetComplete)
-            {
-                _stateManager.IsTutorialTiltabetComplete = true;
-            }
-
-            if (value is GameScene.Quiz or GameScene.Cooking)
-            {
-                _hudManager.SetLeaderboardUIActive(false);
-            }
-            else
-            {
-                _hudManager.SetLeaderboardUIActive(true);
-            }
-
-            if (value is GameScene.Cooking or GameScene.Quiz)
-            {
-                if (value == GameScene.Cooking)
-                    _levelManager.StartNewLevel();
-                _hudManager.CookingMode(true);
-            }
-            else
-            {
-                _hudManager.CookingMode(false);
-            }
-
+            HandleSceneChange(value);
             _currentGameScene = value;
         }
     }
@@ -130,46 +76,59 @@ public class GameManager : MonoBehaviour
         get => _previousGameScene;
         set
         {
-            if (value == GameScene.Astana)
-            {
-                if (!_stateManager.IsStartTutorialShown)
-                {
-                    _tutorialManager.StartTutorial();
-                    _tutorialManager.StartTutorialComplete += () => _stateManager.IsStartTutorialShown = true;
-                }
-
-                if (_stateManager.IsTutorialTiltabetComplete && !_stateManager.IsQuizTutorialShown)
-                {
-                    _tutorialManager.QuizTutorial();
-                    _tutorialManager.QuizTutorialComplete += () => _stateManager.IsQuizTutorialShown = true;
-                }
-            }
-            else if (value == GameScene.Cooking && !_stateManager.IsTutorialTiltabetComplete)
-            {
-                _stateManager.IsTutorialTiltabetComplete = true;
-            }
-
-            if (value is GameScene.Quiz or GameScene.Cooking)
-            {
-                _hudManager.SetLeaderboardUIActive(false);
-            }
-            else
-            {
-                _hudManager.SetLeaderboardUIActive(true);
-            }
-
-            if (value is GameScene.Cooking or GameScene.Quiz)
-            {
-                if (value == GameScene.Cooking)
-                    _levelManager.StartNewLevel();
-                _hudManager.CookingMode(true);
-            }
-            else
-            {
-                _hudManager.CookingMode(false);
-            }
-
+            HandleSceneChange(value);
             _previousGameScene = value;
+        }
+    }
+
+    private void HandleSceneChange(GameScene scene)
+    {
+        if (scene == GameScene.Astana)
+        {
+            if (!_stateManager.IsStartTutorialShown)
+            {
+                _tutorialManager.StartTutorial();
+                _tutorialManager.StartTutorialComplete += () => _stateManager.IsStartTutorialShown = true;
+            }
+
+            if (_stateManager.IsTutorialTiltabetComplete && !_stateManager.IsQuizTutorialShown)
+            {
+                _tutorialManager.QuizTutorial();
+                _tutorialManager.QuizTutorialComplete += () => _stateManager.IsQuizTutorialShown = true;
+            }
+
+            _stateManager.City = GameScene.Astana;
+        }
+        else if (scene == GameScene.Almaty)
+        {
+            _stateManager.City = GameScene.Almaty;
+        }
+        else if (scene == GameScene.Cooking && !_stateManager.IsTutorialTiltabetComplete)
+        {
+            _stateManager.IsTutorialTiltabetComplete = true;
+        }
+
+        _hudManager.SetLeaderboardUIActive(scene is not (GameScene.Quiz or GameScene.Cooking));
+
+        bool showBackButton = scene is GameScene.Cooking
+            or GameScene.Quiz
+            or GameScene.Museum
+            or GameScene.MuseumFiveWeapons
+            or GameScene.MuseumSevenTreasures
+            or GameScene.MuseumWeapon
+            or GameScene.Bozok
+            or GameScene.AlmatyMuseum
+            or GameScene.AltynAdam;
+
+        if (showBackButton)
+        {
+            if (scene == GameScene.Cooking)
+                _levelManager.StartNewLevel();
+            _hudManager.CookingMode(true);
+        }
+        else
+        {
+            _hudManager.CookingMode(false);
         }
     }
 
@@ -204,6 +163,13 @@ public class GameManager : MonoBehaviour
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+
+        // Отписываемся от событий авторизации
+        if (LoginManager.Instance != null)
+        {
+            LoginManager.Instance.OnLoginSuccess -= OnAuthenticationSuccess;
+            LoginManager.Instance.OnLoginFailed -= OnAuthenticationFailed;
+        }
     }
 
     private void PutToDontDestroyOnLoad(GameObject go)
@@ -233,13 +199,113 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        // Подписываемся на события авторизации
+        if (LoginManager.Instance != null)
+        {
+            LoginManager.Instance.OnLoginSuccess += OnAuthenticationSuccess;
+            LoginManager.Instance.OnLoginFailed += OnAuthenticationFailed;
+
+            // Если уже авторизован - продолжаем
+            if (LoginManager.Instance.IsAuthenticated)
+            {
+                OnAuthenticationSuccess(LoginManager.Instance.GetUserId());
+            }
+            // Иначе ждем авторизацию (LoginManager сам запустит SignIn)
+        }
+        else
+        {
+            // Fallback на старую логику если LoginManager не настроен
+            StartGameLegacy();
+        }
+    }
+
+    private async void OnAuthenticationSuccess(string odl)
+    {
+        Debug.Log($"[GameManager] Авторизация успешна. Player ID: {odl}");
+
+        // Проверяем есть ли данные пользователя в Cloud Save
+        bool userExists = await _realtimeManager.UserExists();
+
+        if (userExists)
+        {
+            // Загружаем данные пользователя
+            var userModel = await _realtimeManager.ReadCurrentUserData();
+            if (userModel != null && !string.IsNullOrEmpty(userModel.Name))
+            {
+                _stateManager.PlayerName = userModel.Name;
+                _stateManager.CharacterSex = userModel.GetSexAsEnum();
+                _stateManager.PointsAmount = userModel.Points;
+                _stateManager.ExperienceAmount = userModel.Experience;
+
+                // Загружаем монеты
+                _stateManager.CurrencyAmount = await _realtimeManager.LoadCoins();
+
+                Debug.Log($"[GameManager] Данные загружены: {userModel.Name}, Exp: {userModel.Experience}, Level: {userModel.Level}, Points: {userModel.Points}, Coins: {_stateManager.CurrencyAmount}");
+
+                // Переходим на выбор города (данные персонажа уже есть)
+                OpenNewScene(GameScene.ChooseCity);
+            }
+            else
+            {
+                // Данные не загрузились или имя пустое - показываем экран создания персонажа
+                Debug.Log("[GameManager] Данные пустые, показываем экран создания персонажа");
+                ResetLocalPlayerData();
+                OpenNewScene(GameScene.ChooseCharacter);
+            }
+        }
+        else
+        {
+            // Новый пользователь - показываем экран создания персонажа
+            Debug.Log("[GameManager] Новый пользователь, показываем экран создания персонажа");
+            ResetLocalPlayerData();
+            OpenNewScene(GameScene.ChooseCharacter);
+        }
+    }
+
+    /// <summary>
+    /// Сброс локальных данных игрока для нового аккаунта
+    /// </summary>
+    private void ResetLocalPlayerData()
+    {
+        _stateManager.ExperienceAmount = 0;
+        _stateManager.PointsAmount = 0;
+        _stateManager.CurrencyAmount = 0;
+        _stateManager.PlayerName = "";
+        Debug.Log("[GameManager] Локальные данные сброшены");
+    }
+
+    /// <summary>
+    /// Сохранить данные игрока в Cloud Save
+    /// </summary>
+    private async Task SavePlayerDataAsync()
+    {
+        if (string.IsNullOrEmpty(_stateManager.PlayerName)) return;
+
+        await _realtimeManager.SaveUserData(
+            userName: _stateManager.PlayerName,
+            userSex: _stateManager.CharacterSex,
+            userExperience: _stateManager.ExperienceAmount,
+            userPoints: _stateManager.PointsAmount
+        );
+    }
+
+    private void OnAuthenticationFailed(string error)
+    {
+        Debug.LogWarning($"Ошибка авторизации: {error}");
+        // Показываем экран авторизации или используем гостевой режим
+        StartGameLegacy();
+    }
+
+    private void StartGameLegacy()
+    {
+        // Старая логика без авторизации
         if (string.IsNullOrEmpty(_stateManager.PlayerName))
         {
             OpenNewScene(GameScene.ChooseCharacter);
         }
         else
         {
-            OpenNewScene(_stateManager.City);
+            OpenNewScene(GameScene.ChooseCity);
         }
     }
 
@@ -273,13 +339,23 @@ public class GameManager : MonoBehaviour
         _chooseCharacterManager.CharacterChoosen +=
             isBoy => _stateManager.CharacterSex = isBoy ? CharacterSex.Boy : CharacterSex.Girl;
 
-        _chooseCharacterManager.NameSubmitted += name =>
+        _chooseCharacterManager.NameSubmitted += async name =>
         {
+            ResetLocalPlayerData();
             _stateManager.PlayerName = name;
+
+            // Сохраняем данные персонажа в Cloud Save
+            await _realtimeManager.SaveUserData(
+                userName: name,
+                userSex: _stateManager.CharacterSex,
+                userExperience: 0,
+                userPoints: 0
+            );
+            Debug.Log($"[GameManager] Данные персонажа сохранены: {name}");
+
             OpenNewScene(GameScene.ChooseCity);
         };
 
-        //_levelManager.Initialize(_stateManager);
         LevelManager.OnBackClick += () => OpenNewScene(_stateManager.City);
 
         _soundManager.Initialize(_stateManager, _cookingViewManager, _dragDropManager, _hudManager);
@@ -299,26 +375,25 @@ public class GameManager : MonoBehaviour
 
         _tutorialManager.OnTutorialStarted += _soundManager.OnTutorialSound;
 
-        //_bozokIntro.Initialize(_stateManager);
         BozokIntroManager.OnEnterButtonAction += () => OpenNewScene(GameScene.Bozok);
-
-        //_bozokGameManager.Initialize(_stateManager, _hudManager);
         BozokGameManager.OnBackToBozokMap += () => OpenNewScene(GameScene.Bozok);
         BozokGameManager.OnBackToMap += () => OpenNewScene(_stateManager.City);
 
         _sharpGameSecondSceneNewManager.Initialize(_stateManager, _soundManager);
-
-        //_horseQuizManager.Initialize(_stateManager, _soundManager);
-        //_ballQuizManager.Initialize(_stateManager, _soundManager);
-        //_bowQuizManager.Initialize(_stateManager, _soundManager);
-        //_boneQuizManager.Initialize(_stateManager, _soundManager);
     }
 
     public async void OpenNewScene(GameScene scene)
     {
+        // Защита от повторных вызовов
+        if (_isLoadingScene)
+        {
+            Debug.Log("[GameManager] Загрузка уже выполняется, пропускаем");
+            return;
+        }
+        _isLoadingScene = true;
+
         _soundManager.PlayButtonSound();
         CloseAllScenes();
-        //await LoadSceneWithLoadingScreen(scene);
 
         // Получаем имя сцены (оно должно соответствовать названию сцены в Build Settings)
         string sceneName = GetSceneName(scene);
@@ -343,14 +418,7 @@ public class GameManager : MonoBehaviour
             }
             _progressBar.value = 1f;
 
-            if (_stateManager.PlayerName != "")
-            {
-                await _realtimeManager.SaveUserData(
-                    userName: _stateManager.PlayerName,
-                    userSex: _stateManager.CharacterSex,
-                    userLevel: _stateManager.ExperienceAmount / 80,
-                    userPoints: _stateManager.PointsAmount);
-            }
+            await SavePlayerDataAsync();
 
             asyncLoad.allowSceneActivation = true;
             ActivateScene(scene);
@@ -363,30 +431,24 @@ public class GameManager : MonoBehaviour
                 await Task.Yield();
             }
             _loadingCanvas.enabled = false;
+            _isLoadingScene = false;
         }
         else
         {
-            CloseAllScenes();
             _loadingCanvas.enabled = true;
             _progressBar.value = 0;
 
             const float totalSteps = 10;
             for (var i = 0; i < totalSteps / 2; i++)
             {
-                // yield return new WaitForSeconds(0.05f);
                 await Task.Delay(TimeSpan.FromSeconds(0.05f));
                 _progressBar.value = (i + 1) / totalSteps;
             }
 
-            if (_stateManager.PlayerName != "")
-            {
-                await _realtimeManager.SaveUserData(userName: _stateManager.PlayerName, userSex: _stateManager.CharacterSex,
-                    userLevel: _stateManager.ExperienceAmount / 80, userPoints: _stateManager.PointsAmount);
-            }
+            await SavePlayerDataAsync();
 
             for (var i = 4; i < totalSteps; i++)
             {
-                // yield return new WaitForSeconds(0.05f);
                 await Task.Delay(TimeSpan.FromSeconds(0.05f));
                 _progressBar.value = (i + 1) / totalSteps;
             }
@@ -396,67 +458,18 @@ public class GameManager : MonoBehaviour
             CurrentGameScene = scene;
             _stateManager.City = scene;
             _loadingCanvas.enabled = false;
+            _isLoadingScene = false;
         }
     }
 
-    // private async Task LoadSceneWithLoadingScreen(GameScene scene)
-    // {
-    //     _soundManager.PlayLogoSound();
-    //
-    //     _loadingCanvas.enabled = true;
-    //     _progressBar.value = 0;
-    //
-    //     const float totalSteps = 10;
-    //     for (var i = 0; i < totalSteps / 2; i++)
-    //     {
-    //         // yield return new WaitForSeconds(0.05f);
-    //         await Task.Delay(TimeSpan.FromSeconds(0.05f));
-    //         _progressBar.value = (i + 1) / totalSteps;
-    //     }
-    //
-    //     if (_stateManager.PlayerName != "")
-    //     {
-    //         await _realtimeManager.SaveUserData(userName: _stateManager.PlayerName, userSex: _stateManager.CharacterSex,
-    //             userLevel: _stateManager.ExperienceAmount / 80, userPoints: _stateManager.PointsAmount);
-    //     }
-    //
-    //     for (var i = 4; i < totalSteps; i++)
-    //     {
-    //         // yield return new WaitForSeconds(0.05f);
-    //         await Task.Delay(TimeSpan.FromSeconds(0.05f));
-    //         _progressBar.value = (i + 1) / totalSteps;
-    //     }
-    //
-    //     ActivateScene(scene);
-    //     PreviousGameScene = CurrentGameScene;
-    //     CurrentGameScene = scene;
-    //     _stateManager.City = scene;
-    //     _loadingCanvas.enabled = false;
-    // }
-
     private string GetSceneName(GameScene scene)
     {
-        switch (scene)
+        return scene switch
         {
-            // case GameScene.Cooking:
-            //     return "CookingScene";
-            // case GameScene.Quiz:
-            //     return "QuizScene";
-            case GameScene.Astana:
-                return "GameScene";
-            // case GameScene.Almaty:
-            //     return "AlmatyScene";
-            // case GameScene.ChooseCharacter:
-            //     return "ChooseCharacterScene";
-            // case GameScene.ChooseCity:
-            //     return "ChooseCityScene";
-            // case GameScene.Museum:
-            //     return "MuseumScene";
-            case GameScene.Bozok:
-                return _stateManager.IsIntroBozokComplete ? "BozokGames" : "BozokIntro";
-            default:
-                return "";
-        }
+            GameScene.Astana => "GameScene",
+            GameScene.Bozok => _stateManager.IsIntroBozokComplete ? "BozokGames" : "BozokIntro",
+            _ => ""
+        };
     }
 
     private void ProcessBackClick()
@@ -525,8 +538,6 @@ public class GameManager : MonoBehaviour
         _museumFiveWeapons.SetActive(false);
         _museumSevenTreasures.SetActive(false);
         _museumWeaponPointAndClickCanvas.gameObject.SetActive(false);
-        //_bozokIntro.gameObject.SetActive(false);
-        //_bozokMap.gameObject.SetActive(false);
         _almatyMuseumCanvas.SetActive(false);
         _altynAdamCanvas.SetActive(false);
         _traditionalLifeCanvas.SetActive(false);
@@ -592,20 +603,6 @@ public class GameManager : MonoBehaviour
                 _hudManager.gameObject.SetActive(true);
                 _museumWeaponPointAndClickCanvas.gameObject.SetActive(true);
                 break;
-            // case GameScene.Bozok:
-            // {
-            //     if (_stateManager.IsIntroBozokComplete)
-            //     {
-            //         _bozokMap.SetActive(true);
-            //     }
-            //     else
-            //     {
-            //         _bozokIntro.gameObject.SetActive(true);
-            //     }
-            //
-            //     _hudManager.gameObject.SetActive(true);
-            //     break;
-            // }
             case GameScene.AlmatyMuseum:
                 _hudManager.gameObject.SetActive(true);
                 _almatyMuseumCanvas.gameObject.SetActive(true);

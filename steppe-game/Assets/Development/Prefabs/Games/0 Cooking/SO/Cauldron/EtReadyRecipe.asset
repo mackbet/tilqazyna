@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a7788dedccc6254e99e4ab2f551b9a4, type: 3}
+  m_Name: EtReadyRecipe
+  m_EditorClassIdentifier: Assembly-CSharp::RecipeData
+  _ingredients:
+  - {fileID: 11400000, guid: 606214cd709807d42b79fed9c205ed88, type: 2}
+  - {fileID: 11400000, guid: 09a0612533397fc40964bcd0b54bcd09, type: 2}
+  - {fileID: 11400000, guid: 4b5b6d0070ae7a14cad0f3d45aa9c1ff, type: 2}
+  - {fileID: 11400000, guid: 963ac4fd723ab984c87ced16e47c5d41, type: 2}
+  _result: {fileID: 11400000, guid: 05433fa6f868e394c99d9975dbe7fea3, type: 2}
+  _extraResults:
+  - {fileID: 11400000, guid: 4d610a410bf7a144083f3f453ae4e56b, type: 2}

@@ -1582,7 +1582,15 @@ MonoBehaviour:
   fishContainer: {fileID: 2881554469997761032}
   gameArea: {fileID: 2881554469997761032}
   levels:
-  - levelName: "\u0411\u0430\u043B\u044B\u049B \u0442\u04AF\u0441\u0456"
+  - levelName:
+      m_TableReference:
+        m_TableCollectionName: GUID:aa0c96a897bb2520f8d789afe9cb43d5
+      m_TableEntryReference:
+        m_KeyId: 156386601316012032
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     levelIcon: {fileID: 21300000, guid: c9b6a620304281d40b7d20b10f3c409e, type: 3}
     fishPrefabs:
     - {fileID: 7827987461012154418, guid: 94afb538a044ea44899750bec519f5b2, type: 3}
@@ -1599,7 +1607,15 @@ MonoBehaviour:
     fishToCatch: 5
     spawnInterval: 2
     maxFishOnScreen: 8
-  - levelName: "\u0411\u0430\u043B\u044B\u049B \u0442\u04AF\u0440\u0456"
+  - levelName:
+      m_TableReference:
+        m_TableCollectionName: GUID:aa0c96a897bb2520f8d789afe9cb43d5
+      m_TableEntryReference:
+        m_KeyId: 156386624086888448
+        m_Key: 
+      m_FallbackState: 0
+      m_WaitForCompletion: 0
+      m_LocalVariables: []
     levelIcon: {fileID: 21300000, guid: 1e563a27c319cd84c888db4cb211eb71, type: 3}
     fishPrefabs:
     - {fileID: 7827987461012154418, guid: fd90672e349e13f4b8e627c67f0051b6, type: 3}
@@ -1625,6 +1641,9 @@ MonoBehaviour:
   noiseSound: {fileID: 8300000, guid: c7d4f79569aea894e802ad68f805dfd4, type: 3}
   catchSound: {fileID: 8300000, guid: a952bc3dc0b2b5f45bf35fcaa2f3c5af, type: 3}
   wrongFishSound: {fileID: 8300000, guid: 893f48ecb04dd3e4db7da1449028a354, type: 3}
+  references:
+    version: 2
+    RefIds: []
 --- !u!224 &1042392189725360847 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 30355100260634061, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}

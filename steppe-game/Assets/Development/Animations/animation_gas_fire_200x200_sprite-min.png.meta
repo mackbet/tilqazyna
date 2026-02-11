@@ -123,10 +123,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 3
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -193,12 +193,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 435
-        width: 181
-        height: 132
+        x: 0
+        y: 400
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -215,12 +215,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_1
       rect:
         serializedVersion: 2
-        x: 209
-        y: 435
-        width: 181
-        height: 133
+        x: 200
+        y: 400
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -237,12 +237,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_2
       rect:
         serializedVersion: 2
-        x: 409
-        y: 435
-        width: 181
-        height: 132
+        x: 400
+        y: 400
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -259,12 +259,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_3
       rect:
         serializedVersion: 2
-        x: 609
-        y: 435
-        width: 181
-        height: 133
+        x: 600
+        y: 400
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -281,12 +281,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_4
       rect:
         serializedVersion: 2
-        x: 809
-        y: 435
-        width: 181
-        height: 133
+        x: 800
+        y: 400
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -303,12 +303,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_5
       rect:
         serializedVersion: 2
-        x: 1009
-        y: 435
-        width: 181
-        height: 133
+        x: 1000
+        y: 400
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -325,12 +325,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_6
       rect:
         serializedVersion: 2
-        x: 9
-        y: 235
-        width: 181
-        height: 133
+        x: 0
+        y: 200
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -347,12 +347,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_7
       rect:
         serializedVersion: 2
-        x: 209
-        y: 235
-        width: 181
-        height: 133
+        x: 200
+        y: 200
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -369,12 +369,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_8
       rect:
         serializedVersion: 2
-        x: 409
-        y: 235
-        width: 180
-        height: 133
+        x: 400
+        y: 200
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -391,12 +391,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_9
       rect:
         serializedVersion: 2
-        x: 609
-        y: 235
-        width: 181
-        height: 133
+        x: 600
+        y: 200
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -413,12 +413,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_10
       rect:
         serializedVersion: 2
-        x: 809
-        y: 235
-        width: 181
-        height: 133
+        x: 800
+        y: 200
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -435,12 +435,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_11
       rect:
         serializedVersion: 2
-        x: 1009
-        y: 235
-        width: 181
-        height: 133
+        x: 1000
+        y: 200
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -457,12 +457,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_12
       rect:
         serializedVersion: 2
-        x: 9
-        y: 35
-        width: 181
-        height: 133
+        x: 0
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -479,12 +479,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_13
       rect:
         serializedVersion: 2
-        x: 209
-        y: 35
-        width: 181
-        height: 133
+        x: 200
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -501,12 +501,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_14
       rect:
         serializedVersion: 2
-        x: 409
-        y: 35
-        width: 181
-        height: 133
+        x: 400
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -523,12 +523,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_15
       rect:
         serializedVersion: 2
-        x: 609
-        y: 35
-        width: 181
-        height: 133
+        x: 600
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -545,12 +545,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_16
       rect:
         serializedVersion: 2
-        x: 809
-        y: 35
-        width: 181
-        height: 133
+        x: 800
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -567,12 +567,12 @@ TextureImporter:
       name: animation_gas_fire_200x200_sprite-min_17
       rect:
         serializedVersion: 2
-        x: 1009
-        y: 35
-        width: 181
-        height: 133
+        x: 1000
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -589,7 +589,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 426e4a91f3f02b14bb32f31ab9504a76
     internalID: 0
     vertices: []
     indices: 
@@ -597,7 +597,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":3.0},"gridSpriteSize":{"x":200.0,"y":200.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       animation_gas_fire_200x200_sprite-min_0: 4703960910066725855
       animation_gas_fire_200x200_sprite-min_1: -404952734537924641

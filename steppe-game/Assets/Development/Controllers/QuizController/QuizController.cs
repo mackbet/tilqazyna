@@ -1,7 +1,6 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
@@ -63,8 +62,9 @@ public class QuizController : MonoBehaviour
     [SerializeField] private GameObject arrowObject;
     [SerializeField] private Canvas energyBarCanvas;
 
-    [Header("Question Canvas")]
-    [SerializeField] private Canvas questionCanvas;
+    [Header("Hint and Continue Buttons")]
+    [SerializeField] private Button hintButton;
+    [SerializeField] private Button continueButton;
 
     [Header("Question index and amount of right answers")]
     private int currentQuestionIndex;
@@ -227,8 +227,9 @@ public class QuizController : MonoBehaviour
 
         _soundManager.StopVoice();
 
-        // questionCanvas.overrideSorting = true;
-        // questionCanvas.sortingOrder = 15;
+        // Скрыть подсказку, показать кнопку продолжения
+        hintButton.gameObject.SetActive(false);
+        continueButton.gameObject.SetActive(true);
 
         if (quizInfo.questions[currentQuestionIndex].answers[buttonIndex].correct)
         {
@@ -322,12 +323,19 @@ public class QuizController : MonoBehaviour
         ActivateAllButtons();
 
         removeAnswers.gameObject.SetActive(true);
+
+        // Показать подсказку, скрыть кнопку продолжения
+        hintButton.gameObject.SetActive(true);
+        continueButton.gameObject.SetActive(false);
     }
 
     private void LocalizeQuestionUI()
     {
-        Debug.Log($"LocalizeQuestionUI: {LocalizationSettings.SelectedLocale.LocaleName}");
+        // Проверка что квиз активен и вопрос существует
+        if (quizInfo == null || quizInfo.questions == null || currentQuestionIndex >= quizInfo.questions.Length)
+            return;
 
+        Debug.Log($"LocalizeQuestionUI: {LocalizationSettings.SelectedLocale.LocaleName}");
         questionTitleText.text = LocalizationSettings.StringDatabase.GetLocalizedString("Main", "Вопрос") + " " + (currentQuestionIndex + 1) + " / " + quizInfo.questions.Length;
         questionDescriptionText.text = LocalizationSettings.StringDatabase.GetLocalizedString("Main", quizInfo.questions[currentQuestionIndex].description);
 
@@ -340,8 +348,6 @@ public class QuizController : MonoBehaviour
     private void SetCurrentUIToEndGame()
     {
         DeactivateAnswerBackPanel();
-
-        questionCanvas.overrideSorting = false;
 
         // endLevelCanvas.overrideSorting = true;
         // endLevelCanvas.sortingOrder = 20;
@@ -463,8 +469,6 @@ public class QuizController : MonoBehaviour
             // Quiz is finished
             SetCurrentUIToEndGame();
         }
-
-        questionCanvas.overrideSorting = false;
     }
 
     public void OnBackToCityClick()
@@ -472,7 +476,6 @@ public class QuizController : MonoBehaviour
         _soundManager.StopVoice();
 
         DeactivateAnswerBackPanel();
-        questionCanvas.overrideSorting = false;
         endLevelCanvas.overrideSorting = false;
 
         endGamePanel.SetActive(false);

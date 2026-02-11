@@ -273,7 +273,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -330,10 +330,10 @@ TextureImporter:
       name: reveal_4
       rect:
         serializedVersion: 2
-        x: 26
-        y: 1197
-        width: 302
-        height: 239
+        x: 0
+        y: 1125
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,10 +352,10 @@ TextureImporter:
       name: reveal_5
       rect:
         serializedVersion: 2
-        x: 398
-        y: 1191
-        width: 312
-        height: 247
+        x: 375
+        y: 1125
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -374,10 +374,10 @@ TextureImporter:
       name: reveal_6
       rect:
         serializedVersion: 2
-        x: 770
-        y: 1184
-        width: 316
-        height: 277
+        x: 750
+        y: 1125
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,10 +396,10 @@ TextureImporter:
       name: reveal_7
       rect:
         serializedVersion: 2
-        x: 1145
-        y: 1184
-        width: 317
-        height: 277
+        x: 1125
+        y: 1125
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,10 +418,10 @@ TextureImporter:
       name: reveal_0
       rect:
         serializedVersion: 2
-        x: 398
-        y: 1540
-        width: 317
-        height: 277
+        x: 0
+        y: 1500
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -440,10 +440,10 @@ TextureImporter:
       name: reveal_1
       rect:
         serializedVersion: 2
-        x: 1145
-        y: 1540
-        width: 317
-        height: 277
+        x: 375
+        y: 1500
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,10 +462,10 @@ TextureImporter:
       name: reveal_2
       rect:
         serializedVersion: 2
-        x: 770
-        y: 1540
-        width: 317
-        height: 277
+        x: 750
+        y: 1500
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,10 +484,10 @@ TextureImporter:
       name: reveal_3
       rect:
         serializedVersion: 2
-        x: 28
-        y: 1540
-        width: 317
-        height: 277
+        x: 1125
+        y: 1500
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -506,10 +506,10 @@ TextureImporter:
       name: reveal_8
       rect:
         serializedVersion: 2
-        x: 27
-        y: 1197
-        width: 302
-        height: 239
+        x: 0
+        y: 750
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -528,10 +528,10 @@ TextureImporter:
       name: reveal_9
       rect:
         serializedVersion: 2
-        x: 770
-        y: 800
-        width: 317
-        height: 277
+        x: 375
+        y: 750
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -550,10 +550,10 @@ TextureImporter:
       name: reveal_10
       rect:
         serializedVersion: 2
-        x: 1145
-        y: 800
-        width: 317
-        height: 277
+        x: 750
+        y: 750
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -572,10 +572,10 @@ TextureImporter:
       name: reveal_11
       rect:
         serializedVersion: 2
-        x: 398
-        y: 800
-        width: 317
-        height: 277
+        x: 1125
+        y: 750
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -594,10 +594,10 @@ TextureImporter:
       name: reveal_12
       rect:
         serializedVersion: 2
-        x: 15
-        y: 800
-        width: 328
-        height: 277
+        x: 0
+        y: 375
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -616,10 +616,10 @@ TextureImporter:
       name: reveal_13
       rect:
         serializedVersion: 2
-        x: 1145
-        y: 370
-        width: 317
-        height: 277
+        x: 375
+        y: 375
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -638,10 +638,10 @@ TextureImporter:
       name: reveal_14
       rect:
         serializedVersion: 2
-        x: 770
-        y: 370
-        width: 317
-        height: 277
+        x: 750
+        y: 375
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -650,8 +650,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a50d977a44bed0b46af47b01e7131b77
-      internalID: -1529909402
+      spriteID: 16c82b829a97ada4a8d344860c132d0c
+      internalID: -183428186
       vertices: []
       indices: 
       edges: []
@@ -660,10 +660,10 @@ TextureImporter:
       name: reveal_15
       rect:
         serializedVersion: 2
-        x: 398
-        y: 370
-        width: 317
-        height: 277
+        x: 1125
+        y: 375
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -672,8 +672,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a23eee7a16c39e149b953acae1ad1cef
-      internalID: 175219160
+      spriteID: 7dae65318e03a4f41ab9800ad77a639d
+      internalID: 351631283
       vertices: []
       indices: 
       edges: []
@@ -682,10 +682,10 @@ TextureImporter:
       name: reveal_16
       rect:
         serializedVersion: 2
-        x: 15
-        y: 370
-        width: 317
-        height: 277
+        x: 0
+        y: 0
+        width: 375
+        height: 375
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -694,8 +694,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68045dcc44f431a4aa6717dbcd47e557
-      internalID: 1208127572
+      spriteID: 17d934987ed4eb54580d4ea6e1e1fb75
+      internalID: 1391865653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reveal_17
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 0
+        width: 375
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41c3d5418f5fb8644b212dde463f6484
+      internalID: -1331694724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reveal_18
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 375
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e06aff8e323b3145b53e696adad5183
+      internalID: -775642188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: reveal_19
+      rect:
+        serializedVersion: 2
+        x: 1125
+        y: 0
+        width: 375
+        height: 375
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9357b23c2f1d2674f83a1048deb00595
+      internalID: -1922432839
       vertices: []
       indices: 
       edges: []
@@ -712,7 +778,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":5.0},"gridSpriteSize":{"x":375.0,"y":375.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":true,"isAlternate":false}'
     nameFileIdTable:
       reveal_0: -363593365
       reveal_1: -1969691142
@@ -720,9 +788,12 @@ TextureImporter:
       reveal_11: -1910130620
       reveal_12: 2095356491
       reveal_13: 609321665
-      reveal_14: -1529909402
-      reveal_15: 175219160
-      reveal_16: 1208127572
+      reveal_14: -183428186
+      reveal_15: 351631283
+      reveal_16: 1391865653
+      reveal_17: -1331694724
+      reveal_18: -775642188
+      reveal_19: -1922432839
       reveal_2: 954068202
       reveal_3: -100971342
       reveal_4: -8954769331493019391

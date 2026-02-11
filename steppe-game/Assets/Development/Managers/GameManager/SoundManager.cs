@@ -262,25 +262,9 @@ public class SoundManager : MonoBehaviour
 
     private void UpdateVolume()
     {
-        _musicAudioSource.volume = Mathf.Clamp(_stateManager.MusicVolume / 10f * musicMultiplier, 0f, 1f);
+        _musicAudioSource.volume = Mathf.Clamp(_stateManager.MusicVolume / 10f * musicMultiplier, 0f, 0.4f);
         _effectsAudioSource.volume = Mathf.Clamp(_stateManager.SoundVolume / 10f, 0f, 1f);
-        //_voiceAudioSource.volume = _effectsAudioSource.volume;
-
-        if (_stateManager.Language == Language.Russian)
-        {
-            _voiceAudioSource.volume = 0;
-        }
-        else
-        {
-            if (_musicAudioSource.volume == 0)
-            {
-                _voiceAudioSource.volume = 0;
-            }
-            else
-            {
-                _voiceAudioSource.volume = 1;
-            }
-        }
+        _voiceAudioSource.volume = Mathf.Clamp(_stateManager.VoiceVolume / 10f, 0f, 1f);
 
         VolumeVoicesSounds = _voiceAudioSource.volume;
     }

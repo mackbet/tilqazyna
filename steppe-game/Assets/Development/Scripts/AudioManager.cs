@@ -45,12 +45,16 @@ public class AudioManager : MonoBehaviour
             return null;
         }
 
+        // Учитываем глобальную громкость звуков из настроек
+        float globalVolume = StateManager.Instance != null ? StateManager.Instance.SoundVolume / 10f : 1f;
+        float finalVolume = Mathf.Clamp01(volume * globalVolume);
+
         GameObject soundObject = new GameObject($"Sound_{clip.name}");
         soundObject.transform.SetParent(transform);
 
         AudioSource audioSource = soundObject.AddComponent<AudioSource>();
         audioSource.clip = clip;
-        audioSource.volume = Mathf.Clamp01(volume);
+        audioSource.volume = finalVolume;
         audioSource.loop = loop;
         audioSource.pitch = pitch;
         audioSource.Play();

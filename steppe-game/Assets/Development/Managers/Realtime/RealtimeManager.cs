@@ -1,191 +1,304 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Unity.Services.CloudSave;
+using Unity.Services.CloudSave.Models.Data.Player;
 using UnityEngine;
-
-#if !UNITY_EDITOR
-using Firebase;
-using Firebase.Extensions;
-using Firebase.Firestore;
-#endif
+using SaveOptions = Unity.Services.CloudSave.Models.Data.Player.SaveOptions;
+using DeleteOptions = Unity.Services.CloudSave.Models.Data.Player.DeleteOptions;
 
 public class RealtimeManager
 {
-#if !UNITY_EDITOR
-    private FirebaseFirestore firestore;
-    private FirebaseApp app;
-#endif
-    private bool isInitialized = false;
+    public static RealtimeManager Instance { get; private set; }
 
-    public async Task Initialize()
+    // Ключи для Cloud Save
+    private const string KEY_NAME = "playerName";
+    private const string KEY_SEX = "playerSex";
+    private const string KEY_EXPERIENCE = "playerExperience";
+    private const string KEY_POINTS = "playerPoints";
+    private const string KEY_COINS = "playerCoins";
+
+    public void Initialize()
     {
-#if UNITY_EDITOR
-        Debug.LogWarning("[Firebase] Running in Unity Editor. Firebase is disabled. Build to iOS/Android device to test Firebase features.");
-        isInitialized = false;
-        await Task.CompletedTask;
-        return;
-#else
-        try
-        {
-            Debug.Log("[Firebase] Starting initialization...");
-
-            var dependencyStatus = await FirebaseApp.CheckAndFixDependenciesAsync();
-
-            if (dependencyStatus == DependencyStatus.Available)
-            {
-                app = FirebaseApp.DefaultInstance;
-                firestore = FirebaseFirestore.DefaultInstance;
-
-                isInitialized = true;
-                Debug.Log("[Firebase] ✓ Initialization successful");
-            }
-            else
-            {
-                Debug.LogError($"[Firebase] ✗ Could not resolve dependencies: {dependencyStatus}");
-                isInitialized = false;
-            }
-        }
-        catch (Exception e)
-        {
-            Debug.LogError($"[Firebase] ✗ Initialization failed: {e.Message}");
-            isInitialized = false;
-        }
-#endif
+        Instance = this;
+        Debug.Log("[CloudSave] RealtimeManager инициализирован");
     }
 
-    public async Task SaveUserData(string userName, CharacterSex userSex, int userLevel, int userPoints)
+    /// <summary>
+    /// Сохранить данные пользователя и отправить в лидерборд
+    /// </summary>
+    public async Task SaveUserData(string userName, CharacterSex userSex, int userExperience, int userPoints)
     {
-#if UNITY_EDITOR
-        Debug.LogWarning($"[Firebase] MOCK: Would save user {userName} with {userPoints} points (Editor mode)");
-        await Task.CompletedTask;
-        return;
-#else
-        if (!isInitialized)
+        if (!LoginManager.Instance?.IsAuthenticated ?? true)
         {
-            Debug.LogError("[Firebase] Not initialized. Cannot save user data.");
+            Debug.LogWarning("[CloudSave] Пользователь не авторизован, сохранение невозможно");
             return;
         }
 
-        var userData = new Dictionary<string, object>
+        var data = new Dictionary<string, object>
         {
-            { "Name", userName },
-            { "Sex", (int)userSex },
-            { "Level", userLevel },
-            { "Points", userPoints },
-            { "LastUpdated", FieldValue.ServerTimestamp }
+            { KEY_NAME, userName },
+            { KEY_SEX, (int)userSex },
+            { KEY_EXPERIENCE, userExperience },
+            { KEY_POINTS, userPoints }
         };
 
         try
         {
-            await firestore.Collection("Users").Document(userName).SetAsync(userData);
-            Debug.Log($"[Firebase] ✓ User data saved: {userName}");
+            await CloudSaveService.Instance.Data.Player.SaveAsync(data);
+            Debug.Log($"[CloudSave] Данные сохранены: {userName}, Exp: {userExperience}, Points: {userPoints}");
+
+            // Отправляем данные в лидерборд (уровень рассчитываем на месте)
+            if (LeaderboardManager.Instance != null)
+            {
+                int level = userExperience / 80;
+                await LeaderboardManager.Instance.SubmitScore(userPoints, userName, userSex, level);
+            }
         }
         catch (Exception e)
         {
-            Debug.LogError($"[Firebase] ✗ Failed to save user data: {e.Message}");
+            Debug.LogError($"[CloudSave] Ошибка сохранения: {e.Message}");
         }
-#endif
     }
 
+    /// <summary>
+    /// Сохранить монеты игрока
+    /// </summary>
+    public async Task SaveCoins(int coins)
+    {
+        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+        {
+            Debug.LogWarning("[CloudSave] Пользователь не авторизован");
+            return;
+        }
+
+        var data = new Dictionary<string, object>
+        {
+            { KEY_COINS, coins }
+        };
+
+        try
+        {
+            await CloudSaveService.Instance.Data.Player.SaveAsync(data);
+            Debug.Log($"[CloudSave] Монеты сохранены: {coins}");
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"[CloudSave] Ошибка сохранения монет: {e.Message}");
+        }
+    }
+
+    /// <summary>
+    /// Сохранить произвольные данные
+    /// </summary>
+    public async Task SaveData(Dictionary<string, object> data)
+    {
+        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+        {
+            Debug.LogWarning("[CloudSave] Пользователь не авторизован");
+            return;
+        }
+
+        try
+        {
+            await CloudSaveService.Instance.Data.Player.SaveAsync(data);
+            Debug.Log("[CloudSave] Данные сохранены");
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"[CloudSave] Ошибка сохранения: {e.Message}");
+        }
+    }
+
+    /// <summary>
+    /// Прочитать данные текущего пользователя
+    /// </summary>
+    public async Task<UserModel> ReadCurrentUserData()
+    {
+        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+        {
+            Debug.LogWarning("[CloudSave] Пользователь не авторизован");
+            return null;
+        }
+
+        try
+        {
+            var keys = new HashSet<string> { KEY_NAME, KEY_SEX, KEY_EXPERIENCE, KEY_POINTS };
+            var result = await CloudSaveService.Instance.Data.Player.LoadAsync(keys);
+
+            if (result.Count == 0)
+            {
+                Debug.Log("[CloudSave] Данные пользователя не найдены");
+                return null;
+            }
+
+            string name = result.TryGetValue(KEY_NAME, out var nameItem)
+                ? nameItem.Value.GetAs<string>()
+                : "Unknown";
+
+            int sex = result.TryGetValue(KEY_SEX, out var sexItem)
+                ? sexItem.Value.GetAs<int>()
+                : 0;
+
+            int experience = result.TryGetValue(KEY_EXPERIENCE, out var expItem)
+                ? expItem.Value.GetAs<int>()
+                : 0;
+
+            int points = result.TryGetValue(KEY_POINTS, out var pointsItem)
+                ? pointsItem.Value.GetAs<int>()
+                : 0;
+
+            var userModel = new UserModel(name, (CharacterSex)sex, experience: experience, points: points);
+            Debug.Log($"[CloudSave] Данные загружены: {userModel.Name}, Exp: {experience}, Level: {userModel.Level}");
+            return userModel;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"[CloudSave] Ошибка чтения данных: {e.Message}");
+            return null;
+        }
+    }
+
+    /// <summary>
+    /// Загрузить монеты игрока
+    /// </summary>
+    public async Task<int> LoadCoins()
+    {
+        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+        {
+            Debug.LogWarning("[CloudSave] Пользователь не авторизован");
+            return 0;
+        }
+
+        try
+        {
+            var keys = new HashSet<string> { KEY_COINS };
+            var result = await CloudSaveService.Instance.Data.Player.LoadAsync(keys);
+
+            int coins = result.TryGetValue(KEY_COINS, out var coinsItem)
+                ? coinsItem.Value.GetAs<int>()
+                : 0;
+
+            Debug.Log($"[CloudSave] Монеты загружены: {coins}");
+            return coins;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"[CloudSave] Ошибка загрузки монет: {e.Message}");
+            return 0;
+        }
+    }
+
+    /// <summary>
+    /// Загрузить произвольные данные
+    /// </summary>
+    public async Task<Dictionary<string, object>> LoadData(HashSet<string> keys)
+    {
+        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+        {
+            Debug.LogWarning("[CloudSave] Пользователь не авторизован");
+            return null;
+        }
+
+        try
+        {
+            var result = await CloudSaveService.Instance.Data.Player.LoadAsync(keys);
+            var data = new Dictionary<string, object>();
+
+            foreach (var kvp in result)
+            {
+                data[kvp.Key] = kvp.Value.Value.GetAs<object>();
+            }
+
+            return data;
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"[CloudSave] Ошибка загрузки: {e.Message}");
+            return null;
+        }
+    }
+
+    /// <summary>
+    /// Прочитать данные пользователя по имени (для совместимости)
+    /// </summary>
     public async Task<UserModel> ReadUserData(string userName)
     {
-#if UNITY_EDITOR
-        Debug.LogWarning($"[Firebase] MOCK: Would read user {userName} (Editor mode)");
-        // Возвращаем mock данные для тестирования в Editor
-        await Task.CompletedTask;
-        return new UserModel(userName, CharacterSex.Boy, 1, 100);
-#else
-        if (!isInitialized)
-        {
-            Debug.LogError("[Firebase] Not initialized. Cannot read user data.");
-            return null;
-        }
-
-        try
-        {
-            var snapshot = await firestore.Collection("Users").Document(userName).GetSnapshotAsync();
-
-            if (snapshot.Exists)
-            {
-                var data = snapshot.ToDictionary();
-
-                var userModel = new UserModel(
-                    data["Name"].ToString(),
-                    (CharacterSex)Convert.ToInt32(data["Sex"]),
-                    Convert.ToInt32(data["Level"]),
-                    Convert.ToInt32(data["Points"])
-                );
-
-                Debug.Log($"[Firebase] ✓ User data loaded: {userModel.Name}");
-                return userModel;
-            }
-
-            Debug.Log($"[Firebase] User not found: {userName}");
-            return null;
-        }
-        catch (Exception e)
-        {
-            Debug.LogError($"[Firebase] ✗ Failed to read user data: {e.Message}");
-            return null;
-        }
-#endif
+        // Cloud Save не поддерживает чтение данных других игроков
+        // Возвращаем данные текущего пользователя
+        return await ReadCurrentUserData();
     }
 
-    public async Task<List<UserModel>> ReadOtherUsersData(string userName)
+    /// <summary>
+    /// Прочитать данные пользователя по userId (для совместимости)
+    /// </summary>
+    public async Task<UserModel> ReadUserDataById(string odl)
     {
-#if UNITY_EDITOR
-        Debug.LogWarning($"[Firebase] MOCK: Would read leaderboard (Editor mode)");
-        // Возвращаем mock данные для тестирования
-        await Task.CompletedTask;
-        return new List<UserModel>
-        {
-            new UserModel("Player1", CharacterSex.Boy, 5, 500),
-            new UserModel("Player2", CharacterSex.Girl, 3, 300),
-            new UserModel("Player3", CharacterSex.Boy, 2, 200)
-        };
-#else
-        if (!isInitialized)
-        {
-            Debug.LogError("[Firebase] Not initialized. Cannot read other users.");
-            return new List<UserModel>();
-        }
+        // Cloud Save не поддерживает чтение данных других игроков
+        return await ReadCurrentUserData();
+    }
 
-        List<UserModel> users = new List<UserModel>();
+    /// <summary>
+    /// Получить список пользователей для лидерборда
+    /// ВАЖНО: Cloud Save не поддерживает чтение данных других игроков!
+    /// Для лидерборда используй Unity Leaderboards
+    /// </summary>
+    public async Task<List<UserModel>> ReadOtherUsersData(string excludeUserName)
+    {
+        Debug.LogWarning("[CloudSave] Cloud Save не поддерживает лидерборды. Используйте Unity Leaderboards.");
+        // TODO: Реализовать через Unity Leaderboards
+        return new List<UserModel>();
+    }
+
+    /// <summary>
+    /// Проверить, существует ли пользователь в базе
+    /// </summary>
+    public async Task<bool> UserExists()
+    {
+        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+            return false;
 
         try
         {
-            var snapshot = await firestore.Collection("Users")
-                .OrderByDescending("Points")
-                .Limit(30)
-                .GetSnapshotAsync();
+            var keys = new HashSet<string> { KEY_NAME };
+            var result = await CloudSaveService.Instance.Data.Player.LoadAsync(keys);
+            return result.ContainsKey(KEY_NAME);
+        }
+        catch
+        {
+            return false;
+        }
+    }
 
-            foreach (var doc in snapshot.Documents)
+    /// <summary>
+    /// Удалить все данные пользователя
+    /// </summary>
+    public async Task DeleteAllData()
+    {
+        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+        {
+            Debug.LogWarning("[CloudSave] Пользователь не авторизован");
+            return;
+        }
+
+        try
+        {
+            var keys = new List<string> { KEY_NAME, KEY_SEX, KEY_EXPERIENCE, KEY_POINTS, KEY_COINS };
+            var options = new DeleteOptions();
+
+            foreach (var key in keys)
             {
-                var data = doc.ToDictionary();
-
-                var userModel = new UserModel(
-                    data["Name"].ToString(),
-                    (CharacterSex)Convert.ToInt32(data["Sex"]),
-                    Convert.ToInt32(data["Level"]),
-                    Convert.ToInt32(data["Points"])
-                );
-
-                if (userModel.Name != userName)
+                try
                 {
-                    users.Add(userModel);
+                    await CloudSaveService.Instance.Data.Player.DeleteAsync(key, options);
                 }
+                catch { }
             }
-
-            Debug.Log($"[Firebase] ✓ Loaded {users.Count} users from leaderboard");
-            return users;
+            Debug.Log("[CloudSave] Все данные удалены");
         }
         catch (Exception e)
         {
-            Debug.LogError($"[Firebase] ✗ Failed to read leaderboard: {e.Message}");
-            return new List<UserModel>();
+            Debug.LogError($"[CloudSave] Ошибка удаления данных: {e.Message}");
         }
-#endif
     }
-
-    public bool IsInitialized => isInitialized;
 }

@@ -7,7 +7,17 @@ public class LocaleManager : MonoBehaviour
 {
     public static event Action OnChangeQuestionUI;
 
+    private const string LocaleKey = "SelectedLocaleId";
     private bool isActive;
+
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey(LocaleKey))
+        {
+            int savedLocaleId = PlayerPrefs.GetInt(LocaleKey);
+            StartCoroutine(SetLocale(savedLocaleId, false));
+        }
+    }
 
     public void ChangeLocale(int localeId)
     {
@@ -23,10 +33,10 @@ public class LocaleManager : MonoBehaviour
             return;
         }
 
-        StartCoroutine(SetLocale(localeId));
+        StartCoroutine(SetLocale(localeId, true));
     }
 
-    private IEnumerator SetLocale(int localeId)
+    private IEnumerator SetLocale(int localeId, bool save)
     {
         isActive = true;
 
@@ -36,6 +46,12 @@ public class LocaleManager : MonoBehaviour
         // Set the selected locale
         var locales = LocalizationSettings.AvailableLocales.Locales;
         LocalizationSettings.SelectedLocale = locales[localeId];
+
+        if (save)
+        {
+            PlayerPrefs.SetInt(LocaleKey, localeId);
+            PlayerPrefs.Save();
+        }
 
         Debug.Log($"Locale changed to: {LocalizationSettings.SelectedLocale.LocaleName}");
         isActive = false;

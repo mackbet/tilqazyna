@@ -108,11 +108,7 @@ public class MapManager : MonoBehaviour
     public void OnExpoClick() => OnClickQuizButton(CityEnum.expo);
     public void OnSarayClick() => OnClickQuizButton(CityEnum.saray);
 
-    public void OnMuseumClick()
-    {
-        OnClickMuseumButtonAction?.Invoke();
-    }
-
+    public void OnMuseumClick() => OnClickMuseumButtonAction?.Invoke();
     public void OnMuseumFiveWeaponsClick() => OnClickMuseumFiveWeaponsButtonAction?.Invoke();
     public void OnMuseumSevenTreasuresClick() => OnClickMuseumSevenTreasuresButtonAction?.Invoke();
 

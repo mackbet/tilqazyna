@@ -23,13 +23,41 @@ public class UIPanelFinish : UIPanel
     {
         base.Show();
 
+        // Сначала начисляем награды
+        StateManager.Instance.CurrencyAmount += coins;
+        StateManager.Instance.PointsAmount += points;
+        StateManager.Instance.ExperienceAmount += exp;
+
+        // Затем выводим актуальные значения
         coinField.text = coins + " " + coinText;
         pointField.text = points + " " + pointText;
         expField.text = StateManager.Instance.ExperienceAmount.ToString();
 
-        StateManager.Instance.CurrencyAmount += coins;
-        StateManager.Instance.PointsAmount += points;
-        StateManager.Instance.ExperienceAmount += exp;
+        // Сохраняем данные и отправляем в лидерборд
+        SaveAndSubmit();
+        SoundManager.Instance.PlayExpGainSound();
+    }
+
+    private async void SaveAndSubmit()
+    {
+        // Сохраняем данные в Cloud Save (лидерборд обновляется автоматически)
+        var realtimeManager = GetRealtimeManager();
+        if (realtimeManager != null)
+        {
+            await realtimeManager.SaveUserData(
+                StateManager.Instance.PlayerName,
+                StateManager.Instance.CharacterSex,
+                StateManager.Instance.ExperienceAmount,
+                StateManager.Instance.PointsAmount
+            );
+
+            await realtimeManager.SaveCoins(StateManager.Instance.CurrencyAmount);
+        }
+    }
+
+    private RealtimeManager GetRealtimeManager()
+    {
+        return RealtimeManager.Instance;
     }
 
     public void SetTitle(string title)

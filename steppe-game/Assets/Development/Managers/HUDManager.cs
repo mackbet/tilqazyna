@@ -2,6 +2,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.Localization.Components;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 public class HUDManager : MonoBehaviour
@@ -19,6 +20,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField] private Button _kzButton;
     [SerializeField] private Slider _musicVolumeSlider;
     [SerializeField] private Slider _soundsVolumeSlider;
+    [SerializeField] private Slider _voiceVolumeSlider;
     [SerializeField] private LocalizeStringEvent _versionText;
 
     [Header("Avatar")]
@@ -30,6 +32,7 @@ public class HUDManager : MonoBehaviour
     [Header("Settings icons")]
     [SerializeField] private GameObject _musicSlash;
     [SerializeField] private GameObject _soundSlash;
+    [SerializeField] private GameObject _voiceSlash;
 
     [Header("Leaderboard")]
     [SerializeField] private GameObject _leaderWindow;
@@ -120,8 +123,6 @@ public class HUDManager : MonoBehaviour
             _avatarLeaderboardImage.sprite = _girlAvatarSprite;
         }
 
-        OnLanguageChange(_stateManager.Language);
-
         _energySlider.value = _stateManager.EnergyAmount;
 
         _versionText.StringReference.Arguments = new object[] { new VersionUtility().GetVersionNumber() };
@@ -142,10 +143,15 @@ public class HUDManager : MonoBehaviour
         _soundsVolumeSlider.value = _stateManager.SoundVolume;
         _musicVolumeSlider.value = _stateManager.MusicVolume;
 
+        if (_voiceVolumeSlider != null)
+            _voiceVolumeSlider.value = _stateManager.VoiceVolume;
+
         SetMusicSoundButtonsImage();
 
-        _ruButton.image.sprite = _stateManager.Language == Language.Russian ? _activeButtonLanguageBackground : _unactiveButtonLanguageBackground;
-        _kzButton.image.sprite = _stateManager.Language == Language.Kazakh ? _activeButtonLanguageBackground : _unactiveButtonLanguageBackground;
+        var currentLocale = LocalizationSettings.SelectedLocale;
+        bool isRussian = currentLocale != null && currentLocale.Identifier.Code == "ru";
+        _ruButton.image.sprite = isRussian ? _activeButtonLanguageBackground : _unactiveButtonLanguageBackground;
+        _kzButton.image.sprite = isRussian ? _unactiveButtonLanguageBackground : _activeButtonLanguageBackground;
     }
 
     public void OnBuyEnergyClick()
@@ -277,25 +283,44 @@ public class HUDManager : MonoBehaviour
         OnButtonClick?.Invoke();
     }
 
-    private void SetMusicSoundButtonsImage()
+    public void OnVoiceVolumeChanged()
     {
-        if (_soundsVolumeSlider.value == 0)
+        _soundManager.PlayDefaultButtonSound();
+
+        _stateManager.VoiceVolume = (int)_voiceVolumeSlider.value;
+
+        SetMusicSoundButtonsImage();
+
+        OnButtonClick?.Invoke();
+    }
+
+    public void OnVoiceVolumeClick()
+    {
+        _soundManager.PlayDefaultButtonSound();
+
+        if (_stateManager.VoiceVolume == 0)
         {
-            _soundSlash.SetActive(true);
+            _stateManager.VoiceVolume = 5;
+            _voiceVolumeSlider.value = 5;
         }
         else
         {
-            _soundSlash.SetActive(false);
+            _stateManager.VoiceVolume = 0;
+            _voiceVolumeSlider.value = 0;
         }
 
-        if (_musicVolumeSlider.value == 0)
-        {
-            _musicSlash.SetActive(true);
-        }
-        else
-        {
-            _musicSlash.SetActive(false);
-        }
+        SetMusicSoundButtonsImage();
+
+        OnButtonClick?.Invoke();
+    }
+
+    private void SetMusicSoundButtonsImage()
+    {
+        _soundSlash.SetActive(_soundsVolumeSlider.value == 0);
+        _musicSlash.SetActive(_musicVolumeSlider.value == 0);
+
+        if (_voiceSlash != null)
+            _voiceSlash.SetActive(_voiceVolumeSlider.value == 0);
     }
 
     public void SetUpperRightGroupWithLeaderboardActive(bool setActive)

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 public class NumberOfTargets : GameController
@@ -44,7 +46,7 @@ public class NumberOfTargets : GameController
     [Serializable]
     private class TargetGroup
     {
-        [field: SerializeField] public string Name { get; private set; }
+        [field: SerializeField] public LocalizedString Name { get; private set; }
         [field: SerializeField] public AudioClip Audio { get; private set; }
         [field: SerializeField] public Sprite Sprite { get; private set; }
         [field: SerializeField] public GameObject[] Objects { get; private set; }
@@ -55,6 +57,8 @@ public class NumberOfTargets : GameController
     protected override void InitializeGame()
     {
         base.InitializeGame();
+
+        LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
 
         // Скрываем случайные объекты
         HideRandomObjects();
@@ -71,6 +75,12 @@ public class NumberOfTargets : GameController
 
         // Показываем вопрос и запускаем таймер
         ShowQuestion();
+    }
+
+    private void OnLocaleChanged(Locale locale)
+    {
+        if (selectedGroup != null && questionText != null)
+            questionText.text = selectedGroup.Name.GetLocalizedString();
     }
 
     private void Update()
@@ -180,7 +190,7 @@ public class NumberOfTargets : GameController
             }
             group.VisibleCount = visibleCount;
 
-            Debug.Log($"Группа {group.Name}: всего {totalObjects}, видимых {visibleCount}, скрытых {objectsToHide}");
+            Debug.Log($"Группа {group.Name.GetLocalizedString()}: всего {totalObjects}, видимых {visibleCount}, скрытых {objectsToHide}");
         }
     }
 
@@ -189,7 +199,7 @@ public class NumberOfTargets : GameController
         selectedGroup = groups[UnityEngine.Random.Range(0, groups.Length)];
         correctAnswer = selectedGroup.VisibleCount;
 
-        Debug.Log($"Выбрана группа: {selectedGroup.Name}, правильный ответ: {correctAnswer}");
+        Debug.Log($"Выбрана группа: {selectedGroup.Name.GetLocalizedString()}, правильный ответ: {correctAnswer}");
     }
 
     private void SetupButtons()
@@ -249,7 +259,7 @@ public class NumberOfTargets : GameController
         // Показываем текст вопроса
         if (questionText != null)
         {
-            questionText.text = $"{selectedGroup.Name}";
+            questionText.text = selectedGroup.Name.GetLocalizedString();
         }
 
         isAnswering = false;
@@ -326,6 +336,7 @@ public class NumberOfTargets : GameController
     protected override void OnDisable()
     {
         base.OnDisable();
+        LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
 
         // Отписываемся от кнопок
         if (increaseButton != null)
@@ -365,5 +376,5 @@ public class NumberOfTargets : GameController
 
     // Методы для получения информации
     public int GetCorrectAnswer() => correctAnswer;
-    public string GetSelectedGroupName() => selectedGroup?.Name;
+    public string GetSelectedGroupName() => selectedGroup?.Name.GetLocalizedString();
 }
