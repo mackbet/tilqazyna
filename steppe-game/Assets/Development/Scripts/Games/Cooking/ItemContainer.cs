@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -6,15 +7,19 @@ public class ItemContainer : MonoBehaviour
 {
     [SerializeField] private ItemData _item;
     [SerializeField] private bool _isResource;
+    [SerializeField] private float _transferDelay;
 
     private Draggable _draggable;
-    private Vessel _currentVessel;
+    private IItemReceiver _currentReceiver;
+    private Coroutine _transferCoroutine;
 
     public ItemData Item => _item;
     public bool IsResource => _isResource;
     public bool IsEmpty => _item == null;
 
     public event Action<ItemData> ItemChanged;
+    public event Action<IItemReceiver> TransferStarted;
+    public event Action TransferFinished;
 
     private void Awake()
     {
@@ -46,45 +51,76 @@ public class ItemContainer : MonoBehaviour
     {
         if (_draggable == null || !_draggable.IsDragging) return;
 
-        var vessel = other.GetComponent<Vessel>();
-        if (vessel == null || IsEmpty || !vessel.CanAccept(_item)) return;
+        var receiver = other.GetComponent<IItemReceiver>();
+        if (receiver == null || IsEmpty || !receiver.CanAccept(_item)) return;
 
-        _currentVessel = vessel;
+        _currentReceiver = receiver;
         _draggable.DragEnded += OnDragEnded;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        var vessel = other.GetComponent<Vessel>();
-        if (vessel == null || vessel != _currentVessel) return;
+        var vessel = other.GetComponent<IItemReceiver>();
+        if (vessel == null || vessel != _currentReceiver) return;
 
-        ClearVessel();
+        ClearReceiver();
     }
 
     private void OnDragEnded(Draggable draggable, PointerEventData eventData)
     {
-        if (_currentVessel == null || IsEmpty || !_currentVessel.CanAccept(_item))
+        if (_currentReceiver == null || IsEmpty || !_currentReceiver.CanAccept(_item))
         {
-            ClearVessel();
+            ClearReceiver();
             return;
         }
 
-        var vessel = _currentVessel;
+        var vessel = _currentReceiver;
+        ClearReceiver();
+
+        if (_transferDelay > 0f)
+            _transferCoroutine = StartCoroutine(TransferWithDelay(vessel));
+        else
+            Transfer(vessel);
+    }
+
+    private IEnumerator TransferWithDelay(IItemReceiver vessel)
+    {
+        _draggable.Accept();
+        _draggable.CanDrag = false;
+        TransferStarted?.Invoke(vessel);
+
+        yield return new WaitForSeconds(_transferDelay);
+
+        _transferCoroutine = null;
+        Transfer(vessel);
+
+        TransferFinished?.Invoke();
+        _draggable.ReturnToOrigin();
+    }
+
+    private void Transfer(IItemReceiver vessel)
+    {
         var item = Take();
-        ClearVessel();
         vessel.AddItem(item);
     }
 
-    private void ClearVessel()
+    private void ClearReceiver()
     {
         if (_draggable != null)
             _draggable.DragEnded -= OnDragEnded;
 
-        _currentVessel = null;
+        _currentReceiver = null;
     }
 
     private void OnDisable()
     {
-        ClearVessel();
+        ClearReceiver();
+
+        if (_transferCoroutine != null)
+        {
+            StopCoroutine(_transferCoroutine);
+            _transferCoroutine = null;
+            _draggable.ReturnToOrigin();
+        }
     }
 }

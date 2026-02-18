@@ -27,6 +27,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
     public event Action<Draggable, PointerEventData> DragStarted;
     public event Action<Draggable, PointerEventData> Dragging;
     public event Action<Draggable, PointerEventData> DragEnded;
+    public event Action<Draggable> Returned;
 
 #if UNITY_EDITOR
 
@@ -127,6 +128,7 @@ public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
             {
                 _canDrag = true;
                 _returnTween = null;
+                Returned?.Invoke(this);
             });
     }
 

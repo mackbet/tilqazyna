@@ -5,21 +5,32 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(BoxCollider2D))]
-public class Vessel : MonoBehaviour
+public class Vessel : MonoBehaviour, IItemReceiver
 {
     [SerializeField] private RecipeData[] _recipes;
+    [SerializeField] private RectTransform _transferTarget;
     [SerializeField] private ItemContainer _resultContainer;
     [SerializeField] private float _resultAppearDuration = 0.4f;
     [SerializeField] private List<ItemData> _items = new();
+    [SerializeField] private HintData _hint;
 
     private ItemData _lastSpawnedResult;
     private Tweener _resultTween;
+    private Draggable _draggable;
 
+    public RectTransform TransferTarget => _transferTarget;
     public IReadOnlyList<ItemData> Items => _items;
+    public IReadOnlyList<RecipeData> Recipes => _recipes;
+    public HintData Hint => _hint;
 
     public event Action<ItemData> ItemAdded;
     public event Action<ItemData> ItemRemoved;
     public event Action<RecipeData, ItemData> RecipeCompleted;
+
+    private void Awake()
+    {
+        _draggable = GetComponent<Draggable>();
+    }
 
     private void Start()
     {
@@ -29,7 +40,7 @@ public class Vessel : MonoBehaviour
 
     public bool HasResult => _items.Count == 1 && IsResult(_items[0]);
 
-    public bool CanAccept(ItemData item)
+    public virtual bool CanAccept(ItemData item)
     {
         if (item == null || _items.Contains(item) || HasResult) return false;
 
@@ -126,6 +137,9 @@ public class Vessel : MonoBehaviour
             .OnComplete(() => _resultTween = null);
 
         _resultContainer.ItemChanged += OnResultTaken;
+
+        if (_draggable != null)
+            _draggable.CanDrag = false;
     }
 
     private void KillResultTween()
@@ -145,6 +159,9 @@ public class Vessel : MonoBehaviour
         _resultContainer.gameObject.SetActive(false);
         _items.Remove(_lastSpawnedResult);
         _lastSpawnedResult = null;
+
+        if (_draggable != null)
+            _draggable.CanDrag = true;
     }
 
     private void CheckRecipes()

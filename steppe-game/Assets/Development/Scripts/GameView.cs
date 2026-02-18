@@ -35,6 +35,8 @@ public class GameView : CanvasView
 
     public void SetTitle(LocalizedString localizedTitle)
     {
+        if (!title)
+            return;
         _localizedTitle = localizedTitle;
         var text = localizedTitle.GetLocalizedString();
         title.text = text;
