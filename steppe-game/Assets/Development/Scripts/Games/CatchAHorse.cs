@@ -41,6 +41,12 @@ public class CatchAHorse : GameController
     private int sliderDirection = 1; // 1 = вверх, -1 = вниз
     private AudioSource horseRunAudioSource; // AudioSource для звука бега коня
 
+    private void OnValidate()
+    {
+        if (words != null)
+            words = System.Array.FindAll(words, w => w != null);
+    }
+
     protected override void InitializeGame()
     {
         base.InitializeGame();

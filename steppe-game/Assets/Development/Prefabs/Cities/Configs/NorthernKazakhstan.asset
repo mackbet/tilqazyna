@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f217f405b71684e83e5add371a6f2b, type: 3}
+  m_Name: NorthernKazakhstan
+  m_EditorClassIdentifier: Assembly-CSharp::CityConfig
+  city: 9
+  requiredGames:
+  - {fileID: 9003518508384956049, guid: a08fac61cd27dd4438a9667d98f17e09, type: 3}
+  - {fileID: 3169420249415545088, guid: d692ed73d8f297b46a9401cf69e57a17, type: 3}
+  - {fileID: 4121003273138344159, guid: 1b14cce650a7b2c48ac079f40f6893dc, type: 3}
+  - {fileID: 1114649210849863102, guid: 19c30c488f78d9c4cbb7ece95ec5c08f, type: 3}
+  - {fileID: 7582991900624102210, guid: be23ad13105f179449265d46e90e4663, type: 3}
+  - {fileID: 9067366667921250123, guid: aae2971ada693fa428bbd84f3de1c96e, type: 3}
+  - {fileID: 701756756198264269, guid: 66d9006f1504758488c7d1e7aff247a2, type: 3}
+  trophyPrefab: {fileID: 3010230583145951057, guid: df2961552e5e23c4da208700cdcfd543, type: 3}

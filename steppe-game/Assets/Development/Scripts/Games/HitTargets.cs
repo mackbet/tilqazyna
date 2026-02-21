@@ -79,6 +79,12 @@ public class HitTargets : GameController
         stopwatch.StartStopwatch();
     }
 
+    private void OnValidate()
+    {
+        if (allWords != null)
+            allWords = System.Array.FindAll(allWords, w => w != null);
+    }
+
     private void SelectRandomCategory()
     {
         if (availableCategories == null || availableCategories.Length == 0)
@@ -94,6 +100,7 @@ public class HitTargets : GameController
 
         foreach (var word in allWords)
         {
+            if (word == null) continue;
             if (word.HasCategory(targetCategory))
             {
                 targetCategoryWords.Add(word);

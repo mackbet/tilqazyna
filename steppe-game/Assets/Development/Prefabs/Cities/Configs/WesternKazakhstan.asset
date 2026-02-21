@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f217f405b71684e83e5add371a6f2b, type: 3}
+  m_Name: WesternKazakhstan
+  m_EditorClassIdentifier: Assembly-CSharp::CityConfig
+  city: 8
+  requiredGames:
+  - {fileID: 6788610508351207282, guid: b426978c321869e4dbd182ea7bfc0ac0, type: 3}
+  - {fileID: 2810966945874307518, guid: f064130f5e847e34db7f03af6de24087, type: 3}
+  trophyPrefab: {fileID: 3097847280347520052, guid: 6c17caeba273dcc498e663e8f8a619dc, type: 3}

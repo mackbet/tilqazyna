@@ -31,6 +31,11 @@ public class WordSpawner : MonoBehaviour
     private Coroutine spawnCoroutine;
     private bool isActive = false;
 
+    private void OnValidate()
+    {
+        availableWords?.RemoveAll(w => w == null);
+    }
+
     public void StartSpawning()
     {
         isActive = true;

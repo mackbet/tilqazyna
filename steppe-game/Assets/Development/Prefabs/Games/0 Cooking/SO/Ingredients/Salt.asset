@@ -23,6 +23,9 @@ MonoBehaviour:
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _category: 0
+  _prerequisites: []
+  _price: 0
+  _hint: {fileID: 11400000, guid: 995341d36a8f8854488e137ec11bb1a6, type: 2}
   references:
     version: 2
     RefIds: []

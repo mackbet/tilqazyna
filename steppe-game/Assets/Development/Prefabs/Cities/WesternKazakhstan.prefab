@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6780323075963227035}
   - component: {fileID: 6553576068101192633}
   - component: {fileID: 3598863077003763600}
+  - component: {fileID: -5262191805108296569}
   m_Layer: 5
   m_Name: WesternKazakhstan
   m_TagString: AlmatyMuseumCanvas
@@ -51,7 +52,7 @@ Canvas:
   m_GameObject: {fileID: 3418002994697460246}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -117,6 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0ed4a919e6c1c488ac85588cf174ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CanvasView
+  _canvas: {fileID: 5804477295791844405}
+  isScreenSpaceCamera: 0
 --- !u!114 &3598863077003763600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,6 +134,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MusicPlayer
   music: {fileID: 8300000, guid: 3a99def952a70fd40ab703e735b381fb, type: 3}
   volume: 0.1
+--- !u!114 &-5262191805108296569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3418002994697460246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e41a5a73aaf2244b7e6cbd6a70a5c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CityProgressChecker
+  _config: {fileID: 11400000, guid: d3ec7927eddbfba4681cf28374874102, type: 2}
+  _trophyPanelPrefab: {fileID: 7118238411842663794, guid: 25d9820edf103ca449d77a43488a1ee2, type: 3}
+  _debugAlwaysShow: 0
 --- !u!1 &7637655191055362459
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +321,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 92.15
+  m_fontSize: 92.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

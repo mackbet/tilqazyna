@@ -35,7 +35,6 @@ public class CameraShake : MonoBehaviour
         }
 
         instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     /// <summary>

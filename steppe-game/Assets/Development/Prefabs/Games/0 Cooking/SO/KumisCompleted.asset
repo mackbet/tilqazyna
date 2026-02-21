@@ -24,6 +24,19 @@ MonoBehaviour:
     m_LocalVariables: []
   _category: 0
   _prerequisites: []
+  _price: 3
+  _hint: {fileID: 0}
+  _orderText:
+    m_TableReference:
+      m_TableCollectionName: GUID:aa0c96a897bb2520f8d789afe9cb43d5
+    m_TableEntryReference:
+      m_KeyId: 2983042404925440
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _orderAudioMale: {fileID: 0}
+  _orderAudioFemale: {fileID: 8300000, guid: 5dcf82b1a01a49749b1977c7ba5f5b7a, type: 3}
   references:
     version: 2
     RefIds: []
