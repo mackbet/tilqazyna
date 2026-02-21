@@ -154,6 +154,12 @@ public class WordMagnet : GameController
         }
     }
 
+    private void OnValidate()
+    {
+        if (allWords != null)
+            allWords = System.Array.FindAll(allWords, w => w != null);
+    }
+
     private void SelectRandomCategory()
     {
         if (availableCategories == null || availableCategories.Length == 0)
@@ -171,6 +177,7 @@ public class WordMagnet : GameController
 
         foreach (var word in allWords)
         {
+            if (word == null) continue;
             if (word.HasCategory(targetCategory))
             {
                 targetCategoryWords.Add(word);

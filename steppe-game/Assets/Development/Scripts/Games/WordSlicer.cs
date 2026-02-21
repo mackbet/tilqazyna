@@ -169,6 +169,12 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
         }
     }
 
+    private void OnValidate()
+    {
+        if (allWords != null)
+            allWords = System.Array.FindAll(allWords, w => w != null);
+    }
+
     private void SelectRandomCategory()
     {
         if (availableCategories == null || availableCategories.Length == 0) return;
@@ -182,6 +188,7 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
         {
             foreach (WordData word in allWords)
             {
+                if (word == null) continue;
                 if (word.HasCategory(targetCategory) && !word.Word.Contains(" "))
                 {
                     targetCategoryWords.Add(word);
@@ -330,6 +337,7 @@ public class WordSlicer : GameController, IPointerDownHandler, IPointerUpHandler
             while (wordData == null && attempts < 50)
             {
                 WordData candidate = allWords[Random.Range(0, allWords.Length)];
+                if (candidate == null) { attempts++; continue; }
                 if (!candidate.Word.Contains(" "))
                 {
                     wordData = candidate;

@@ -22304,7 +22304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2903458761911869237, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3075755175789649611, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_AnchorMax.y
@@ -22365,6 +22365,22 @@ PrefabInstance:
     - target: {fileID: 3490258391911967646, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605284936325516358, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605284936325516358, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605284936325516358, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3605284936325516358, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 35.000008
       objectReference: {fileID: 0}
     - target: {fileID: 3857027271526464528, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_fontSize
@@ -22624,6 +22640,7 @@ MonoBehaviour:
   startDelay: 0
   finishDelay: 3
   startWithDelay: 1
+  _gameId: Cooking
   _seats:
   - {fileID: 8581603499796803449}
   - {fileID: 5719070050559126002}
@@ -22710,7 +22727,7 @@ MonoBehaviour:
   - {fileID: 7406758666517082994}
   - {fileID: 6897976013181961168}
   - {fileID: 4044858913497750997}
-  _inactivityDelay: 3
+  _inactivityDelay: 5
   _arrowPrefab: {fileID: 6944814667820345564, guid: e8a720016f0beda4fbbe4a32eaef3f5c, type: 3}
   _outlineMaterial: {fileID: 2100000, guid: c81d283781b1843408adc3f8a57b656f, type: 2}
   _arrowOffset: {x: 0, y: 70}

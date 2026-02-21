@@ -276,6 +276,12 @@ public class WordCategoryAnalyzer : MonoBehaviour
         return counts;
     }
 
+    private void OnValidate()
+    {
+        if (allWords != null)
+            allWords = System.Array.FindAll(allWords, w => w != null);
+    }
+
     private void Start()
     {
         if (analyzeOnStart)

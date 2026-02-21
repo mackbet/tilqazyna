@@ -50,6 +50,11 @@ public class CanvasViewManager : MonoBehaviour
         }
 
         T view = Instantiate(viewPrefab, transform);
+
+        // Настраиваем Canvas на UI камеру
+        if (view.IsScreenSpaceCamera)
+            SetupCanvasCamera(view);
+
         viewStack.Push(view);
         return view;
     }
@@ -60,6 +65,30 @@ public class CanvasViewManager : MonoBehaviour
     public CanvasView Load(CanvasView viewPrefab, bool single = true)
     {
         return Load<CanvasView>(viewPrefab, single);
+    }
+
+    /// <summary>
+    /// Настраивает Canvas на использование UI камеры
+    /// </summary>
+    private void SetupCanvasCamera(CanvasView view)
+    {
+        if (view.Canvas == null)
+        {
+            Debug.LogWarning($"CanvasViewManager: CanvasView '{view.name}' не имеет Canvas компонента!");
+            return;
+        }
+
+        Camera uiCamera = CameraUI.Instance?.UICamera;
+        if (uiCamera == null)
+        {
+            Debug.LogError("CanvasViewManager: UI Camera не найдена! Убедитесь что CameraUI существует на сцене.");
+            return;
+        }
+
+        // Переключаем на Screen Space - Camera mode
+        view.Canvas.renderMode = RenderMode.ScreenSpaceCamera;
+        view.Canvas.worldCamera = uiCamera;
+        view.Canvas.planeDistance = 100f; // можно вынести в настройки если нужно
     }
 
     /// <summary>

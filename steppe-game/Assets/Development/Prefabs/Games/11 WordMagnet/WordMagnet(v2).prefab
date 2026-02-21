@@ -11140,10 +11140,6 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8203383318861018872, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8082043098754384589, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
     m_RemovedGameObjects: []
@@ -11217,6 +11213,7 @@ MonoBehaviour:
   startDelay: 1
   finishDelay: 1
   startWithDelay: 0
+  _gameId: WordMagnet(v2)
   magnet: {fileID: 237974963326723427}
   magnetAttractionPoint: {fileID: 237974963326723427}
   gameArea: {fileID: 478438730755161733}

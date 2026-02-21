@@ -69,7 +69,7 @@ public class UIPanelFinish : UIPanel
     {
         coins = newCoins;
         points = newPoints;
-        exp = newExp;
+        exp = newExp / 2;
     }
 
     public void SetState(bool isPassed)

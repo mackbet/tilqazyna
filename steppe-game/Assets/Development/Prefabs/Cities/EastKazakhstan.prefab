@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 5910317660829788756}
   - component: {fileID: 3758763949689232630}
   - component: {fileID: 4160033534480687636}
+  - component: {fileID: -3322370314506145127}
   m_Layer: 5
   m_Name: EastKazakhstan
   m_TagString: AlmatyMuseumCanvas
@@ -129,7 +130,7 @@ Canvas:
   m_GameObject: {fileID: 649479517520905975}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -195,6 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0ed4a919e6c1c488ac85588cf174ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CanvasView
+  _canvas: {fileID: 1836456716311888897}
+  isScreenSpaceCamera: 0
 --- !u!114 &4160033534480687636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +212,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MusicPlayer
   music: {fileID: 8300000, guid: 3a99def952a70fd40ab703e735b381fb, type: 3}
   volume: 0.1
+--- !u!114 &-3322370314506145127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649479517520905975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78e41a5a73aaf2244b7e6cbd6a70a5c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CityProgressChecker
+  _config: {fileID: 11400000, guid: 1bc5a76d8d972cb48988efd148abe19a, type: 2}
+  _trophyPanelPrefab: {fileID: 7118238411842663794, guid: 25d9820edf103ca449d77a43488a1ee2, type: 3}
+  _debugAlwaysShow: 0
 --- !u!1 &1527905142730632432
 GameObject:
   m_ObjectHideFlags: 0

@@ -45,6 +45,7 @@ public class GameView : CanvasView
 
     public void Close()
     {
+        gameController?.NotifyCompleted();
         CanvasViewManager.Instance.Unload(this);
     }
 

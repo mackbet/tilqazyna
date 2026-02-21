@@ -88,5 +88,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cecb2d6364aa1d468a7425f06494d1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrowWobble
-  _amplitude: 10
+  _amplitude: 3
   _speed: 2

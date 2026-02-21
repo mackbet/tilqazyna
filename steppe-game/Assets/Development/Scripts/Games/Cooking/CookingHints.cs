@@ -137,10 +137,20 @@ public class CookingHints : MonoBehaviour
         }
 
         var arrow = Instantiate(_arrowPrefab, transform);
-        Vector3 arrowWorldPos = target.position + (Vector3)_arrowOffset;
-        arrow.transform.position = arrowWorldPos;
+        var arrowRect = arrow.GetComponent<RectTransform>();
+        var parentRect = (RectTransform)transform;
+        var canvas = GetComponentInParent<Canvas>();
 
-        Vector2 dirToItem = ((Vector2)target.position - (Vector2)arrowWorldPos).normalized;
+        // Переводим позицию объекта в локальные координаты canvas,
+        // корректно работает и в ScreenSpaceOverlay, и в ScreenSpaceCamera
+        Vector2 screenPoint = RectTransformUtility.WorldToScreenPoint(canvas.worldCamera, target.position);
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            parentRect, screenPoint, canvas.worldCamera, out Vector2 localPoint);
+
+        Vector2 arrowLocalPos = localPoint + _arrowOffset;
+        arrowRect.anchoredPosition = arrowLocalPos;
+
+        Vector2 dirToItem = (localPoint - arrowLocalPos).normalized;
         if (dirToItem != Vector2.zero)
         {
             float angle = Vector2.SignedAngle(Vector2.down, dirToItem);

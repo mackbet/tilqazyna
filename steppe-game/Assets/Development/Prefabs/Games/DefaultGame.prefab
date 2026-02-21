@@ -444,7 +444,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!114 &1072864705411891833
 MonoBehaviour:
@@ -498,6 +498,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62382b57baeccc94ab02e7a2e4d366f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameView
+  _canvas: {fileID: 8203383318861018872}
   title: {fileID: 3215562817317932678}
   finishTitle: {fileID: 8255466567671250423}
   finishPanel: {fileID: 7198366607822241818}

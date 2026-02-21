@@ -22,6 +22,7 @@ public class FishingLevel
     [Header("Difficulty")]
     public float spawnInterval = 2f; // Интервал спавна рыб
     public int maxFishOnScreen = 5; // Максимум рыб на экране
+    [Range(0f, 1f)] public float targetFishSpawnChance = 0.3f; // Шанс спавна целевой рыбы
 }
 
 public class Fishing : GameController
@@ -194,8 +195,13 @@ public class Fishing : GameController
         if (currentLevel.fishPrefabs == null || currentLevel.fishPrefabs.Length == 0)
             return;
 
-        // Выбираем случайную рыбу из списка рыб текущего уровня
-        Fish fishPrefab = currentLevel.fishPrefabs[Random.Range(0, currentLevel.fishPrefabs.Length)];
+        // Выбираем рыбу: с заданным шансом спавним целевую, иначе случайную из списка
+        Fish fishPrefab;
+        Fish targetPrefab = Array.Find(currentLevel.fishPrefabs, f => f.FishType == currentTargetFishType);
+        if (targetPrefab != null && Random.value < currentLevel.targetFishSpawnChance)
+            fishPrefab = targetPrefab;
+        else
+            fishPrefab = currentLevel.fishPrefabs[Random.Range(0, currentLevel.fishPrefabs.Length)];
 
         // Определяем сторону спавна (слева или справа)
         bool spawnFromLeft = Random.value > 0.5f;

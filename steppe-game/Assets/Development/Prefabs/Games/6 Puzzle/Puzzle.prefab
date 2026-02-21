@@ -2771,10 +2771,6 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8203383318861018872, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 25
-      objectReference: {fileID: 0}
     - target: {fileID: 8714421542448981507, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2842,6 +2838,7 @@ MonoBehaviour:
   startDelay: 1
   finishDelay: 1
   startWithDelay: 0
+  _gameId: Puzzle
   puzzleSets:
   - name: Abay
     picture: {fileID: 21300000, guid: 72bdcc734f51864439c38364e9e803cb, type: 3}

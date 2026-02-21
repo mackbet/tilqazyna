@@ -56,6 +56,12 @@ public class DancingOnIce : GameController
     private bool isCharacterMoving = false;
     private Vector3 originalCharacterScale;
 
+    private void OnValidate()
+    {
+        if (words != null)
+            words = System.Array.FindAll(words, w => w != null);
+    }
+
     protected override void InitializeGame()
     {
         base.InitializeGame();
