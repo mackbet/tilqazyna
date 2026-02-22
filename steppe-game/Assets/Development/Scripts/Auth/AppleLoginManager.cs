@@ -82,8 +82,8 @@ public class AppleLoginManager : MonoBehaviour
 
         try
         {
+            await GKLocalPlayer.Authenticate();
             var localPlayer = GKLocalPlayer.Local;
-            await localPlayer.Authenticate();
 
             if (!localPlayer.IsAuthenticated)
             {
@@ -119,13 +119,14 @@ public class AppleLoginManager : MonoBehaviour
         var localPlayer = GKLocalPlayer.Local;
         var fetchResult = await localPlayer.FetchItems();
 
-        m_Signature = Convert.ToBase64String(fetchResult.GetSignature());
-        m_Salt = Convert.ToBase64String(fetchResult.GetSalt());
+        m_Signature   = Convert.ToBase64String(fetchResult.GetSignature());
+        m_Salt        = Convert.ToBase64String(fetchResult.GetSalt());
         m_PublicKeyUrl = fetchResult.PublicKeyUrl;
-        m_TeamPlayerId = fetchResult.TeamPlayerId;
-        m_Timestamp = fetchResult.Timestamp;
+        m_Timestamp   = fetchResult.Timestamp;
+        m_TeamPlayerId = localPlayer.TeamPlayerId; // ← берётся с localPlayer, не с fetchResult
 
         Debug.Log("[Auth-Apple] Game Center credentials получены");
+        Debug.Log($"[Auth-Apple] TeamPlayerId: {m_TeamPlayerId}");
     }
 
     /// <summary>
@@ -137,8 +138,8 @@ public class AppleLoginManager : MonoBehaviour
 
         try
         {
+            await GKLocalPlayer.Authenticate();
             var localPlayer = GKLocalPlayer.Local;
-            await localPlayer.Authenticate();
 
             if (!localPlayer.IsAuthenticated)
             {
