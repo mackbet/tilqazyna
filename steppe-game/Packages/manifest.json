@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "com.ammariqais.skiaforunity": "https://github.com/ammariqais/SkiaForUnity.git?path=SkiaUnity/Assets/SkiaSharp#3.2.3",
+    "com.apple.unityplugin.core": "file:/Users/macbook/Downloads/com.apple.unityplugin.core-3.1.8.tgz",
+    "com.apple.unityplugin.gamekit": "file:/Users/macbook/Downloads/com.apple.unityplugin.gamekit-3.0.2.tgz",
     "com.coffee.ui-particle": "https://github.com/mob-sakai/ParticleEffectForUGUI.git",
     "com.unity.adaptiveperformance.google.android": "5.1.6",
     "com.unity.addressables": "2.7.6",
