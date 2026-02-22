@@ -34,7 +34,6 @@ public class Chase : GameController, IPointerDownHandler, IPointerUpHandler
     [SerializeField] private Ease wolfMoveEase = Ease.InOutQuad;
 
     [Header("Game Settings")]
-    [SerializeField] private float gameDuration = 30f;
     [SerializeField] private int startLives = 3;
 
     [Header("Sounds")]
@@ -45,7 +44,6 @@ public class Chase : GameController, IPointerDownHandler, IPointerUpHandler
 
     private bool isJumping = false;
     private bool isRolling = false;
-    private float gameTimer;
     private bool isGameActive = false;
     private List<GameObject> activeObstacles = new List<GameObject>();
     private Coroutine obstacleSpawnerCoroutine;
@@ -65,7 +63,6 @@ public class Chase : GameController, IPointerDownHandler, IPointerUpHandler
         KillAllTweens();
 
         SetLives(startLives);
-        gameTimer = gameDuration;
         isGameActive = true;
         currentWolfStep = 0;
 
@@ -86,6 +83,7 @@ public class Chase : GameController, IPointerDownHandler, IPointerUpHandler
         ClearObstacles();
         obstacleSpawnerCoroutine = StartCoroutine(SpawnObstacles());
 
+        wordSpawner.OnAllWordsCollected += WinGame;
         wordSpawner.StartSpawning();
     }
 
@@ -95,6 +93,9 @@ public class Chase : GameController, IPointerDownHandler, IPointerUpHandler
         isGameActive = false;
 
         KillAllTweens();
+
+        if (wordSpawner != null)
+            wordSpawner.OnAllWordsCollected -= WinGame;
 
         if (obstacleSpawnerCoroutine != null)
         {
@@ -116,7 +117,6 @@ public class Chase : GameController, IPointerDownHandler, IPointerUpHandler
         if (!isGameActive) return;
 
         UpdateParallax();
-        UpdateGameTimer();
         UpdateObstacles();
     }
 
@@ -179,16 +179,6 @@ public class Chase : GameController, IPointerDownHandler, IPointerUpHandler
                     layer.nextSpawnTime = Time.time + UnityEngine.Random.Range(layer.minInterval, layer.maxInterval);
                 }
             }
-        }
-    }
-
-    private void UpdateGameTimer()
-    {
-        gameTimer -= Time.deltaTime;
-
-        if (gameTimer <= 0)
-        {
-            WinGame();
         }
     }
 

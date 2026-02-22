@@ -7,10 +7,8 @@ using UnityEngine.UI;
 public class DancingOnIce : GameController
 {
     [Header("Game Data")]
-    [SerializeField] private WordData[] words;
+    [SerializeField] private List<string> sentences = new List<string>();
     [SerializeField] private int sessionsCount = 3; // Количество сессий (раундов)
-    [SerializeField] private int minLettersInWord = 3; // Минимальное количество букв в слове
-    [SerializeField] private int maxLettersInWord = 10; // Максимальное количество букв в слове
 
     [Header("UI References")]
     [SerializeField] private TextMeshProUGUI targetWordText;
@@ -25,18 +23,18 @@ public class DancingOnIce : GameController
     [SerializeField] private float characterMoveSpeed = 500f;
     [SerializeField] private RectTransform characterParticles;
 
-    [Header("Letter Spawn Settings")]
-    [SerializeField][Range(0f, 1f)] private float minSpawnWidth = 0.1f; // Минимальная ширина спавна (0 = левый край, 1 = правый край)
-    [SerializeField][Range(0f, 1f)] private float maxSpawnWidth = 0.9f; // Максимальная ширина спавна (0 = левый край, 1 = правый край)
-    [SerializeField][Range(0f, 1f)] private float minSpawnHeight = 0.2f; // Минимальная высота спавна (0 = низ, 1 = верх)
-    [SerializeField][Range(0f, 1f)] private float maxSpawnHeight = 0.8f; // Максимальная высота спавна (0 = низ, 1 = верх)
-    [SerializeField] private float minDistanceBetweenLetters = 100f;
-    [SerializeField] private float minDistanceFromCharacter = 150f; // Минимальное расстояние от персонажа (центр экрана)
+    [Header("Word Spawn Settings")]
+    [SerializeField][Range(0f, 1f)] private float minSpawnWidth = 0.1f;
+    [SerializeField][Range(0f, 1f)] private float maxSpawnWidth = 0.9f;
+    [SerializeField][Range(0f, 1f)] private float minSpawnHeight = 0.2f;
+    [SerializeField][Range(0f, 1f)] private float maxSpawnHeight = 0.8f;
+    [SerializeField] private float minDistanceBetweenWords = 150f;
+    [SerializeField] private float minDistanceFromCharacter = 150f;
 
     [Header("Scale Settings")]
-    [SerializeField] private float minLetterScale = 0.6f; // Минимальный размер буквы (дальше - меньше)
-    [SerializeField] private float maxLetterScale = 1.2f; // Максимальный размер буквы (ближе - больше)
-    [SerializeField] private float endDelay = 1f; // Задержка в конце перед показом панели финиша
+    [SerializeField] private float minWordScale = 0.6f;
+    [SerializeField] private float maxWordScale = 1.2f;
+    [SerializeField] private float endDelay = 1f;
 
     [Header("Visual Settings")]
     [SerializeField] private float connectionLineWidth = 5f;
@@ -47,8 +45,9 @@ public class DancingOnIce : GameController
     [SerializeField] private AudioClip completeSound;
 
     private int currentSessionIndex = 0;
-    private WordData currentWord;
-    private List<WordData> availableWords = new List<WordData>();
+    private string currentSentence;
+    private string[] currentSentenceWords; // Слова текущего предложения
+    private List<string> availableSentences = new List<string>();
     private List<DancingOnIceLetter> letters = new List<DancingOnIceLetter>();
     private List<DancingOnIceLetter> selectedLetters = new List<DancingOnIceLetter>();
     private List<Image> connectionLines = new List<Image>();
@@ -56,21 +55,14 @@ public class DancingOnIce : GameController
     private bool isCharacterMoving = false;
     private Vector3 originalCharacterScale;
 
-    private void OnValidate()
-    {
-        if (words != null)
-            words = System.Array.FindAll(words, w => w != null);
-    }
-
     protected override void InitializeGame()
     {
         base.InitializeGame();
 
         SetLives(3);
-        FilterAvailableWords();
+        FilterAvailableSentences();
         currentSessionIndex = 0;
 
-        // Сохраняем оригинальный размер персонажа для flip (абсолютные значения)
         if (character != null)
         {
             originalCharacterScale = new Vector3(
@@ -83,64 +75,59 @@ public class DancingOnIce : GameController
         StartNextWord();
     }
 
-    private void FilterAvailableWords()
+    private void FilterAvailableSentences()
     {
-        availableWords.Clear();
+        availableSentences.Clear();
 
-        if (words == null || words.Length == 0)
+        if (sentences == null || sentences.Count == 0)
         {
+            Debug.LogError("DancingOnIce: Список предложений пуст!");
             return;
         }
 
-        // Фильтруем слова по количеству букв (от min до max) и исключаем составные слова (с пробелами)
-        foreach (var word in words)
+        foreach (var sentence in sentences)
         {
-            if (word != null && !string.IsNullOrEmpty(word.Word))
+            if (!string.IsNullOrEmpty(sentence))
             {
-                string wordText = word.Word;
-                int wordLength = wordText.Length;
-
-                // Проверяем что слово одно (не содержит пробелов)
-                if (!wordText.Contains(" ") && wordLength >= minLettersInWord && wordLength <= maxLettersInWord)
+                string[] splitWords = sentence.Trim().Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                if (splitWords.Length >= 2)
                 {
-                    availableWords.Add(word);
+                    availableSentences.Add(sentence);
                 }
             }
         }
 
-        if (availableWords.Count == 0)
+        if (availableSentences.Count == 0)
         {
-            Debug.LogError($"DancingOnIce: Нет подходящих слов (одно слово, {minLettersInWord}-{maxLettersInWord} букв)!");
+            Debug.LogError("DancingOnIce: Нет подходящих предложений (минимум 2 слова)!");
         }
     }
 
     private void StartNextWord()
     {
-        if (availableWords.Count == 0)
+        if (availableSentences.Count == 0)
         {
-            Debug.LogError("DancingOnIce: Нет доступных слов!");
+            Debug.LogError("DancingOnIce: Нет доступных предложений!");
             LoseGame();
             return;
         }
 
-        // Выбираем случайное слово из доступных
-        currentWord = availableWords[Random.Range(0, availableWords.Count)];
+        // Выбираем случайное предложение из доступных
+        currentSentence = availableSentences[Random.Range(0, availableSentences.Count)];
+        currentSentenceWords = currentSentence.Trim().Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
 
         ResetRound();
         SetupUI();
-        SpawnLetters();
+        SpawnWords();
 
         if (character != null)
         {
             character.gameObject.SetActive(true);
-
-            // Возвращаем исходный размер персонажа (без flip)
             character.localScale = originalCharacterScale;
         }
 
         isInputEnabled = true;
 
-        // Запускаем анимацию ожидания
         if (characterAnimController != null)
         {
             characterAnimController.Play("idle", loop: true);
@@ -153,7 +140,6 @@ public class DancingOnIce : GameController
         isInputEnabled = false;
         isCharacterMoving = false;
 
-        // Очищаем старые буквы
         foreach (var letter in letters)
         {
             if (letter != null)
@@ -161,7 +147,6 @@ public class DancingOnIce : GameController
         }
         letters.Clear();
 
-        // Очищаем линии соединения
         foreach (var line in connectionLines)
         {
             if (line != null)
@@ -172,47 +157,64 @@ public class DancingOnIce : GameController
 
     private void SetupUI()
     {
-        if (targetWordText != null && currentWord != null)
+        if (targetWordText != null && currentSentence != null)
         {
-            targetWordText.text = currentWord.Word.ToUpper();
+            targetWordText.text = currentSentence.ToUpper();
         }
     }
 
-    private void SpawnLetters()
+    private void SpawnWords()
     {
-        if (currentWord == null || string.IsNullOrEmpty(currentWord.Word))
+        if (currentSentenceWords == null || currentSentenceWords.Length == 0)
             return;
 
-        string word = currentWord.Word.ToUpper();
         List<Vector2> usedPositions = new List<Vector2>();
 
-        // Получаем размеры канваса для вычисления масштаба
         RectTransform canvasRect = GetComponentInParent<Canvas>().GetComponent<RectTransform>();
         Vector2 canvasSize = canvasRect.sizeDelta;
 
-        // Создаем буквы
-        for (int i = 0; i < word.Length; i++)
+        // Перемешиваем индексы для случайного размещения слов
+        List<int> shuffledIndices = new List<int>();
+        for (int i = 0; i < currentSentenceWords.Length; i++)
+            shuffledIndices.Add(i);
+
+        // Fisher-Yates shuffle
+        for (int i = shuffledIndices.Count - 1; i > 0; i--)
         {
-            char letterChar = word[i];
+            int j = Random.Range(0, i + 1);
+            int temp = shuffledIndices[i];
+            shuffledIndices[i] = shuffledIndices[j];
+            shuffledIndices[j] = temp;
+        }
+
+        // Создаём кнопки слов в перемешанном порядке
+        DancingOnIceLetter[] wordButtons = new DancingOnIceLetter[currentSentenceWords.Length];
+
+        for (int si = 0; si < shuffledIndices.Count; si++)
+        {
+            int originalIndex = shuffledIndices[si];
+            string wordText = currentSentenceWords[originalIndex];
+
             Vector2 position = GetRandomPosition(usedPositions);
             usedPositions.Add(position);
 
-            DancingOnIceLetter letter = Instantiate(letterPrefab, lettersContainer);
-            letter.Initialize(letterChar, i, this);
-            RectTransform letterRect = letter.GetComponent<RectTransform>();
-            letterRect.anchoredPosition = position;
+            DancingOnIceLetter wordButton = Instantiate(letterPrefab, lettersContainer);
+            wordButton.Initialize(wordText, originalIndex, this);
+            RectTransform wordRect = wordButton.GetComponent<RectTransform>();
+            wordRect.anchoredPosition = position;
 
-            // Вычисляем масштаб буквы в зависимости от Y позиции (относительно лимитов спавна)
-            float scale = CalculateScaleByYPositionWithLimits(position.y, canvasSize.y, minLetterScale, maxLetterScale);
-            letterRect.localScale = Vector3.one * scale;
+            float scale = CalculateScaleByYPositionWithLimits(position.y, canvasSize.y, minWordScale, maxWordScale);
+            wordRect.localScale = Vector3.one * scale;
 
-            letters.Add(letter);
+            wordButtons[originalIndex] = wordButton;
         }
+
+        // Сохраняем в порядке оригинальных индексов
+        letters.AddRange(wordButtons);
     }
 
     private Vector2 GetRandomPosition(List<Vector2> usedPositions)
     {
-        // Получаем размеры канваса (экрана)
         RectTransform canvasRect = GetComponentInParent<Canvas>().GetComponent<RectTransform>();
         Vector2 canvasSize = canvasRect.sizeDelta;
 
@@ -222,7 +224,6 @@ public class DancingOnIce : GameController
 
         do
         {
-            // Вычисляем случайные позиции на основе нормализованных значений (0-1)
             float minX = -canvasSize.x / 2f + minSpawnWidth * canvasSize.x;
             float maxX = -canvasSize.x / 2f + maxSpawnWidth * canvasSize.x;
             float minY = -canvasSize.y / 2f + minSpawnHeight * canvasSize.y;
@@ -244,7 +245,6 @@ public class DancingOnIce : GameController
 
     private bool IsPositionValid(Vector2 position, List<Vector2> usedPositions)
     {
-        // Проверяем расстояние от персонажа (с учетом pivot)
         if (character != null)
         {
             Vector2 characterPosition = character.anchoredPosition;
@@ -252,10 +252,9 @@ public class DancingOnIce : GameController
                 return false;
         }
 
-        // Проверяем расстояние от других букв
         foreach (var usedPos in usedPositions)
         {
-            if (Vector2.Distance(position, usedPos) < minDistanceBetweenLetters)
+            if (Vector2.Distance(position, usedPos) < minDistanceBetweenWords)
                 return false;
         }
         return true;
@@ -263,16 +262,12 @@ public class DancingOnIce : GameController
 
     private float CalculateScaleByYPositionWithLimits(float yPosition, float canvasHeight, float minScale, float maxScale)
     {
-        // Вычисляем границы спавна в координатах
         float minY = -canvasHeight / 2f + minSpawnHeight * canvasHeight;
         float maxY = -canvasHeight / 2f + maxSpawnHeight * canvasHeight;
 
-        // Нормализуем Y позицию относительно границ спавна: minY (низ) = 0, maxY (верх) = 1
         float normalizedY = (yPosition - minY) / (maxY - minY);
         normalizedY = Mathf.Clamp01(normalizedY);
 
-        // Чем выше (normalizedY ближе к 1), тем меньше размер (дальше)
-        // Чем ниже (normalizedY ближе к 0), тем больше размер (ближе)
         float scale = Mathf.Lerp(maxScale, minScale, normalizedY);
 
         return scale;
@@ -284,18 +279,16 @@ public class DancingOnIce : GameController
         if (!isInputEnabled || isCharacterMoving || letter == null)
             return;
 
-        // Проверяем, не выбрана ли уже эта буква
         if (selectedLetters.Contains(letter))
             return;
 
-        // Определяем какая буква должна быть следующей
+        // Определяем какое слово должно быть следующим
         int expectedPosition = selectedLetters.Count;
-        char expectedChar = currentWord.Word.ToUpper()[expectedPosition];
+        string expectedWord = currentSentenceWords[expectedPosition];
 
-        // Проверяем, правильная ли это буква (сравниваем символы)
-        if (letter.Letter == expectedChar)
+        // Сравниваем слова (без учёта регистра)
+        if (string.Equals(letter.Word, expectedWord, System.StringComparison.OrdinalIgnoreCase))
         {
-            // Правильная буква
             selectedLetters.Add(letter);
             letter.SetSelected(true);
 
@@ -304,15 +297,13 @@ public class DancingOnIce : GameController
 
             UpdateConnectionLine();
 
-            // Проверяем, завершено ли слово
-            if (selectedLetters.Count == letters.Count)
+            if (selectedLetters.Count == currentSentenceWords.Length)
             {
                 OnWordCompleted();
             }
         }
         else
         {
-            // Неправильная буква - сброс выбора и потеря жизни
             OnWordFailed();
         }
     }
@@ -322,7 +313,6 @@ public class DancingOnIce : GameController
         if (connectionLinePrefab == null || connectionLinesContainer == null)
             return;
 
-        // Очищаем старые линии
         foreach (var line in connectionLines)
         {
             if (line != null)
@@ -330,7 +320,6 @@ public class DancingOnIce : GameController
         }
         connectionLines.Clear();
 
-        // Создаем линии между последовательными выбранными буквами
         for (int i = 0; i < selectedLetters.Count - 1; i++)
         {
             DancingOnIceLetter fromLetter = selectedLetters[i];
@@ -342,27 +331,20 @@ public class DancingOnIce : GameController
             RectTransform fromRect = fromLetter.GetComponent<RectTransform>();
             RectTransform toRect = toLetter.GetComponent<RectTransform>();
 
-            // Создаем линию
             Image line = Instantiate(connectionLinePrefab, connectionLinesContainer);
             RectTransform lineRect = line.GetComponent<RectTransform>();
 
-            // Вычисляем позицию и размер линии
             Vector2 fromPos = fromRect.anchoredPosition;
             Vector2 toPos = toRect.anchoredPosition;
 
-            // Центр линии - посередине между двумя буквами
             Vector2 center = (fromPos + toPos) / 2f;
             lineRect.anchoredPosition = center;
 
-            // Вычисляем расстояние и угол
             Vector2 direction = toPos - fromPos;
             float distance = direction.magnitude;
             float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-            // Устанавливаем размер линии (длина = расстояние, высота = ширина линии)
             lineRect.sizeDelta = new Vector2(distance, connectionLineWidth);
-
-            // Поворачиваем линию
             lineRect.rotation = Quaternion.Euler(0, 0, angle);
 
             connectionLines.Add(line);
@@ -376,13 +358,6 @@ public class DancingOnIce : GameController
         if (completeSound != null)
             AudioManager.Instance.PlaySound(completeSound);
 
-        // Воспроизводим аудио слова, если есть
-        if (currentWord.AudioClip != null)
-        {
-            AudioManager.Instance.PlaySound(currentWord.AudioClip);
-        }
-
-        // Запускаем движение персонажа
         StartCoroutine(MoveCharacterThroughLetters());
     }
 
@@ -392,7 +367,6 @@ public class DancingOnIce : GameController
         {
             yield return new WaitForSeconds(0.5f);
 
-            // Увеличиваем счетчик сессий после успешного завершения
             currentSessionIndex++;
 
             if (currentSessionIndex < sessionsCount)
@@ -408,42 +382,32 @@ public class DancingOnIce : GameController
 
         isCharacterMoving = true;
 
-        // Запускаем анимацию ходьбы
         if (characterAnimController != null)
         {
             characterAnimController.Play("walking", loop: true);
         }
 
-        // Активируем систему частиц
         characterParticles.position = character.position;
 
-        // Двигаемся к каждой букве по порядку
         foreach (var letter in selectedLetters)
         {
             if (letter == null) continue;
 
-            // Используем мировую позицию для точного движения (не зависит от pivot)
             Vector3 targetWorldPos = letter.transform.position;
             Vector3 startPos = character.position;
 
-            // Вычисляем направление для поворота (только по горизонтали)
             Vector2 direction = (targetWorldPos - startPos).normalized;
 
-            // Поворот персонажа только по горизонтали (flip лево/право)
-            // Если движется влево (direction.x < 0), то отражаем по X
             float flipX = direction.x < 0 ? -1f : 1f;
 
-            // Двигаемся к букве
             while (Vector3.Distance(character.position, targetWorldPos) > 5f)
             {
-                // Двигаемся в мировых координатах (не зависит от pivot)
                 character.position = Vector3.MoveTowards(
                     character.position,
                     targetWorldPos,
                     characterMoveSpeed * Time.deltaTime
                 );
 
-                // Применяем только flip без изменения размера
                 character.localScale = new Vector3(
                     originalCharacterScale.x * flipX,
                     originalCharacterScale.y,
@@ -455,17 +419,13 @@ public class DancingOnIce : GameController
                 yield return null;
             }
 
-            // Небольшая пауза на букве
             yield return new WaitForSeconds(0.2f);
         }
 
         isCharacterMoving = false;
 
-        // Поворачиваем персонажа в сторону центра экрана
         if (character != null)
         {
-            // Если персонаж левее центра - смотрит вправо (flipX = 1)
-            // Если персонаж правее центра - смотрит влево (flipX = -1)
             float flipX = character.position.x < 0 ? 1f : -1f;
             character.localScale = new Vector3(
                 originalCharacterScale.x * flipX,
@@ -474,16 +434,13 @@ public class DancingOnIce : GameController
             );
         }
 
-        // Запускаем анимацию прыжка
         if (characterAnimController != null)
         {
             characterAnimController.Play("jumping", false);
         }
 
-        // Увеличиваем счетчик сессий после успешного завершения
         currentSessionIndex++;
 
-        // Переходим к следующему слову или завершаем игру
         yield return new WaitForSeconds(endDelay);
 
         if (currentSessionIndex < sessionsCount)
@@ -510,13 +467,11 @@ public class DancingOnIce : GameController
         }
         else
         {
-            // Перезапускаем текущее слово
             ResetRound();
             SetupUI();
-            SpawnLetters();
+            SpawnWords();
             isInputEnabled = true;
 
-            // Запускаем анимацию ожидания
             if (characterAnimController != null)
             {
                 characterAnimController.Play("idle", loop: true);
@@ -534,7 +489,6 @@ public class DancingOnIce : GameController
 
         selectedLetters.Clear();
 
-        // Очищаем линии соединения
         foreach (var line in connectionLines)
         {
             if (line != null)
@@ -583,7 +537,6 @@ public class DancingOnIce : GameController
     {
         base.OnDisable();
 
-        // Очищаем буквы
         foreach (var letter in letters)
         {
             if (letter != null)
@@ -592,7 +545,6 @@ public class DancingOnIce : GameController
         letters.Clear();
         selectedLetters.Clear();
 
-        // Очищаем линии соединения
         foreach (var line in connectionLines)
         {
             if (line != null)
