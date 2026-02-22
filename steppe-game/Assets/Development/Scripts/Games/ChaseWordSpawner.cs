@@ -1,6 +1,6 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 
@@ -8,12 +8,12 @@ public class WordSpawner : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private RectTransform wordsContainer;
-    [SerializeField] private GameObject wordContainerPrefab; // Префаб с WordContainer компонентом
+    [SerializeField] private GameObject wordContainerPrefab;
     [SerializeField] private RectTransform resultPanel;
     [SerializeField] private TextMeshProUGUI resultField;
 
-    [Header("Word Data")]
-    [SerializeField] private List<WordData> availableWords = new List<WordData>();
+    [Header("Sentence")]
+    [SerializeField] private List<string> sentences = new List<string>();
 
     [Header("Spawn Settings")]
     [SerializeField] private float spawnInterval = 3f;
@@ -23,24 +23,46 @@ public class WordSpawner : MonoBehaviour
 
     [Header("Movement Settings")]
     [SerializeField] private float wordSpeed = 300f;
-    [Range(0f, 1f)][SerializeField] private float minYNormalized = 0.2f; // 0 = низ экрана, 1 = верх экрана
+    [Range(0f, 1f)][SerializeField] private float minYNormalized = 0.2f;
     [Range(0f, 1f)][SerializeField] private float maxYNormalized = 0.8f;
 
     private List<WordContainer> activeWords = new List<WordContainer>();
-    private List<WordData> clickedWords = new List<WordData>();
     private Coroutine spawnCoroutine;
     private bool isActive = false;
 
-    private void OnValidate()
-    {
-        availableWords?.RemoveAll(w => w == null);
-    }
+    // Sentence mode
+    private string[] sentenceWords;
+    private int currentWordIndex = 0;
+    private HashSet<int> collectedIndices = new HashSet<int>();
+    private Queue<int> pendingWords = new Queue<int>();
+
+    public event Action OnAllWordsCollected;
 
     public void StartSpawning()
     {
         isActive = true;
-        clickedWords.Clear();
+        collectedIndices.Clear();
         ClearAllWords();
+
+        // Выбираем случайное предложение и разбиваем на слова
+        if (sentences.Count > 0)
+        {
+            string sentence = sentences[UnityEngine.Random.Range(0, sentences.Count)];
+            sentenceWords = sentence.Trim().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        }
+        else
+        {
+            sentenceWords = new string[0];
+        }
+
+        currentWordIndex = 0;
+        pendingWords.Clear();
+
+        // Добавляем все индексы слов в очередь по порядку
+        for (int i = 0; i < sentenceWords.Length; i++)
+        {
+            pendingWords.Enqueue(i);
+        }
 
         if (spawnCoroutine != null)
             StopCoroutine(spawnCoroutine);
@@ -63,24 +85,30 @@ public class WordSpawner : MonoBehaviour
 
     private IEnumerator SpawnWordsCoroutine()
     {
-        while (isActive)
+        while (isActive && pendingWords.Count > 0)
         {
             float interval = useRandomInterval
-                ? Random.Range(minSpawnInterval, maxSpawnInterval)
+                ? UnityEngine.Random.Range(minSpawnInterval, maxSpawnInterval)
                 : spawnInterval;
 
             yield return new WaitForSeconds(interval);
-            SpawnWord();
+
+            if (!isActive) break;
+
+            SpawnNextWord();
         }
     }
 
-    private void SpawnWord()
+    private void SpawnNextWord()
     {
-        if (wordsContainer == null || wordContainerPrefab == null || availableWords.Count == 0)
+        if (wordsContainer == null || wordContainerPrefab == null)
             return;
 
-        WordData wordData = availableWords[Random.Range(0, availableWords.Count)];
-        if (wordData == null) return;
+        if (pendingWords.Count == 0)
+            return;
+
+        int wordIndex = pendingWords.Dequeue();
+        string word = sentenceWords[wordIndex];
 
         GameObject wordObj = Instantiate(wordContainerPrefab, wordsContainer);
         WordContainer container = wordObj.GetComponent<WordContainer>();
@@ -95,39 +123,49 @@ public class WordSpawner : MonoBehaviour
         float screenHeight = Screen.height;
         float screenBottom = -screenHeight / 2f;
 
-        // Конвертируем нормализованные значения в реальные координаты
         float minY = screenBottom + (screenHeight * minYNormalized);
         float maxY = screenBottom + (screenHeight * maxYNormalized);
-        float randomY = Random.Range(minY, maxY);
+        float randomY = UnityEngine.Random.Range(minY, maxY);
 
         Vector2 startPos = new Vector2(screenRight + 100f, randomY);
 
-        container.Initialize(wordData, startPos, wordSpeed, OnWordOutOfBounds);
-        container.OnWordClicked += OnWordClicked;
+        container.Initialize(word, startPos, wordSpeed, (c) => OnWordOutOfBounds(c, wordIndex));
+        container.OnWordClicked += (c) => OnWordClicked(c, wordIndex);
         activeWords.Add(container);
     }
 
-    private void OnWordClicked(WordContainer container)
+    private void OnWordClicked(WordContainer container, int wordIndex)
     {
-        if (container != null)
+        if (container != null && !collectedIndices.Contains(wordIndex))
         {
-            WordData wordData = container.GetWordData();
-            if (wordData != null)
-            {
-                clickedWords.Add(wordData);
-            }
+            collectedIndices.Add(wordIndex);
 
-            //activeWords.Remove(container);
-            //Destroy(container.gameObject);
+            // Проверяем, все ли слова собраны
+            if (collectedIndices.Count >= sentenceWords.Length)
+            {
+                OnAllWordsCollected?.Invoke();
+            }
         }
     }
 
-    private void OnWordOutOfBounds(WordContainer container)
+    private void OnWordOutOfBounds(WordContainer container, int wordIndex)
     {
         if (container != null)
         {
             activeWords.Remove(container);
             Destroy(container.gameObject);
+
+            // Если слово не было нажато — добавляем обратно в очередь
+            if (!collectedIndices.Contains(wordIndex))
+            {
+                pendingWords.Enqueue(wordIndex);
+
+                // Если корутина уже завершилась, перезапускаем
+                if (spawnCoroutine == null && isActive)
+                {
+                    spawnCoroutine = StartCoroutine(SpawnWordsCoroutine());
+                }
+            }
         }
     }
 
@@ -148,16 +186,31 @@ public class WordSpawner : MonoBehaviour
 
     private void ShowResult()
     {
-        if (clickedWords.Count > 0)
+        if (sentenceWords == null || sentenceWords.Length == 0)
         {
-            string words = string.Join(", ", clickedWords.Select(w => w.Word));
-            resultField.text = "Сен осындай сөздерді білдің: \n \n" + words;
-        }
-        else
-        {
-            resultField.text = "Сен ешқандай сөз үйренбедің(";
+            if (resultField != null)
+                resultField.text = "";
+            if (resultPanel != null)
+                resultPanel.gameObject.SetActive(true);
+            return;
         }
 
-        resultPanel.gameObject.SetActive(true);
+        int total = sentenceWords.Length;
+        int collected = collectedIndices.Count;
+
+        if (resultField != null)
+        {
+            if (collected >= total)
+            {
+                resultField.text = string.Join(" ", sentenceWords);
+            }
+            else
+            {
+                resultField.text = $"Жиналған сөздер: {collected}/{total}";
+            }
+        }
+
+        if (resultPanel != null)
+            resultPanel.gameObject.SetActive(true);
     }
 }

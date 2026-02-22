@@ -15,13 +15,13 @@ public class DancingOnIceLetter : MonoBehaviour
     [SerializeField] private Color normalTextColor = Color.black;
     [SerializeField] private Color selectedTextColor = Color.white;
 
-    private char letter;
+    private string word;
     private int index;
     private DancingOnIce gameController;
     private bool isSelected = false;
 
     public int Index => index;
-    public char Letter => letter;
+    public string Word => word;
 
 #if UNITY_EDITOR
     private void OnValidate()
@@ -54,15 +54,15 @@ public class DancingOnIceLetter : MonoBehaviour
         }
     }
 
-    public void Initialize(char letterChar, int letterIndex, DancingOnIce controller)
+    public void Initialize(string wordText, int wordIndex, DancingOnIce controller)
     {
-        letter = letterChar;
-        index = letterIndex;
+        word = wordText;
+        index = wordIndex;
         gameController = controller;
 
         if (letterText != null)
         {
-            letterText.text = letter.ToString();
+            letterText.text = word;
         }
 
         SetSelected(false);
