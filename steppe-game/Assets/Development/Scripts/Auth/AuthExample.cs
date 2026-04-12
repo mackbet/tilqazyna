@@ -8,14 +8,14 @@ public class AuthExample : MonoBehaviour
     private void Start()
     {
         // Подписка на события авторизации
-        if (LoginManager.Instance != null)
+        if (AndroidLoginManager.Instance != null)
         {
-            LoginManager.Instance.OnLoginSuccess += HandleLoginSuccess;
-            LoginManager.Instance.OnLoginFailed += HandleLoginFailed;
-            LoginManager.Instance.OnLogoutSuccess += HandleLogout;
+            AndroidLoginManager.Instance.OnLoginSuccess += HandleLoginSuccess;
+            AndroidLoginManager.Instance.OnLoginFailed += HandleLoginFailed;
+            AndroidLoginManager.Instance.OnLogoutSuccess += HandleLogout;
 
             // Проверка состояния при запуске
-            if (LoginManager.Instance.IsAuthenticated)
+            if (AndroidLoginManager.Instance.IsAuthenticated)
             {
                 Debug.Log("Пользователь уже авторизован");
                 ShowMainGame();
@@ -31,11 +31,11 @@ public class AuthExample : MonoBehaviour
     private void OnDestroy()
     {
         // Отписка от событий
-        if (LoginManager.Instance != null)
+        if (AndroidLoginManager.Instance != null)
         {
-            LoginManager.Instance.OnLoginSuccess -= HandleLoginSuccess;
-            LoginManager.Instance.OnLoginFailed -= HandleLoginFailed;
-            LoginManager.Instance.OnLogoutSuccess -= HandleLogout;
+            AndroidLoginManager.Instance.OnLoginSuccess -= HandleLoginSuccess;
+            AndroidLoginManager.Instance.OnLoginFailed -= HandleLoginFailed;
+            AndroidLoginManager.Instance.OnLogoutSuccess -= HandleLogout;
         }
     }
 
@@ -43,7 +43,7 @@ public class AuthExample : MonoBehaviour
 
     private void HandleLoginSuccess(string odl)
     {
-        string userName = LoginManager.Instance?.GetUserName();
+        string userName = AndroidLoginManager.Instance?.GetUserName();
 
         Debug.Log($"Авторизация успешна!");
         Debug.Log($"   Player ID: {odl}");
@@ -106,7 +106,7 @@ public class AuthExample : MonoBehaviour
     public void OnLogoutButtonClick()
     {
         Debug.Log("Кнопка выхода нажата");
-        LoginManager.Instance?.SignOut();
+        AndroidLoginManager.Instance?.SignOut();
     }
 
     // ========== ДОПОЛНИТЕЛЬНЫЕ УТИЛИТЫ ==========
@@ -116,7 +116,7 @@ public class AuthExample : MonoBehaviour
     /// </summary>
     public string GetCurrentUserId()
     {
-        return LoginManager.Instance?.GetUserId();
+        return AndroidLoginManager.Instance?.GetUserId();
     }
 
     /// <summary>
@@ -124,6 +124,6 @@ public class AuthExample : MonoBehaviour
     /// </summary>
     public bool IsUserLoggedIn()
     {
-        return LoginManager.Instance != null && LoginManager.Instance.IsAuthenticated;
+        return AndroidLoginManager.Instance != null && AndroidLoginManager.Instance.IsAuthenticated;
     }
 }

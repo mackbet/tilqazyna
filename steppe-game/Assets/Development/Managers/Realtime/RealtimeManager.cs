@@ -29,7 +29,7 @@ public class RealtimeManager
     /// </summary>
     public async Task SaveUserData(string userName, CharacterSex userSex, int userExperience, int userPoints)
     {
-        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+        if (!IsAuthenticated())
         {
             Debug.LogWarning("[CloudSave] Пользователь не авторизован, сохранение невозможно");
             return;
@@ -66,7 +66,7 @@ public class RealtimeManager
     /// </summary>
     public async Task SaveCoins(int coins)
     {
-        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+        if (!IsAuthenticated())
         {
             Debug.LogWarning("[CloudSave] Пользователь не авторизован");
             return;
@@ -93,7 +93,7 @@ public class RealtimeManager
     /// </summary>
     public async Task SaveData(Dictionary<string, object> data)
     {
-        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+        if (!IsAuthenticated())
         {
             Debug.LogWarning("[CloudSave] Пользователь не авторизован");
             return;
@@ -115,7 +115,7 @@ public class RealtimeManager
     /// </summary>
     public async Task<UserModel> ReadCurrentUserData()
     {
-        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+        if (!IsAuthenticated())
         {
             Debug.LogWarning("[CloudSave] Пользователь не авторизован");
             return null;
@@ -164,7 +164,7 @@ public class RealtimeManager
     /// </summary>
     public async Task<int> LoadCoins()
     {
-        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+        if (!IsAuthenticated())
         {
             Debug.LogWarning("[CloudSave] Пользователь не авторизован");
             return 0;
@@ -194,7 +194,7 @@ public class RealtimeManager
     /// </summary>
     public async Task<Dictionary<string, object>> LoadData(HashSet<string> keys)
     {
-        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+        if (!IsAuthenticated())
         {
             Debug.LogWarning("[CloudSave] Пользователь не авторизован");
             return null;
@@ -255,7 +255,7 @@ public class RealtimeManager
     /// </summary>
     public async Task<bool> UserExists()
     {
-        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+        if (!IsAuthenticated())
             return false;
 
         try
@@ -275,7 +275,7 @@ public class RealtimeManager
     /// </summary>
     public async Task DeleteAllData()
     {
-        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+        if (!IsAuthenticated())
         {
             Debug.LogWarning("[CloudSave] Пользователь не авторизован");
             return;
@@ -300,5 +300,18 @@ public class RealtimeManager
         {
             Debug.LogError($"[CloudSave] Ошибка удаления данных: {e.Message}");
         }
+    }
+
+    private bool IsAuthenticated()
+    {
+        // Android
+        if (AndroidLoginManager.Instance != null && AndroidLoginManager.Instance.IsAuthenticated)
+            return true;
+
+        // iOS
+        if (AppleLoginManager.Instance != null && AppleLoginManager.Instance.IsAuthenticated)
+            return true;
+
+        return false;
     }
 }

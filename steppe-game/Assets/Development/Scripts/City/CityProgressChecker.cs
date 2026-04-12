@@ -58,15 +58,15 @@ public class CityProgressChecker : MonoBehaviour
 
     private static async Task LoadProgress()
     {
-        if (LoginManager.Instance != null && !LoginManager.Instance.IsAuthenticated)
+        if (AndroidLoginManager.Instance != null && !AndroidLoginManager.Instance.IsAuthenticated)
         {
             var tcs = new TaskCompletionSource<bool>();
             void OnLogin(string _)
             {
-                LoginManager.Instance.OnLoginSuccess -= OnLogin;
+                AndroidLoginManager.Instance.OnLoginSuccess -= OnLogin;
                 tcs.TrySetResult(true);
             }
-            LoginManager.Instance.OnLoginSuccess += OnLogin;
+            AndroidLoginManager.Instance.OnLoginSuccess += OnLogin;
             await tcs.Task;
         }
 

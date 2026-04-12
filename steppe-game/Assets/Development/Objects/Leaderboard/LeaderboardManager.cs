@@ -46,7 +46,7 @@ public class LeaderboardManager : MonoBehaviour
     /// </summary>
     public async Task SubmitScore(int score, string playerName, CharacterSex sex, int level)
     {
-        if (!LoginManager.Instance?.IsAuthenticated ?? true)
+        if (!AndroidLoginManager.Instance?.IsAuthenticated ?? true)
         {
             Debug.LogWarning("[Leaderboard] Пользователь не авторизован");
             return;
@@ -116,7 +116,7 @@ public class LeaderboardManager : MonoBehaviour
         {
             // Отправляем текущие очки игрока, чтобы он появился в списке
             var sm = _stateManager != null ? _stateManager : StateManager.Instance;
-            if (sm != null && (LoginManager.Instance?.IsAuthenticated ?? false))
+            if (sm != null && (AndroidLoginManager.Instance?.IsAuthenticated ?? false))
             {
                 await SubmitScore(sm.PointsAmount);
             }

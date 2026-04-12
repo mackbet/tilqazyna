@@ -1,34 +1,15 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using System;
-using System.Collections;
-using System.Threading.Tasks;
-using Unity.Services.Authentication;
-using Unity.Services.Core;
 
 #if UNITY_IOS
 using Apple.GameKit;
 #endif
 
-public class AppleLoginManager : MonoBehaviour
+/// <summary>
+/// Авторизация для iOS через Apple Game Center.
+/// </summary>
+public class AppleLoginManager : BaseLoginManager
 {
-    public static AppleLoginManager Instance { get; private set; }
-
-    #region Настройки
-    [Header("Настройки сцены")]
-    [SerializeField] private string gameSceneName = "GameScene";
-    [SerializeField] private bool autoLoadSceneOnLogin = true;
-    [SerializeField] private GameObject curtain;
-    #endregion
-
-    #region События
-    public event Action<string> OnLoginSuccess;
-    public event Action<string> OnLoginFailed;
-    public event Action OnLogoutSuccess;
-    #endregion
-
     #region Состояние
-    private bool isAuthenticated = false;
     private bool isGameCenterAuthenticated = false;
 
 #if UNITY_IOS
@@ -41,36 +22,14 @@ public class AppleLoginManager : MonoBehaviour
     #endregion
 
     #region Unity Lifecycle
-    private void Awake()
+    protected override void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        base.Awake();
     }
 
-    private async void Start()
+    protected override void OnStart()
     {
-        await InitializeUnityServices();
         TryAutoLoginGameCenter();
-    }
-    #endregion
-
-    #region Инициализация
-    private async Task InitializeUnityServices()
-    {
-        if (UnityServices.State == ServicesInitializationState.Uninitialized)
-        {
-            Debug.Log("[Auth-Apple] Инициализация Unity Services...");
-            await UnityServices.InitializeAsync();
-            Debug.Log("[Auth-Apple] Unity Services инициализированы");
-        }
     }
     #endregion
 
@@ -119,19 +78,16 @@ public class AppleLoginManager : MonoBehaviour
         var localPlayer = GKLocalPlayer.Local;
         var fetchResult = await localPlayer.FetchItems();
 
-        m_Signature   = Convert.ToBase64String(fetchResult.GetSignature());
-        m_Salt        = Convert.ToBase64String(fetchResult.GetSalt());
+        m_Signature    = Convert.ToBase64String(fetchResult.GetSignature());
+        m_Salt         = Convert.ToBase64String(fetchResult.GetSalt());
         m_PublicKeyUrl = fetchResult.PublicKeyUrl;
-        m_Timestamp   = fetchResult.Timestamp;
-        m_TeamPlayerId = localPlayer.TeamPlayerId; // ← берётся с localPlayer, не с fetchResult
+        m_Timestamp    = fetchResult.Timestamp;
+        m_TeamPlayerId = localPlayer.TeamPlayerId;
 
         Debug.Log("[Auth-Apple] Game Center credentials получены");
         Debug.Log($"[Auth-Apple] TeamPlayerId: {m_TeamPlayerId}");
     }
 
-    /// <summary>
-    /// Ручной вход через Game Center.
-    /// </summary>
     public async void LoginGameCenter()
     {
         Debug.Log("[Auth-Apple] Попытка входа через Game Center...");
@@ -144,7 +100,7 @@ public class AppleLoginManager : MonoBehaviour
             if (!localPlayer.IsAuthenticated)
             {
                 Debug.LogWarning("[Auth-Apple] Вход в Game Center не удался");
-                OnLoginFailed?.Invoke("Game Center вход не удался");
+                InvokeLoginFailed("Game Center вход не удался");
                 return;
             }
 
@@ -158,89 +114,10 @@ public class AppleLoginManager : MonoBehaviour
         catch (Exception e)
         {
             Debug.LogWarning($"[Auth-Apple] Вход в Game Center не удался: {e.Message}");
-            OnLoginFailed?.Invoke(e.Message);
+            InvokeLoginFailed(e.Message);
         }
     }
 #endif
-    #endregion
-
-    #region Гостевой вход
-    public async void SignInAsGuest()
-    {
-        Debug.Log("[Auth-Apple] Гостевой вход...");
-
-        try
-        {
-            if (AuthenticationService.Instance.IsSignedIn)
-            {
-                Debug.Log("[Auth-Apple] Пользователь уже авторизован");
-                isAuthenticated = true;
-                OnLoginSuccess?.Invoke(AuthenticationService.Instance.PlayerId);
-
-                if (autoLoadSceneOnLogin)
-                    LoadGameScene();
-                return;
-            }
-
-            await AuthenticationService.Instance.SignInAnonymouslyAsync();
-
-            isAuthenticated = true;
-            string playerId = AuthenticationService.Instance.PlayerId;
-
-            Debug.Log("[Auth-Apple] ========== ГОСТЕВОЙ ВХОД УСПЕШЕН ==========");
-            Debug.Log($"[Auth-Apple] Unity Player ID: {playerId}");
-            Debug.Log("[Auth-Apple] ============================================");
-
-            OnLoginSuccess?.Invoke(playerId);
-
-            if (autoLoadSceneOnLogin)
-                LoadGameScene();
-        }
-        catch (Exception ex) when (ex is AuthenticationException || ex is RequestFailedException)
-        {
-            Debug.LogWarning($"[Auth-Apple] Ошибка гостевого входа: {ex.Message}");
-
-            bool isInvalidTokenError = ex.Message.Contains("INVALID_SESSION_TOKEN") ||
-                                       ex.Message.Contains("401") ||
-                                       ex.Message.Contains("session token is not valid") ||
-                                       (ex is RequestFailedException rfe && rfe.ErrorCode == 401);
-
-            if (isInvalidTokenError || AuthenticationService.Instance.SessionTokenExists)
-            {
-                Debug.Log("[Auth-Apple] Очистка токена и создание нового гостевого аккаунта...");
-                AuthenticationService.Instance.ClearSessionToken();
-                await RetryGuestSignIn();
-                return;
-            }
-
-            OnLoginFailed?.Invoke(ex.Message);
-        }
-    }
-
-    private async Task RetryGuestSignIn()
-    {
-        try
-        {
-            await AuthenticationService.Instance.SignInAnonymouslyAsync();
-
-            isAuthenticated = true;
-            string playerId = AuthenticationService.Instance.PlayerId;
-
-            Debug.Log("[Auth-Apple] ========== НОВЫЙ ГОСТЕВОЙ АККАУНТ ==========");
-            Debug.Log($"[Auth-Apple] Unity Player ID: {playerId}");
-            Debug.Log("[Auth-Apple] =============================================");
-
-            OnLoginSuccess?.Invoke(playerId);
-
-            if (autoLoadSceneOnLogin)
-                LoadGameScene();
-        }
-        catch (Exception retryEx)
-        {
-            Debug.LogError($"[Auth-Apple] Повторная попытка не удалась: {retryEx.Message}");
-            OnLoginFailed?.Invoke(retryEx.Message);
-        }
-    }
     #endregion
 
     #region Unity Authentication
@@ -302,81 +179,46 @@ public class AppleLoginManager : MonoBehaviour
             Debug.Log($"[Auth-Apple] Гостевой: {IsGuest}");
             Debug.Log("[Auth-Apple] =========================================");
 
-            OnLoginSuccess?.Invoke(playerId);
-
-            if (autoLoadSceneOnLogin)
-                LoadGameScene();
+            InvokeLoginSuccess(playerId);
+            if (autoLoadSceneOnLogin) LoadGameScene();
         }
         catch (AuthenticationException ex)
         {
             Debug.LogError($"[Auth-Apple] Ошибка аутентификации: {ex.Message}");
-            OnLoginFailed?.Invoke(ex.Message);
+            InvokeLoginFailed(ex.Message);
         }
         catch (RequestFailedException ex)
         {
             Debug.LogError($"[Auth-Apple] Ошибка запроса: {ex.Message}");
-            OnLoginFailed?.Invoke(ex.Message);
+            InvokeLoginFailed(ex.Message);
         }
 #endif
     }
     #endregion
 
     #region Выход
-    public void SignOut()
+    public override void SignOut()
     {
-        Debug.Log("[Auth-Apple] Выход из аккаунта...");
-
-        AuthenticationService.Instance.SignOut();
-
-        isAuthenticated = false;
+        base.SignOut();
         isGameCenterAuthenticated = false;
-
-        Debug.Log("[Auth-Apple] Выход выполнен");
-        OnLogoutSuccess?.Invoke();
     }
     #endregion
 
-    #region Загрузка сцены
-    public void LoadGameScene()
-    {
-        Debug.Log($"[Auth-Apple] Загрузка сцены: {gameSceneName}");
-        StartCoroutine(LoadSceneWithCurtain(gameSceneName));
-    }
-
-    public void LoadScene(string sceneName)
-    {
-        Debug.Log($"[Auth-Apple] Загрузка сцены: {sceneName}");
-        StartCoroutine(LoadSceneWithCurtain(sceneName));
-    }
-
-    private IEnumerator LoadSceneWithCurtain(string sceneName)
-    {
-        if (curtain != null) curtain.SetActive(true);
-        yield return null;
-        SceneManager.LoadScene(sceneName);
-    }
-    #endregion
-
-    #region Публичные свойства и методы
-    public bool IsAuthenticated => isAuthenticated && AuthenticationService.Instance.IsSignedIn;
-
-    public bool IsGuest => AuthenticationService.Instance.IsSignedIn &&
-                           AuthenticationService.Instance.PlayerInfo?.Identities?.Count == 0;
-
-    public string GetUserId()
-    {
-        if (AuthenticationService.Instance.IsSignedIn)
-            return AuthenticationService.Instance.PlayerId;
-        return null;
-    }
-
-    public string GetUserName()
+    #region Публичные свойства
+    public override string GetUserName()
     {
 #if UNITY_IOS
         if (isGameCenterAuthenticated)
             return GKLocalPlayer.Local.DisplayName;
 #endif
         return null;
+    }
+
+    public void LoginGameCenterButton()
+    {
+#if UNITY_IOS
+        LoginGameCenter();
+#endif
     }
     #endregion
 }

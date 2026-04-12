@@ -157,7 +157,6 @@ public class GameManager : MonoBehaviour
         }
 
         SceneManager.sceneLoaded += OnSceneLoaded;
-
     }
 
     private void OnDestroy()
@@ -165,10 +164,10 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
 
         // Отписываемся от событий авторизации
-        if (LoginManager.Instance != null)
+        if (BaseLoginManager.Instance != null)
         {
-            LoginManager.Instance.OnLoginSuccess -= OnAuthenticationSuccess;
-            LoginManager.Instance.OnLoginFailed -= OnAuthenticationFailed;
+            BaseLoginManager.Instance.OnLoginSuccess -= OnAuthenticationSuccess;
+            BaseLoginManager.Instance.OnLoginFailed -= OnAuthenticationFailed;
         }
     }
 
@@ -181,40 +180,30 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(go.gameObject);
     }
 
-    /// <summary>
-    /// Метод, вызываемый после загрузки новой сцены.
-    /// Можно выполнять дополнительные настройки сцены.
-    /// </summary>
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Если нужно, например, включить общий HUD, который является DontDestroyOnLoad,
-        // или выполнить инициализацию сцены «Бозок»
         if (CurrentGameScene == GameScene.Bozok)
         {
-            // Если мы на сцене BozokIntro или BozokMap, дополнительная логика может быть здесь.
             _hudManager.gameObject.SetActive(true);
         }
-        // Другие кейсы...
     }
 
     private void Start()
     {
-        // Подписываемся на события авторизации
-        if (LoginManager.Instance != null)
+        // Подписываемся на события авторизации через базовый класс
+        // Работает и с AndroidLoginManager и с AppleLoginManager
+        if (BaseLoginManager.Instance != null)
         {
-            LoginManager.Instance.OnLoginSuccess += OnAuthenticationSuccess;
-            LoginManager.Instance.OnLoginFailed += OnAuthenticationFailed;
+            BaseLoginManager.Instance.OnLoginSuccess += OnAuthenticationSuccess;
+            BaseLoginManager.Instance.OnLoginFailed += OnAuthenticationFailed;
 
-            // Если уже авторизован - продолжаем
-            if (LoginManager.Instance.IsAuthenticated)
+            if (BaseLoginManager.Instance.IsAuthenticated)
             {
-                OnAuthenticationSuccess(LoginManager.Instance.GetUserId());
+                OnAuthenticationSuccess(BaseLoginManager.Instance.GetUserId());
             }
-            // Иначе ждем авторизацию (LoginManager сам запустит SignIn)
         }
         else
         {
-            // Fallback на старую логику если LoginManager не настроен
             StartGameLegacy();
         }
     }
@@ -223,12 +212,10 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log($"[GameManager] Авторизация успешна. Player ID: {odl}");
 
-        // Проверяем есть ли данные пользователя в Cloud Save
         bool userExists = await _realtimeManager.UserExists();
 
         if (userExists)
         {
-            // Загружаем данные пользователя
             var userModel = await _realtimeManager.ReadCurrentUserData();
             if (userModel != null && !string.IsNullOrEmpty(userModel.Name))
             {
@@ -237,17 +224,14 @@ public class GameManager : MonoBehaviour
                 _stateManager.PointsAmount = userModel.Points;
                 _stateManager.ExperienceAmount = userModel.Experience;
 
-                // Загружаем монеты
                 _stateManager.CurrencyAmount = await _realtimeManager.LoadCoins();
 
                 Debug.Log($"[GameManager] Данные загружены: {userModel.Name}, Exp: {userModel.Experience}, Level: {userModel.Level}, Points: {userModel.Points}, Coins: {_stateManager.CurrencyAmount}");
 
-                // Переходим на выбор города (данные персонажа уже есть)
                 OpenNewScene(GameScene.ChooseCity);
             }
             else
             {
-                // Данные не загрузились или имя пустое - показываем экран создания персонажа
                 Debug.Log("[GameManager] Данные пустые, показываем экран создания персонажа");
                 ResetLocalPlayerData();
                 OpenNewScene(GameScene.ChooseCharacter);
@@ -255,16 +239,12 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            // Новый пользователь - показываем экран создания персонажа
             Debug.Log("[GameManager] Новый пользователь, показываем экран создания персонажа");
             ResetLocalPlayerData();
             OpenNewScene(GameScene.ChooseCharacter);
         }
     }
 
-    /// <summary>
-    /// Сброс локальных данных игрока для нового аккаунта
-    /// </summary>
     private void ResetLocalPlayerData()
     {
         _stateManager.ExperienceAmount = 0;
@@ -274,9 +254,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("[GameManager] Локальные данные сброшены");
     }
 
-    /// <summary>
-    /// Сохранить данные игрока в Cloud Save
-    /// </summary>
     private async Task SavePlayerDataAsync()
     {
         if (string.IsNullOrEmpty(_stateManager.PlayerName)) return;
@@ -292,13 +269,11 @@ public class GameManager : MonoBehaviour
     private void OnAuthenticationFailed(string error)
     {
         Debug.LogWarning($"Ошибка авторизации: {error}");
-        // Показываем экран авторизации или используем гостевой режим
         StartGameLegacy();
     }
 
     private void StartGameLegacy()
     {
-        // Старая логика без авторизации
         if (string.IsNullOrEmpty(_stateManager.PlayerName))
         {
             OpenNewScene(GameScene.ChooseCharacter);
@@ -344,7 +319,6 @@ public class GameManager : MonoBehaviour
             ResetLocalPlayerData();
             _stateManager.PlayerName = name;
 
-            // Сохраняем данные персонажа в Cloud Save
             await _realtimeManager.SaveUserData(
                 userName: name,
                 userSex: _stateManager.CharacterSex,
@@ -384,7 +358,6 @@ public class GameManager : MonoBehaviour
 
     public async void OpenNewScene(GameScene scene)
     {
-        // Защита от повторных вызовов
         if (_isLoadingScene)
         {
             Debug.Log("[GameManager] Загрузка уже выполняется, пропускаем");
@@ -395,13 +368,7 @@ public class GameManager : MonoBehaviour
         _soundManager.PlayButtonSound();
         CloseAllScenes();
 
-        // Получаем имя сцены (оно должно соответствовать названию сцены в Build Settings)
         string sceneName = GetSceneName(scene);
-        // if (string.IsNullOrEmpty(sceneName))
-        // {
-        //     Debug.LogError($"Не найдено имя сцены для {scene}");
-        //     return;
-        // }
 
         if (sceneName == "BozokGames" || sceneName == "BozokIntro" ||
             (sceneName == "GameScene" && CurrentGameScene == GameScene.Bozok))
@@ -617,7 +584,6 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
-
 
     private GameObject lastCity = null;
 
