@@ -22617,7 +22617,7 @@ PrefabInstance:
       addedObject: {fileID: 2607176828203027421}
     - targetCorrespondingSourceObject: {fileID: 849376715505048235, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5131053250381583221}
+      addedObject: {fileID: -5231355950955041277}
   m_SourcePrefab: {fileID: 100100000, guid: 77b83d8b146807b4c9e194bbdc2819ec, type: 3}
 --- !u!1 &2322009010836378135 stripped
 GameObject:
@@ -22734,7 +22734,7 @@ MonoBehaviour:
   _hintTextObject: {fileID: 3918334231470253647}
   _hintText: {fileID: 58524132253395462}
   _debug: 1
---- !u!114 &5131053250381583221
+--- !u!114 &-5231355950955041277
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -22743,10 +22743,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2322009010836378135}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 575001fd022082c47974fa43833f0ecb, type: 3}
+  m_Script: {fileID: 11500000, guid: 238aca114a033d642afa652b3bb27b63, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MusicPlayer
-  music: {fileID: 8300000, guid: 5e702ed960fc7bc4780bcea35930b994, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::GameMelody
+  audioClip: {fileID: 8300000, guid: 5e702ed960fc7bc4780bcea35930b994, type: 3}
   volume: 1
 --- !u!224 &3186810905311615010 stripped
 RectTransform:
